@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>கார் Dashboard Warning Lights | KaarKalvi</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #c0392b;
+    --red-glow: rgba(192,57,43,0.2);
+    --yellow: #d68910;
+    --yellow-glow: rgba(214,137,16,0.2);
+    --green: #1e8449;
+    --green-glow: rgba(30,132,73,0.2);
+    --blue: #1a6fba;
+    --blue-glow: rgba(26,111,186,0.2);
+    --dark: #3d2b1f;
+    --darker: #fdf6ee;
+    --panel: #fff8f0;
+    --border: rgba(180,140,100,0.2);
+    --text: #2c1a0e;
+    --muted: #8a6a50;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fdf6ee;
+    color: var(--text);
+    font-family: 'Rajdhani', 'Noto Sans Tamil', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Subtle warm background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 10%, rgba(214,137,16,0.05) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 80%, rgba(192,57,43,0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .brand {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .title-en {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #2c1a0e;
+    line-height: 1;
+  }
+
+  .title-ta {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 600;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .subtitle {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--muted);
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+
+  /* Color legend */
+  .legend {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 32px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .section-dot.red { background: var(--red); box-shadow: 0 0 12px var(--red-glow); }
+  .section-dot.yellow { background: var(--yellow); box-shadow: 0 0 12px var(--yellow-glow); }
+  .section-dot.green { background: var(--green); box-shadow: 0 0 12px var(--green-glow); }
+  .section-dot.blue { background: var(--blue); box-shadow: 0 0 12px var(--blue-glow); }
+
+  .section-title-en {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .section-title-ta {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .section-urgency {
+    margin-left: auto;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  .urgency-red { background: rgba(230,57,70,0.15); color: var(--red); border: 1px solid rgba(230,57,70,0.3); }
+  .urgency-yellow { background: rgba(244,161,0,0.12); color: var(--yellow); border: 1px solid rgba(244,161,0,0.3); }
+  .urgency-green { background: rgba(45,198,83,0.1); color: var(--green); border: 1px solid rgba(45,198,83,0.25); }
+
+  /* Grid */
+  .lights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+
+  /* Light card */
+  .light-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .light-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .light-card.red::before { background: var(--red); }
+  .light-card.yellow::before { background: var(--yellow); }
+  .light-card.green::before { background: var(--green); }
+  .light-card.blue::before { background: var(--blue); }
+
+  .light-card:hover {
+    border-color: rgba(140,90,50,0.3);
+    transform: translateY(-2px);
+  }
+
+  .light-card.red:hover { box-shadow: 0 4px 24px rgba(230,57,70,0.18); }
+  .light-card.yellow:hover { box-shadow: 0 4px 24px rgba(244,161,0,0.15); }
+  .light-card.green:hover { box-shadow: 0 4px 24px rgba(45,198,83,0.12); }
+  .light-card.blue:hover { box-shadow: 0 4px 24px rgba(72,149,239,0.12); }
+
+  /* Icon */
+  .light-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .light-icon.red { background: rgba(192,57,43,0.1); }
+  .light-icon.yellow { background: rgba(214,137,16,0.1); }
+  .light-icon.green { background: rgba(30,132,73,0.08); }
+  .light-icon.blue { background: rgba(26,111,186,0.08); }
+
+  /* Card content */
+  .card-body { flex: 1; min-width: 0; }
+
+  .card-name-en {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2c1a0e;
+    letter-spacing: 0.3px;
+  }
+
+  .card-name-ta {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .card-action {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #5a3e2b;
+  }
+
+  /* Expanded detail */
+  .card-detail {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #6b4c35;
+  }
+
+  .light-card.expanded .card-detail { display: block; }
+
+  .card-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .card-location::before {
+    content: '📍';
+    font-size: 10px;
+  }
+
+  /* Color rule box */
+  .color-rule-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .color-rule {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    min-width: 180px;
+  }
+
+  .color-rule.red { background: rgba(230,57,70,0.08); border: 1px solid rgba(230,57,70,0.2); }
+  .color-rule.yellow { background: rgba(244,161,0,0.07); border: 1px solid rgba(244,161,0,0.2); }
+  .color-rule.green { background: rgba(45,198,83,0.06); border: 1px solid rgba(45,198,83,0.18); }
+
+  .color-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .color-circle.red { background: var(--red); box-shadow: 0 0 14px var(--red-glow); }
+  .color-circle.yellow { background: var(--yellow); box-shadow: 0 0 14px var(--yellow-glow); }
+  .color-circle.green { background: var(--green); box-shadow: 0 0 14px var(--green-glow); }
+
+  .color-rule-text { font-family: 'Noto Sans Tamil', sans-serif; }
+  .color-rule-en { font-size: 13px; font-weight: 700; font-family: 'Rajdhani', sans-serif; color: #2c1a0e; }
+  .color-rule-ta { font-size: 12px; color: var(--muted); }
+
+  /* Share Section */
+  .share-section {
+    margin: 32px 0 24px;
+    background: #fff3e0;
+    border: 1px solid rgba(180,140,100,0.25);
+    border-radius: 18px;
+    padding: 24px;
+  }
+
+  .share-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  .share-title-en {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c1a0e;
+  }
+
+  .share-title-ta {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 3px;
+    line-height: 1.6;
+  }
+
+  .share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 18px;
+    border-radius: 50px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .share-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+  }
+
+  .share-btn:active { transform: scale(0.97); }
+
+  .share-btn.whatsapp  { background: #25d366; color: #fff; }
+  .share-btn.facebook  { background: #1877f2; color: #fff; }
+  .share-btn.twitter   { background: #1a1a2e; color: #fff; border: 1px solid #333; }
+  .share-btn.telegram  { background: #0088cc; color: #fff; }
+  .share-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
+
+  .share-note {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .footer-brand {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--yellow);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+
+  /* Tap hint */
+  .tap-hint {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+
+  @media (max-width: 500px) {
+    .lights-grid { grid-template-columns: 1fr; }
+    .color-rule-box { flex-direction: column; align-items: stretch; }
+    .color-rule { min-width: unset; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="brand">KaarKalvi · கார் கல்வி</div>
+    <div class="title-en">Dashboard Warning Lights</div>
+    <div class="title-ta">உங்கள் காரின் எச்சரிக்கை விளக்குகள்</div>
+    <div class="subtitle">ஒவ்வொரு விளக்கும் என்ன சொல்கிறது? அழுத்தி தெரிந்துகொள்ளுங்கள் ↓</div>
+  </div>
+
+  <!-- Color rule -->
+  <div class="color-rule-box">
+    <div class="color-rule red">
+      <div class="color-circle red">!</div>
+      <div class="color-rule-text">
+        <div class="color-rule-en">RED = STOP NOW</div>
+        <div class="color-rule-ta">உடனே நிறுத்தணும்</div>
+      </div>
+    </div>
+    <div class="color-rule yellow">
+      <div class="color-circle yellow">⚠</div>
+      <div class="color-rule-text">
+        <div class="color-rule-en">YELLOW = SERVICE SOON</div>
+        <div class="color-rule-ta">விரைவில் garage போ</div>
+      </div>
+    </div>
+    <div class="color-rule green">
+      <div class="color-circle green">✓</div>
+      <div class="color-rule-text">
+        <div class="color-rule-en">GREEN/BLUE = NORMAL</div>
+        <div class="color-rule-ta">Feature ON — பயப்பட வேண்டாம்</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tap-hint">💡 ஒவ்வொரு card-ஐயும் அழுத்தினால் விரிவான விளக்கம் கிடைக்கும்</div>
+
+  <!-- RED SECTION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot red"></div>
+      <div>
+        <div class="section-title-en">RED LIGHTS</div>
+        <div class="section-title-ta">உடனே நிறுத்தணும் — Immediate Action</div>
+      </div>
+      <div class="section-urgency urgency-red">CRITICAL</div>
+    </div>
+    <div class="lights-grid">
+
+      <div class="light-card red" onclick="toggle(this)">
+        <div class="light-icon red">🛢️</div>
+        <div class="card-body">
+          <div class="card-name-en">Oil Pressure Warning</div>
+          <div class="card-name-ta">எண்ணெய் அழுத்த எச்சரிக்கை</div>
+          <div class="card-action">உடனே நிறுத்து, engine OFF பண்ணு</div>
+          <div class="card-location">Dashboard center cluster</div>
+          <div class="card-detail">
+            என்ன ஆகுது: Oil level குறைவாக இருக்கு அல்லது oil pump சரியா வேலை செய்யலை. Engine lubrication இல்லாம ஓடினால் engine seize ஆகும் — repair cost ₹50,000+.<br><br>
+            என்ன செய்யணும்: உடனே பக்கத்தில் நிறுத்து. Engine OFF பண்ணு. 5 நிமிஷம் ஆறவிட்டு oil dipstick check பண்ணு. Oil குறைஞ்சிருந்தா top-up பண்ணு. Light போகலன்னா tow பண்ணி garage போ.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card red" onclick="toggle(this)">
+        <div class="light-icon red">🌡️</div>
+        <div class="card-body">
+          <div class="card-name-en">Engine Temperature</div>
+          <div class="card-name-ta">Engine வெப்பம் அதிகமாகி விட்டது</div>
+          <div class="card-action">நிறுத்து, bonnet திறக்காதே</div>
+          <div class="card-location">Right side / Center cluster</div>
+          <div class="card-detail">
+            என்ன ஆகுது: Coolant level குறைவு, radiator fan problem, அல்லது coolant leak. Overheat ஆனா engine head gasket damage ஆகும்.<br><br>
+            என்ன செய்யணும்: AC OFF பண்ணு, heater ON பண்ணு (heat absorb ஆகும்). பக்கத்தில் நிறுத்து. 30 நிமிஷம் ஆறவிட்டு மட்டுமே bonnet திற. சூடான radiator cap திறக்காதே — steam face-ல் அடிக்கும்.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card red" onclick="toggle(this)">
+        <div class="light-icon red">🔋</div>
+        <div class="card-body">
+          <div class="card-name-en">Battery Warning</div>
+          <div class="card-name-ta">Battery / Alternator பிரச்னை</div>
+          <div class="card-action">Battery power-ல் மட்டும் ஓடுது</div>
+          <div class="card-location">Center cluster</div>
+          <div class="card-detail">
+            என்ன ஆகுது: Alternator charge பண்ணலை. Battery மட்டும் power supply செய்யுது — 20–40 நிமிஷத்தில் car நிற்கும்.<br><br>
+            என்ன செய்யணும்: AC, headlights, music எல்லாம் OFF பண்ணு. விரைவில் nearest garage போ. இரவில் கண்டிப்பாக நிறுத்தி mechanic-ஐ கூப்பிடு.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card red" onclick="toggle(this)">
+        <div class="light-icon red">🅿️</div>
+        <div class="card-body">
+          <div class="card-name-en">Brake Warning</div>
+          <div class="card-name-ta">Brake எச்சரிக்கை</div>
+          <div class="card-action">Parking brake check பண்ணு</div>
+          <div class="card-location">Center cluster</div>
+          <div class="card-detail">
+            இரண்டு காரணம் இருக்கு:<br>
+            1. Parking/Handbrake இன்னும் engaged-ல் இருக்கு — release பண்ணு.<br>
+            2. Brake fluid level குறைஞ்சு விட்டது — இது serious. Brake fail ஆகலாம்.<br><br>
+            Parking brake release பண்ணியும் light போகலன்னா உடனே garage போ. ஓட்டாதே.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card red" onclick="toggle(this)">
+        <div class="light-icon red">🚪</div>
+        <div class="card-body">
+          <div class="card-name-en">Door Ajar Warning</div>
+          <div class="card-name-ta">கதவு சரியா மூடவில்லை</div>
+          <div class="card-action">எந்த door என்று check பண்ணு</div>
+          <div class="card-location">Center cluster / MID display</div>
+          <div class="card-detail">
+            Car diagram-ல் எந்த door open என்று காட்டும். அந்த door-ஐ "click" சத்தம் வரும் வரை தள்ளி மூடு.<br><br>
+            Seat belt stuck ஆனாலும் இந்த light வரலாம். Boot (dickey) சரியா மூடாவிட்டாலும் வரும்.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card red" onclick="toggle(this)">
+        <div class="light-icon red">💺</div>
+        <div class="card-body">
+          <div class="card-name-en">Seat Belt Reminder</div>
+          <div class="card-name-ta">Seat Belt போடவில்லை</div>
+          <div class="card-action">உடனே belt போடு</div>
+          <div class="card-location">Left cluster / Instrument panel</div>
+          <div class="card-detail">
+            Driver அல்லது front passenger belt போடவில்லை என்றால் இந்த light எரியும். Beep sound-உம் வரும்.<br><br>
+            India-ல் seat belt fine: ₹1,000. ஆனால் accident-ல் belt இல்லாம fatality chance 40x அதிகம். Belt போடுவது உன் உயிரை காக்கும்.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- YELLOW SECTION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot yellow"></div>
+      <div>
+        <div class="section-title-en">YELLOW / AMBER LIGHTS</div>
+        <div class="section-title-ta">விரைவில் கவனிக்கணும் — Service Soon</div>
+      </div>
+      <div class="section-urgency urgency-yellow">CAUTION</div>
+    </div>
+    <div class="lights-grid">
+
+      <div class="light-card yellow" onclick="toggle(this)">
+        <div class="light-icon yellow">⚙️</div>
+        <div class="card-body">
+          <div class="card-name-en">Check Engine (MIL)</div>
+          <div class="card-name-ta">Engine பிரச்னை சமிக்ஞை</div>
+          <div class="card-action">OBD scan பண்ணி காரணம் தெரிஞ்சுக்கோ</div>
+          <div class="card-location">Center cluster — most prominent</div>
+          <div class="card-detail">
+            Engine shape icon. 100+ வித காரணங்கள் இருக்கு — loose fuel cap முதல் serious engine misfire வரை.<br><br>
+            Blinking = serious, உடனே நிறுத்து. Steady = தொடர்ந்து ஓட்டலாம் ஆனால் garage போ. OBD scanner ₹500-ல் கிடைக்கும் — காரணம் exact-ஆ தெரியும்.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card yellow" onclick="toggle(this)">
+        <div class="light-icon yellow">🔘</div>
+        <div class="card-body">
+          <div class="card-name-en">TPMS — Tyre Pressure</div>
+          <div class="card-name-ta">டயர் காற்று அழுத்தம் குறைஞ்சுது</div>
+          <div class="card-action">எந்த tyre என்று check பண்ணு</div>
+          <div class="card-location">Center cluster</div>
+          <div class="card-detail">
+            Flat tyre உள்ளே ! symbol. நான்கு tyre-லும் pressure check பண்ணு. Correct pressure: 30–35 PSI (car manual பார்).<br><br>
+            குறைந்த pressure-ல் ஓட்டினால்: fuel consumption அதிகம், tyre wear fast, blowout risk அதிகம்.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card yellow" onclick="toggle(this)">
+        <div class="light-icon yellow">🅰️</div>
+        <div class="card-body">
+          <div class="card-name-en">ABS Warning</div>
+          <div class="card-name-ta">Anti-lock Brake System பிரச்னை</div>
+          <div class="card-action">Garage போ, normal brake works</div>
+          <div class="card-location">Center cluster</div>
+          <div class="card-detail">
+            "ABS" என்று letters காட்டும். Normal brake இன்னும் வேலை செய்யும் — பயப்படாதே. ஆனால் emergency braking-ல் wheel lock-up ஆகலாம்.<br><br>
+            Cause: ABS sensor dirty/damaged. Garage-ல் clean பண்ணினாலே சரியாகலாம். Cost: ₹500–₹3,000.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card yellow" onclick="toggle(this)">
+        <div class="light-icon yellow">🎈</div>
+        <div class="card-body">
+          <div class="card-name-en">Airbag / SRS Warning</div>
+          <div class="card-name-ta">Airbag system பிரச்னை</div>
+          <div class="card-action">உடனே service center போ</div>
+          <div class="card-location">Center cluster</div>
+          <div class="card-detail">
+            Person with balloon (airbag) symbol. இந்த light எரிஞ்சா — accident நடந்தாலும் airbag deploy ஆகாமல் போகலாம். மிகவும் serious.<br><br>
+            Common cause: seat connector loose, airbag clock spring damage. Authorized service center மட்டுமே fix பண்ண வேண்டும்.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card yellow" onclick="toggle(this)">
+        <div class="light-icon yellow">🔧</div>
+        <div class="card-body">
+          <div class="card-name-en">Service Due</div>
+          <div class="card-name-ta">Service செய்ய நேரம் ஆச்சு</div>
+          <div class="card-action">Oil change / periodic service book பண்ணு</div>
+          <div class="card-location">Center / MID display</div>
+          <div class="card-detail">
+            Spanner (wrench) symbol அல்லது "Service Due" text. ஒவ்வொரு 5,000–10,000 km-க்கும் oil change பண்ணணும்.<br><br>
+            Ignore பண்ணாதே — dirty oil engine wear அதிகம் பண்ணும். Long term-ல் costly repair வரும்.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card yellow" onclick="toggle(this)">
+        <div class="light-icon yellow">⛽</div>
+        <div class="card-body">
+          <div class="card-name-en">Low Fuel Warning</div>
+          <div class="card-name-ta">Petrol குறைஞ்சுது</div>
+          <div class="card-action">~50 km மட்டுமே மீதம்</div>
+          <div class="card-location">Right side — Fuel gauge area</div>
+          <div class="card-detail">
+            Petrol pump icon எரியும். Reserve-ல் ~4–6 litres மட்டுமே இருக்கு. City traffic-ல் ~40–50 km போகலாம்.<br><br>
+            Tip: Arrow direction பார்த்தா உன் car-ல் fuel cap எந்த side-ல் இருக்கு என்று தெரியும் — petrol bunk-ல் சரியான side-ல் நிறுத்தலாம்!
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GREEN/BLUE SECTION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot green"></div>
+      <div>
+        <div class="section-title-en">GREEN & BLUE LIGHTS</div>
+        <div class="section-title-ta">பயப்பட வேண்டாம் — Feature ON indicator</div>
+      </div>
+      <div class="section-urgency urgency-green">NORMAL</div>
+    </div>
+    <div class="lights-grid">
+
+      <div class="light-card green" onclick="toggle(this)">
+        <div class="light-icon green">💡</div>
+        <div class="card-body">
+          <div class="card-name-en">High Beam (Blue)</div>
+          <div class="card-name-ta">Full light ON ஆகி இருக்கு</div>
+          <div class="card-action">Oncoming cars-க்கு dim பண்ணு</div>
+          <div class="card-location">Left cluster</div>
+          <div class="card-detail">
+            Blue headlight icon with lines. High beam ON என்று காட்டுது. Oncoming vehicle வரும்போது dim (low beam) பண்ணாவிட்டால் — accident ஆகலாம், fine ₹1,000 வரும்.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card green" onclick="toggle(this)">
+        <div class="light-icon green">↩️</div>
+        <div class="card-body">
+          <div class="card-name-en">Turn Signal Indicator</div>
+          <div class="card-name-ta">Indicator ON ஆகி இருக்கு</div>
+          <div class="card-action">Turn முடிஞ்சதும் OFF ஆகணும்</div>
+          <div class="card-location">Left cluster — flashing</div>
+          <div class="card-detail">
+            Green arrow flashing. Left arrow = left indicator, Right arrow = right indicator. Turn முடிஞ்சதும் auto-cancel ஆகலை என்றால் manually cancel பண்ணு. Hazard = இரண்டும் ஒரே நேரத்தில் flash ஆகும்.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card green" onclick="toggle(this)">
+        <div class="light-icon green">🛞</div>
+        <div class="card-body">
+          <div class="card-name-en">Traction Control Active</div>
+          <div class="card-name-ta">Traction Control வேலை செய்யுது</div>
+          <div class="card-action">Slippery road — system helping you</div>
+          <div class="card-location">Center cluster</div>
+          <div class="card-detail">
+            Car with wavy lines below. Wet road அல்லது loose surface-ல் wheel spin ஆகும்போது system automatically brake/power reduce பண்ணும். ஒரு second flash = normal. Steady = system OFF பண்ணியிருக்கே.
+          </div>
+        </div>
+      </div>
+
+      <div class="light-card blue" onclick="toggle(this)">
+        <div class="light-icon blue">🚗</div>
+        <div class="card-body">
+          <div class="card-name-en">Cruise Control</div>
+          <div class="card-name-ta">Cruise Control ON</div>
+          <div class="card-action">Set speed-ல் auto drive</div>
+          <div class="card-location">Center cluster / MID</div>
+          <div class="card-detail">
+            Speedometer with arrow symbol. Highway-ல் constant speed maintain பண்ண உதவுது. Brake அல்லது clutch (manual) பண்ணினால் cancel ஆகும். City traffic-ல் use பண்ணாதே.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Share Section -->
+  <div class="share-section">
+    <div class="share-title">
+      <span>🚗</span>
+      <div>
+        <div class="share-title-en">Share with your friends & family</div>
+        <div class="share-title-ta">உங்கள் நண்பர்களுக்கும் இதை share பண்ணுங்கள் — ஒருவேளை அவர்களுக்கு உயிரை காப்பாற்றலாம்!</div>
+      </div>
+    </div>
+    <div class="share-buttons">
+      <a class="share-btn whatsapp" onclick="shareToWhatsApp()" href="#">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a class="share-btn facebook" onclick="shareToFacebook()" href="#">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <a class="share-btn twitter" onclick="shareToTwitter()" href="#">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X (Twitter)
+      </a>
+      <a class="share-btn telegram" onclick="shareToTelegram()" href="#">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Telegram
+      </a>
+      <a class="share-btn instagram" onclick="shareToInstagram()" href="#">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        Instagram
+      </a>
+    </div>
+    <div class="share-note">📌 Save பண்ணி வை — எப்போதாவது dashboard light வந்தா உடனே check பண்ணலாம்!</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-brand">KAARKALVI</div>
+    <div>கார் கல்வி · Tamil Car Education · தமிழ் கார் வழிகாட்டி</div>
+  </div>
+
+</div>
+
+<script>
+  function toggle(card) {
+    const wasExpanded = card.classList.contains('expanded');
+    document.querySelectorAll('.light-card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!wasExpanded) card.classList.add('expanded');
+  }
+
+  const shareURL = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent('🚗 உங்கள் காரின் Dashboard Warning Lights எல்லாம் தமிழில் — KaarKalvi! இதை படிச்சா accident தவிர்க்கலாம். உன் நண்பர்களுக்கும் share பண்ணு 👇');
+
+  function shareToWhatsApp() {
+    window.open('https://wa.me/?text=' + shareText + '%0A' + shareURL, '_blank');
+  }
+
+  function shareToFacebook() {
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL, '_blank');
+  }
+
+  function shareToTwitter() {
+    window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareURL, '_blank');
+  }
+
+  function shareToTelegram() {
+    window.open('https://t.me/share/url?url=' + shareURL + '&text=' + shareText, '_blank');
+  }
+
+  function shareToInstagram() {
+    // Instagram doesn't support direct URL sharing — copy link instead
+    navigator.clipboard.writeText(decodeURIComponent(shareURL)).then(() => {
+      alert('✅ Link copied!\n\nInstagram direct share support இல்லை.\nஉங்கள் Instagram Story / Bio-ல் paste பண்ணுங்கள்! 📋');
+    }).catch(() => {
+      prompt('இந்த link-ஐ copy பண்ணி Instagram-ல் paste பண்ணுங்கள்:', window.location.href);
+    });
+  }
+</script>
+</body>
+</html>
