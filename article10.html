@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Car Engine Works Tamil | கார் என்ஜின் எப்படி வேலை செய்யும் | KaarKalvi</title>
+<meta name="description" content="Car engine எப்படி வேலை செய்யும்? 4-stroke cycle, engine parts தமிழில் எளிமையாக விளக்கம் | KaarKalvi">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;
+  --border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;
+  --muted:#8a6a50;--accent:#c47820;
+  --red:#c0392b;--green:#1a7a3c;--blue:#1a5fa0;--orange:#d4560a;
+  --fire:#e63946;--intake:#4895ef;--compress:#f4a100;--exhaust:#7f8c8d;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:#2c1a0e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.2);}
+.nav-brand{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.nav-sub{font-size:10px;color:#8a6a50;}
+.nav-home{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;color:#c0a880;text-decoration:none;padding:6px 12px;border:1px solid rgba(180,140,100,0.3);border-radius:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a0800,#4a1800,#c47820);padding:40px 20px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'⚙️';position:absolute;font-size:200px;opacity:.05;top:-20px;right:-20px;animation:spin 20s linear infinite;}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.hero-tag{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:3px;color:#fff5;margin-bottom:10px;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,6vw,44px);font-weight:800;color:#fff;margin-bottom:8px;line-height:1.1;}
+.hero-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:#ffe0a0;margin-bottom:14px;}
+.hero-meta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:12px;color:#ffcc60;}
+
+/* MAIN */
+.container{max-width:760px;margin:0 auto;padding:28px 16px;}
+.intro-box{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;margin-bottom:24px;font-size:14px;line-height:1.8;color:var(--brown2);}
+
+/* SECTION */
+.sec{margin:28px 0 14px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.sec-badge{padding:4px 12px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;}
+.sec-badge.amber{background:#fff8e8;color:var(--accent);border:1px solid rgba(196,120,32,0.3);}
+.sec-badge.red{background:#fff0ee;color:var(--red);border:1px solid rgba(192,57,43,0.3);}
+.sec-badge.blue{background:#f0f4ff;color:var(--blue);border:1px solid rgba(26,95,160,0.3);}
+.sec-badge.green{background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,0.3);}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;}
+.sec-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+
+/* ENGINE ANALOGY */
+.analogy-box{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:20px;}
+.analogy-title{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:var(--brown);margin-bottom:14px;}
+.analogy-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:480px){.analogy-grid{grid-template-columns:1fr;}}
+.analogy-item{background:var(--cream3);border:1px solid var(--border);border-radius:10px;padding:12px;display:flex;gap:10px;align-items:flex-start;}
+.analogy-icon{font-size:26px;flex-shrink:0;}
+.analogy-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:2px;}
+.analogy-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.5;}
+
+/* 4-STROKE ANIMATED VISUAL */
+.stroke-section{background:#0d0a06;border-radius:16px;padding:24px 20px;margin-bottom:20px;}
+.stroke-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:18px;letter-spacing:1px;text-align:center;}
+.strokes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+@media(max-width:500px){.strokes-grid{grid-template-columns:1fr;}}
+
+.stroke-card{background:rgba(255,255,255,0.04);border-radius:12px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.08);}
+.stroke-card:nth-child(1){border-top:3px solid var(--intake);}
+.stroke-card:nth-child(2){border-top:3px solid var(--compress);}
+.stroke-card:nth-child(3){border-top:3px solid var(--fire);}
+.stroke-card:nth-child(4){border-top:3px solid var(--exhaust);}
+
+.stroke-num{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;margin-bottom:8px;}
+.stroke-card:nth-child(1) .stroke-num{color:var(--intake);}
+.stroke-card:nth-child(2) .stroke-num{color:var(--compress);}
+.stroke-card:nth-child(3) .stroke-num{color:var(--fire);}
+.stroke-card:nth-child(4) .stroke-num{color:var(--exhaust);}
+
+/* Animated Piston SVG per stroke */
+.piston-wrap{margin:0 auto 10px;}
+
+.stroke-name{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:#fff;margin-bottom:3px;}
+.stroke-tamil{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;margin-bottom:8px;}
+.stroke-card:nth-child(1) .stroke-tamil{color:var(--intake);}
+.stroke-card:nth-child(2) .stroke-tamil{color:var(--compress);}
+.stroke-card:nth-child(3) .stroke-tamil{color:var(--fire);}
+.stroke-card:nth-child(4) .stroke-tamil{color:var(--exhaust);}
+.stroke-desc{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#b0a090;line-height:1.6;}
+
+/* PISTON ANIMATIONS */
+@keyframes piston-down{0%,100%{transform:translateY(0);}50%{transform:translateY(16px);}}
+@keyframes piston-up{0%,100%{transform:translateY(16px);}50%{transform:translateY(0);}}
+@keyframes piston-down-slow{0%{transform:translateY(0);}100%{transform:translateY(16px);}}
+@keyframes explosion{0%,100%{opacity:0;}30%,70%{opacity:1;}}
+@keyframes exhaust-puff{0%{opacity:0;transform:translateY(0);}50%{opacity:.8;}100%{opacity:0;transform:translateY(-12px);}}
+
+.piston-anim-down{animation:piston-down 1.5s ease-in-out infinite;}
+.piston-anim-up{animation:piston-up 1.5s ease-in-out infinite;}
+.explosion-anim{animation:explosion 1.5s ease-in-out infinite;}
+.exhaust-anim{animation:exhaust-puff 1.5s ease-in-out infinite;}
+
+/* ENGINE PARTS */
+.parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:16px;}
+.part-card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;cursor:pointer;transition:all .2s;}
+.part-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(120,80,40,0.1);}
+.part-card.active{background:var(--cream3);border-color:var(--accent);}
+.part-icon{font-size:30px;margin-bottom:6px;}
+.part-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:2px;}
+.part-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--muted);}
+
+/* PARTS DETAIL PANEL */
+.part-panel{background:var(--cream2);border:1px solid var(--accent);border-radius:12px;padding:16px;margin-bottom:16px;display:none;}
+.part-panel.show{display:block;}
+.pp-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.pp-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.7;}
+
+/* PETROL vs DIESEL ENGINE */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+@media(max-width:480px){.compare-grid{grid-template-columns:1fr;}}
+.cmp-box{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:16px;}
+.cmp-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.cmp-item{display:flex;gap:8px;margin-bottom:6px;font-size:12px;color:var(--brown2);align-items:flex-start;line-height:1.5;}
+
+/* CYLINDER COUNT */
+.cyl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:16px;}
+.cyl-card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;}
+.cyl-cylinders{display:flex;gap:4px;justify-content:center;margin:8px 0;}
+.cyl-dot{width:12px;height:20px;border-radius:3px;background:var(--accent);opacity:.8;}
+.cyl-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:2px;}
+.cyl-cars{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--muted);}
+.cyl-power{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--accent);}
+
+/* ENGINE SOUNDS */
+.sound-list{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.sound-item{background:var(--cream2);border:1px solid var(--border);border-radius:10px;padding:13px 15px;display:flex;align-items:flex-start;gap:12px;}
+.sound-icon{font-size:24px;flex-shrink:0;}
+.sound-name{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--brown);margin-bottom:2px;}
+.sound-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+.sound-action{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;margin-top:4px;}
+.sound-action.danger{color:var(--red);}
+.sound-action.warn{color:var(--orange);}
+.sound-action.ok{color:var(--green);}
+
+/* EXPANDABLE CARD */
+.card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.card-hdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;}
+.card-ico{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;background:var(--cream3);}
+.card-en{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;}
+.card-ta{font-size:12px;color:var(--muted);margin-bottom:2px;}
+.card-sum{font-size:12px;color:var(--brown2);}
+.card-arr{margin-left:auto;font-size:16px;color:var(--muted);transition:transform .2s;flex-shrink:0;}
+.card.open .card-arr{transform:rotate(180deg);}
+.card-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border);}
+.card.open .card-body{display:block;}
+.rule-list{margin-top:12px;display:flex;flex-direction:column;gap:7px;}
+.rule-item{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--brown2);line-height:1.5;}
+.tip-box{background:#f0fff4;border-left:3px solid var(--green);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--green);}
+.danger-box{background:#fff0ee;border-left:3px solid var(--red);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--red);}
+
+/* CONC */
+.conc{background:linear-gradient(135deg,#1a0800,#2c1a0e);color:#fff;border-radius:14px;padding:24px 20px;margin-top:28px;text-align:center;}
+.conc h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;margin-bottom:14px;color:var(--accent);}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+.pill{padding:7px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;background:rgba(196,120,32,0.18);color:#ffcc60;}
+.conc p{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:#c0a880;line-height:1.7;}
+
+/* SHARE */
+.nxt{margin-top:20px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxt-ico{font-size:26px;flex-shrink:0;}
+.nxt-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxt-en{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxt-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxt-arr{margin-left:auto;font-size:20px;color:var(--accent);}
+.share-wrap{margin-top:16px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.share-h{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:3px;}
+.share-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.share-btns{display:flex;flex-wrap:wrap;gap:7px;}
+.sb{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sb:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+footer{text-align:center;padding:24px 20px;border-top:1px solid var(--border);margin-top:14px;}
+.fb2{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--accent);letter-spacing:3px;}
+.fs{font-size:12px;color:var(--muted);margin-top:3px;}
+.fl2{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.fl2 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:999;transition:width .1s;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+<nav>
+  <div><a href="index.html" class="nav-brand">KAARKALVI</a><div class="nav-sub">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nav-home">← Home</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Article 10 · Engine Guide</div>
+  <h1>⚙️ How Car Engine Works</h1>
+  <div class="hero-ta">கார் என்ஜின் எப்படி வேலை செய்யும்? — தமிழில் எளிமையான விளக்கம்</div>
+  <div class="hero-meta"><span>📖 7 min read</span><span>⚙️ 4-Stroke cycle</span><span>🔧 Engine parts</span><span>🔊 Engine sounds</span></div>
+</div>
+
+<div class="container">
+  <div class="intro-box">
+    Petrol ஒரு small spark-உடன் இணைந்தால் — பெரிய அளவில் energy release ஆகும். <strong>இந்த energy-ஐ wheels-க்கு convert பண்றதே engine-ஓட வேலை.</strong> இதை புரிஞ்சுக்கா — dashboard light வந்தாலும், engine sound மாறினாலும் என்ன ஆகிறது என்று தெரியும்.
+  </div>
+
+  <!-- ANALOGY -->
+  <div class="sec">
+    <div class="sec-badge amber">🧠 EASY ANALOGY</div>
+    <div><div class="sec-title">Engine = இதுபோல் நினைத்துக்கொள்ளுங்கள்</div><div class="sec-ta">Technical terms கஷ்டமாக இருந்தால் — இந்த உவமைகள் உதவும்</div></div>
+  </div>
+
+  <div class="analogy-box">
+    <div class="analogy-title">Engine parts — Daily life comparison</div>
+    <div class="analogy-grid">
+      <div class="analogy-item">
+        <div class="analogy-icon">🫁</div>
+        <div>
+          <div class="analogy-name">Cylinder = நுரையீரல்</div>
+          <div class="analogy-ta">காற்றை உள்ளே எடுத்து, compress பண்ணி, வெளியே விடும். Engine-ல் air+fuel இப்படியே.</div>
+        </div>
+      </div>
+      <div class="analogy-item">
+        <div class="analogy-icon">🏃</div>
+        <div>
+          <div class="analogy-name">Piston = தண்டு ஓட்டுபவர்</div>
+          <div class="analogy-ta">Cylinder-க்குள் மேலும் கீழும் ஓடும். இந்த motion-ஐ crankshaft rotation-ஆக convert பண்ணும்.</div>
+        </div>
+      </div>
+      <div class="analogy-item">
+        <div class="analogy-icon">🔄</div>
+        <div>
+          <div class="analogy-name">Crankshaft = Cycle Pedal axle</div>
+          <div class="analogy-ta">Piston-ஓட up-down motion-ஐ rotation-ஆக மாற்றும். Cycle pedal-ஐ மிதிக்கும்போது wheel சுற்றுவது போல்.</div>
+        </div>
+      </div>
+      <div class="analogy-item">
+        <div class="analogy-icon">⚡</div>
+        <div>
+          <div class="analogy-name">Spark Plug = Lighter</div>
+          <div class="analogy-ta">Compressed air+fuel mixture-ஐ ignite பண்ணும். Gas stove lighter போல் — correct time-ல் spark கொடுக்கும்.</div>
+        </div>
+      </div>
+      <div class="analogy-item">
+        <div class="analogy-icon">🚪</div>
+        <div>
+          <div class="analogy-name">Valves = Door</div>
+          <div class="analogy-ta">Intake valve = air+fuel உள்ளே வர திறக்கும். Exhaust valve = waste gas வெளியே போக திறக்கும்.</div>
+        </div>
+      </div>
+      <div class="analogy-item">
+        <div class="analogy-icon">🫀</div>
+        <div>
+          <div class="analogy-name">Engine = Heart</div>
+          <div class="analogy-ta">Car-ஓட heart. தொடர்ந்து beat பண்றது — ஒவ்வொரு minute-லும் 600–6000 times ஒவ்வொரு cylinder fire ஆகும்!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4-STROKE ANIMATED -->
+  <div class="sec">
+    <div class="sec-badge red">🔥 4-STROKE</div>
+    <div><div class="sec-title">4-Stroke Engine Cycle</div><div class="sec-ta">ஒவ்வொரு stroke-உம் animated-ஆக பாருங்கள்</div></div>
+  </div>
+
+  <div class="stroke-section">
+    <div class="stroke-title">⚙️ 4-STROKE CYCLE — ENGINE எப்படி வேலை செய்யும்?</div>
+    <div class="strokes-grid">
+
+      <!-- STROKE 1: INTAKE -->
+      <div class="stroke-card">
+        <div class="stroke-num">STROKE 1 — INTAKE</div>
+        <!-- Animated Piston SVG - going down, valve open, fuel rushing in -->
+        <svg class="piston-wrap" width="80" height="110" viewBox="0 0 80 110">
+          <!-- Cylinder walls -->
+          <rect x="15" y="5" width="50" height="80" rx="4" fill="#1a1208" stroke="#4a3020" stroke-width="2"/>
+          <!-- Intake valve open -->
+          <rect x="20" y="5" width="12" height="4" rx="2" fill="#4895ef"/>
+          <text x="26" y="3" text-anchor="middle" fill="#4895ef" font-size="6" font-family="Barlow Condensed">IN</text>
+          <!-- Exhaust valve closed -->
+          <rect x="48" y="5" width="12" height="4" rx="2" fill="#555"/>
+          <text x="54" y="3" text-anchor="middle" fill="#555" font-size="6" font-family="Barlow Condensed">EX</text>
+          <!-- Fuel/air particles going in -->
+          <circle cx="30" cy="25" r="3" fill="#4895ef" opacity=".8"><animate attributeName="cy" values="10;30;10" dur="1.5s" repeatCount="indefinite"/></circle>
+          <circle cx="50" cy="20" r="2" fill="#4895ef" opacity=".6"><animate attributeName="cy" values="5;25;5" dur="1.5s" begin=".3s" repeatCount="indefinite"/></circle>
+          <circle cx="40" cy="18" r="2.5" fill="#4895ef" opacity=".7"><animate attributeName="cy" values="8;22;8" dur="1.5s" begin=".6s" repeatCount="indefinite"/></circle>
+          <!-- Piston going DOWN -->
+          <g class="piston-anim-down">
+            <rect x="18" y="55" width="44" height="14" rx="3" fill="#c47820"/>
+            <rect x="35" y="69" width="10" height="12" rx="2" fill="#8a5020"/>
+          </g>
+          <!-- Crankshaft hint -->
+          <circle cx="40" cy="95" r="8" fill="none" stroke="#4a3020" stroke-width="2"/>
+          <line x1="40" y1="87" x2="40" y2="95" stroke="#c47820" stroke-width="2"/>
+        </svg>
+        <div class="stroke-name">INTAKE</div>
+        <div class="stroke-tamil">உள்ளிழுப்பு</div>
+        <div class="stroke-desc">Piston கீழே போகும். Intake valve திறக்கும். Air + Fuel உள்ளே வரும். Cylinder நிரம்பும்.</div>
+      </div>
+
+      <!-- STROKE 2: COMPRESSION -->
+      <div class="stroke-card">
+        <div class="stroke-num">STROKE 2 — COMPRESSION</div>
+        <svg class="piston-wrap" width="80" height="110" viewBox="0 0 80 110">
+          <!-- Cylinder walls -->
+          <rect x="15" y="5" width="50" height="80" rx="4" fill="#1a1208" stroke="#4a3020" stroke-width="2"/>
+          <!-- Both valves closed -->
+          <rect x="20" y="5" width="12" height="4" rx="2" fill="#555"/>
+          <rect x="48" y="5" width="12" height="4" rx="2" fill="#555"/>
+          <!-- Compressed mixture (orange cloud at top) -->
+          <ellipse cx="40" cy="18" rx="18" ry="8" fill="#f4a100" opacity=".4"/>
+          <ellipse cx="40" cy="18" rx="12" ry="5" fill="#f4a100" opacity=".6"/>
+          <!-- Piston going UP -->
+          <g class="piston-anim-up">
+            <rect x="18" y="55" width="44" height="14" rx="3" fill="#c47820"/>
+            <rect x="35" y="69" width="10" height="12" rx="2" fill="#8a5020"/>
+          </g>
+          <!-- Compression arrows -->
+          <text x="40" y="32" text-anchor="middle" fill="#f4a100" font-size="10" font-family="Barlow Condensed">⬆ ⬆</text>
+          <circle cx="40" cy="95" r="8" fill="none" stroke="#4a3020" stroke-width="2"/>
+          <line x1="40" y1="87" x2="40" y2="95" stroke="#c47820" stroke-width="2"/>
+        </svg>
+        <div class="stroke-name">COMPRESSION</div>
+        <div class="stroke-tamil">அழுத்துதல்</div>
+        <div class="stroke-desc">Piston மேலே போகும். இரண்டு valves-உம் மூடும். Air+Fuel compressed ஆகும். 10x அழுத்தம்!</div>
+      </div>
+
+      <!-- STROKE 3: POWER/COMBUSTION -->
+      <div class="stroke-card">
+        <div class="stroke-num">STROKE 3 — POWER 🔥</div>
+        <svg class="piston-wrap" width="80" height="110" viewBox="0 0 80 110">
+          <!-- Cylinder walls -->
+          <rect x="15" y="5" width="50" height="80" rx="4" fill="#1a1208" stroke="#4a3020" stroke-width="2"/>
+          <!-- Both valves closed -->
+          <rect x="20" y="5" width="12" height="4" rx="2" fill="#555"/>
+          <rect x="48" y="5" width="12" height="4" rx="2" fill="#555"/>
+          <!-- Spark plug spark -->
+          <line x1="40" y1="9" x2="40" y2="14" stroke="#fff" stroke-width="1.5"/>
+          <circle cx="40" cy="10" r="2" fill="#fff"/>
+          <!-- EXPLOSION -->
+          <g class="explosion-anim">
+            <ellipse cx="40" cy="22" rx="20" ry="12" fill="#e63946" opacity=".7"/>
+            <ellipse cx="40" cy="22" rx="14" ry="8" fill="#f4a100" opacity=".8"/>
+            <ellipse cx="40" cy="22" rx="8" ry="5" fill="#fff" opacity=".6"/>
+          </g>
+          <!-- Piston going DOWN fast -->
+          <g class="piston-anim-down">
+            <rect x="18" y="55" width="44" height="14" rx="3" fill="#e63946"/>
+            <rect x="35" y="69" width="10" height="12" rx="2" fill="#a02010"/>
+          </g>
+          <!-- Power arrows -->
+          <text x="40" y="50" text-anchor="middle" fill="#e63946" font-size="12" font-family="Barlow Condensed">⬇ ⬇</text>
+          <circle cx="40" cy="95" r="8" fill="none" stroke="#4a3020" stroke-width="2"/>
+          <line x1="40" y1="87" x2="40" y2="95" stroke="#e63946" stroke-width="2"/>
+        </svg>
+        <div class="stroke-name">POWER</div>
+        <div class="stroke-tamil">சக்தி உருவாக்கம்</div>
+        <div class="stroke-desc">Spark plug ஒரு spark கொடுக்கும். BOOM! Explosion. Piston கீழே தள்ளப்படும். <strong>இதுவே car-ஐ ஓட்டும் energy!</strong></div>
+      </div>
+
+      <!-- STROKE 4: EXHAUST -->
+      <div class="stroke-card">
+        <div class="stroke-num">STROKE 4 — EXHAUST</div>
+        <svg class="piston-wrap" width="80" height="110" viewBox="0 0 80 110">
+          <!-- Cylinder walls -->
+          <rect x="15" y="5" width="50" height="80" rx="4" fill="#1a1208" stroke="#4a3020" stroke-width="2"/>
+          <!-- Intake valve closed -->
+          <rect x="20" y="5" width="12" height="4" rx="2" fill="#555"/>
+          <!-- Exhaust valve OPEN -->
+          <rect x="48" y="5" width="12" height="4" rx="2" fill="#7f8c8d"/>
+          <text x="54" y="3" text-anchor="middle" fill="#7f8c8d" font-size="6" font-family="Barlow Condensed">EX</text>
+          <!-- Exhaust gases going out -->
+          <g class="exhaust-anim">
+            <circle cx="55" cy="18" r="4" fill="#7f8c8d" opacity=".6"/>
+            <circle cx="62" cy="12" r="3" fill="#7f8c8d" opacity=".4"/>
+            <circle cx="58" cy="6" r="2" fill="#7f8c8d" opacity=".2"/>
+          </g>
+          <!-- Grey waste in cylinder -->
+          <ellipse cx="40" cy="22" rx="18" ry="8" fill="#555" opacity=".3"/>
+          <!-- Piston going UP -->
+          <g class="piston-anim-up">
+            <rect x="18" y="55" width="44" height="14" rx="3" fill="#7f8c8d"/>
+            <rect x="35" y="69" width="10" height="12" rx="2" fill="#5a6060"/>
+          </g>
+          <circle cx="40" cy="95" r="8" fill="none" stroke="#4a3020" stroke-width="2"/>
+          <line x1="40" y1="87" x2="40" y2="95" stroke="#7f8c8d" stroke-width="2"/>
+        </svg>
+        <div class="stroke-name">EXHAUST</div>
+        <div class="stroke-tamil">புகை வெளியேற்றம்</div>
+        <div class="stroke-desc">Piston மேலே போகும். Exhaust valve திறக்கும். Waste gas வெளியே போகும். Cycle மீண்டும் தொடங்கும்!</div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:14px;font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:#806040;">
+      💡 இந்த 4 strokes ஒரு second-ல் 10–50 times நடக்கும் — அதுவே RPM!
+    </div>
+  </div>
+
+  <!-- ENGINE PARTS -->
+  <div class="sec">
+    <div class="sec-badge amber">🔧 PARTS</div>
+    <div><div class="sec-title">Engine Parts — ஒவ்வொன்னும் என்ன செய்யும்?</div><div class="sec-ta">Click பண்ணி details பாருங்கள்</div></div>
+  </div>
+
+  <div class="parts-grid" id="parts-grid">
+    <div class="part-card" onclick="showPart('cylinder')"><div class="part-icon">🫙</div><div class="part-name">Cylinder</div><div class="part-ta">சிலிண்டர்</div></div>
+    <div class="part-card" onclick="showPart('piston')"><div class="part-icon">🔩</div><div class="part-name">Piston</div><div class="part-ta">பிஸ்டன்</div></div>
+    <div class="part-card" onclick="showPart('sparkplug')"><div class="part-icon">⚡</div><div class="part-name">Spark Plug</div><div class="part-ta">ஸ்பார்க் பிளக்</div></div>
+    <div class="part-card" onclick="showPart('crankshaft')"><div class="part-icon">🔄</div><div class="part-name">Crankshaft</div><div class="part-ta">கிரேங்க்ஷாஃப்ட்</div></div>
+    <div class="part-card" onclick="showPart('camshaft')"><div class="part-icon">🎡</div><div class="part-name">Camshaft</div><div class="part-ta">கேம்ஷாஃப்ட்</div></div>
+    <div class="part-card" onclick="showPart('valve')"><div class="part-icon">🚪</div><div class="part-name">Valves</div><div class="part-ta">வால்வுகள்</div></div>
+    <div class="part-card" onclick="showPart('radiator')"><div class="part-icon">🌡️</div><div class="part-name">Radiator</div><div class="part-ta">ரேடியேட்டர்</div></div>
+    <div class="part-card" onclick="showPart('oilpump')"><div class="part-icon">🛢️</div><div class="part-name">Oil Pump</div><div class="part-ta">ஆயில் பம்ப்</div></div>
+    <div class="part-card" onclick="showPart('alternator')"><div class="part-icon">🔋</div><div class="part-name">Alternator</div><div class="part-ta">ஆல்டர்னேட்டர்</div></div>
+  </div>
+
+  <div class="part-panel" id="part-panel">
+    <div class="pp-title" id="pp-title"></div>
+    <div class="pp-ta" id="pp-desc"></div>
+  </div>
+
+  <!-- PETROL vs DIESEL -->
+  <div class="sec">
+    <div class="sec-badge blue">⚡ PETROL vs DIESEL</div>
+    <div><div class="sec-title">Petrol Engine vs Diesel Engine</div><div class="sec-ta">என்ன வித்தியாசம்?</div></div>
+  </div>
+
+  <div class="compare-grid">
+    <div class="cmp-box">
+      <div class="cmp-title" style="color:var(--red);">⛽ Petrol Engine</div>
+      <div class="cmp-item"><span>⚡</span><div>Spark plug-ஓட spark-ஆல் ignition</div></div>
+      <div class="cmp-item"><span>🏎️</span><div>Higher RPM — smooth, quick acceleration</div></div>
+      <div class="cmp-item"><span>🔇</span><div>Quiet, smooth operation</div></div>
+      <div class="cmp-item"><span>💰</span><div>Lower initial cost, higher fuel cost</div></div>
+      <div class="cmp-item"><span>🌿</span><div>Less NOx emission</div></div>
+      <div class="cmp-item"><span>✅</span><div>Best for: City driving, short trips</div></div>
+    </div>
+    <div class="cmp-box">
+      <div class="cmp-title" style="color:var(--orange);">🛢️ Diesel Engine</div>
+      <div class="cmp-item"><span>🔥</span><div>Spark plug இல்லை — high compression-இல் self-ignition</div></div>
+      <div class="cmp-item"><span>💪</span><div>High torque — heavy loads இழுக்கும்</div></div>
+      <div class="cmp-item"><span>🔊</span><div>Slightly louder, but modern diesels quiet</div></div>
+      <div class="cmp-item"><span>💰</span><div>Higher initial cost, lower fuel cost</div></div>
+      <div class="cmp-item"><span>⚠️</span><div>More NOx, PM emissions</div></div>
+      <div class="cmp-item"><span>✅</span><div>Best for: Highway, 50+ km daily</div></div>
+    </div>
+  </div>
+
+  <!-- CYLINDER COUNT -->
+  <div class="sec">
+    <div class="sec-badge amber">🔢 CYLINDERS</div>
+    <div><div class="sec-title">எத்தனை Cylinders? என்ன வித்தியாசம்?</div><div class="sec-ta">Cylinders அதிகம் = Power அதிகம் = Fuel அதிகம்</div></div>
+  </div>
+
+  <div class="cyl-grid">
+    <div class="cyl-card">
+      <div class="cyl-cylinders"><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div></div>
+      <div class="cyl-name">3-Cylinder</div>
+      <div class="cyl-power">~70–100 hp</div>
+      <div class="cyl-cars">Alto, S-Presso, WagonR — Small budget cars</div>
+    </div>
+    <div class="cyl-card">
+      <div class="cyl-cylinders"><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div></div>
+      <div class="cyl-name">4-Cylinder</div>
+      <div class="cyl-power">~100–150 hp</div>
+      <div class="cyl-cars">Swift, Nexon, i20, Creta — Most common</div>
+    </div>
+    <div class="cyl-card">
+      <div class="cyl-cylinders"><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div></div>
+      <div class="cyl-name">6-Cylinder</div>
+      <div class="cyl-power">~200–300 hp</div>
+      <div class="cyl-cars">Fortuner, Endeavour — Premium SUVs</div>
+    </div>
+    <div class="cyl-card">
+      <div class="cyl-cylinders"><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div><div class="cyl-dot"></div></div>
+      <div class="cyl-name">8-Cylinder (V8)</div>
+      <div class="cyl-power">300+ hp</div>
+      <div class="cyl-cars">BMW, Mercedes AMG — Luxury/Sports</div>
+    </div>
+  </div>
+
+  <!-- ENGINE SOUNDS GUIDE -->
+  <div class="sec">
+    <div class="sec-badge red">🔊 SOUNDS</div>
+    <div><div class="sec-title">Engine Sounds — என்ன சொல்கிறது?</div><div class="sec-ta">Sound கேட்டாலே problem தெரியும்</div></div>
+  </div>
+
+  <div class="sound-list">
+    <div class="sound-item">
+      <div class="sound-icon">🔔</div>
+      <div>
+        <div class="sound-name">Knocking / Pinging Sound</div>
+        <div class="sound-ta">"டக்டக்" அல்லது "டிங்டிங்" sound — acceleration-ல் வரும்</div>
+        <div class="sound-action danger">⚠️ Wrong petrol grade அல்லது carbon buildup — garage போங்கள்</div>
+      </div>
+    </div>
+    <div class="sound-item">
+      <div class="sound-icon">🔧</div>
+      <div>
+        <div class="sound-name">Tapping / Clicking Sound</div>
+        <div class="sound-ta">Engine-லிருந்து "டப்டப்" sound — cold start-ல் வரும்</div>
+        <div class="sound-action warn">⚠️ Low oil level அல்லது valve clearance issue — oil check பண்ணுங்கள்</div>
+      </div>
+    </div>
+    <div class="sound-item">
+      <div class="sound-icon">💨</div>
+      <div>
+        <div class="sound-name">Hissing Sound</div>
+        <div class="sound-ta">"சீ..." sound — bonnet-லிருந்து வரும்</div>
+        <div class="sound-action danger">🚨 Coolant leak அல்லது vacuum hose crack — உடனே garage</div>
+      </div>
+    </div>
+    <div class="sound-item">
+      <div class="sound-icon">🌪️</div>
+      <div>
+        <div class="sound-name">Rattling Sound</div>
+        <div class="sound-ta">Loose sound — start-ல் அல்லது idle-ல் வரும்</div>
+        <div class="sound-action warn">⚠️ Timing chain loose அல்லது heat shield — mechanic காட்டுங்கள்</div>
+      </div>
+    </div>
+    <div class="sound-item">
+      <div class="sound-icon">🎵</div>
+      <div>
+        <div class="sound-name">Smooth Hum</div>
+        <div class="sound-ta">Consistent smooth sound — normal operation</div>
+        <div class="sound-action ok">✅ Engine healthy — பயப்படாதீர்கள்!</div>
+      </div>
+    </div>
+    <div class="sound-item">
+      <div class="sound-icon">💥</div>
+      <div>
+        <div class="sound-name">Backfiring</div>
+        <div class="sound-ta">"பொம்" sound — exhaust-லிருந்து அல்லது engine-லிருந்து</div>
+        <div class="sound-action danger">🚨 Ignition timing issue அல்லது fuel mixture problem — உடனே garage</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENGINE MAINTENANCE -->
+  <div class="sec">
+    <div class="sec-badge green">🛠️ MAINTENANCE</div>
+    <div><div class="sec-title">Engine நீண்ட நாள் வாழ — என்ன செய்யணும்?</div><div class="sec-ta">Simple habits = Long engine life</div></div>
+  </div>
+
+  <div class="card" id="m1">
+    <div class="card-hdr" onclick="t('m1')">
+      <div class="card-ico">🛢️</div>
+      <div style="flex:1"><div class="card-ta">Engine Oil — மிக முக்கியம்</div><div class="card-en">Regular Oil Changes</div><div class="card-sum">Oil = Engine blood. இல்லாமல் engine 5 நிமிடத்தில் seize ஆகும்</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>✅</span><div>Every 10,000 km oil change — கட்டாயம். Synthetic oil prefer பண்ணுங்கள்</div></div>
+        <div class="rule-item"><span>✅</span><div>Monthly ஒரு முறை dipstick check — level + color பாருங்கள்</div></div>
+        <div class="rule-item"><span>✅</span><div>Black oily color = change time. Light brown = still ok</div></div>
+        <div class="rule-item"><span>✅</span><div>Car manual-ல் recommend பண்ணிய grade மட்டும் போடுங்கள்</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="m2">
+    <div class="card-hdr" onclick="t('m2')">
+      <div class="card-ico">🌡️</div>
+      <div style="flex:1"><div class="card-ta">Coolant — Engine சூடாகாம வைக்கும்</div><div class="card-en">Coolant Level Check</div><div class="card-sum">Coolant இல்லாமல் engine overheat → ₹50,000+ damage</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>✅</span><div>Monthly coolant reservoir level check — MIN to MAX line-க்கு இடையே இருக்கணும்</div></div>
+        <div class="rule-item"><span>✅</span><div>Coolant color மாறினால் (brown/rusty) — flush and refill</div></div>
+        <div class="rule-item"><span>✅</span><div>Every 2 years coolant change</div></div>
+        <div class="rule-item"><span>✅</span><div>Plain water போகாதீர்கள் — antifreeze + distilled water mix மட்டும்</div></div>
+      </div>
+      <div class="danger-box">🚨 Temperature gauge red-ல் போனால் — உடனே நிறுத்துங்கள். ஓட்டினால் engine total damage!</div>
+    </div>
+  </div>
+
+  <div class="card" id="m3">
+    <div class="card-hdr" onclick="t('m3')">
+      <div class="card-ico">💨</div>
+      <div style="flex:1"><div class="card-ta">Air Filter — Engine breathing</div><div class="card-en">Air Filter & Spark Plugs</div><div class="card-sum">Clogged filter = engine struggle = more fuel + less power</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>✅</span><div>Air filter — 10,000 km-க்கு ஒரு முறை clean/replace (₹300–₹500)</div></div>
+        <div class="rule-item"><span>✅</span><div>Spark plugs — 30,000 km-க்கு ஒரு முறை replace (₹200–₹800/plug)</div></div>
+        <div class="rule-item"><span>✅</span><div>Diesel cars — glow plugs check (spark plugs இல்லை)</div></div>
+      </div>
+      <div class="tip-box">✅ Clean air filter alone = mileage 5–10% improvement. ₹300 invest → monthly ₹500 save!</div>
+    </div>
+  </div>
+
+  <div class="conc">
+    <h3>⚙️ Engine — Key Takeaways</h3>
+    <div class="pills">
+      <div class="pill">💡 4 strokes = 1 power cycle</div>
+      <div class="pill">🔥 Only power stroke = energy</div>
+      <div class="pill">🛢️ Oil change = engine life</div>
+      <div class="pill">🔊 Sound மாறினால் = garage</div>
+      <div class="pill">🌡️ Overheat = உடனே நிறுத்து</div>
+    </div>
+    <p>Car engine complex-ஆக தெரியலாம் — ஆனால் principle simple: <strong>Fuel + Spark + Air = Power.</strong> இந்த 4 strokes தொடர்ந்து நடக்கும் வரை car ஓடும். Oil level maintain பண்ணுங்கள், sounds கவனியுங்கள், overheat ஆகாம பார்த்துக்கொள்ளுங்கள் — engine 2–3 lakh km வரை நீடிக்கும்!</p>
+  </div>
+
+  <a href="index.html" class="nxt">
+    <div class="nxt-ico">🏠</div>
+    <div><div class="nxt-lbl">← Back to</div><div class="nxt-en">KaarKalvi Home</div><div class="nxt-ta">எல்லா articles-உம் இங்கே</div></div>
+    <div class="nxt-arr">→</div>
+  </a>
+
+  <div class="share-wrap">
+    <div class="share-h">⚙️ Share பண்ணுங்கள்</div>
+    <div class="share-ta">Car engine எப்படி வேலை செய்யும் என்று தெரியாத நண்பர்களுக்கு share பண்ணுங்கள்!</div>
+    <div class="share-btns">
+      <button class="sb wa" onclick="sWA()">WhatsApp</button>
+      <button class="sb fb" onclick="sFB()">Facebook</button>
+      <button class="sb tw" onclick="sTW()">X</button>
+      <button class="sb tg" onclick="sTG()">Telegram</button>
+      <button class="sb ig" onclick="sIG()">Instagram</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fb2">KAARKALVI</div>
+  <div class="fs">கார் கல்வி · Tamil Car Education</div>
+  <div class="fl2">
+    <a href="index.html">Home</a>
+    <a href="article1.html">Dashboard</a>
+    <a href="article7.html">Fuel Saving</a>
+    <a href="article8.html">CNG Guide</a>
+    <a href="article9.html">Safest Cars</a>
+    <a href="article10.html">Engine Guide</a>
+  </div>
+</footer>
+
+<script>
+// Toggle expandable cards
+function t(id){document.getElementById(id).classList.toggle('open');}
+
+// Progress bar
+window.addEventListener('scroll',()=>{
+  const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(w/h*100)+'%';
+});
+
+// Engine parts data
+const parts = {
+  cylinder:{title:'Cylinder — சிலிண்டர்',desc:'Engine-ல் உள்ள tube-like chamber. Piston இதில் up-down move ஆகும். Modern cars-ல் 3, 4, 6, 8 cylinders இருக்கும். ஒவ்வொரு cylinder-லும் 4-stroke cycle நடக்கும். அதிக cylinders = அதிக power = அதிக fuel consumption.'},
+  piston:{title:'Piston — பிஸ்டன்',desc:'Cylinder-க்குள் மேலும் கீழும் move ஆகும் metal part. Power stroke-ல் explosion இதை கீழே தள்ளும். இந்த linear motion crankshaft மூலம் rotational motion-ஆக மாறும். Piston rings — cylinder wall-உடன் seal maintain பண்ணும்.'},
+  sparkplug:{title:'Spark Plug — ஸ்பார்க் பிளக்',desc:'Petrol engines-ல் மட்டும். High-voltage electric spark கொடுக்கும் — compressed air-fuel mixture-ஐ ignite பண்ண. Correct timing-ல் spark கொடுக்கணும். Worn spark plugs = misfire = poor mileage + rough idle. 30,000 km-க்கு ஒரு முறை replace பண்ணுங்கள்.'},
+  crankshaft:{title:'Crankshaft — கிரேங்க்ஷாஃப்ட்',desc:'Piston-ஓட up-down motion-ஐ rotational motion-ஆக convert பண்ணும். Cycle pedal axle-போல் வேலை செய்யும். Crankshaft rotation = gearbox-க்கு power கொடுக்கும் → wheels-க்கு reach ஆகும். RPM = crankshaft ஒரு minute-ல் எத்தனை முறை சுற்றுகிறது.'},
+  camshaft:{title:'Camshaft — கேம்ஷாஃப்ட்',desc:'Intake மற்றும் exhaust valves-ஐ correct timing-ல் திறக்கவும் மூடவும் control பண்ணும். Crankshaft-உடன் timing belt/chain மூலம் sync ஆகியிருக்கும். Timing belt snap ஆனால் — engine major damage. Manufacturer recommend timing-ல் replace பண்ணுங்கள்.'},
+  valve:{title:'Valves — வால்வுகள்',desc:'ஒவ்வொரு cylinder-க்கும் 2 valves — Intake valve (air+fuel உள்ளே வர) மற்றும் Exhaust valve (waste gas வெளியே போக). Correct timing-ல் திறக்கும், மூடும். Valve clearance தவறானால் — tapping sound வரும், performance குறையும்.'},
+  radiator:{title:'Radiator — ரேடியேட்டர்',desc:'Engine-ஐ cool பண்ண coolant flow பண்ணும் system. Engine heat-ஐ absorb பண்ணி, radiator-ல் cool ஆகி, மீண்டும் engine-க்கு போகும். Radiator fan — extra cooling பண்ணும். Coolant level குறைந்தால் அல்லது leak ஆனால் — engine overheat ஆகும். Dashboard temperature light வரும்.'},
+  oilpump:{title:'Oil Pump — ஆயில் பம்ப்',desc:'Engine oil-ஐ எல்லா moving parts-க்கும் pump பண்ணும். Oil pressure maintain பண்ணும். Oil pressure light red-ல் எரிந்தால் — pump fail அல்லது oil குறைவு. உடனே engine off பண்ணி oil check பண்ணுங்கள். Ignore பண்ணினால் 5 நிமிடத்தில் engine seize ஆகும் — ₹50,000+ damage.'},
+  alternator:{title:'Alternator — ஆல்டர்னேட்டர்',desc:'Engine running-ல் electricity generate பண்ணி battery-ஐ charge பண்ணும். AC, headlights, phone charger எல்லாவற்றிற்கும் power கொடுக்கும். Alternator fail ஆனால் — battery light red-ல் எரியும். Battery மட்டும் 20–40 நிமிடம் power கொடுக்கும். உடனே garage போங்கள்.'}
+};
+
+function showPart(key){
+  const d=parts[key];
+  document.getElementById('pp-title').textContent=d.title;
+  document.getElementById('pp-desc').textContent=d.desc;
+  const panel=document.getElementById('part-panel');
+  panel.classList.add('show');
+  // Highlight active card
+  document.querySelectorAll('.part-card').forEach(c=>c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+// Share
+const u=encodeURIComponent(location.href),tx=encodeURIComponent('⚙️ Car Engine எப்படி வேலை செய்யும்? 4-stroke cycle தமிழில் — KaarKalvi! 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+</body>
+</html>

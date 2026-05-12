@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack வைத்து டயர் மாற்றுவது எப்படி? | KaarKalvi</title>
+<meta name="description" content="ஜாக்கி பயன்படுத்தி கார் டயர் மாற்றுவது எப்படி? 10 steps தமிழில் — KaarKalvi">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;
+  --border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;
+  --muted:#8a6a50;--accent:#c47820;--accent2:#f4a100;
+  --red:#c0392b;--green:#1a7a3c;--blue:#1a5fa0;--dark:#1a0e06;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+
+/* NAV */
+nav{background:var(--dark);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,0.3);}
+.nav-brand{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.nav-sub{font-size:10px;color:#8a6a50;}
+.nav-home{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#c0a880;text-decoration:none;padding:6px 14px;border:1px solid rgba(180,140,100,0.35);border-radius:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#0a0602 0%,#1a0e06 40%,#2c1a0a 70%,#c47820 150%);padding:44px 20px 36px;text-align:center;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 20%,rgba(244,161,0,0.08),transparent);}
+.hero-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(244,161,0,0.6);margin-bottom:10px;position:relative;z-index:1;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,7vw,52px);font-weight:900;color:#fff;line-height:1;margin-bottom:8px;position:relative;z-index:1;letter-spacing:1px;}
+.hero h1 span{color:var(--accent2);}
+.hero-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(15px,3.5vw,22px);color:rgba(255,220,150,0.85);margin-bottom:18px;position:relative;z-index:1;}
+.hero-meta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:12px;color:rgba(255,200,100,0.7);position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:rgba(244,161,0,0.15);border:1px solid rgba(244,161,0,0.3);border-radius:50px;padding:8px 20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--accent2);position:relative;z-index:1;}
+
+/* MAIN */
+.container{max-width:780px;margin:0 auto;padding:32px 16px;}
+
+/* LIFT FORMULA BANNER */
+.lift-banner{background:var(--dark);border-radius:16px;padding:22px 24px;margin-bottom:28px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+.lift-item{display:flex;align-items:center;gap:10px;background:rgba(244,161,0,0.08);border:1px solid rgba(244,161,0,0.2);border-radius:12px;padding:12px 16px;min-width:140px;}
+.lift-letter{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:var(--accent2);width:32px;flex-shrink:0;}
+.lift-word{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:.5px;}
+.lift-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#a08060;margin-top:1px;}
+
+/* INTRO */
+.intro-box{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;margin-bottom:28px;font-size:14px;line-height:1.8;color:var(--brown2);}
+
+/* TOOLS SECTION */
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-bottom:28px;}
+.tool-item{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px 12px;text-align:center;transition:all .2s;}
+.tool-item:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(120,80,40,0.1);}
+.tool-icon{font-size:28px;margin-bottom:6px;}
+.tool-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);}
+.tool-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--muted);margin-top:2px;}
+.tool-must{display:inline-block;margin-top:4px;padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;}
+.must-yes{background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,0.2);}
+.must-opt{background:var(--cream3);color:var(--muted);border:1px solid var(--border);}
+
+/* SECTION */
+.sec{margin:32px 0 16px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.sec-badge{padding:4px 12px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;background:var(--cream3);color:var(--accent);border:1px solid rgba(196,120,32,0.3);}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;}
+.sec-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+
+/* STEPS */
+.steps-list{display:flex;flex-direction:column;gap:14px;margin-bottom:14px;}
+
+.step-card{background:var(--cream2);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .2s;cursor:pointer;}
+.step-card:hover{box-shadow:0 6px 24px rgba(120,80,40,0.1);}
+
+.step-hdr{display:flex;align-items:flex-start;gap:0;padding:0;}
+.step-num-bar{background:var(--dark);width:56px;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;padding:12px 0;}
+.step-num{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--accent2);line-height:1;}
+.step-of{font-family:'Barlow Condensed',sans-serif;font-size:9px;color:rgba(244,161,0,0.5);letter-spacing:1px;margin-top:2px;}
+
+.step-content{flex:1;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;}
+.step-svg-wrap{flex-shrink:0;width:60px;height:60px;}
+.step-text{flex:1;}
+.step-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:2px;}
+.step-subtitle{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:6px;}
+.step-summary{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.5;}
+.step-arrow{font-size:16px;color:var(--muted);margin-left:auto;flex-shrink:0;align-self:flex-start;margin-top:4px;transition:transform .2s;}
+.step-card.open .step-arrow{transform:rotate(180deg);}
+
+.step-body{display:none;padding:0 16px 16px 16px;border-top:1px solid var(--border);}
+.step-card.open .step-body{display:block;}
+.step-details{display:flex;flex-direction:column;gap:7px;margin-top:12px;}
+.step-detail{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--brown2);line-height:1.6;}
+.step-dot{width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+
+.warn-tag{display:flex;align-items:flex-start;gap:8px;background:#fff0ee;border-left:3px solid var(--red);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--red);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.tip-tag{display:flex;align-items:flex-start;gap:8px;background:#f0fff4;border-left:3px solid var(--green);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--green);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.info-tag{display:flex;align-items:flex-start;gap:8px;background:var(--cream3);border-left:3px solid var(--accent);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--brown2);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+
+/* COLOR BANDS PER STEP */
+.step-card:nth-child(1) .step-num-bar{background:#1a0e06;}
+.step-card:nth-child(2) .step-num-bar{background:#1a1206;}
+.step-card:nth-child(3) .step-num-bar{background:#0e1a06;}
+.step-card:nth-child(4) .step-num-bar{background:#061a18;}
+.step-card:nth-child(5) .step-num-bar{background:#06081a;}
+.step-card:nth-child(6) .step-num-bar{background:#1a0618;}
+.step-card:nth-child(7) .step-num-bar{background:#1a0a06;}
+.step-card:nth-child(8) .step-num-bar{background:#061218;}
+.step-card:nth-child(9) .step-num-bar{background:#0e1a0a;}
+.step-card:nth-child(10) .step-num-bar{background:#1a0e06;}
+
+/* SAFETY SECTION */
+.safety-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:16px;}
+.safety-item{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px;}
+.safety-icon{font-size:26px;margin-bottom:6px;}
+.safety-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--brown);margin-bottom:4px;}
+.safety-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+
+/* JACK POINTS DIAGRAM */
+.jack-diagram{background:var(--dark);border-radius:14px;padding:20px;margin-bottom:16px;}
+.jd-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--accent2);margin-bottom:14px;letter-spacing:1px;}
+
+/* LUG NUT PATTERN */
+.pattern-box{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px;text-align:center;}
+.pattern-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.pattern-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:14px;}
+
+/* INFOGRAPHIC EMBED */
+.infographic-box{background:var(--cream2);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:24px;}
+.infographic-title{background:var(--dark);padding:14px 18px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--accent2);letter-spacing:1px;}
+.infographic-img{width:100%;height:auto;display:block;}
+
+/* CONCLUSION */
+.conc{background:linear-gradient(135deg,var(--dark),#2c1a0a);color:#fff;border-radius:16px;padding:26px 22px;margin-top:32px;text-align:center;}
+.conc h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;margin-bottom:14px;color:var(--accent2);}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+.pill{padding:7px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;background:rgba(244,161,0,0.15);color:var(--accent2);}
+.conc p{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:#c0a070;line-height:1.7;}
+
+/* SHARE */
+.share-wrap{margin-top:20px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.share-h{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:3px;}
+.share-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.share-btns{display:flex;flex-wrap:wrap;gap:7px;}
+.sb{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sb:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+
+.nxt{margin-top:16px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxt-ico{font-size:26px;flex-shrink:0;}
+.nxt-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxt-en{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxt-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxt-arr{margin-left:auto;font-size:20px;color:var(--accent);}
+
+footer{text-align:center;padding:26px 20px;border-top:1px solid var(--border);margin-top:14px;}
+.fb2{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);letter-spacing:3px;}
+.fs{font-size:12px;color:var(--muted);margin-top:3px;}
+.fl2{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.fl2 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--accent2);z-index:999;transition:width .1s;}
+
+/* FADE IN */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{animation:fadeUp .5s ease forwards;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+
+<nav>
+  <div><a href="index.html" class="nav-brand">KAARKALVI</a><div class="nav-sub">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nav-home">← Home</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Article 13 · Tyre Change Guide</div>
+  <h1>🔧 <span>JACK</span> வைத்து<br>டயர் மாற்றுவது எப்படி?</h1>
+  <div class="hero-ta">ஜாக்கி பயன்படுத்தி கார் டயர் — 10 Steps தமிழில்</div>
+  <div class="hero-meta">
+    <span>📖 6 min read</span>
+    <span>🔟 10 Steps</span>
+    <span>⚠️ Safety tips</span>
+    <span>🛞 Spare tyre</span>
+  </div>
+  <div class="hero-badge">💡 LIFT Formula நினைவில் வையுங்கள் — L·I·F·T</div>
+</div>
+
+<div class="container">
+
+  <!-- LIFT FORMULA -->
+  <div class="lift-banner">
+    <div class="lift-item">
+      <div class="lift-letter">L</div>
+      <div><div class="lift-word">LOOSEN NUTS</div><div class="lift-ta">Nuts-ஐ தளர்த்துங்கள்</div></div>
+    </div>
+    <div class="lift-item">
+      <div class="lift-letter">I</div>
+      <div><div class="lift-word">INSTALL JACK</div><div class="lift-ta">Jack வையுங்கள்</div></div>
+    </div>
+    <div class="lift-item">
+      <div class="lift-letter">F</div>
+      <div><div class="lift-word">FIT SPARE</div><div class="lift-ta">Spare tyre போடுங்கள்</div></div>
+    </div>
+    <div class="lift-item">
+      <div class="lift-letter">T</div>
+      <div><div class="lift-word">TIGHTEN NUTS</div><div class="lift-ta">Nuts-ஐ இறுக்குங்கள்</div></div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-box">
+    Highway-ல் திடீரென்று டயர் puncture ஆகும்போது — mechanic-ஐ காத்திருக்க தேவையில்லை. <strong>இந்த 10 steps தெரிந்தால் நீங்களே 15–20 நிமிடத்தில் டயர் மாற்றிவிடலாம்.</strong> உன் car-ல் இருக்கும் jack, spanner, stepney மட்டுமே போதும்!
+  </div>
+
+  <!-- INFOGRAPHIC -->
+  <div class="infographic-box">
+    <div class="infographic-title">📊 Quick Reference Infographic</div>
+    <img class="infographic-img" src="1000414852.png" alt="ஜாக்கி பயன்படுத்தி டயர் மாற்றுவது எப்படி - infographic">
+  </div>
+
+  <!-- TOOLS -->
+  <div class="sec">
+    <div class="sec-badge">🧰 TOOLS</div>
+    <div><div class="sec-title">தேவையான பொருட்கள்</div><div class="sec-ta">Car-ல் எப்போதும் இவை இருக்கணும்</div></div>
+  </div>
+
+  <div class="tools-grid">
+    <div class="tool-item">
+      <div class="tool-icon">🔧</div>
+      <div class="tool-name">Car Jack</div>
+      <div class="tool-ta">ஜாக்கி — car-ஐ தூக்கும்</div>
+      <div class="tool-must must-yes">✅ கட்டாயம்</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">🛞</div>
+      <div class="tool-name">Spare Tyre</div>
+      <div class="tool-ta">Stepney — புதிய டயர்</div>
+      <div class="tool-must must-yes">✅ கட்டாயம்</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">🔩</div>
+      <div class="tool-name">Lug Wrench</div>
+      <div class="tool-ta">Wheel spanner</div>
+      <div class="tool-must must-yes">✅ கட்டாயம்</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">🧤</div>
+      <div class="tool-name">Gloves</div>
+      <div class="tool-ta">கை பாதுகாப்பு</div>
+      <div class="tool-must must-opt">Optional</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">🔦</div>
+      <div class="tool-name">Torch</div>
+      <div class="tool-ta">இரவில் தேவை</div>
+      <div class="tool-must must-opt">Optional</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">⚠️</div>
+      <div class="tool-name">Warning Triangle</div>
+      <div class="tool-ta">எச்சரிக்கை முக்கோணம்</div>
+      <div class="tool-must must-yes">✅ Safety</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">📖</div>
+      <div class="tool-name">Car Manual</div>
+      <div class="tool-ta">Jack point location-க்கு</div>
+      <div class="tool-must must-opt">Helpful</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">🧱</div>
+      <div class="tool-name">Wheel Wedge</div>
+      <div class="tool-ta">Brick/Stone — car roll தடுக்க</div>
+      <div class="tool-must must-opt">Recommended</div>
+    </div>
+  </div>
+
+  <!-- STEPS -->
+  <div class="sec">
+    <div class="sec-badge">🔟 STEPS</div>
+    <div><div class="sec-title">10 Steps — ஒவ்வொன்னும் tap பண்ணி பாருங்கள்</div><div class="sec-ta">Step by step விளக்கம்</div></div>
+  </div>
+
+  <div class="steps-list">
+
+    <!-- STEP 1 -->
+    <div class="step-card" id="s1">
+      <div class="step-hdr" onclick="ts('s1')">
+        <div class="step-num-bar"><div class="step-num">01</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <rect x="5" y="20" width="50" height="28" rx="5" fill="#2c1a0e"/>
+            <rect x="8" y="23" width="44" height="20" rx="3" fill="#4a3020"/>
+            <circle cx="15" cy="43" r="6" fill="#1a1208" stroke="#c47820" stroke-width="1.5"/>
+            <circle cx="45" cy="43" r="6" fill="#1a1208" stroke="#c47820" stroke-width="1.5"/>
+            <rect x="18" y="15" width="24" height="8" rx="3" fill="#3a2010"/>
+            <!-- Hazard lights blinking -->
+            <circle cx="8" cy="30" r="3" fill="#f4a100" opacity=".9"/>
+            <circle cx="52" cy="30" r="3" fill="#f4a100" opacity=".9"/>
+            <!-- Hand brake symbol -->
+            <text x="30" y="35" text-anchor="middle" fill="#c47820" font-size="8" font-family="Barlow Condensed" font-weight="700">STOP</text>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">பாதுகாப்பான இடத்தில் நிறுத்துங்கள்</div>
+            <div class="step-subtitle">Safe location — முதல் priority இது!</div>
+            <div class="step-summary">சமமான இடம் தேடுங்கள், hazard light போடுங்கள்</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>சாலை ஓரமாக flat, சமமான இடம் தேடுங்கள் — மணல் அல்லது soft ground-ல் jack sink ஆகும்</div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div>Hazard lights (⚠️) ON பண்ணுங்கள் — உடனே!</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div>Engine OFF, Hand brake (Handbrake) போடுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>Warning triangle car-லிருந்து 45 meter பின்னால் வையுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">5</div><div>Opposite wheels-ல் brick/stone வையுங்கள் — car roll ஆகாமல் தடுக்க</div></div>
+        </div>
+        <div class="warn-tag">⚠️ சாய்வான இடத்தில் (slope/hill) டயர் மாற்ற வேண்டாம் — மிகவும் ஆபத்து!</div>
+        <div class="warn-tag">⚠️ Highway-ல் இருந்தால் — next exit அல்லது safe lay-by வரும் வரை மெதுவாக ஓட்டுங்கள். Road மத்தியில் நிறுத்தாதீர்கள்.</div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-card" id="s2">
+      <div class="step-hdr" onclick="ts('s2')">
+        <div class="step-num-bar"><div class="step-num">02</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="22" fill="#1a1208" stroke="#c47820" stroke-width="2"/>
+            <circle cx="30" cy="30" r="14" fill="#2c2010" stroke="#a07030" stroke-width="1"/>
+            <circle cx="30" cy="30" r="5" fill="#c47820"/>
+            <!-- Lug nuts at 5 positions -->
+            <circle cx="30" cy="13" r="3" fill="#f4a100"/>
+            <circle cx="43" cy="21" r="3" fill="#f4a100"/>
+            <circle cx="38" cy="41" r="3" fill="#f4a100"/>
+            <circle cx="22" cy="41" r="3" fill="#f4a100"/>
+            <circle cx="17" cy="21" r="3" fill="#f4a100"/>
+            <!-- Wrench -->
+            <rect x="40" y="8" width="12" height="5" rx="2" fill="#888" transform="rotate(45 40 8)"/>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">Wheel Nuts-ஐ Loosen செய்யுங்கள்</div>
+            <div class="step-subtitle">முழுவதும் கழற்றாதீர்கள் — கொஞ்சம் மட்டும்!</div>
+            <div class="step-summary">Car தரையில் இருக்கும்போதே — Anti-clockwise திருப்புங்கள்</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>Boot-லிருந்து Jack, Spanner, Spare tyre எடுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div>Hubcap (wheel cover) இருந்தால் — flat end of wrench-ஐ வைத்து pry out பண்ணுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div>Spanner-ஐ nut-ல் fit பண்ணி <strong>anti-clockwise (இடது பக்கம்)</strong> திருப்புங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>ஒவ்வொரு nut-ஐயும் <strong>half turn மட்டும்</strong> — முழுவதும் கழற்றாதீர்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">5</div><div>Tight ஆக இருந்தால் — spanner-ல் body weight போடுங்கள் (நில்லுங்கள்)</div></div>
+        </div>
+        <div class="tip-tag">✅ <strong>Easy trick:</strong> "Lefty Loosey, Righty Tighty" — இடது = loose, வலது = tight. நினைவில் வையுங்கள்!</div>
+        <div class="info-tag">💡 <strong>ஏன் இப்போதே loosen?</strong> Car தரையில் இருக்கும்போது tyre rotation இல்லாமல் நட்களை தளர்த்தலாம். Jack பண்ணிய பிறகு tyre spin ஆகும்.</div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-card" id="s3">
+      <div class="step-hdr" onclick="ts('s3')">
+        <div class="step-num-bar"><div class="step-num">03</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <!-- Car bottom view -->
+            <rect x="8" y="15" width="44" height="20" rx="4" fill="#2c1a0e"/>
+            <!-- Jack points marked -->
+            <rect x="12" y="33" width="6" height="4" rx="1" fill="#f4a100"/>
+            <rect x="42" y="33" width="6" height="4" rx="1" fill="#f4a100"/>
+            <rect x="12" y="11" width="6" height="4" rx="1" fill="#f4a100"/>
+            <rect x="42" y="11" width="6" height="4" rx="1" fill="#f4a100"/>
+            <!-- Arrow pointing to jack point -->
+            <line x1="15" y1="42" x2="15" y2="37" stroke="#e63946" stroke-width="2" marker-end="url(#arr)"/>
+            <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#e63946"/></marker></defs>
+            <text x="30" y="50" text-anchor="middle" fill="#c47820" font-size="7" font-family="Barlow Condensed" font-weight="700">JACK POINTS</text>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">Jack Point கண்டுபிடியுங்கள்</div>
+            <div class="step-subtitle">சரியான இடம் முக்கியம் — car damage ஆகும்</div>
+            <div class="step-summary">Door-க்கு கீழே side-ல் notch/groove தேடுங்கள்</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>Car-ஓட உடலின் கீழ் பக்கம் பாருங்கள் — தரையிலிருந்து 10-15 cm உயரத்தில்</div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div>Door-க்கு கீழே side-ல் — small notch, groove அல்லது small triangle marking தெரியும்</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div>ஒவ்வொரு wheel-க்கும் ஒரு jack point உண்டு — 4 wheels = 4 jack points</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>உறுதியாக தெரியவில்லை என்றால் — car manual பாருங்கள் (diagram இருக்கும்)</div></div>
+        </div>
+        <div class="warn-tag">⚠️ தவறான இடத்தில் jack வைத்தால் — plastic body parts crack ஆகும், car damage ₹5,000–₹20,000 ஆகும்!</div>
+        <div class="tip-tag">✅ <strong>Easy find:</strong> புதிய cars-ல் door sill-ல் (உள்ளே metal strip) jack point mark இருக்கும். ஒரு முறை identify பண்ணி வையுங்கள்.</div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step-card" id="s4">
+      <div class="step-hdr" onclick="ts('s4')">
+        <div class="step-num-bar"><div class="step-num">04</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <!-- Car lifted -->
+            <rect x="8" y="10" width="44" height="20" rx="4" fill="#2c1a0e"/>
+            <circle cx="15" cy="40" r="8" fill="#1a1208" stroke="#c47820" stroke-width="1.5"/>
+            <circle cx="45" cy="40" r="8" fill="#1a1208" stroke="#c47820" stroke-width="1.5"/>
+            <!-- Jack under car -->
+            <rect x="27" y="30" width="8" height="14" rx="2" fill="#888"/>
+            <rect x="22" y="42" width="18" height="4" rx="2" fill="#666"/>
+            <rect x="25" y="46" width="12" height="3" rx="1" fill="#555"/>
+            <!-- Up arrows -->
+            <text x="50" y="18" fill="#f4a100" font-size="12">↑</text>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">Jack வைத்து Car-ஐ தூக்குங்கள்</div>
+            <div class="step-subtitle">Slowly, carefully — stability check பண்ணுங்கள்</div>
+            <div class="step-summary">Tyre தரையிலிருந்து 5-10 cm மேலே வரும் வரை</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>Jack-ஐ jack point-ல் சரியாக align பண்ணுங்கள் — perpendicular (நேராக) இருக்கணும்</div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div>Soft ground-ல் இருந்தால் — jack-ல் கீழே flat wood piece வையுங்கள் (sink ஆகாமல்)</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div>Jack handle clockwise-ல் slowly rotate பண்ணுங்கள் — car மெதுவாக lift ஆகும்</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>Tyre தரையிலிருந்து <strong>5–10 cm மேலே</strong> வந்தால் போதும் — அதிகமாக தூக்காதீர்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">5</div><div>Jack stable-ஆ இருக்கிறதா check பண்ணுங்கள் — wobble ஆனால் lower பண்ணி reposition பண்ணுங்கள்</div></div>
+        </div>
+        <div class="warn-tag">🚨 <strong>மிக முக்கியம்:</strong> Car jack-ல் இருக்கும்போது கீழே கையை வைக்காதீர்கள். Jack slip ஆனால் — serious injury!</div>
+        <div class="warn-tag">⚠️ Jack-ல் car இருக்கும்போது யாரும் car-க்குள் உட்காரவோ, car-ஐ push பண்ணவோ வேண்டாம்.</div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step-card" id="s5">
+      <div class="step-hdr" onclick="ts('s5')">
+        <div class="step-num-bar"><div class="step-num">05</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="20" fill="#1a1208" stroke="#a07030" stroke-width="1.5"/>
+            <circle cx="30" cy="30" r="12" fill="#2c2010"/>
+            <!-- Lug nuts being removed -->
+            <circle cx="30" cy="13" r="3" fill="#888" opacity=".3"/>
+            <circle cx="43" cy="21" r="3" fill="#888" opacity=".3"/>
+            <circle cx="38" cy="41" r="3" fill="#888" opacity=".3"/>
+            <circle cx="22" cy="41" r="3" fill="#888" opacity=".3"/>
+            <circle cx="17" cy="21" r="3" fill="#888" opacity=".3"/>
+            <!-- Nuts removed, floating -->
+            <circle cx="50" cy="10" r="3" fill="#f4a100"/>
+            <circle cx="55" cy="20" r="3" fill="#f4a100"/>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">Nuts முழுவதும் கழற்றுங்கள்</div>
+            <div class="step-subtitle">Safe place-ல் வையுங்கள் — தொலைய விடாதீர்கள்!</div>
+            <div class="step-summary">Hubcap-ல் அல்லது pocket-ல் வையுங்கள்</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>Step 2-ல் loosen பண்ணிய nuts-ஐ இப்போது முழுவதும் கழற்றுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div>ஒவ்வொரு nut-ஐயும் கையினால் பண்ணலாம் — car lifted-ல் இருக்கும்போது tyre spin ஆகாது</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div>Nuts-ஐ hubcap-ல் வையுங்கள் — roll ஆகி தொலையாமல் இருக்கும்</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>எத்தனை nuts இருந்தன என்று count பண்ணுங்கள் — எல்லாம் இருக்கணும்!</div></div>
+        </div>
+        <div class="tip-tag">✅ <strong>Pro tip:</strong> Nuts-ஐ dark ground-ல் வைக்காதீர்கள் — தெரியாமல் போகலாம். Hubcap அல்லது cloth-ல் வையுங்கள்.</div>
+      </div>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="step-card" id="s6">
+      <div class="step-hdr" onclick="ts('s6')">
+        <div class="step-num-bar"><div class="step-num">06</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <!-- Flat tyre being removed -->
+            <circle cx="22" cy="30" r="18" fill="#1a1208" stroke="#555" stroke-width="2"/>
+            <circle cx="22" cy="30" r="11" fill="#2c2010"/>
+            <!-- Arrow pulling out -->
+            <line x1="35" y1="30" x2="52" y2="30" stroke="#c47820" stroke-width="2.5" stroke-dasharray="4,3"/>
+            <polygon points="52,27 58,30 52,33" fill="#c47820"/>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">பழைய டயரை Remove செய்யுங்கள்</div>
+            <div class="step-subtitle">நேராக இழுக்கவும் — twist பண்ணாதீர்கள்</div>
+            <div class="step-summary">Tyre stuck ஆனால் — gentle kick பண்ணலாம்</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>Tyre-ஐ இரண்டு கைகளிலும் பிடித்து <strong>நேராக வெளியே இழுக்கவும்</strong></div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div>Rust பிடித்து stuck ஆனால் — tyre sidewall-ல் gentle kick பண்ணலாம் (boot-ஐ use பண்ணுங்கள்)</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div>Remove ஆன tyre-ஐ side-ல் flat-ஆக வையுங்கள் — roll ஆகி தொலையாமல்</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>Brake disc/drum சுத்தமாக இருக்கிறதா check பண்ணுங்கள்</div></div>
+        </div>
+        <div class="info-tag">💡 Flat tyre-ஐ boot-ல் வைக்கவும் — later puncture shop-ல் repair பண்ண.</div>
+      </div>
+    </div>
+
+    <!-- STEP 7 -->
+    <div class="step-card" id="s7">
+      <div class="step-hdr" onclick="ts('s7')">
+        <div class="step-num-bar"><div class="step-num">07</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <!-- New spare tyre being fitted -->
+            <circle cx="38" cy="30" r="18" fill="#1a1208" stroke="#c47820" stroke-width="2"/>
+            <circle cx="38" cy="30" r="11" fill="#2c1a0e"/>
+            <circle cx="38" cy="30" r="4" fill="#c47820"/>
+            <!-- Lug bolts visible -->
+            <circle cx="38" cy="14" r="2.5" fill="#f4a100"/>
+            <circle cx="49" cy="22" r="2.5" fill="#f4a100"/>
+            <circle cx="45" cy="38" r="2.5" fill="#f4a100"/>
+            <circle cx="31" cy="38" r="2.5" fill="#f4a100"/>
+            <circle cx="27" cy="22" r="2.5" fill="#f4a100"/>
+            <!-- Arrow fitting -->
+            <line x1="8" y1="30" x2="18" y2="30" stroke="#c47820" stroke-width="2.5" stroke-dasharray="3,2"/>
+            <polygon points="18,27 24,30 18,33" fill="#c47820"/>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">Spare Tyre பொருத்துங்கள்</div>
+            <div class="step-subtitle">Holes align பண்ணுங்கள் — valve outward!</div>
+            <div class="step-summary">கையால் முதலில் nuts-ஐ tighten பண்ணுங்கள்</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>Spare tyre-ஐ hub-ல் align பண்ணுங்கள் — bolt holes match ஆகணும்</div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div><strong>Valve (air nozzle) outward</strong> இருக்கணும் — உள்ளே போகக்கூடாது</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div>Tyre-ஐ push பண்ணி hold பண்ணியபடியே — கையால் nuts-ஐ போட்டு tighten பண்ணுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>எல்லா nuts-ஐயும் கையால் finger-tight மட்டும் — spanner இன்னும் வேண்டாம்</div></div>
+          <div class="step-detail"><div class="step-dot">5</div><div>Tyre wobble ஆகாமல் இருக்கிறதா check பண்ணுங்கள்</div></div>
+        </div>
+        <div class="tip-tag">✅ Heavy spare tyre-ஐ lift பண்ண கஷ்டமாக இருந்தால் — tyre-ஐ thigh-ல் rest வைத்துக்கொண்டு fit பண்ணலாம்.</div>
+      </div>
+    </div>
+
+    <!-- STEP 8 -->
+    <div class="step-card" id="s8">
+      <div class="step-hdr" onclick="ts('s8')">
+        <div class="step-num-bar"><div class="step-num">08</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <!-- Car lowering -->
+            <rect x="8" y="15" width="44" height="20" rx="4" fill="#2c1a0e"/>
+            <circle cx="15" cy="42" r="8" fill="#1a1208" stroke="#c47820" stroke-width="1.5"/>
+            <circle cx="45" cy="42" r="8" fill="#1a1208" stroke="#c47820" stroke-width="1.5"/>
+            <!-- Jack lowering -->
+            <rect x="27" y="35" width="8" height="10" rx="2" fill="#888"/>
+            <rect x="22" y="44" width="18" height="3" rx="1" fill="#666"/>
+            <!-- Down arrows -->
+            <text x="48" y="30" fill="#f4a100" font-size="12">↓</text>
+            <!-- Cross pattern -->
+            <text x="30" y="55" text-anchor="middle" fill="#c47820" font-size="7" font-family="Barlow Condensed" font-weight="700">CROSS PATTERN</text>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">Jack கீழே இறக்கி Nuts Tighten பண்ணுங்கள்</div>
+            <div class="step-subtitle">Cross pattern-ல் tighten — மிக முக்கியம்!</div>
+            <div class="step-summary">Car தரையை touch பண்ணிய பிறகு fully tighten</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>Jack handle-ஐ anti-clockwise-ல் slowly திருப்பி car-ஐ கீழே இறக்குங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div>Tyre தரையை touch பண்ணியதும் — spanner எடுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div><strong>Cross/Star pattern-ல் tighten:</strong> Opposite nuts-ஐ ஒரே நேரத்தில் tighten பண்ணுங்கள் (star போல்)</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>Car-ஐ fully lower பண்ணி jack remove பண்ணுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">5</div><div>Nuts-ஐ maximum force-ல் tighten — foot-ஐ spanner-ல் step பண்ணலாம்</div></div>
+        </div>
+
+        <!-- Cross pattern visual -->
+        <div class="pattern-box">
+          <div class="pattern-title">Cross Pattern Tightening Order</div>
+          <div class="pattern-ta">இந்த order-ல் tighten பண்ணினால் — tyre evenly seat ஆகும்</div>
+          <svg viewBox="0 0 160 160" width="160" style="margin:0 auto;display:block;">
+            <circle cx="80" cy="80" r="60" fill="#1a1208" stroke="#c47820" stroke-width="1.5"/>
+            <circle cx="80" cy="80" r="35" fill="#2c1a0e"/>
+            <circle cx="80" cy="80" r="10" fill="#c47820"/>
+            <!-- 4 nuts with order -->
+            <circle cx="80" cy="25" r="12" fill="#f4a100"/>
+            <text x="80" y="30" text-anchor="middle" fill="#000" font-size="11" font-family="Barlow Condensed" font-weight="800">1</text>
+            <circle cx="135" cy="80" r="12" fill="#888"/>
+            <text x="135" y="85" text-anchor="middle" fill="#fff" font-size="11" font-family="Barlow Condensed" font-weight="800">3</text>
+            <circle cx="80" cy="135" r="12" fill="#f4a100"/>
+            <text x="80" y="140" text-anchor="middle" fill="#000" font-size="11" font-family="Barlow Condensed" font-weight="800">2</text>
+            <circle cx="25" cy="80" r="12" fill="#888"/>
+            <text x="25" y="85" text-anchor="middle" fill="#fff" font-size="11" font-family="Barlow Condensed" font-weight="800">4</text>
+            <!-- Lines showing cross -->
+            <line x1="80" y1="37" x2="80" y2="123" stroke="rgba(244,161,0,0.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <line x1="37" y1="80" x2="123" y2="80" stroke="rgba(244,161,0,0.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          </svg>
+          <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);margin-top:10px;">1 → 2 (opposite) → 3 → 4 (opposite) → திரும்பவும் 1 முதல் tighten</div>
+        </div>
+        <div class="warn-tag">⚠️ Jack remove பண்ணாமல் nuts tighten பண்ணாதீர்கள் — tyre spin ஆகும்!</div>
+      </div>
+    </div>
+
+    <!-- STEP 9 -->
+    <div class="step-card" id="s9">
+      <div class="step-hdr" onclick="ts('s9')">
+        <div class="step-num-bar"><div class="step-num">09</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <!-- Check marks -->
+            <circle cx="30" cy="30" r="22" fill="#f0fff4" stroke="#1a7a3c" stroke-width="2"/>
+            <path d="M18 30 L26 38 L42 22" stroke="#1a7a3c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">Final Check பண்ணுங்கள்</div>
+            <div class="step-subtitle">Drive பண்ணுவதற்கு முன் — 3 things check!</div>
+            <div class="step-summary">Nuts, tyre fit, jack remove — எல்லாம் ok?</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">✅</div><div>எல்லா nuts fully tight ஆ இருக்கிறதா? — spanner-ல் இறுக்கி check பண்ணுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">✅</div><div>Spare tyre properly fit ஆகியிருக்கிறதா? — wobble ஆகாமல் இருக்கணும்</div></div>
+          <div class="step-detail"><div class="step-dot">✅</div><div>Jack, spanner — car-லிருந்து remove பண்ணினீர்களா?</div></div>
+          <div class="step-detail"><div class="step-dot">✅</div><div>Warning triangle எடுத்துவிட்டீர்களா?</div></div>
+          <div class="step-detail"><div class="step-dot">✅</div><div>Flat tyre boot-ல் வைத்தீர்களா?</div></div>
+          <div class="step-detail"><div class="step-dot">✅</div><div>Spare tyre pressure — 30–35 PSI இருக்கிறதா? (nearby bunk-ல் check)</div></div>
+        </div>
+        <div class="tip-tag">✅ Drive பண்ணிய 50 km பிறகு nuts மீண்டும் check பண்ணுங்கள் — heat cycle-ல் slightly loose ஆகலாம்.</div>
+      </div>
+    </div>
+
+    <!-- STEP 10 -->
+    <div class="step-card" id="s10">
+      <div class="step-hdr" onclick="ts('s10')">
+        <div class="step-num-bar"><div class="step-num">10</div><div class="step-of">STEP</div></div>
+        <div class="step-content">
+          <svg class="step-svg-wrap" viewBox="0 0 60 60" fill="none">
+            <!-- Tools stored in boot -->
+            <rect x="10" y="25" width="40" height="25" rx="4" fill="#2c1a0e"/>
+            <rect x="13" y="28" width="34" height="18" rx="2" fill="#1a1208"/>
+            <!-- Jack icon -->
+            <rect x="16" y="31" width="8" height="12" rx="1" fill="#888"/>
+            <!-- Tyre icon -->
+            <circle cx="37" cy="37" r="7" fill="none" stroke="#a07030" stroke-width="2"/>
+            <circle cx="37" cy="37" r="3" fill="#888"/>
+            <!-- Spanner -->
+            <rect x="27" y="32" width="6" height="2" rx="1" fill="#666" transform="rotate(45 27 32)"/>
+          </svg>
+          <div class="step-text">
+            <div class="step-title">எல்லாவற்றையும் Boot-ல் வையுங்கள்</div>
+            <div class="step-subtitle">பிறகு puncture shop-க்கு போங்கள்</div>
+            <div class="step-summary">Spare tyre-ல் அதிக speed வேண்டாம்!</div>
+          </div>
+          <div class="step-arrow">▾</div>
+        </div>
+      </div>
+      <div class="step-body">
+        <div class="step-details">
+          <div class="step-detail"><div class="step-dot">1</div><div>Jack, spanner, warning triangle — எல்லாவற்றையும் boot-ல் வையுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">2</div><div>Flat tyre-ஐயும் boot-ல் வையுங்கள் — repair பண்ண puncture shop-க்கு போங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">3</div><div>Nearest puncture shop (tyre shop) — Google Maps-ல் "tyre repair near me" search பண்ணுங்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">4</div><div>Spare tyre-ல் <strong>maximum 80 km/h மட்டும்</strong> — அதிக speed போகாதீர்கள்</div></div>
+          <div class="step-detail"><div class="step-dot">5</div><div>Repaired tyre வந்தவுடன் — spare tyre-ஐ boot-ல் properly store பண்ணி 35 PSI check பண்ணுங்கள்</div></div>
+        </div>
+        <div class="warn-tag">⚠️ Spare tyre (Stepney) permanent tyre இல்லை — long distance drive-க்கு பயன்படுத்தாதீர்கள். விரைவில் original tyre repair பண்ணுங்கள்.</div>
+      </div>
+    </div>
+
+  </div><!-- end steps-list -->
+
+  <!-- SAFETY SECTION -->
+  <div class="sec">
+    <div class="sec-badge">⚠️ SAFETY</div>
+    <div><div class="sec-title">முக்கிய Safety Tips</div><div class="sec-ta">இவற்றை ignore பண்ணாதீர்கள்</div></div>
+  </div>
+
+  <div class="safety-grid">
+    <div class="safety-item">
+      <div class="safety-icon">🔺</div>
+      <div class="safety-title">Warning Triangle</div>
+      <div class="safety-ta">Car-லிருந்து 45 meter பின்னால் வையுங்கள். இரவில் hazard lights + triangle இரண்டும் கட்டாயம்.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🚫</div>
+      <div class="safety-title">Car கீழே போகாதீர்கள்</div>
+      <div class="safety-ta">Jack-ல் car இருக்கும்போது — never go under car. Jack slip ஆனால் fatal injury.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">📱</div>
+      <div class="safety-title">Phone Ready வையுங்கள்</div>
+      <div class="safety-ta">108, 112, Insurance helpline, Maruti 1800-102-1800 — numbers ready-ஆ வையுங்கள்.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🌙</div>
+      <div class="safety-title">இரவில் Extra Care</div>
+      <div class="safety-ta">Torch, reflective jacket, hazard lights — இரவில் இவை கட்டாயம். Visibility மிக முக்கியம்.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🏔️</div>
+      <div class="safety-title">Slope-ல் வேண்டாம்</div>
+      <div class="safety-ta">சாய்வான இடத்தில் டயர் மாற்ற வேண்டாம். Flat area கண்டுபிடிக்க slowly drive பண்ணுங்கள்.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🧤</div>
+      <div class="safety-title">Gloves போடுங்கள்</div>
+      <div class="safety-ta">Tyre dirty, oily இருக்கும். Cuts, scrapes தவிர்க்க gloves போடுங்கள். Cloth-ல் செய்தாலும் ok.</div>
+    </div>
+  </div>
+
+  <!-- PREVENTION -->
+  <div class="sec">
+    <div class="sec-badge">🛡️ PREVENT</div>
+    <div><div class="sec-title">Puncture தவிர்ப்பது எப்படி?</div><div class="sec-ta">Prevention better than cure</div></div>
+  </div>
+
+  <div style="background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:14px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;">
+      <div style="background:var(--cream3);border-radius:8px;padding:12px;">
+        <div style="font-size:20px;margin-bottom:4px;">🔘</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;">Tyre Pressure Check</div>
+        <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);">வாரம் ஒரு முறை 33 PSI check பண்ணுங்கள் — under-inflation = puncture risk</div>
+      </div>
+      <div style="background:var(--cream3);border-radius:8px;padding:12px;">
+        <div style="font-size:20px;margin-bottom:4px;">🔍</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;">Tyre Tread Check</div>
+        <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);">Tread depth 1.6mm-க்கு கீழே போனால் replace பண்ணுங்கள் — slip ஆகும்</div>
+      </div>
+      <div style="background:var(--cream3);border-radius:8px;padding:12px;">
+        <div style="font-size:20px;margin-bottom:4px;">🛞</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;">Spare Tyre Check</div>
+        <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);">Spare tyre pressure — 60 PSI (compact spare). 6 மாதத்திற்கு ஒரு முறை check பண்ணுங்கள்</div>
+      </div>
+      <div style="background:var(--cream3);border-radius:8px;padding:12px;">
+        <div style="font-size:20px;margin-bottom:4px;">🚦</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;">Road Hazards</div>
+        <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);">Potholes, sharp objects-ஐ avoid பண்ணுங்கள். Road debris பார்த்து ஓட்டுங்கள்</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="conc">
+    <h3>🔧 LIFT Formula நினைவில் வையுங்கள்</h3>
+    <div class="lift-banner" style="background:rgba(255,255,255,0.05);margin-bottom:14px;padding:14px;">
+      <div class="lift-item" style="background:rgba(244,161,0,0.1);">
+        <div class="lift-letter">L</div>
+        <div><div class="lift-word">LOOSEN</div><div class="lift-ta">Nuts தளர்த்து</div></div>
+      </div>
+      <div class="lift-item" style="background:rgba(244,161,0,0.1);">
+        <div class="lift-letter">I</div>
+        <div><div class="lift-word">INSTALL</div><div class="lift-ta">Jack வை</div></div>
+      </div>
+      <div class="lift-item" style="background:rgba(244,161,0,0.1);">
+        <div class="lift-letter">F</div>
+        <div><div class="lift-word">FIT</div><div class="lift-ta">Spare போடு</div></div>
+      </div>
+      <div class="lift-item" style="background:rgba(244,161,0,0.1);">
+        <div class="lift-letter">T</div>
+        <div><div class="lift-word">TIGHTEN</div><div class="lift-ta">Nuts இறுக்கு</div></div>
+      </div>
+    </div>
+    <p>Puncture எப்போது வேண்டுமானாலும் வரலாம் — ஆனால் இப்போது உங்களுக்கு தெரியும். <strong>Car-ல் எப்போதும்: spare tyre inflated-ஆ இருக்கணும், jack + spanner ready-ஆ இருக்கணும், warning triangle இருக்கணும்.</strong> இந்த article-ஐ save பண்ணி வையுங்கள் — emergency-ல் உதவும்!</p>
+  </div>
+
+  <a href="index.html" class="nxt">
+    <div class="nxt-ico">🏠</div>
+    <div><div class="nxt-lbl">← Back to</div><div class="nxt-en">KaarKalvi Home</div><div class="nxt-ta">எல்லா articles-உம் இங்கே</div></div>
+    <div class="nxt-arr">→</div>
+  </a>
+
+  <div class="share-wrap">
+    <div class="share-h">🔧 Share பண்ணுங்கள்!</div>
+    <div class="share-ta">இந்த guide-ஐ family, friends-க்கு share பண்ணுங்கள் — emergency-ல் உதவும்!</div>
+    <div class="share-btns">
+      <button class="sb wa" onclick="sWA()">WhatsApp</button>
+      <button class="sb fb" onclick="sFB()">Facebook</button>
+      <button class="sb tw" onclick="sTW()">X</button>
+      <button class="sb tg" onclick="sTG()">Telegram</button>
+      <button class="sb ig" onclick="sIG()">Instagram</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fb2">KAARKALVI</div>
+  <div class="fs">கார் கல்வி · Tamil Car Education</div>
+  <div class="fl2">
+    <a href="index.html">Home</a>
+    <a href="article5.html">Emergency Guide</a>
+    <a href="article10.html">Engine Guide</a>
+    <a href="article11.html">Secret Features</a>
+    <a href="article13.html">Tyre Change</a>
+  </div>
+</footer>
+
+<script>
+function ts(id){document.getElementById(id).classList.toggle('open');}
+window.addEventListener('scroll',()=>{
+  const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(w/h*100)+'%';
+});
+// Auto open step 1
+document.getElementById('s1').classList.add('open');
+
+const u=encodeURIComponent(location.href);
+const tx=encodeURIComponent('🔧 Jack வைத்து டயர் மாற்றுவது எப்படி? 10 Steps தமிழில் — KaarKalvi! Emergency-ல் உதவும் 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tesla vs Traditional Cars Tamil | EV vs Petrol Diesel | KaarKalvi</title>
+<meta name="description" content="Tesla vs Petrol vs Diesel cars — முழு comparison தமிழில். India-ல் Tesla price, running cost, pros cons — KaarKalvi">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;
+  --border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;
+  --muted:#8a6a50;--accent:#c47820;
+  --tesla:#e31937;--ev:#1a7a3c;--petrol:#c47820;--diesel:#1a5fa0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:#2c1a0e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.2);}
+.nav-brand{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.nav-sub{font-size:10px;color:#8a6a50;}
+.nav-home{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;color:#c0a880;text-decoration:none;padding:6px 12px;border:1px solid rgba(180,140,100,0.3);border-radius:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a0806,#1a0808,#4a0808,#e31937);padding:40px 20px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'⚡';position:absolute;font-size:200px;opacity:.05;top:-20px;right:-20px;animation:bolt 3s ease-in-out infinite;}
+@keyframes bolt{0%,100%{opacity:.05;}50%{opacity:.12;}}
+.hero-tag{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:3px;color:#fff5;margin-bottom:10px;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,6vw,44px);font-weight:800;color:#fff;margin-bottom:8px;line-height:1.1;}
+.hero-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:#ffa0a0;margin-bottom:14px;}
+.hero-meta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:12px;color:#ff8080;}
+.hero-india{display:inline-block;margin-top:12px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:8px 20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:#fff;}
+
+/* MAIN */
+.container{max-width:760px;margin:0 auto;padding:28px 16px;}
+.intro-box{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--tesla);border-radius:10px;padding:16px 18px;margin-bottom:24px;font-size:14px;line-height:1.8;color:var(--brown2);}
+
+/* TESLA INDIA NEWS BOX */
+.news-box{background:#1a0808;color:#fff;border-radius:14px;padding:20px;margin-bottom:20px;position:relative;overflow:hidden;}
+.news-box::before{content:'🇮🇳';position:absolute;font-size:80px;opacity:.1;right:10px;top:10px;}
+.news-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;color:var(--tesla);margin-bottom:10px;}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;}
+.news-item{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px;text-align:center;}
+.news-icon{font-size:22px;margin-bottom:4px;}
+.news-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--tesla);}
+.news-label2{font-size:11px;color:#a08080;margin-top:2px;font-family:'Noto Sans Tamil',sans-serif;}
+
+/* SECTION */
+.sec{margin:28px 0 14px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.sec-badge{padding:4px 12px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;}
+.sec-badge.tesla{background:#fff0ee;color:var(--tesla);border:1px solid rgba(227,25,55,0.25);}
+.sec-badge.green{background:#f0fff4;color:var(--ev);border:1px solid rgba(26,122,60,0.3);}
+.sec-badge.amber{background:#fffbf0;color:var(--accent);border:1px solid rgba(196,120,32,0.3);}
+.sec-badge.blue{background:#f0f4ff;color:var(--diesel);border:1px solid rgba(26,95,160,0.3);}
+.sec-badge.red{background:#fff0ee;color:#c0392b;border:1px solid rgba(192,57,43,0.3);}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;}
+.sec-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+
+/* VS COMPARISON HEADER */
+.vs-header{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:16px;}
+.vs-car{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;}
+.vs-car.tesla-side{border-top:3px solid var(--tesla);}
+.vs-car.petrol-side{border-top:3px solid var(--petrol);}
+.vs-icon{font-size:32px;margin-bottom:6px;}
+.vs-name{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;}
+.vs-name.tesla-t{color:var(--tesla);}
+.vs-name.petrol-t{color:var(--petrol);}
+.vs-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--muted);}
+.vs-mid{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:var(--brown);text-align:center;}
+
+/* BIG COMPARISON TABLE */
+.comp-rows{display:flex;flex-direction:column;gap:0;margin-bottom:16px;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+.comp-row{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border);}
+.comp-row:last-child{border-bottom:none;}
+.comp-row.header{background:var(--cream3);}
+.comp-cell{padding:12px 14px;font-size:13px;color:var(--brown2);display:flex;align-items:flex-start;gap:6px;}
+.comp-cell.header-cell{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);background:var(--cream3);}
+.comp-cell.tesla-cell{background:#fff8f8;border-left:2px solid rgba(227,25,55,0.1);}
+.comp-cell.petrol-cell{background:#fffaf4;}
+.winner-badge{display:inline-block;padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;}
+.w-tesla{background:#fff0ee;color:var(--tesla);}
+.w-petrol{background:#fffbf0;color:var(--petrol);}
+.w-tie{background:#f0fff4;color:var(--ev);}
+
+/* RUNNING COST CALCULATOR */
+.cost-box{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px;}
+.cost-title{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:var(--brown);margin-bottom:14px;}
+.cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:480px){.cost-grid{grid-template-columns:1fr;}}
+.cost-card{border-radius:10px;padding:14px;text-align:center;}
+.cost-card.tesla-c{background:#fff0ee;border:1px solid rgba(227,25,55,0.15);}
+.cost-card.petrol-c{background:#fffbf0;border:1px solid rgba(196,120,32,0.2);}
+.cost-card.diesel-c{background:#f0f4ff;border:1px solid rgba(26,95,160,0.15);}
+.cost-type{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;margin-bottom:6px;}
+.cost-type.tesla-t{color:var(--tesla);}
+.cost-type.petrol-t{color:var(--petrol);}
+.cost-type.diesel-t{color:var(--diesel);}
+.cost-per-km{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;margin:4px 0;}
+.cost-monthly{font-size:11px;color:var(--muted);font-family:'Noto Sans Tamil',sans-serif;}
+.cost-annual{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;margin-top:6px;}
+
+/* TESLA MODELS */
+.model-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:16px;}
+.model-card{background:var(--cream2);border:1px solid var(--border);border-top:3px solid var(--tesla);border-radius:12px;padding:16px;}
+.model-name{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--tesla);margin-bottom:4px;}
+.model-price{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--brown);margin-bottom:6px;}
+.model-specs{font-size:12px;color:var(--brown2);line-height:1.7;}
+.model-status{display:inline-block;padding:3px 10px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;margin-top:8px;}
+.status-live{background:#f0fff4;color:var(--ev);border:1px solid rgba(26,122,60,0.2);}
+.status-soon{background:#fffbf0;color:var(--accent);border:1px solid rgba(196,120,32,0.2);}
+
+/* INDIA EV ALTERNATIVES */
+.alt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:16px;}
+.alt-card{background:var(--cream2);border:1px solid var(--border);border-radius:10px;padding:12px;}
+.alt-name{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;color:var(--ev);margin-bottom:2px;}
+.alt-price{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:var(--brown);}
+.alt-range{font-size:11px;color:var(--muted);}
+.alt-vs{font-size:11px;color:var(--brown2);margin-top:4px;font-family:'Noto Sans Tamil',sans-serif;}
+
+/* WHO SHOULD table */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+@media(max-width:480px){.who-grid{grid-template-columns:1fr;}}
+.who-box{border-radius:12px;padding:14px;}
+.who-tesla{background:#fff0ee;border:1px solid rgba(227,25,55,0.15);}
+.who-petrol{background:#fffbf0;border:1px solid rgba(196,120,32,0.15);}
+.who-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.who-item{display:flex;gap:8px;margin-bottom:6px;font-size:12px;color:var(--brown2);align-items:flex-start;line-height:1.5;}
+
+/* FUTURE */
+.future-strip{background:#1a0808;border-radius:14px;padding:20px;margin-bottom:16px;color:#fff;}
+.future-title{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:var(--tesla);margin-bottom:14px;letter-spacing:1px;}
+.future-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;}
+.future-item{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;text-align:center;}
+.future-icon{font-size:24px;margin-bottom:6px;}
+.future-year{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--tesla);}
+.future-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#a08080;margin-top:2px;line-height:1.5;}
+
+/* EXPANDABLE */
+.card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.card-hdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;}
+.card-ico{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;background:var(--cream3);}
+.card-en{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;}
+.card-ta{font-size:12px;color:var(--muted);margin-bottom:2px;}
+.card-sum{font-size:12px;color:var(--brown2);}
+.card-arr{margin-left:auto;font-size:16px;color:var(--muted);transition:transform .2s;flex-shrink:0;}
+.card.open .card-arr{transform:rotate(180deg);}
+.card-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border);}
+.card.open .card-body{display:block;}
+.rule-list{margin-top:12px;display:flex;flex-direction:column;gap:7px;}
+.rule-item{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--brown2);line-height:1.5;}
+.tip-box{background:#f0fff4;border-left:3px solid var(--ev);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--ev);}
+.warn-box{background:#fff8e8;border-left:3px solid var(--accent);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--accent);}
+
+/* CONCLUSION */
+.conc{background:linear-gradient(135deg,#1a0808,#0a0806);color:#fff;border-radius:14px;padding:24px 20px;margin-top:28px;text-align:center;}
+.conc h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;margin-bottom:14px;color:var(--tesla);}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+.pill{padding:7px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;}
+.pill.t{background:rgba(227,25,55,0.2);color:#ff8080;}
+.pill.p{background:rgba(196,120,32,0.15);color:#ffcc60;}
+.conc p{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:#c08080;line-height:1.7;}
+
+/* SHARE */
+.nxt{margin-top:20px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxt-ico{font-size:26px;flex-shrink:0;}
+.nxt-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxt-en{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxt-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxt-arr{margin-left:auto;font-size:20px;color:var(--accent);}
+.share-wrap{margin-top:16px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.share-h{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:3px;}
+.share-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.share-btns{display:flex;flex-wrap:wrap;gap:7px;}
+.sb{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sb:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+footer{text-align:center;padding:24px 20px;border-top:1px solid var(--border);margin-top:14px;}
+.fb2{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--accent);letter-spacing:3px;}
+.fs{font-size:12px;color:var(--muted);margin-top:3px;}
+.fl2{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.fl2 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--tesla);z-index:999;transition:width .1s;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+<nav>
+  <div><a href="index.html" class="nav-brand">KAARKALVI</a><div class="nav-sub">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nav-home">← Home</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Article 12 · EV vs Traditional</div>
+  <h1>⚡ Tesla vs Traditional Cars</h1>
+  <div class="hero-ta">Electric vs Petrol vs Diesel — தமிழில் முழு comparison</div>
+  <div class="hero-meta"><span>📖 8 min read</span><span>⚡ EV revolution</span><span>💰 Cost comparison</span><span>🇮🇳 India focus</span></div>
+  <div class="hero-india">🇮🇳 Tesla India-ல் arrived — Model Y ₹59.89L-லிருந்து!</div>
+</div>
+
+<div class="container">
+  <div class="intro-box">
+    2025-ல் Tesla India-ல் officially launch ஆனது. <strong>Model Y ₹59.89 lakh-லிருந்து</strong> Mumbai, Delhi, Gurugram-ல் கிடைக்கிறது. இனி EV vs Petrol என்ற question India-ல் real ஆகிவிட்டது. யாருக்கு EV பொருத்தமானது? Running cost எவ்வளவு குறையும்? Tamil Nadu-ல் EV viable-ஆ? — எல்லாமே இங்கே!
+  </div>
+
+  <!-- TESLA INDIA STATUS -->
+  <div class="news-box">
+    <div class="news-label">🇮🇳 TESLA IN INDIA — 2025 STATUS</div>
+    <div class="news-grid">
+      <div class="news-item">
+        <div class="news-icon">🚗</div>
+        <div class="news-val">Model Y</div>
+        <div class="news-label2">First Tesla in India (Jul 2025)</div>
+      </div>
+      <div class="news-item">
+        <div class="news-icon">💰</div>
+        <div class="news-val">₹59.89L</div>
+        <div class="news-label2">Starting price ex-showroom</div>
+      </div>
+      <div class="news-item">
+        <div class="news-icon">🔋</div>
+        <div class="news-val">500–681 km</div>
+        <div class="news-label2">Range per charge</div>
+      </div>
+      <div class="news-item">
+        <div class="news-icon">🌟</div>
+        <div class="news-val">5 Star</div>
+        <div class="news-label2">EuroNCAP safety rating</div>
+      </div>
+      <div class="news-item">
+        <div class="news-icon">📍</div>
+        <div class="news-val">3 Cities</div>
+        <div class="news-label2">Mumbai, Delhi, Gurugram</div>
+      </div>
+      <div class="news-item">
+        <div class="news-icon">🔮</div>
+        <div class="news-val">Model 3</div>
+        <div class="news-label2">Coming soon ~₹60L</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VS HEADER -->
+  <div class="vs-header">
+    <div class="vs-car tesla-side">
+      <div class="vs-icon">⚡</div>
+      <div class="vs-name tesla-t">TESLA / EV</div>
+      <div class="vs-ta">Electric Vehicle — Future technology</div>
+    </div>
+    <div class="vs-mid">VS</div>
+    <div class="vs-car petrol-side">
+      <div class="vs-icon">⛽</div>
+      <div class="vs-name petrol-t">PETROL / DIESEL</div>
+      <div class="vs-ta">Traditional ICE — Trusted technology</div>
+    </div>
+  </div>
+
+  <!-- SECTION: BIG COMPARISON -->
+  <div class="sec">
+    <div class="sec-badge tesla">⚡ COMPARISON</div>
+    <div><div class="sec-title">Tesla / EV vs Petrol — முழு comparison</div><div class="sec-ta">ஒவ்வொரு factor-உம் compare பண்ணலாம்</div></div>
+  </div>
+
+  <div class="comp-rows">
+    <div class="comp-row header">
+      <div class="comp-cell header-cell">Factor</div>
+      <div class="comp-cell header-cell" style="color:var(--tesla);">⚡ Tesla/EV</div>
+      <div class="comp-cell header-cell" style="color:var(--petrol);">⛽ Petrol Car</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">💰 Purchase Price</div>
+      <div class="comp-cell tesla-cell">₹10L (Tata Punch EV) – ₹60L+ (Tesla)<span class="winner-badge w-petrol" style="margin-left:6px;">Petrol wins</span></div>
+      <div class="comp-cell petrol-cell">₹6L–₹25L — much affordable <span class="winner-badge w-petrol" style="margin-left:6px;">✅ Winner</span></div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">⚡ Running Cost/km</div>
+      <div class="comp-cell tesla-cell">₹1–2/km (electricity) <span class="winner-badge w-tesla" style="margin-left:6px;">✅ Winner</span></div>
+      <div class="comp-cell petrol-cell">₹5–7/km (petrol) <span class="winner-badge w-petrol" style="margin-left:6px;">EV wins</span></div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">🔧 Maintenance Cost</div>
+      <div class="comp-cell tesla-cell">மிகவும் குறைவு — oil change இல்லை, spark plugs இல்லை <span class="winner-badge w-tesla" style="margin-left:6px;">✅ Winner</span></div>
+      <div class="comp-cell petrol-cell">Regular service — oil, filters, spark plugs, etc.</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">🏁 Performance</div>
+      <div class="comp-cell tesla-cell">Instant torque — 0-100 in 3-5 sec. Smooth acceleration <span class="winner-badge w-tesla" style="margin-left:6px;">✅ Winner</span></div>
+      <div class="comp-cell petrol-cell">Good mid-range power, highway top speed higher</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">🛣️ Range / Trip</div>
+      <div class="comp-cell tesla-cell">500–681 km per charge (Tesla). Charging 30–45 min fast charge</div>
+      <div class="comp-cell petrol-cell">600–800 km per tank. Refuel 5 minutes <span class="winner-badge w-petrol" style="margin-left:6px;">✅ Winner</span></div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">⛽ Fuel Availability</div>
+      <div class="comp-cell tesla-cell">Charging stations growing. Home charging possible <span class="winner-badge w-tie" style="margin-left:6px;">Growing</span></div>
+      <div class="comp-cell petrol-cell">Petrol bunks everywhere — no range anxiety <span class="winner-badge w-petrol" style="margin-left:6px;">✅ Winner</span></div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">🌿 Environment</div>
+      <div class="comp-cell tesla-cell">Zero tailpipe emission. 30–40% lower lifetime CO₂ <span class="winner-badge w-tesla" style="margin-left:6px;">✅ Winner</span></div>
+      <div class="comp-cell petrol-cell">120–130g CO₂/km. Air pollution contributor</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">🔇 Noise</div>
+      <div class="comp-cell tesla-cell">Silent — no engine sound. Very relaxing drive <span class="winner-badge w-tesla" style="margin-left:6px;">✅ Winner</span></div>
+      <div class="comp-cell petrol-cell">Engine noise — especially at high RPM</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">📱 Technology</div>
+      <div class="comp-cell tesla-cell">OTA software updates, Autopilot, 15" touchscreen, AI features <span class="winner-badge w-tesla" style="margin-left:6px;">✅ Winner</span></div>
+      <div class="comp-cell petrol-cell">Good infotainment, but no OTA updates, no Autopilot</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">🔄 Resale Value</div>
+      <div class="comp-cell tesla-cell">Uncertain — battery degradation concern, new models coming fast</div>
+      <div class="comp-cell petrol-cell">Stable resale — trusted by used car market <span class="winner-badge w-petrol" style="margin-left:6px;">✅ Winner</span></div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">🛠️ Service Network</div>
+      <div class="comp-cell tesla-cell">Limited — only 3 cities now. Growing slowly</div>
+      <div class="comp-cell petrol-cell">Everywhere — village-ல் கூட mechanics கிடைப்பார்கள் <span class="winner-badge w-petrol" style="margin-left:6px;">✅ Winner</span></div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-cell">5 Year Cost (1,500 km/month)</div>
+      <div class="comp-cell tesla-cell" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;color:var(--ev);">~₹3.6L running cost <span class="winner-badge w-tesla" style="margin-left:6px;">✅ Winner</span></div>
+      <div class="comp-cell petrol-cell" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;color:var(--tesla);">~₹9–10L running cost</div>
+    </div>
+  </div>
+
+  <!-- RUNNING COST SECTION -->
+  <div class="sec">
+    <div class="sec-badge green">💰 RUNNING COST</div>
+    <div><div class="sec-title">மாத செலவு — எது குறைவு?</div><div class="sec-ta">1,500 km/month basis-ல் calculation</div></div>
+  </div>
+
+  <div class="cost-box">
+    <div class="cost-title">Monthly Running Cost (1,500 km)</div>
+    <div class="cost-grid">
+      <div class="cost-card tesla-c">
+        <div class="cost-type tesla-t">⚡ EV (Tesla/Nexon)</div>
+        <div class="cost-per-km" style="color:var(--ev);">₹1.5–2</div>
+        <div class="cost-monthly">per km (electricity ₹7/unit)</div>
+        <div class="cost-annual" style="color:var(--ev);">~₹2,250–3,000/month</div>
+      </div>
+      <div class="cost-card petrol-c">
+        <div class="cost-type petrol-t">⛽ Petrol Car</div>
+        <div class="cost-per-km" style="color:var(--petrol);">₹6–7</div>
+        <div class="cost-monthly">per km (₹102/litre, 15 kmpl)</div>
+        <div class="cost-annual" style="color:var(--petrol);">~₹9,000–10,500/month</div>
+      </div>
+      <div class="cost-card diesel-c">
+        <div class="cost-type diesel-t">🛢️ Diesel Car</div>
+        <div class="cost-per-km" style="color:var(--diesel);">₹4.5–5</div>
+        <div class="cost-monthly">per km (₹90/litre, 20 kmpl)</div>
+        <div class="cost-annual" style="color:var(--diesel);">~₹6,750–7,500/month</div>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg,#0a1a0a,#1a3a1a);color:#fff;border-radius:10px;padding:14px;margin-top:14px;text-align:center;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:#60e080;margin-bottom:4px;">EV vs Petrol — Annual Savings</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:#fff;">₹72,000 – ₹96,000/year</div>
+      <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:#90c090;margin-top:4px;">10 வருட ownership-ல் ₹7–9 lakh save ஆகும்!</div>
+    </div>
+  </div>
+
+  <!-- TESLA MODELS IN INDIA -->
+  <div class="sec">
+    <div class="sec-badge tesla">🚗 TESLA MODELS</div>
+    <div><div class="sec-title">Tesla India-ல் Available / Coming</div><div class="sec-ta">2025-26 launch lineup</div></div>
+  </div>
+
+  <div class="model-grid">
+    <div class="model-card">
+      <div class="model-name">Model Y</div>
+      <div class="model-price">₹59.89L–₹67.89L</div>
+      <div class="model-specs">
+        🔋 Range: 500–681 km<br>
+        ⚡ 0-100: ~5 sec<br>
+        💺 5/6 seater SUV<br>
+        📱 15" touchscreen<br>
+        🛡️ 5-star EuroNCAP
+      </div>
+      <span class="model-status status-live">✅ Available Now</span>
+    </div>
+    <div class="model-card">
+      <div class="model-name">Model Y L</div>
+      <div class="model-price">₹61.99L</div>
+      <div class="model-specs">
+        🔋 Range: 681 km<br>
+        💺 6-seater (3 rows)<br>
+        📏 Longer wheelbase<br>
+        🚙 Family SUV<br>
+        🗓️ Launched April 2026
+      </div>
+      <span class="model-status status-live">✅ Available Now</span>
+    </div>
+    <div class="model-card">
+      <div class="model-name">Model 3</div>
+      <div class="model-price">~₹60–70L</div>
+      <div class="model-specs">
+        🔋 Range: 500+ km<br>
+        ⚡ 0-100: ~4 sec<br>
+        💺 5-seat sedan<br>
+        🤖 Autopilot ready<br>
+        🔮 Coming soon
+      </div>
+      <span class="model-status status-soon">🔜 Coming Soon</span>
+    </div>
+  </div>
+
+  <!-- INDIA EV ALTERNATIVES -->
+  <div class="sec">
+    <div class="sec-badge green">🇮🇳 INDIA EVs</div>
+    <div><div class="sec-title">Tesla Afford பண்ண முடியாவிட்டால்?</div><div class="sec-ta">Indian EV alternatives — budget-friendly</div></div>
+  </div>
+
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-name">Tata Punch EV</div>
+      <div class="alt-price">₹10–14L</div>
+      <div class="alt-range">🔋 315–421 km range</div>
+      <div class="alt-vs">Tesla alternative-ஆக — budget 5-star safe EV</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-name">Tata Nexon EV</div>
+      <div class="alt-price">₹14–20L</div>
+      <div class="alt-range">🔋 325–489 km range</div>
+      <div class="alt-vs">Most popular Indian EV. Reliable, good range</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-name">Hyundai Creta EV</div>
+      <div class="alt-price">₹18–24L</div>
+      <div class="alt-range">🔋 473 km range</div>
+      <div class="alt-vs">Premium feel, ADAS features, Korean reliability</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-name">Mahindra BE 6</div>
+      <div class="alt-price">₹19–27L</div>
+      <div class="alt-range">🔋 550+ km range</div>
+      <div class="alt-vs">New age Indian EV — sporty design, long range</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-name">MG Windsor EV</div>
+      <div class="alt-price">₹14–17L</div>
+      <div class="alt-range">🔋 332 km range</div>
+      <div class="alt-vs">Battery-as-a-service option — low upfront cost</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-name">Kia EV6</div>
+      <div class="alt-price">₹61–66L</div>
+      <div class="alt-range">🔋 528 km range</div>
+      <div class="alt-vs">Tesla Model Y direct competitor — premium EV</div>
+    </div>
+  </div>
+
+  <!-- TESLA UNIQUE FEATURES -->
+  <div class="sec">
+    <div class="sec-badge tesla">🤖 TESLA MAGIC</div>
+    <div><div class="sec-title">Tesla-க்கு மட்டும் உள்ள features</div><div class="sec-ta">யாரும் இதை offer பண்றதில்லை</div></div>
+  </div>
+
+  <div class="card" id="t1">
+    <div class="card-hdr" onclick="tc('t1')">
+      <div class="card-ico" style="background:#fff0ee;">🤖</div>
+      <div style="flex:1"><div class="card-ta">Tesla மட்டும்</div><div class="card-en">Autopilot & Full Self-Driving</div><div class="card-sum">Semi-autonomous driving — highway-ல் hands-free!</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>🤖</span><div><strong>Autopilot</strong> — Lane keeping, adaptive cruise, emergency braking. Standard feature.</div></div>
+        <div class="rule-item"><span>🚗</span><div><strong>Full Self-Driving (FSD)</strong> — ₹6 lakh extra option. Highway-to-highway self drive.</div></div>
+        <div class="rule-item"><span>⚠️</span><div>India-ல் FSD currently disabled (laws pending). Future-ல் OTA update-ல் unlock ஆகலாம்.</div></div>
+        <div class="rule-item"><span>📷</span><div>8 cameras + ultrasonic sensors + radar — 360° awareness.</div></div>
+      </div>
+      <div class="warn-box">⚠️ Autopilot = driver assistance, not full autonomous. Always hands on wheel, eyes on road!</div>
+    </div>
+  </div>
+
+  <div class="card" id="t2">
+    <div class="card-hdr" onclick="tc('t2')">
+      <div class="card-ico" style="background:#fff0ee;">📱</div>
+      <div style="flex:1"><div class="card-ta">Software car</div><div class="card-en">Over-the-Air (OTA) Updates</div><div class="card-sum">Phone போல் car-ஐ update பண்றார்கள்!</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>📲</span><div>Sleep-ல் car automatically update ஆகும் — garage போக வேண்டியதில்லை</div></div>
+        <div class="rule-item"><span>⚡</span><div>Performance improvements, new features, bug fixes — all OTA</div></div>
+        <div class="rule-item"><span>🎮</span><div>Games, Netflix, YouTube — car-ல் parked-ல் watch பண்ணலாம்</div></div>
+        <div class="rule-item"><span>🌡️</span><div>Pre-conditioning — office-லிருந்தே car-ஐ cool/warm பண்ணலாம் phone-ல்</div></div>
+      </div>
+      <div class="tip-box">✅ Traditional cars = garage போய் update. Tesla = phone-ல் software update. Game changer!</div>
+    </div>
+  </div>
+
+  <div class="card" id="t3">
+    <div class="card-hdr" onclick="tc('t3')">
+      <div class="card-ico" style="background:#fff0ee;">⚡</div>
+      <div style="flex:1"><div class="card-ta">Charging secrets</div><div class="card-en">Tesla Supercharger Network</div><div class="card-sum">India-ல் expanding — 30 min-ல் 80% charge!</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>⚡</span><div>Tesla Supercharger V3 — 250kW peak. 15 min-ல் 200 km range add ஆகும்</div></div>
+        <div class="rule-item"><span>🏠</span><div>Home charging — Wall Connector install பண்ணினால் overnight full charge. ₹50–80 cost</div></div>
+        <div class="rule-item"><span>📍</span><div>India-ல் Mumbai, Delhi, Bengaluru, Hyderabad — Superchargers growing</div></div>
+        <div class="rule-item"><span>🛣️</span><div>Chennai–Bengaluru highway-ல் charging stations available — Tamil Nadu expanding</div></div>
+      </div>
+      <div class="warn-box">⚠️ Tamil Nadu interior areas (Mulanur, small towns) — still limited charging. Long trips-ல் plan பண்ணணும்.</div>
+    </div>
+  </div>
+
+  <!-- WHO SHOULD BUY -->
+  <div class="sec">
+    <div class="sec-badge amber">🤔 WHO?</div>
+    <div><div class="sec-title">யாருக்கு EV/Tesla? யாருக்கு Petrol?</div><div class="sec-ta">உன் situation பாரு — decide பண்ணு</div></div>
+  </div>
+
+  <div class="who-grid">
+    <div class="who-box who-tesla">
+      <div class="who-title" style="color:var(--tesla);">⚡ EV / Tesla சரியானது</div>
+      <div class="who-item"><span>✅</span><div>Chennai, Coimbatore, Madurai city drivers</div></div>
+      <div class="who-item"><span>✅</span><div>Daily 50–80 km commute — office போய் வருவர்</div></div>
+      <div class="who-item"><span>✅</span><div>Home charging possible (apartment வாசிகள்)</div></div>
+      <div class="who-item"><span>✅</span><div>Tech-savvy, environment-conscious buyers</div></div>
+      <div class="who-item"><span>✅</span><div>5 year+ ownership plan உள்ளவர்கள்</div></div>
+      <div class="who-item"><span>✅</span><div>₹15L+ budget — savings long-term கிடைக்கும்</div></div>
+    </div>
+    <div class="who-box who-petrol">
+      <div class="who-title" style="color:var(--petrol);">⛽ Petrol / Diesel சரியானது</div>
+      <div class="who-item"><span>✅</span><div>Tamil Nadu interior areas — Tiruppur, Salem rural</div></div>
+      <div class="who-item"><span>✅</span><div>Long highway trips frequent-ஆக போவர்கள்</div></div>
+      <div class="who-item"><span>✅</span><div>Limited budget — ₹8–12L range buyers</div></div>
+      <div class="who-item"><span>✅</span><div>Service center எங்கும் வேண்டுவர்கள்</div></div>
+      <div class="who-item"><span>✅</span><div>Home charging facility இல்லாதவர்கள்</div></div>
+      <div class="who-item"><span>✅</span><div>Short ownership plan (3 years-க்கு மாற்றுவர்கள்)</div></div>
+    </div>
+  </div>
+
+  <!-- ENVIRONMENT -->
+  <div class="sec">
+    <div class="sec-badge green">🌿 ENVIRONMENT</div>
+    <div><div class="sec-title">Environment Impact</div><div class="sec-ta">EV really eco-friendly-ஆ?</div></div>
+  </div>
+
+  <div class="card" id="env1">
+    <div class="card-hdr" onclick="tc('env1')">
+      <div class="card-ico" style="background:#f0fff4;">🌿</div>
+      <div style="flex:1"><div class="card-ta">EV eco-friendly-ஆ? Full truth</div><div class="card-en">EV vs Petrol — Real Environmental Impact</div><div class="card-sum">Manufacturing + charging + lifetime — total picture</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>🏭</span><div><strong>Manufacturing:</strong> EV battery production-ல் அதிக CO₂ emit ஆகும். Petrol car-ஐ விட manufacturing carbon footprint அதிகம்.</div></div>
+        <div class="rule-item"><span>⚡</span><div><strong>Charging:</strong> India-ல் 70% electricity coal-லிருந்து வருகிறது. ஆனால் lifecycle emissions 30–40% குறைவு என்று ICCT 2024 study சொல்கிறது.</div></div>
+        <div class="rule-item"><span>☀️</span><div><strong>Future:</strong> India 2024-ல் 13 GW solar add பண்ணியது. Grid cleaner ஆக ஆக EV-ஓட advantage அதிகமாகும்.</div></div>
+        <div class="rule-item"><span>🌆</span><div><strong>City air:</strong> Tailpipe emission zero — Chennai, Coimbatore urban air quality improve ஆகும்.</div></div>
+      </div>
+      <div class="tip-box">✅ Short answer: EV இன்று petrol-ஐ விட better. Solar charging பண்ணினால் — almost carbon-free driving!</div>
+    </div>
+  </div>
+
+  <!-- FUTURE OF EV IN INDIA -->
+  <div class="future-strip">
+    <div class="future-title">🔮 EV FUTURE IN INDIA — TIMELINE</div>
+    <div class="future-grid">
+      <div class="future-item">
+        <div class="future-icon">🚗</div>
+        <div class="future-year">2025</div>
+        <div class="future-ta">Tesla India arrived. 1.5M+ EV sales. Charging growing.</div>
+      </div>
+      <div class="future-item">
+        <div class="future-icon">⚡</div>
+        <div class="future-year">2027</div>
+        <div class="future-ta">Tamil Nadu-ல் charging network expand. EV highway-ready.</div>
+      </div>
+      <div class="future-item">
+        <div class="future-icon">🏭</div>
+        <div class="future-year">2030</div>
+        <div class="future-ta">India targets 30% EV sales. Battery prices halve.</div>
+      </div>
+      <div class="future-item">
+        <div class="future-icon">🚫</div>
+        <div class="future-year">2035</div>
+        <div class="future-ta">EU bans new petrol cars. Global shift to EV accelerates.</div>
+      </div>
+      <div class="future-item">
+        <div class="future-icon">🤖</div>
+        <div class="future-year">2040</div>
+        <div class="future-ta">60%+ global new cars = EV. Self-driving becomes mainstream.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="conc">
+    <h3>⚡ Tesla vs Petrol — Final Verdict</h3>
+    <div class="pills">
+      <div class="pill t">⚡ EV = Running cost winner</div>
+      <div class="pill p">⛽ Petrol = Purchase cost winner</div>
+      <div class="pill t">⚡ Tesla = Technology winner</div>
+      <div class="pill p">⛽ Petrol = Range & service winner</div>
+    </div>
+    <p>
+      <strong style="color:#ff8080;">Tesla இன்று buy பண்ண வேண்டுமா?</strong> — ₹60L budget இருந்து, Chennai/Coimbatore city-ல் இருந்து, home charging possible-ஆ இருந்தால் — Yes, excellent choice.<br><br>
+      <strong style="color:#ffcc60;">Petrol car buy பண்ண வேண்டுமா?</strong> — Budget limited-ஆ இருந்து, interior areas-ல் இருந்து, highway trips frequent-ஆ இருந்தால் — Yes, still smart choice.<br><br>
+      <strong style="color:#80ff80;">Middle path:</strong> Tata Nexon EV அல்லது Punch EV — Indian roads-க்கு perfect, ₹10–20L range, Tata service network, 5-star safety. Best of both worlds!
+    </p>
+  </div>
+
+  <a href="index.html" class="nxt">
+    <div class="nxt-ico">🏠</div>
+    <div><div class="nxt-lbl">← Back to</div><div class="nxt-en">KaarKalvi Home</div><div class="nxt-ta">எல்லா articles-உம் இங்கே</div></div>
+    <div class="nxt-arr">→</div>
+  </a>
+
+  <div class="share-wrap">
+    <div class="share-h">⚡ Share பண்ணுங்கள்!</div>
+    <div class="share-ta">Tesla vs Petrol debate — friends-கிட்ட share பண்ணுங்கள்!</div>
+    <div class="share-btns">
+      <button class="sb wa" onclick="sWA()">WhatsApp</button>
+      <button class="sb fb" onclick="sFB()">Facebook</button>
+      <button class="sb tw" onclick="sTW()">X</button>
+      <button class="sb tg" onclick="sTG()">Telegram</button>
+      <button class="sb ig" onclick="sIG()">Instagram</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fb2">KAARKALVI</div>
+  <div class="fs">கார் கல்வி · Tamil Car Education</div>
+  <div class="fl2">
+    <a href="index.html">Home</a>
+    <a href="article8.html">CNG Guide</a>
+    <a href="article9.html">Safest Cars</a>
+    <a href="article11.html">Secret Features</a>
+    <a href="article12.html">Tesla vs Petrol</a>
+  </div>
+</footer>
+
+<script>
+function tc(id){document.getElementById(id).classList.toggle('open');}
+window.addEventListener('scroll',()=>{
+  const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(w/h*100)+'%';
+});
+const u=encodeURIComponent(location.href),tx=encodeURIComponent('⚡ Tesla vs Petrol Car — India-ல் எது better? தமிழில் முழு comparison — KaarKalvi! 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traffic Signals & Road Rules Tamil | சாலை விதிகள் | KaarKalvi</title>
+<meta name="description" content="Traffic signals, roundabout, highway rules, pedestrian rules தமிழில் — symbols உடன் முழு விளக்கம் | KaarKalvi">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:#fdf6ee; --cream2:#fff8f0; --cream3:#fef3e2;
+  --border:rgba(180,140,100,0.2); --brown:#2c1a0e; --brown2:#5a3e2b;
+  --muted:#8a6a50; --accent:#c47820;
+  --red:#c0392b; --yellow:#d4880a; --green:#1a7a3c; --blue:#1a5fa0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+
+/* NAV */
+nav{background:#2c1a0e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.2);}
+.nav-brand{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.nav-sub{font-size:10px;color:#8a6a50;}
+.nav-home{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;color:#c0a880;text-decoration:none;padding:6px 12px;border:1px solid rgba(180,140,100,0.3);border-radius:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a0a00,#8a3a00,#c47820);padding:40px 20px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'🚦';position:absolute;font-size:200px;opacity:.05;top:-20px;right:-20px;}
+.hero-tag{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:3px;color:#fff6;margin-bottom:10px;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,6vw,44px);font-weight:800;color:#fff;margin-bottom:8px;}
+.hero-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:#ffe0b0;margin-bottom:14px;}
+.hero-meta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:12px;color:#ffcc80;}
+
+/* CONTAINER */
+.container{max-width:760px;margin:0 auto;padding:28px 16px;}
+.intro-box{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;margin-bottom:28px;font-size:14px;line-height:1.8;color:var(--brown2);}
+
+/* SECTION */
+.sec{margin:32px 0 16px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.sec-badge{padding:4px 12px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;}
+.sec-badge.amber{background:#fff8e0;color:var(--accent);border:1px solid rgba(196,120,32,0.3);}
+.sec-badge.red{background:#fff0ee;color:var(--red);border:1px solid rgba(192,57,43,0.3);}
+.sec-badge.green{background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,0.3);}
+.sec-badge.blue{background:#f0f4ff;color:var(--blue);border:1px solid rgba(26,95,160,0.3);}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;}
+.sec-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+
+/* SIGNAL LIGHTS — SVG-based */
+.signal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:16px;}
+.signal-card{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:18px 16px;text-align:center;transition:all .2s;}
+.signal-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(120,80,40,0.12);}
+
+/* Traffic Light SVG */
+.tl-box{width:54px;height:130px;background:#1a1a1a;border-radius:10px;margin:0 auto 12px;display:flex;flex-direction:column;align-items:center;justify-content:space-around;padding:8px;border:2px solid #333;}
+.tl-light{width:30px;height:30px;border-radius:50%;border:2px solid #444;}
+.tl-light.r-on{background:#e63946;box-shadow:0 0 12px #e63946, 0 0 24px rgba(230,57,70,0.5);}
+.tl-light.r-off{background:#3a1a1a;}
+.tl-light.y-on{background:#f4c100;box-shadow:0 0 12px #f4c100, 0 0 24px rgba(244,193,0,0.5);}
+.tl-light.y-off{background:#3a3a1a;}
+.tl-light.g-on{background:#2dc653;box-shadow:0 0 12px #2dc653, 0 0 24px rgba(45,198,83,0.4);}
+.tl-light.g-off{background:#1a3a1a;}
+
+.signal-title{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.signal-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:8px;}
+.signal-rule{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+.signal-fine{display:inline-block;margin-top:6px;padding:3px 10px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+.fine-red{background:#fff0ee;color:var(--red);border:1px solid rgba(192,57,43,0.25);}
+.fine-yellow{background:#fffbf0;color:var(--yellow);border:1px solid rgba(212,136,10,0.25);}
+
+/* ROAD SIGN SYMBOLS */
+.signs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:16px;}
+.sign-card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px 12px;text-align:center;cursor:pointer;transition:all .2s;}
+.sign-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(120,80,40,0.1);}
+
+/* SVG Road Signs */
+.sign-svg{width:64px;height:64px;margin:0 auto 8px;}
+.sign-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:2px;}
+.sign-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--muted);}
+
+/* ROAD MARKINGS */
+.marking-list{display:flex;flex-direction:column;gap:10px;}
+.marking-item{background:var(--cream2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;}
+.marking-visual{width:80px;height:24px;flex-shrink:0;border-radius:4px;overflow:hidden;position:relative;}
+.marking-info{flex:1;}
+.marking-name{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--brown);}
+.marking-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);margin-top:2px;}
+
+/* EXPANDABLE CARD */
+.card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.card-hdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;}
+.card-sym{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.card-en{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;}
+.card-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:2px;}
+.card-sum{font-size:12px;color:var(--brown2);}
+.card-arr{margin-left:auto;font-size:16px;color:var(--muted);transition:transform .2s;flex-shrink:0;}
+.card.open .card-arr{transform:rotate(180deg);}
+.card-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border);}
+.card.open .card-body{display:block;}
+.rule-list{margin-top:12px;display:flex;flex-direction:column;gap:7px;}
+.rule-item{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--brown2);}
+.rule-sym{font-size:16px;flex-shrink:0;margin-top:1px;}
+.danger{background:#fff0ee;border-left:3px solid var(--red);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--red);}
+.tip{background:#f0fff4;border-left:3px solid var(--green);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--green);}
+
+/* FINE TABLE */
+.fine-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px;}
+.fine-table th{background:var(--cream3);color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);}
+.fine-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--brown2);}
+.fine-table tr:last-child td{border-bottom:none;}
+.fine-table tr:nth-child(even) td{background:var(--cream3);}
+.badge-red{background:#fff0ee;color:var(--red);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+
+/* SHARE & FOOTER */
+.share-wrap{margin-top:24px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:20px;}
+.share-h{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;margin-bottom:4px;}
+.share-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.share-btns{display:flex;flex-wrap:wrap;gap:8px;}
+.sb{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sb:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+.nxt{margin-top:16px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxt-ico{font-size:26px;flex-shrink:0;}
+.nxt-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxt-en{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxt-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxt-arr{margin-left:auto;font-size:20px;color:var(--accent);}
+footer{text-align:center;padding:24px 20px;border-top:1px solid var(--border);margin-top:16px;}
+.fb2{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--accent);letter-spacing:3px;}
+.fs{font-size:12px;color:var(--muted);margin-top:3px;}
+.fl2{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.fl2 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:999;transition:width .1s;}
+
+/* ROUNDABOUT VISUAL */
+.roundabout-wrap{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;margin-bottom:16px;}
+.roundabout-svg{max-width:240px;margin:0 auto 12px;}
+
+/* SPECIAL SIGNAL VISUAL */
+.special-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px;}
+.sp-card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:16px 14px;text-align:center;}
+.sp-signal{width:48px;height:48px;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.sp-signal.flash-y{background:#f4c100;box-shadow:0 0 16px rgba(244,193,0,0.5);animation:flash 1s ease-in-out infinite;}
+.sp-signal.flash-r{background:#e63946;box-shadow:0 0 16px rgba(230,57,70,0.5);animation:flash 1s ease-in-out infinite;}
+.sp-signal.arrow-g{background:#2dc653;box-shadow:0 0 12px rgba(45,198,83,0.4);}
+.sp-signal.count{background:#1a5fa0;box-shadow:0 0 12px rgba(26,95,160,0.4);}
+@keyframes flash{0%,100%{opacity:1;}50%{opacity:.3;}}
+.sp-name{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--brown);margin-bottom:4px;}
+.sp-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:6px;}
+.sp-rule{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+
+<nav>
+  <div><a href="index.html" class="nav-brand">KAARKALVI</a><div class="nav-sub">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nav-home">← Home</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Article 6 · Traffic Signals Deep Dive</div>
+  <h1>Traffic Signals & Road Rules</h1>
+  <div class="hero-ta">சாலை விதிகள் — Symbols உடன் முழு விளக்கம்</div>
+  <div class="hero-meta"><span>📖 7 min read</span><span>🚦 Signals</span><span>🛣️ Road Markings</span><span>🚨 Fines 2024</span></div>
+</div>
+
+<div class="container">
+  <div class="intro-box">License test-ல் படித்தோம், பிறகு மறந்துவிட்டோம். இந்த article-ல் traffic signals-ஐ <strong>symbols உடன்</strong> பார்க்கலாம் — கண்ணால் பார்த்தால் எளிதாக நினைவில் இருக்கும்.</div>
+
+  <!-- TRAFFIC LIGHTS -->
+  <div class="sec">
+    <div class="sec-badge amber">🚦 SIGNALS</div>
+    <div><div class="sec-title">Traffic Light Signals</div><div class="sec-ta">3 colors — 3 rules</div></div>
+  </div>
+
+  <div class="signal-grid">
+    <!-- RED -->
+    <div class="signal-card">
+      <div class="tl-box">
+        <div class="tl-light r-on"></div>
+        <div class="tl-light y-off"></div>
+        <div class="tl-light g-off"></div>
+      </div>
+      <div class="signal-title">RED LIGHT</div>
+      <div class="signal-ta">சிவப்பு விளக்கு</div>
+      <div class="signal-rule">முழுவதும் நிறுத்துங்கள் — Stop line-க்கு முன்னால். நகராதீர்கள்!</div>
+      <span class="signal-fine fine-red">Fine: ₹5,000</span>
+    </div>
+    <!-- YELLOW -->
+    <div class="signal-card">
+      <div class="tl-box">
+        <div class="tl-light r-off"></div>
+        <div class="tl-light y-on"></div>
+        <div class="tl-light g-off"></div>
+      </div>
+      <div class="signal-title">YELLOW LIGHT</div>
+      <div class="signal-ta">மஞ்சள் விளக்கு</div>
+      <div class="signal-rule">நிறுத்த தயாராகுங்கள். Accelerate பண்ணாதீர்கள் — 3–5 seconds மட்டுமே</div>
+      <span class="signal-fine fine-yellow">Fine: ₹1,000</span>
+    </div>
+    <!-- GREEN -->
+    <div class="signal-card">
+      <div class="tl-box">
+        <div class="tl-light r-off"></div>
+        <div class="tl-light y-off"></div>
+        <div class="tl-light g-on"></div>
+      </div>
+      <div class="signal-title">GREEN LIGHT</div>
+      <div class="signal-ta">பச்சை விளக்கு</div>
+      <div class="signal-rule">போகலாம் — Pedestrian பார்த்துவிட்டு. Left-right check பண்ணுங்கள்</div>
+      <span class="signal-fine" style="background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,0.25);">Safe ✅</span>
+    </div>
+  </div>
+
+  <!-- SPECIAL SIGNALS -->
+  <div class="sec">
+    <div class="sec-badge amber">⚡ SPECIAL</div>
+    <div><div class="sec-title">Special Signal Situations</div><div class="sec-ta">இவை பலருக்கு confuse ஆகும்</div></div>
+  </div>
+
+  <div class="special-grid">
+    <div class="sp-card">
+      <div class="sp-signal flash-y">⚠️</div>
+      <div class="sp-name">Flashing Yellow</div>
+      <div class="sp-ta">மின்னும் மஞ்சள்</div>
+      <div class="sp-rule">Uncontrolled junction — slow down, இரண்டு பக்கமும் பார்த்துவிட்டு போங்கள்</div>
+    </div>
+    <div class="sp-card">
+      <div class="sp-signal flash-r">🛑</div>
+      <div class="sp-name">Flashing Red</div>
+      <div class="sp-ta">மின்னும் சிவப்பு</div>
+      <div class="sp-rule">Stop sign போல — நிறுத்தி, பார்த்துவிட்டு, பிறகு போங்கள்</div>
+    </div>
+    <div class="sp-card">
+      <div class="sp-signal arrow-g">↗️</div>
+      <div class="sp-name">Green Arrow</div>
+      <div class="sp-ta">பச்சை அம்புக்குறி</div>
+      <div class="sp-rule">Arrow direction மட்டும் போகலாம். Other directions red-ஆக இருந்தாலும் ok</div>
+    </div>
+    <div class="sp-card">
+      <div class="sp-signal count" style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:800;color:#fff;">15</div>
+      <div class="sp-name">Countdown Timer</div>
+      <div class="sp-ta">எண்ணிக்கை காட்டி</div>
+      <div class="sp-rule">3..2..1 race இல்லை — calm-ஆக இருங்கள். Numbers குறையும்போது accelerate வேண்டாம்</div>
+    </div>
+  </div>
+
+  <!-- ROAD SIGNS -->
+  <div class="sec">
+    <div class="sec-badge red">🔴 SIGNS</div>
+    <div><div class="sec-title">Road Signs — 3 Types</div><div class="sec-ta">Shape பார்த்தாலே type தெரியும்</div></div>
+  </div>
+
+  <div class="signs-grid">
+    <!-- Mandatory Signs — Circles -->
+    <div class="sign-card" onclick="t('s1')">
+      <svg class="sign-svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#fff" stroke="#e63946" stroke-width="5"/><text x="32" y="38" text-anchor="middle" fill="#e63946" font-size="14" font-family="Barlow Condensed" font-weight="800">STOP</text></svg>
+      <div class="sign-name">STOP</div><div class="sign-ta">நிறுத்துங்கள்</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#fff" stroke="#e63946" stroke-width="5"/><line x1="16" y1="32" x2="48" y2="32" stroke="#e63946" stroke-width="5" stroke-linecap="round"/></svg>
+      <div class="sign-name">NO ENTRY</div><div class="sign-ta">நுழைய கூடாது</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#fff" stroke="#e63946" stroke-width="5"/><text x="32" y="26" text-anchor="middle" fill="#e63946" font-size="10" font-family="Barlow Condensed" font-weight="800">SPEED</text><text x="32" y="40" text-anchor="middle" fill="#e63946" font-size="14" font-family="Barlow Condensed" font-weight="800">60</text></svg>
+      <div class="sign-name">SPEED LIMIT</div><div class="sign-ta">வேக வரம்பு</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#fff" stroke="#e63946" stroke-width="5"/><text x="32" y="22" text-anchor="middle" fill="#e63946" font-size="8" font-family="Barlow Condensed" font-weight="800">NO</text><text x="32" y="34" text-anchor="middle" fill="#e63946" font-size="8" font-family="Barlow Condensed" font-weight="800">PARKING</text><text x="32" y="46" text-anchor="middle" fill="#e63946" font-size="16">🅿️</text></svg>
+      <div class="sign-name">NO PARKING</div><div class="sign-ta">நிறுத்த கூடாது</div>
+    </div>
+    <!-- Cautionary Signs — Triangles -->
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><polygon points="32,4 60,58 4,58" fill="#fff7e0" stroke="#e6a000" stroke-width="4"/><text x="32" y="44" text-anchor="middle" fill="#c47820" font-size="22">⚠️</text></svg>
+      <div class="sign-name">CAUTION</div><div class="sign-ta">எச்சரிக்கை</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><polygon points="32,4 60,58 4,58" fill="#fff7e0" stroke="#e6a000" stroke-width="4"/><text x="32" y="44" text-anchor="middle" fill="#c47820" font-size="22">🏫</text></svg>
+      <div class="sign-name">SCHOOL ZONE</div><div class="sign-ta">பள்ளி பகுதி</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><polygon points="32,4 60,58 4,58" fill="#fff7e0" stroke="#e6a000" stroke-width="4"/><text x="32" y="44" text-anchor="middle" fill="#c47820" font-size="22">🚂</text></svg>
+      <div class="sign-name">RAILWAY</div><div class="sign-ta">ரயில் கடவை</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><polygon points="32,4 60,58 4,58" fill="#fff7e0" stroke="#e6a000" stroke-width="4"/><text x="32" y="44" text-anchor="middle" fill="#c47820" font-size="22">🏔️</text></svg>
+      <div class="sign-name">STEEP HILL</div><div class="sign-ta">செங்குத்தான மேடு</div>
+    </div>
+    <!-- Informatory Signs — Rectangles -->
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><rect x="4" y="12" width="56" height="40" rx="6" fill="#1a5fa0"/><text x="32" y="28" text-anchor="middle" fill="#fff" font-size="10" font-family="Barlow Condensed" font-weight="700">HOSPITAL</text><text x="32" y="46" text-anchor="middle" fill="#fff" font-size="18">🏥</text></svg>
+      <div class="sign-name">HOSPITAL</div><div class="sign-ta">மருத்துவமனை</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><rect x="4" y="12" width="56" height="40" rx="6" fill="#1a5fa0"/><text x="32" y="28" text-anchor="middle" fill="#fff" font-size="10" font-family="Barlow Condensed" font-weight="700">PARKING</text><text x="32" y="46" text-anchor="middle" fill="#fff" font-size="22" font-family="Barlow Condensed" font-weight="800">P</text></svg>
+      <div class="sign-name">PARKING</div><div class="sign-ta">வாகன நிறுத்துமிடம்</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><rect x="4" y="12" width="56" height="40" rx="6" fill="#27ae60"/><text x="32" y="28" text-anchor="middle" fill="#fff" font-size="9" font-family="Barlow Condensed" font-weight="700">PETROL</text><text x="32" y="46" text-anchor="middle" fill="#fff" font-size="20">⛽</text></svg>
+      <div class="sign-name">PETROL PUMP</div><div class="sign-ta">பெட்ரோல் நிலையம்</div>
+    </div>
+    <div class="sign-card">
+      <svg class="sign-svg" viewBox="0 0 64 64"><rect x="4" y="12" width="56" height="40" rx="6" fill="#27ae60"/><text x="32" y="28" text-anchor="middle" fill="#fff" font-size="9" font-family="Barlow Condensed" font-weight="700">FIRST AID</text><text x="32" y="46" text-anchor="middle" fill="#fff" font-size="20">➕</text></svg>
+      <div class="sign-name">FIRST AID</div><div class="sign-ta">முதல் உதவி</div>
+    </div>
+  </div>
+
+  <!-- ROAD MARKINGS -->
+  <div class="sec">
+    <div class="sec-badge blue">〰️ MARKINGS</div>
+    <div><div class="sec-title">Road Line Markings</div><div class="sec-ta">Lines என்ன சொல்கின்றன?</div></div>
+  </div>
+
+  <div class="marking-list">
+    <div class="marking-item">
+      <div class="marking-visual">
+        <svg width="80" height="24" viewBox="0 0 80 24"><rect width="80" height="24" fill="#444"/><line x1="5" y1="12" x2="20" y2="12" stroke="white" stroke-width="3"/><line x1="30" y1="12" x2="45" y2="12" stroke="white" stroke-width="3"/><line x1="55" y1="12" x2="70" y2="12" stroke="white" stroke-width="3"/></svg>
+      </div>
+      <div class="marking-info">
+        <div class="marking-name">Broken White Line — Overtake OK ✅</div>
+        <div class="marking-ta">இந்த line இருந்தால் — visibility நல்லா இருந்தால் overtake பண்ணலாம்</div>
+      </div>
+    </div>
+    <div class="marking-item">
+      <div class="marking-visual">
+        <svg width="80" height="24" viewBox="0 0 80 24"><rect width="80" height="24" fill="#444"/><line x1="5" y1="12" x2="75" y2="12" stroke="#f4c100" stroke-width="3"/></svg>
+      </div>
+      <div class="marking-info">
+        <div class="marking-name">Single Solid Yellow — Caution ⚠️</div>
+        <div class="marking-ta">Overtake வேண்டாம் — careful-ஆக போங்கள்</div>
+      </div>
+    </div>
+    <div class="marking-item">
+      <div class="marking-visual">
+        <svg width="80" height="24" viewBox="0 0 80 24"><rect width="80" height="24" fill="#444"/><line x1="5" y1="9" x2="75" y2="9" stroke="#f4c100" stroke-width="2.5"/><line x1="5" y1="15" x2="75" y2="15" stroke="#f4c100" stroke-width="2.5"/></svg>
+      </div>
+      <div class="marking-info">
+        <div class="marking-name">Double Solid Yellow — No Overtake ❌</div>
+        <div class="marking-ta">Overtake கண்டிப்பாக கூடாது — Fine ₹1,000</div>
+      </div>
+    </div>
+    <div class="marking-item">
+      <div class="marking-visual">
+        <svg width="80" height="24" viewBox="0 0 80 24"><rect width="80" height="24" fill="#555"/><rect x="5" y="7" width="10" height="10" fill="white"/><rect x="20" y="7" width="10" height="10" fill="white"/><rect x="35" y="7" width="10" height="10" fill="white"/><rect x="50" y="7" width="10" height="10" fill="white"/><rect x="65" y="7" width="10" height="10" fill="white"/></svg>
+      </div>
+      <div class="marking-info">
+        <div class="marking-name">Zebra Crossing — Pedestrian Priority 🚶</div>
+        <div class="marking-ta">Pedestrian கடக்கும்போது நிறுத்துங்கள் — Fine ₹500</div>
+      </div>
+    </div>
+    <div class="marking-item">
+      <div class="marking-visual">
+        <svg width="80" height="24" viewBox="0 0 80 24"><rect width="80" height="24" fill="#444"/><line x1="5" y1="12" x2="75" y2="12" stroke="white" stroke-width="3"/></svg>
+      </div>
+      <div class="marking-info">
+        <div class="marking-name">Solid White Line — No Lane Change ❌</div>
+        <div class="marking-ta">Lane மாற்றக்கூடாது — Fine ₹500</div>
+      </div>
+    </div>
+    <div class="marking-item">
+      <div class="marking-visual">
+        <svg width="80" height="24" viewBox="0 0 80 24"><rect width="80" height="24" fill="#555"/><line x1="5" y1="12" x2="75" y2="12" stroke="#f4c100" stroke-width="3"/></svg>
+      </div>
+      <div class="marking-info">
+        <div class="marking-name">Yellow Edge Line — No Parking 🚫</div>
+        <div class="marking-ta">இந்த line பக்கத்தில் park பண்ணாதீர்கள்</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROUNDABOUT -->
+  <div class="sec">
+    <div class="sec-badge green">🔄 ROUNDABOUT</div>
+    <div><div class="sec-title">Roundabout Rules</div><div class="sec-ta">வட்ட சாலை — பலருக்கு confuse ஆகும்</div></div>
+  </div>
+
+  <div class="roundabout-wrap">
+    <svg class="roundabout-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+      <!-- Road background -->
+      <rect width="240" height="240" fill="#e8d5b8" rx="8"/>
+      <!-- Roads -->
+      <rect x="100" y="0" width="40" height="90" fill="#888"/>
+      <rect x="100" y="150" width="40" height="90" fill="#888"/>
+      <rect x="0" y="100" width="90" height="40" fill="#888"/>
+      <rect x="150" y="100" width="90" height="40" fill="#888"/>
+      <!-- Road markings -->
+      <line x1="120" y1="0" x2="120" y2="90" stroke="white" stroke-width="2" stroke-dasharray="8,6"/>
+      <line x1="120" y1="150" x2="120" y2="240" stroke="white" stroke-width="2" stroke-dasharray="8,6"/>
+      <line x1="0" y1="120" x2="90" y2="120" stroke="white" stroke-width="2" stroke-dasharray="8,6"/>
+      <line x1="150" y1="120" x2="240" y2="120" stroke="white" stroke-width="2" stroke-dasharray="8,6"/>
+      <!-- Roundabout circle -->
+      <circle cx="120" cy="120" r="60" fill="#888"/>
+      <circle cx="120" cy="120" r="38" fill="#d4c090"/>
+      <!-- Direction arrows -->
+      <path d="M120,75 A45,45 0 0,1 165,120" fill="none" stroke="white" stroke-width="3" marker-end="url(#arr)"/>
+      <path d="M165,120 A45,45 0 0,1 120,165" fill="none" stroke="white" stroke-width="3"/>
+      <path d="M120,165 A45,45 0 0,1 75,120" fill="none" stroke="white" stroke-width="3"/>
+      <path d="M75,120 A45,45 0 0,1 120,75" fill="none" stroke="white" stroke-width="3"/>
+      <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="white"/></marker></defs>
+      <!-- Center island -->
+      <circle cx="120" cy="120" r="32" fill="#c4a870" stroke="#b09060" stroke-width="1"/>
+      <text x="120" y="116" text-anchor="middle" fill="#6a4020" font-size="9" font-family="Barlow Condensed" font-weight="700">ANTI-</text>
+      <text x="120" y="127" text-anchor="middle" fill="#6a4020" font-size="9" font-family="Barlow Condensed" font-weight="700">CLOCKWISE</text>
+      <!-- Labels -->
+      <text x="120" y="18" text-anchor="middle" fill="#4a3020" font-size="10" font-family="Barlow Condensed" font-weight="700">NORTH</text>
+      <text x="120" y="232" text-anchor="middle" fill="#4a3020" font-size="10" font-family="Barlow Condensed" font-weight="700">SOUTH</text>
+      <text x="12" y="124" fill="#4a3020" font-size="10" font-family="Barlow Condensed" font-weight="700">WEST</text>
+      <text x="192" y="124" fill="#4a3020" font-size="10" font-family="Barlow Condensed" font-weight="700">EAST</text>
+      <!-- Entry arrow -->
+      <text x="158" y="88" fill="#e63946" font-size="18">↙</text>
+    </svg>
+    <div class="rule-list">
+      <div class="rule-item"><span class="rule-sym">1️⃣</span><div>நுழைவதற்கு முன் — வலது பக்கம் பாருங்கள்</div></div>
+      <div class="rule-item"><span class="rule-sym">2️⃣</span><div>Roundabout-ல் இருப்பவர்களுக்கு priority</div></div>
+      <div class="rule-item"><span class="rule-sym">3️⃣</span><div>Anti-clockwise மட்டும் போங்கள்</div></div>
+      <div class="rule-item"><span class="rule-sym">4️⃣</span><div>Exit-ல் left indicator போடுங்கள்</div></div>
+      <div class="rule-item"><span class="rule-sym">5️⃣</span><div>Roundabout-ல் overtake பண்ணாதீர்கள்</div></div>
+    </div>
+  </div>
+
+  <!-- EMERGENCY VEHICLE -->
+  <div class="sec">
+    <div class="sec-badge red">🚑 EMERGENCY</div>
+    <div><div class="sec-title">Emergency Vehicle Rules</div><div class="sec-ta">Ambulance வந்தால் என்ன செய்யணும்?</div></div>
+  </div>
+
+  <div class="card" id="ev1">
+    <div class="card-hdr" onclick="t('ev1')">
+      <div class="card-sym" style="background:#fff0ee;">🚑</div>
+      <div style="flex:1"><div class="card-ta">Ambulance / Fire / Police வந்தால்</div><div class="card-en">Emergency Vehicle Protocol</div><div class="card-sum">Way கொடுக்காவிட்டால் Fine ₹10,000!</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span class="rule-sym">1️⃣</span><div>Siren கேட்டால் — உடனே left-ஆக நகருங்கள்</div></div>
+        <div class="rule-item"><span class="rule-sym">2️⃣</span><div>Road clear பண்ணுங்கள் — நிறுத்தி காத்திருங்கள்</div></div>
+        <div class="rule-item"><span class="rule-sym">3️⃣</span><div>Signal red-ஆக இருந்தாலும் — emergency vehicle-க்கு way கொடுங்கள்</div></div>
+        <div class="rule-item"><span class="rule-sym">4️⃣</span><div>Vehicle கடந்த பிறகு மட்டும் திரும்பவும்</div></div>
+      </div>
+      <div class="danger">⚠️ Way கொடுக்காவிட்டால் Fine: ₹10,000. ஒரு நிமிடம் delay = ஒருவரின் உயிர் போகலாம்!</div>
+    </div>
+  </div>
+
+  <!-- NIGHT DRIVING -->
+  <div class="sec">
+    <div class="sec-badge blue">🌙 NIGHT</div>
+    <div><div class="sec-title">Night Driving Rules</div><div class="sec-ta">Headlight rules — பலர் தவறு செய்கிறார்கள்</div></div>
+  </div>
+
+  <div class="card" id="nd1">
+    <div class="card-hdr" onclick="t('nd1')">
+      <div class="card-sym" style="background:#f0f4ff;">💡</div>
+      <div style="flex:1"><div class="card-ta">Headlight சரியாக பயன்படுத்துவது எப்படி?</div><div class="card-en">Headlight Rules</div><div class="card-sum">High beam vs Low beam — தெரிந்துகொள்ளுங்கள்</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>🔦</span><div><strong>High Beam (Full light):</strong> Highway-ல் மட்டும் — oncoming vehicle இல்லாதபோது</div></div>
+        <div class="rule-item"><span>💡</span><div><strong>Low Beam (Dim):</strong> City-ல் எப்போதும், oncoming vehicle வரும்போது</div></div>
+        <div class="rule-item"><span>🌫️</span><div><strong>Fog Light (Yellow):</strong> Fog-ல் மட்டும் — High beam போகாதீர்கள், reflect ஆகும்</div></div>
+        <div class="rule-item"><span>⚠️</span><div><strong>Hazard Light:</strong> Moving-ல் பயன்படுத்தாதீர்கள் — Breakdown அல்லது emergency மட்டும்</div></div>
+      </div>
+      <div class="danger">⚠️ City-ல் High beam போட்டால் — opposite driver blind ஆவார். Accident நடக்கும்!</div>
+    </div>
+  </div>
+
+  <!-- FINES TABLE -->
+  <div class="sec">
+    <div class="sec-badge red">💸 FINES</div>
+    <div><div class="sec-title">2024 Updated Fines</div><div class="sec-ta">Camera-ல் catch ஆகும் — தெரிந்துகொள்ளுங்கள்</div></div>
+  </div>
+
+  <table class="fine-table">
+    <tr><th>Violation</th><th>Symbol</th><th>Fine</th></tr>
+    <tr><td>Red light jump</td><td>🚦</td><td><span class="badge-red">₹5,000</span></td></tr>
+    <tr><td>Mobile phone while driving</td><td>📱</td><td><span class="badge-red">₹5,000 / ₹10,000</span></td></tr>
+    <tr><td>No helmet (2-wheeler)</td><td>⛑️</td><td><span class="badge-red">₹1,000 + Suspend</span></td></tr>
+    <tr><td>No seat belt</td><td>💺</td><td><span class="badge-red">₹1,000</span></td></tr>
+    <tr><td>Wrong side driving</td><td>⬅️</td><td><span class="badge-red">₹5,000</span></td></tr>
+    <tr><td>Over speeding</td><td>🏎️</td><td><span class="badge-red">₹1,000–₹2,000</span></td></tr>
+    <tr><td>Drunk driving</td><td>🍺</td><td><span class="badge-red">₹10,000 + Jail</span></td></tr>
+    <tr><td>Emergency vehicle — no way</td><td>🚑</td><td><span class="badge-red">₹10,000</span></td></tr>
+    <tr><td>Triple riding</td><td>🏍️</td><td><span class="badge-red">₹2,000</span></td></tr>
+    <tr><td>No insurance</td><td>📄</td><td><span class="badge-red">₹2,000 + Jail</span></td></tr>
+  </table>
+
+  <!-- NEXT ARTICLE -->
+  <a href="article7.html" class="nxt" style="margin-top:24px">
+    <div class="nxt-ico">⛽</div>
+    <div>
+      <div class="nxt-lbl">Next Article →</div>
+      <div class="nxt-en">Fuel Saving Guide</div>
+      <div class="nxt-ta">Petrol / Diesel save பண்றது எப்படி?</div>
+    </div>
+    <div class="nxt-arr">→</div>
+  </a>
+
+  <div class="share-wrap">
+    <div class="share-h">🚦 Share பண்ணுங்கள்</div>
+    <div class="share-ta">Traffic rules தெரிந்தால் accidents தவிர்க்கலாம் — family-க்கு share பண்ணுங்கள்!</div>
+    <div class="share-btns">
+      <button class="sb wa" onclick="sWA()">WhatsApp</button>
+      <button class="sb fb" onclick="sFB()">Facebook</button>
+      <button class="sb tw" onclick="sTW()">X</button>
+      <button class="sb tg" onclick="sTG()">Telegram</button>
+      <button class="sb ig" onclick="sIG()">Instagram</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fb2">KAARKALVI</div>
+  <div class="fs">கார் கல்வி · Tamil Car Education</div>
+  <div class="fl2">
+    <a href="index.html">Home</a><a href="article1.html">Dashboard</a><a href="article2.html">Airbag</a>
+    <a href="article3.html">Gear</a><a href="article4.html">Signs</a><a href="article5.html">Emergency</a>
+    <a href="article6.html">Traffic Signals</a>
+  </div>
+</footer>
+
+<script>
+function t(id){document.getElementById(id).classList.toggle('open');}
+window.addEventListener('scroll',()=>{
+  const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(w/h*100)+'%';
+});
+const u=encodeURIComponent(location.href),tx=encodeURIComponent('🚦 Traffic Signals & Road Rules — Symbols உடன் தமிழில்! KaarKalvi 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+</body>
+</html>

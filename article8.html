@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNG Vehicle Guide Tamil | CNG Car Pros Cons | KaarKalvi</title>
+<meta name="description" content="CNG vehicle advantages disadvantages Tamil — conversion cost, safety, mileage, best CNG cars in India 2024 | KaarKalvi">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;
+  --border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;
+  --muted:#8a6a50;--accent:#c47820;
+  --green:#1a7a3c;--red:#c0392b;--blue:#1a5fa0;--cng:#16a085;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:#2c1a0e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.2);}
+.nav-brand{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.nav-sub{font-size:10px;color:#8a6a50;}
+.nav-home{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;color:#c0a880;text-decoration:none;padding:6px 12px;border:1px solid rgba(180,140,100,0.3);border-radius:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#062020,#0a4a40,#16a085);padding:40px 20px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'🔋';position:absolute;font-size:180px;opacity:.06;bottom:-10px;right:-10px;}
+.hero-tag{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:3px;color:#fff5;margin-bottom:10px;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,6vw,44px);font-weight:800;color:#fff;margin-bottom:8px;}
+.hero-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:#a0ffe0;margin-bottom:14px;}
+.hero-meta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:12px;color:#70ffd0;}
+
+/* CONTAINER */
+.container{max-width:760px;margin:0 auto;padding:28px 16px;}
+.intro-box{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--cng);border-radius:10px;padding:16px 18px;margin-bottom:24px;font-size:14px;line-height:1.8;color:var(--brown2);}
+
+/* SECTION */
+.sec{margin:28px 0 14px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.sec-badge{padding:4px 12px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;}
+.sec-badge.cng{background:#e8faf6;color:var(--cng);border:1px solid rgba(22,160,133,0.3);}
+.sec-badge.green{background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,0.3);}
+.sec-badge.red{background:#fff0ee;color:var(--red);border:1px solid rgba(192,57,43,0.3);}
+.sec-badge.blue{background:#f0f4ff;color:var(--blue);border:1px solid rgba(26,95,160,0.3);}
+.sec-badge.amber{background:#fffbf0;color:var(--accent);border:1px solid rgba(196,120,32,0.3);}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;}
+.sec-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+
+/* CNG BASICS VISUAL */
+.cng-visual{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px;text-align:center;}
+.cng-flow{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.cng-step{background:var(--cream3);border:1px solid var(--border);border-radius:10px;padding:10px 14px;text-align:center;min-width:90px;}
+.cng-step-icon{font-size:24px;margin-bottom:4px;}
+.cng-step-text{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;color:var(--brown);}
+.cng-step-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:10px;color:var(--muted);}
+.cng-arrow{font-size:20px;color:var(--cng);}
+
+/* PROS CONS GRID */
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+@media(max-width:500px){.pros-cons{grid-template-columns:1fr;}}
+.pros-box{background:#f0fff4;border:1px solid rgba(26,122,60,0.2);border-radius:12px;padding:16px;}
+.cons-box{background:#fff0ee;border:1px solid rgba(192,57,43,0.15);border-radius:12px;padding:16px;}
+.pc-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.pc-item{display:flex;gap:8px;margin-bottom:8px;font-size:13px;color:var(--brown2);align-items:flex-start;line-height:1.5;}
+
+/* EXPANDABLE CARD */
+.card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.card-hdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;}
+.card-ico{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.card-en{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;}
+.card-ta{font-size:12px;color:var(--muted);margin-bottom:2px;}
+.card-sum{font-size:12px;color:var(--brown2);}
+.card-arr{margin-left:auto;font-size:16px;color:var(--muted);transition:transform .2s;flex-shrink:0;}
+.card.open .card-arr{transform:rotate(180deg);}
+.card-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border);}
+.card.open .card-body{display:block;}
+.rule-list{margin-top:12px;display:flex;flex-direction:column;gap:7px;}
+.rule-item{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--brown2);line-height:1.5;}
+.danger{background:#fff0ee;border-left:3px solid var(--red);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--red);}
+.tip-box{background:#f0fff4;border-left:3px solid var(--green);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--green);}
+.info-box{background:#e8faf6;border-left:3px solid var(--cng);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--cng);}
+
+/* COMPARISON TABLE */
+.comp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px;}
+.comp-table th{background:var(--cream3);color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);}
+.comp-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--brown2);vertical-align:top;}
+.comp-table tr:last-child td{border-bottom:none;}
+.comp-table tr:nth-child(even) td{background:var(--cream3);}
+.bg{background:#f0fff4;color:var(--green);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+.br{background:#fff0ee;color:var(--red);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+.by{background:#fffbf0;color:var(--accent);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+
+/* CAR CARDS */
+.car-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:16px;}
+.car-card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;}
+.car-icon{font-size:36px;margin-bottom:8px;}
+.car-name{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.car-mileage{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--cng);}
+.car-mileage-label{font-size:10px;color:var(--muted);}
+.car-price{font-size:11px;color:var(--brown2);margin-top:4px;}
+
+/* SAFETY VISUAL */
+.safety-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:16px;}
+.safety-item{background:var(--cream2);border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;}
+.safety-icon{font-size:28px;margin-bottom:6px;}
+.safety-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--brown);margin-bottom:3px;}
+.safety-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--brown2);line-height:1.5;}
+
+/* WHO SHOULD BUY */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+@media(max-width:480px){.who-grid{grid-template-columns:1fr;}}
+.who-yes{background:#f0fff4;border:1px solid rgba(26,122,60,0.2);border-radius:12px;padding:14px;}
+.who-no{background:#fff0ee;border:1px solid rgba(192,57,43,0.15);border-radius:12px;padding:12px;}
+.who-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.who-item{display:flex;gap:8px;margin-bottom:6px;font-size:12px;color:var(--brown2);align-items:flex-start;}
+
+/* CONCLUSION */
+.conc{background:linear-gradient(135deg,#062020,#0a3a30);color:#fff;border-radius:14px;padding:24px 20px;margin-top:28px;text-align:center;}
+.conc h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;margin-bottom:14px;color:#60ffd0;}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+.pill{padding:7px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;background:rgba(96,255,208,0.12);color:#80ffd8;}
+.conc p{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:#80c0b0;line-height:1.7;}
+
+/* SHARE & NAV */
+.nxt{margin-top:20px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxt-ico{font-size:26px;flex-shrink:0;}
+.nxt-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxt-en{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxt-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxt-arr{margin-left:auto;font-size:20px;color:var(--accent);}
+.share-wrap{margin-top:16px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.share-h{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:3px;}
+.share-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.share-btns{display:flex;flex-wrap:wrap;gap:7px;}
+.sb{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sb:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+footer{text-align:center;padding:24px 20px;border-top:1px solid var(--border);margin-top:14px;}
+.fb2{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--accent);letter-spacing:3px;}
+.fs{font-size:12px;color:var(--muted);margin-top:3px;}
+.fl2{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.fl2 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--cng);z-index:999;transition:width .1s;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+<nav>
+  <div><a href="index.html" class="nav-brand">KAARKALVI</a><div class="nav-sub">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nav-home">← Home</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Article 8 · CNG Vehicle Guide</div>
+  <h1>CNG Vehicle Guide</h1>
+  <div class="hero-ta">🟢 CNG Car — Advantages & Disadvantages முழு விளக்கம்</div>
+  <div class="hero-meta"><span>📖 6 min read</span><span>💰 Running cost</span><span>🔒 Safety</span><span>🚗 Best CNG cars</span></div>
+</div>
+
+<div class="container">
+  <div class="intro-box">
+    Tamil Nadu government 2025-26 budget-ல் <strong>₹70 crore</strong> CNG bus conversion-க்கு ஒதுக்கியிருக்கிறது. CNG vehicles அதிகமாகி வருகின்றன. CNG என்றால் என்ன? யாருக்கு suitable? Advantages என்ன, risks என்ன? — எல்லாமே தமிழில் இங்கே!
+  </div>
+
+  <!-- CNG BASICS -->
+  <div class="sec">
+    <div class="sec-badge cng">🔋 BASICS</div>
+    <div><div class="sec-title">CNG என்றால் என்ன?</div><div class="sec-ta">Compressed Natural Gas — எப்படி வேலை செய்யும்?</div></div>
+  </div>
+
+  <div class="cng-visual">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--brown);margin-bottom:14px;">CNG System — எப்படி வேலை செய்யும்?</div>
+    <div class="cng-flow">
+      <div class="cng-step">
+        <div class="cng-step-icon">🏭</div>
+        <div class="cng-step-text">CNG STATION</div>
+        <div class="cng-step-ta">நிரப்புமிடம்</div>
+      </div>
+      <div class="cng-arrow">→</div>
+      <div class="cng-step">
+        <div class="cng-step-icon">🛢️</div>
+        <div class="cng-step-text">CYLINDER</div>
+        <div class="cng-step-ta">Boot-ல் tank</div>
+      </div>
+      <div class="cng-arrow">→</div>
+      <div class="cng-step">
+        <div class="cng-step-icon">⚙️</div>
+        <div class="cng-step-text">REGULATOR</div>
+        <div class="cng-step-ta">Pressure control</div>
+      </div>
+      <div class="cng-arrow">→</div>
+      <div class="cng-step">
+        <div class="cng-step-icon">🔥</div>
+        <div class="cng-step-text">ENGINE</div>
+        <div class="cng-step-ta">Combustion</div>
+      </div>
+      <div class="cng-arrow">→</div>
+      <div class="cng-step">
+        <div class="cng-step-icon">🚗</div>
+        <div class="cng-step-text">DRIVE</div>
+        <div class="cng-step-ta">Clean energy</div>
+      </div>
+    </div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.7;">
+      CNG = Compressed Natural Gas. Natural gas-ஐ high pressure-ல் compress பண்ணி cylinder-ல் store பண்றார்கள். Petrol-ஐ விட <strong>30–40% குறைவான cost</strong>, <strong>cleaner emission</strong>.
+    </div>
+  </div>
+
+  <!-- PROS AND CONS -->
+  <div class="sec">
+    <div class="sec-badge green">✅ PROS</div>
+    <div><div class="sec-title">CNG Advantages</div><div class="sec-ta">ஏன் CNG பயன்படுத்தணும்?</div></div>
+  </div>
+
+  <div class="pros-cons">
+    <div class="pros-box">
+      <div class="pc-title" style="color:var(--green);">✅ ADVANTAGES</div>
+      <div class="pc-item"><span>💰</span><div><strong>Running cost குறைவு</strong> — Petrol ₹7/km, CNG ₹3–4/km. மாதம் ₹2,000–₹4,000 save</div></div>
+      <div class="pc-item"><span>🌿</span><div><strong>Clean fuel</strong> — CO2 emission 20–25% குறைவு. HC emission 70% குறைவு</div></div>
+      <div class="pc-item"><span>⚙️</span><div><strong>Engine life அதிகம்</strong> — CNG burns cleaner, engine wear குறைவு, oil change interval அதிகம்</div></div>
+      <div class="pc-item"><span>🔒</span><div><strong>Safer than petrol</strong> — Natural gas lighter than air, leak ஆனால் மேலே போகும். Petrol போல் floor-ல் தேங்காது</div></div>
+      <div class="pc-item"><span>🚗</span><div><strong>Dual fuel</strong> — CNG தீர்ந்தால் petrol-ல் ஓட்டலாம். Range anxiety இல்லை</div></div>
+      <div class="pc-item"><span>📉</span><div><strong>Fuel price stable</strong> — Petrol/diesel prices volatile, CNG relatively stable</div></div>
+    </div>
+    <div class="cons-box">
+      <div class="pc-title" style="color:var(--red);">❌ DISADVANTAGES</div>
+      <div class="pc-item"><span>🧳</span><div><strong>Boot space குறைவு</strong> — CNG cylinder boot-ல் இருக்கும். Alto-ல் boot almost full ஆகும்</div></div>
+      <div class="pc-item"><span>⚡</span><div><strong>Performance drop</strong> — Petrol-ஐ விட 8–10% power குறைவு. Overtaking-ல் கொஞ்சம் slow</div></div>
+      <div class="pc-item"><span>🏭</span><div><strong>CNG stations குறைவு</strong> — Tamil Nadu-ல் limited stations. Highway trip-ல் risk இருக்கும்</div></div>
+      <div class="pc-item"><span>💸</span><div><strong>Initial cost அதிகம்</strong> — Factory CNG car: ₹50,000–₹1,00,000 extra. Kit conversion: ₹40,000–₹80,000</div></div>
+      <div class="pc-item"><span>⏱️</span><div><strong>Filling time அதிகம்</strong> — CNG filling: 10–15 minutes. Petrol: 2–3 minutes</div></div>
+      <div class="pc-item"><span>🔧</span><div><strong>Maintenance complex</strong> — CNG system separate maintenance தேவை. All mechanics தெரியாது</div></div>
+    </div>
+  </div>
+
+  <!-- FACTORY vs KIT -->
+  <div class="sec">
+    <div class="sec-badge cng">🏭 FACTORY vs KIT</div>
+    <div><div class="sec-title">Factory CNG vs Kit CNG</div><div class="sec-ta">எது better? முக்கிய வித்தியாசம்</div></div>
+  </div>
+
+  <div class="card" id="fk1">
+    <div class="card-hdr" onclick="t('fk1')">
+      <div class="card-ico" style="background:#e8faf6;">🏭</div>
+      <div style="flex:1"><div class="card-ta">Factory CNG vs Aftermarket Kit</div><div class="card-en">Which is Better?</div><div class="card-sum">இரண்டுக்கும் பெரிய வித்தியாசம் இருக்கு</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <table class="comp-table" style="margin-top:12px;">
+        <tr><th>Factor</th><th>🏭 Factory CNG</th><th>🔧 Aftermarket Kit</th></tr>
+        <tr><td>Warranty</td><td><span class="bg">Full warranty</span></td><td><span class="br">Engine warranty void</span></td></tr>
+        <tr><td>Safety</td><td><span class="bg">Tested & certified</span></td><td><span class="by">Depends on installer</span></td></tr>
+        <tr><td>Performance</td><td><span class="bg">Optimized</span></td><td><span class="by">Some power loss</span></td></tr>
+        <tr><td>Cost</td><td><span class="br">₹50K–₹1L extra</span></td><td><span class="bg">₹40K–₹80K</span></td></tr>
+        <tr><td>Insurance</td><td><span class="bg">Normal</span></td><td><span class="by">RTO approval needed</span></td></tr>
+        <tr><td>Resale value</td><td><span class="bg">Higher</span></td><td><span class="by">Moderate</span></td></tr>
+        <tr><td>Verdict</td><td><span class="bg">Recommended ✅</span></td><td><span class="by">Only authorized kits</span></td></tr>
+      </table>
+      <div class="danger">⚠️ Unauthorized kit போட்டால் — insurance claim reject ஆகும், RTO fine வரும், engine warranty void ஆகும்!</div>
+      <div class="info-box">✅ Kit போட வேண்டும் என்றால் — RTO-approved authorized center மட்டும். RC-ல் CNG entry கட்டாயம்.</div>
+    </div>
+  </div>
+
+  <!-- SAFETY -->
+  <div class="sec">
+    <div class="sec-badge blue">🔒 SAFETY</div>
+    <div><div class="sec-title">CNG Safety — தெரிந்துகொள்ளுங்கள்</div><div class="sec-ta">CNG petrol-ஐ விட safer — ஆனால் rules இருக்கு</div></div>
+  </div>
+
+  <div class="safety-grid">
+    <div class="safety-item">
+      <div class="safety-icon">🌬️</div>
+      <div class="safety-title">Gas leaks up</div>
+      <div class="safety-ta">CNG lighter than air — leak ஆனால் மேலே போகும். Petrol போல் floor-ல் தேங்காது. Fire risk குறைவு.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🛢️</div>
+      <div class="safety-title">Cylinder testing</div>
+      <div class="safety-ta">ஒவ்வொரு 3 வருடத்திற்கும் cylinder pressure test கட்டாயம். Expired cylinder use பண்ணாதீர்கள்.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🅿️</div>
+      <div class="safety-title">Parking rules</div>
+      <div class="safety-ta">Underground parking-ல் CNG car park பண்ணாதீர்கள் — gas leak ஆனால் accumulate ஆகும்.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🚫</div>
+      <div class="safety-title">Smoking ban</div>
+      <div class="safety-ta">CNG filling station-ல் smoking கண்டிப்பாக கூடாது. Engine off பண்ணியே fill பண்ணணும்.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🔧</div>
+      <div class="safety-title">Regular check</div>
+      <div class="safety-ta">CNG pipes, connections yearly check பண்ணுங்கள். Soap water solution — leak detect பண்ண easy method.</div>
+    </div>
+    <div class="safety-item">
+      <div class="safety-icon">🌡️</div>
+      <div class="safety-title">Heat exposure</div>
+      <div class="safety-ta">Direct sunlight-ல் long park பண்ணாதீர்கள். Cylinder valve cover பண்ணுங்கள் — shade-ல் park best.</div>
+    </div>
+  </div>
+
+  <!-- BEST CNG CARS IN INDIA -->
+  <div class="sec">
+    <div class="sec-badge cng">🏆 BEST CARS</div>
+    <div><div class="sec-title">Best Factory CNG Cars 2024</div><div class="sec-ta">India-ல் top CNG cars — mileage உடன்</div></div>
+  </div>
+
+  <div class="car-grid">
+    <div class="car-card">
+      <div class="car-icon">🚗</div>
+      <div class="car-name">Maruti Alto K10</div>
+      <div class="car-mileage">33.85</div>
+      <div class="car-mileage-label">km/kg CNG</div>
+      <div class="car-price">Price: ₹5.9–7.5L | Budget city car</div>
+    </div>
+    <div class="car-card">
+      <div class="car-icon">🚗</div>
+      <div class="car-name">Maruti WagonR</div>
+      <div class="car-mileage">34.05</div>
+      <div class="car-mileage-label">km/kg CNG</div>
+      <div class="car-price">Price: ₹7–10L | Best seller CNG</div>
+    </div>
+    <div class="car-card">
+      <div class="car-icon">🚗</div>
+      <div class="car-name">Maruti Dzire</div>
+      <div class="car-mileage">31.12</div>
+      <div class="car-mileage-label">km/kg CNG</div>
+      <div class="car-price">Price: ₹9–13L | Sedan comfort</div>
+    </div>
+    <div class="car-card">
+      <div class="car-icon">🚙</div>
+      <div class="car-name">Hyundai i10 Nios</div>
+      <div class="car-mileage">24.07</div>
+      <div class="car-mileage-label">km/kg CNG</div>
+      <div class="car-price">Price: ₹8–12L | Premium feel</div>
+    </div>
+    <div class="car-card">
+      <div class="car-icon">🚙</div>
+      <div class="car-name">Tata Tiago CNG</div>
+      <div class="car-mileage">26.49</div>
+      <div class="car-mileage-label">km/kg CNG</div>
+      <div class="car-price">Price: ₹8–11L | Best safety</div>
+    </div>
+    <div class="car-card">
+      <div class="car-icon">🚙</div>
+      <div class="car-name">Maruti Ertiga CNG</div>
+      <div class="car-mileage">26.08</div>
+      <div class="car-mileage-label">km/kg CNG</div>
+      <div class="car-price">Price: ₹12–16L | 7-seater family</div>
+    </div>
+  </div>
+
+  <!-- RUNNING COST CALCULATOR -->
+  <div class="sec">
+    <div class="sec-badge amber">💰 COST</div>
+    <div><div class="sec-title">Running Cost Comparison</div><div class="sec-ta">1 km-க்கு எவ்வளவு செலவு?</div></div>
+  </div>
+
+  <div style="background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:14px;">
+    <table class="comp-table">
+      <tr><th>Fuel Type</th><th>Price/unit</th><th>Mileage</th><th>Cost/km</th><th>Monthly (1500km)</th></tr>
+      <tr><td>⛽ Petrol</td><td>₹102/L</td><td>15 km/L</td><td><span class="br">₹6.8</span></td><td><span class="br">₹10,200</span></td></tr>
+      <tr><td>🛢️ Diesel</td><td>₹90/L</td><td>20 km/L</td><td><span class="by">₹4.5</span></td><td><span class="by">₹6,750</span></td></tr>
+      <tr><td>🟢 CNG</td><td>₹82/kg</td><td>25 km/kg</td><td><span class="bg">₹3.3</span></td><td><span class="bg">₹4,920</span></td></tr>
+    </table>
+    <div style="background:#e8faf6;border-radius:8px;padding:12px;margin-top:12px;text-align:center;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--cng);">Petrol-லிருந்து CNG-க்கு மாறினால்:</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;color:var(--green);margin:6px 0;">₹5,280 மாத சேமிப்பு</div>
+      <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);">வருடம் ₹63,360 save ஆகும் — Kit cost 1 வருடத்தில் recover!</div>
+    </div>
+  </div>
+
+  <!-- WHO SHOULD BUY -->
+  <div class="sec">
+    <div class="sec-badge cng">🤔 WHO?</div>
+    <div><div class="sec-title">யாருக்கு CNG suitable?</div><div class="sec-ta">வாங்கலாமா வேண்டாமா?</div></div>
+  </div>
+
+  <div class="who-grid">
+    <div class="who-yes">
+      <div class="who-title" style="color:var(--green);">✅ CNG சரியானவர்கள்</div>
+      <div class="who-item"><span>✅</span><div>Daily city driving 50+ km பண்றவர்கள்</div></div>
+      <div class="who-item"><span>✅</span><div>Taxi / Ola / Uber drivers</div></div>
+      <div class="who-item"><span>✅</span><div>Office commuters — same route daily</div></div>
+      <div class="who-item"><span>✅</span><div>CNG station nearby இருப்பவர்கள்</div></div>
+      <div class="who-item"><span>✅</span><div>Budget-conscious families</div></div>
+      <div class="who-item"><span>✅</span><div>Environment-conscious buyers</div></div>
+    </div>
+    <div class="who-no">
+      <div class="who-title" style="color:var(--red);">❌ CNG avoid பண்பவர்கள்</div>
+      <div class="who-item"><span>❌</span><div>Highway trips frequent-ஆக போவர்கள்</div></div>
+      <div class="who-item"><span>❌</span><div>Boot space அதிகம் தேவைப்படுவர்கள்</div></div>
+      <div class="who-item"><span>❌</span><div>Performance car தேடுவர்கள்</div></div>
+      <div class="who-item"><span>❌</span><div>Remote areas-ல் வசிப்பவர்கள்</div></div>
+      <div class="who-item"><span>❌</span><div>கம்மி km மட்டுமே drive பண்பவர்கள்</div></div>
+    </div>
+  </div>
+
+  <!-- TAMIL NADU CNG STATUS -->
+  <div class="card" id="tn1">
+    <div class="card-hdr" onclick="t('tn1')">
+      <div class="card-ico" style="background:#e8faf6;">🗺️</div>
+      <div style="flex:1"><div class="card-ta">Tamil Nadu-ல் CNG நிலை</div><div class="card-en">CNG in Tamil Nadu 2024</div><div class="card-sum">Stations எங்கே இருக்கும்? Future plans என்ன?</div></div>
+      <div class="card-arr">▾</div>
+    </div>
+    <div class="card-body">
+      <div class="rule-list">
+        <div class="rule-item"><span>🏭</span><div>Chennai-ல் மட்டும் 100+ CNG stations இருக்கும். Other cities-ல் growing.</div></div>
+        <div class="rule-item"><span>🚌</span><div>TN government 2025-26 budget-ல் ₹70 crore — 1,000+ diesel buses-ஐ CNG-க்கு convert பண்ண plan.</div></div>
+        <div class="rule-item"><span>📈</span><div>Coimbatore, Madurai, Tiruppur, Salem-ல் CNG stations expand ஆகுது.</div></div>
+        <div class="rule-item"><span>⚠️</span><div>Mulanur போன்ற small towns-ல் CNG stations இல்லை — highway trips risky.</div></div>
+        <div class="rule-item"><span>🔮</span><div>2027-ல் Tamil Nadu-ல் significantly more CNG infrastructure வரும் என்று expect பண்றார்கள்.</div></div>
+      </div>
+      <div class="info-box">💡 CNG station locator: IOCL / Indane / Mahanagar Gas app பயன்படுத்துங்கள் — nearest station GPS-ல் தெரியும்.</div>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="conc">
+    <h3>🟢 CNG — Final Verdict</h3>
+    <div class="pills">
+      <div class="pill">💰 Save: ₹5,000+/month</div>
+      <div class="pill">🌿 Cleaner fuel</div>
+      <div class="pill">🚗 Dual fuel safety</div>
+      <div class="pill">⚠️ Boot space குறைவு</div>
+      <div class="pill">🏭 Factory CNG best</div>
+    </div>
+    <p>CNG city drivers-க்கு excellent choice. Running cost petrol-ஐ விட 50% குறைவு. ஆனால் highway-ல் போவர்களுக்கும், boot space தேவைப்படுவர்களுக்கும் CNG suitable இல்லை. <br><br>உன் daily km 50-க்கு மேல் இருந்தால் — factory CNG car வாங்குவது மிகவும் wise decision. Kit conversion பண்றதாக இருந்தால் — RTO-approved authorized center மட்டும்!</p>
+  </div>
+
+  <a href="index.html" class="nxt">
+    <div class="nxt-ico">🏠</div>
+    <div>
+      <div class="nxt-lbl">← Back to</div>
+      <div class="nxt-en">KaarKalvi Home</div>
+      <div class="nxt-ta">எல்லா articles-உம் இங்கே</div>
+    </div>
+    <div class="nxt-arr">→</div>
+  </a>
+
+  <div class="share-wrap">
+    <div class="share-h">🟢 Share பண்ணுங்கள்</div>
+    <div class="share-ta">CNG car பற்றி யோசிக்கிறவர்களுக்கு இந்த article share பண்ணுங்கள்!</div>
+    <div class="share-btns">
+      <button class="sb wa" onclick="sWA()">WhatsApp</button>
+      <button class="sb fb" onclick="sFB()">Facebook</button>
+      <button class="sb tw" onclick="sTW()">X</button>
+      <button class="sb tg" onclick="sTG()">Telegram</button>
+      <button class="sb ig" onclick="sIG()">Instagram</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fb2">KAARKALVI</div>
+  <div class="fs">கார் கல்வி · Tamil Car Education</div>
+  <div class="fl2">
+    <a href="index.html">Home</a>
+    <a href="article1.html">Dashboard</a>
+    <a href="article5.html">Emergency</a>
+    <a href="article6.html">Traffic Signals</a>
+    <a href="article7.html">Fuel Saving</a>
+    <a href="article8.html">CNG Guide</a>
+  </div>
+</footer>
+
+<script>
+function t(id){document.getElementById(id).classList.toggle('open');}
+window.addEventListener('scroll',()=>{
+  const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(w/h*100)+'%';
+});
+const u=encodeURIComponent(location.href),tx=encodeURIComponent('🟢 CNG Vehicle Guide தமிழில் — Advantages, Disadvantages, Running cost எல்லாமே! KaarKalvi 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+</body>
+</html>
