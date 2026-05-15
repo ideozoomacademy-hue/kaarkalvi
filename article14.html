@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usage Based Insurance Tamil | Pay How You Drive | KaarKalvi</title>
+<meta name="description" content="Usage-Based Insurance (UBI) என்றால் என்ன? Safe driver premium குறையுமா? தமிழில் — KaarKalvi">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;--border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;--muted:#8a6a50;--accent:#c47820;--accent2:#f4a100;--blue:#1a5fa0;--green:#1a7a3c;--red:#c0392b;--teal:#0e7a6a;--dark:#0a0806;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:var(--dark);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.nb{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.ns{font-size:10px;color:#8a6a50;}
+.nh{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#c0a880;text-decoration:none;padding:6px 14px;border:1px solid rgba(180,140,100,0.35);border-radius:6px;}
+.hero{background:linear-gradient(160deg,#030810 0%,#06183a 50%,#1a5fa0 120%);padding:44px 20px 36px;text-align:center;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 20% 80%,rgba(26,95,160,0.12),transparent);}
+.htag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(100,160,255,.6);margin-bottom:10px;position:relative;z-index:1;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,7vw,52px);font-weight:900;color:#fff;line-height:1.05;margin-bottom:8px;position:relative;z-index:1;}
+.hero h1 em{color:var(--accent2);font-style:normal;}
+.hta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:rgba(180,210,255,.85);margin-bottom:16px;position:relative;z-index:1;}
+.hmeta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:12px;color:rgba(150,190,255,.7);position:relative;z-index:1;}
+.hstat{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:50px;padding:8px 20px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--accent2);position:relative;z-index:1;}
+.container{max-width:780px;margin:0 auto;padding:32px 16px;}
+.ibox{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--blue);border-radius:12px;padding:18px 20px;margin-bottom:28px;font-size:14px;line-height:1.8;color:var(--brown2);}
+.sec{margin:32px 0 16px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.sbadge{padding:4px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;}
+.sb-b{background:#f0f4ff;color:var(--blue);border:1px solid rgba(26,95,160,.3);}
+.sb-g{background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,.3);}
+.sb-t{background:#e8faf6;color:var(--teal);border:1px solid rgba(14,122,106,.3);}
+.sb-a{background:#fffbf0;color:var(--accent);border:1px solid rgba(196,120,32,.3);}
+.sb-r{background:#fff0ee;color:var(--red);border:1px solid rgba(192,57,43,.3);}
+.stitle{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;}
+.sta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+/* SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+@media(max-width:500px){.split{grid-template-columns:1fr;}}
+/* CARDS */
+.ac{background:var(--cream2);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.ach{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;}
+.aci{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;background:var(--cream3);}
+.ace{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;}
+.act{font-size:12px;color:var(--muted);margin-bottom:2px;}
+.acs{font-size:12px;color:var(--brown2);}
+.aca{margin-left:auto;font-size:16px;color:var(--muted);transition:transform .2s;flex-shrink:0;}
+.ac.open .aca{transform:rotate(180deg);}
+.acb{display:none;padding:0 16px 16px;border-top:1px solid var(--border);}
+.ac.open .acb{display:block;}
+.rl{margin-top:12px;display:flex;flex-direction:column;gap:8px;}
+.ri{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--brown2);line-height:1.6;}
+.tbox{background:#f0fff4;border-left:3px solid var(--green);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--green);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.wbox{background:#fff8e8;border-left:3px solid var(--accent);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--accent);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.iblue{background:#f0f4ff;border-left:3px solid var(--blue);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--blue);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+/* TABLE */
+.ct{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;}
+.ct th{background:var(--cream3);color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);}
+.ct td{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--brown2);}
+.ct tr:last-child td{border-bottom:none;}
+.ct tr:nth-child(even) td{background:var(--cream3);}
+.bg{background:#f0fff4;color:var(--green);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+.br{background:#fff0ee;color:var(--red);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+.by{background:#fffbf0;color:var(--accent);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+/* GRID */
+.g3{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:16px;}
+.g2{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:16px;}
+.gi{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;}
+.gico{font-size:26px;margin-bottom:6px;}
+.gn{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;}
+.gta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--brown2);line-height:1.5;}
+.gbadge{display:inline-block;margin-top:5px;padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;}
+.gbh{background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,.2);}
+.gbm{background:#fffbf0;color:var(--accent);border:1px solid rgba(196,120,32,.2);}
+/* SCORE DEMO */
+.sdemo{background:var(--dark);border-radius:16px;padding:24px 20px;margin-bottom:16px;color:#fff;}
+.sdemo-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);margin-bottom:18px;letter-spacing:1px;text-align:center;}
+.sprof{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:480px){.sprof{grid-template-columns:1fr;}}
+.sp{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px;}
+.spn{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;margin-bottom:10px;}
+.sr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:12px;}
+.sl{color:#a09080;}
+.sbw{width:80px;height:8px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden;}
+.sfg{height:100%;background:#2dc653;border-radius:4px;}
+.sfr{height:100%;background:#e63946;border-radius:4px;}
+.sfy{height:100%;background:#f4c100;border-radius:4px;}
+.sres{margin-top:10px;padding:8px 12px;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;text-align:center;}
+.srg{background:rgba(45,198,83,.15);color:#2dc653;}
+.srr{background:rgba(230,57,70,.15);color:#e63946;}
+/* CALC */
+.cbox{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px;}
+.ctit{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.cta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:16px;}
+.crow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+@media(max-width:480px){.crow{grid-template-columns:1fr;}}
+.cf label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:5px;}
+.cin{background:var(--cream3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:14px;color:var(--brown);width:100%;font-family:'Barlow Condensed',sans-serif;font-weight:600;}
+.cin:focus{outline:none;border-color:var(--blue);background:#f0f4ff;}
+.cbtn{background:var(--blue);color:#fff;border:none;border-radius:10px;padding:12px 20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;cursor:pointer;width:100%;transition:all .2s;letter-spacing:1px;}
+.cbtn:hover{background:#155080;transform:translateY(-1px);}
+.cres{display:none;background:#f0f4ff;border:1px solid rgba(26,95,160,.2);border-radius:10px;padding:16px;margin-top:14px;}
+.crr{display:flex;justify-content:space-between;font-size:13px;color:var(--brown2);margin-bottom:6px;}
+.crv{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--blue);}
+.crfin{background:var(--blue);color:#fff;border-radius:10px;padding:14px;text-align:center;margin-top:10px;}
+.crfv{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;}
+.crfta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;opacity:.85;margin-top:2px;}
+/* INDIA BOX */
+.indbox{background:var(--dark);border-radius:14px;padding:22px;margin-bottom:16px;color:#fff;}
+.indt{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);margin-bottom:14px;letter-spacing:1px;}
+.indg{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;}
+.indi{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:12px;text-align:center;}
+.indiv{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--accent2);}
+.indil{font-family:'Noto Sans Tamil',sans-serif;font-size:10px;color:#a08060;margin-top:2px;}
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin-bottom:16px;}
+.fli{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--border);}
+.fli:last-child{border-bottom:none;}
+.fln{width:44px;height:44px;border-radius:12px;background:var(--blue);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.flt{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:var(--brown);margin-bottom:2px;}
+.flta{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.6;}
+/* UBI TYPES */
+.ubig{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:16px;}
+.ubic{border-radius:14px;padding:18px;border:1px solid var(--border);}
+.ubi-p{background:#f0f4ff;border-top:3px solid var(--blue);}
+.ubi-h{background:#f0fff4;border-top:3px solid var(--green);}
+.ubi-m{background:#e8faf6;border-top:3px solid var(--teal);}
+.ubin{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--brown);margin-bottom:2px;}
+.ubia{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:8px;}
+.ubi-p .ubia{color:var(--blue);}
+.ubi-h .ubia{color:var(--green);}
+.ubi-m .ubia{color:var(--teal);}
+.ubita{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+.ubib{display:inline-block;margin-top:8px;padding:3px 10px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+.ubi-p .ubib{background:rgba(26,95,160,.1);color:var(--blue);}
+.ubi-h .ubib{background:rgba(26,122,60,.1);color:var(--green);}
+.ubi-m .ubib{background:rgba(14,122,106,.1);color:var(--teal);}
+/* TIPS */
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:16px;}
+.ti{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:10px;padding:12px 14px;}
+.tiico{font-size:22px;margin-bottom:4px;}
+.tin{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;}
+.tita{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.5;}
+/* CONC */
+.conc{background:linear-gradient(135deg,#030810,#06183a);color:#fff;border-radius:16px;padding:26px 22px;margin-top:32px;text-align:center;}
+.conc h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;margin-bottom:14px;color:var(--accent2);}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+.pill{padding:7px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;background:rgba(26,95,160,.2);color:#80b0ff;}
+.conc p{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:#8090c0;line-height:1.7;}
+/* SHARE */
+.nxt{margin-top:20px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxtI{font-size:26px;flex-shrink:0;}
+.nxtL{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxtE{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxtT{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxtA{margin-left:auto;font-size:20px;color:var(--accent);}
+.sw{margin-top:16px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.swh{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:3px;}
+.swta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.swb{display:flex;flex-wrap:wrap;gap:7px;}
+.sbt{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sbt:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+footer{text-align:center;padding:26px 20px;border-top:1px solid var(--border);margin-top:14px;}
+.f1{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);letter-spacing:3px;}
+.f2{font-size:12px;color:var(--muted);margin-top:3px;}
+.f3{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.f3 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--blue);z-index:999;transition:width .1s;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+<nav>
+  <div><a href="index.html" class="nb">KAARKALVI</a><div class="ns">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nh">← Home</a>
+</nav>
+
+<div class="hero">
+  <div class="htag">Article 14 · Insurance Tech</div>
+  <h1>📱 <em>USAGE-BASED</em> INSURANCE</h1>
+  <div class="hta">Safe-ஆ ஓட்டினால் Insurance பில் குறையும் — இது எப்படி?</div>
+  <div class="hmeta"><span>📖 7 min read</span><span>🔰 Layman terms</span><span>💰 30–40% savings</span><span>🇮🇳 India status</span></div>
+  <div class="hstat">💡 Safe drivers can save ₹3,000–₹8,000/year on insurance!</div>
+</div>
+
+<div class="container">
+
+<div class="ibox">இப்போது insurance company உங்கள் <strong>age, car model, location</strong> பார்த்து premium fix பண்றார்கள். நீங்கள் எப்படி ஓட்டுகிறீர்கள் என்று பார்க்கமாட்டார்கள். <strong>UBI = Usage-Based Insurance</strong> இதை மாற்றுகிறது. Safe-ஆ ஓட்டினால் premium குறையும். Fair இல்லையா?</div>
+
+<!-- ANALOGY -->
+<div class="sec"><div class="sbadge sb-b">🍽️ ANALOGY</div><div><div class="stitle">எளிமையான உவமை — Restaurant</div><div class="sta">இதை படித்தால் UBI புரியும்</div></div></div>
+<div class="split">
+  <div style="background:#fff8f0;border:1px solid rgba(192,57,43,.15);border-top:3px solid var(--red);border-radius:14px;padding:18px;">
+    <div style="font-size:32px;margin-bottom:8px;">🏪</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--red);letter-spacing:1px;margin-bottom:4px;">❌ TRADITIONAL INSURANCE</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:8px;">Fixed Buffet Restaurant</div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.7;">எல்லாரும் ₹500 pay பண்ணணும். கொஞ்சம் சாப்பிட்டாலும், அதிகமாக சாப்பிட்டாலும் same price.<br><br>அதே போல் — நீங்கள் 2,000 km மட்டும் ஓட்டினாலும், 50,000 km ஓட்டினாலும் same insurance premium!</div>
+  </div>
+  <div style="background:#f0fff4;border:1px solid rgba(26,122,60,.15);border-top:3px solid var(--green);border-radius:14px;padding:18px;">
+    <div style="font-size:32px;margin-bottom:8px;">🍱</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--green);letter-spacing:1px;margin-bottom:4px;">✅ USAGE-BASED INSURANCE (UBI)</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:8px;">Pay-As-You-Eat Restaurant</div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.7;">சாப்பிட்டதற்கு மட்டும் pay பண்ணுங்கள். கொஞ்சம் சாப்பிட்டால் — கம்மி bill.<br><br>UBI-ல் — எவ்வளவு km ஓட்டினீர்கள், எப்படி ஓட்டினீர்கள் என்று பார்த்து premium நிர்ணயிக்கிறார்கள். Fair!</div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="sec"><div class="sbadge sb-b">⚙️ HOW</div><div><div class="stitle">UBI எப்படி வேலை செய்யும்?</div><div class="sta">5 steps — simple</div></div></div>
+<div class="flow">
+  <div class="fli"><div class="fln">1</div><div><div style="font-size:24px;margin-bottom:4px;">📋</div><div class="flt">Policy எடுக்கும்போது UBI option select</div><div class="flta">Normal car insurance எடுக்கிறீர்கள் — "UBI / Telematics" option select பண்ணுகிறீர்கள். Insurance company device அல்லது app கொடுக்கிறார்கள்.</div></div></div>
+  <div class="fli"><div class="fln">2</div><div><div style="font-size:24px;margin-bottom:4px;">📱</div><div class="flt">Device / App Install</div><div class="flta">Car-ல் OBD port-ல் small device plug பண்றார்கள் — அல்லது phone-ல் app install. இது driving data collect பண்ணும்.</div></div></div>
+  <div class="fli"><div class="fln">3</div><div><div style="font-size:24px;margin-bottom:4px;">📊</div><div class="flt">90 days Data Collection</div><div class="flta">Speed, braking, acceleration, time of travel, km — எல்லாம் 3 மாதம் record ஆகும்.</div></div></div>
+  <div class="fli"><div class="fln">4</div><div><div style="font-size:24px;margin-bottom:4px;">🎯</div><div class="flt">Driver Score கிடைக்கும்</div><div class="flta">Insurance company data பார்த்து "Driver Score" கொடுக்கும் — 0 to 100 scale. Score அதிகம் = better driver.</div></div></div>
+  <div class="fli"><div class="fln">5</div><div><div style="font-size:24px;margin-bottom:4px;">💰</div><div class="flt">Renewal-ல் Premium Adjust</div><div class="flta">Score-க்கு தகுந்தபடி premium கூடும் அல்லது குறையும். Safe driver = 30–40% discount possible!</div></div></div>
+</div>
+
+<!-- UBI TYPES -->
+<div class="sec"><div class="sbadge sb-t">🔢 TYPES</div><div><div class="stitle">UBI-ல் 3 வகைகள்</div><div class="sta">PAYD · PHYD · MHYD</div></div></div>
+<div class="ubig">
+  <div class="ubic ubi-p">
+    <div style="font-size:30px;margin-bottom:8px;">📏</div>
+    <div class="ubin">Pay As You Drive</div>
+    <div class="ubia">PAYD</div>
+    <div class="ubita"><strong>என்ன:</strong> எத்தனை km ஓட்டினீர்கள் — மட்டும் பார்க்கிறார்கள்.<br><br><strong>உதாரணம்:</strong> வருடம் 5,000 km மட்டும் ஓட்டுவர்கள் — premium மிகவும் குறைவு.</div>
+    <div class="ubib">📏 Low mileage drivers-க்கு best</div>
+  </div>
+  <div class="ubic ubi-h">
+    <div style="font-size:30px;margin-bottom:8px;">🚗</div>
+    <div class="ubin">Pay How You Drive</div>
+    <div class="ubia">PHYD</div>
+    <div class="ubita"><strong>என்ன:</strong> எத்தனை km + எப்படி ஓட்டினீர்கள் — both பார்க்கிறார்கள்.<br><br><strong>உதாரணம்:</strong> Smooth braking, steady speed = high score = low premium.</div>
+    <div class="ubib">🚗 Safe drivers-க்கு best — most common</div>
+  </div>
+  <div class="ubic ubi-m">
+    <div style="font-size:30px;margin-bottom:8px;">🤖</div>
+    <div class="ubin">Manage How You Drive</div>
+    <div class="ubia">MHYD</div>
+    <div class="ubita"><strong>என்ன:</strong> Real-time coaching கொடுக்கிறார்கள். Speeding-ல் alert வரும்.<br><br><strong>உதாரணம்:</strong> App-ல் "hard braking" notification — improve பண்ணினால் score உயரும்.</div>
+    <div class="ubib">🤖 Fastest growing type</div>
+  </div>
+</div>
+
+<!-- DATA TRACKED -->
+<div class="sec"><div class="sbadge sb-b">📊 DATA</div><div><div class="stitle">என்ன Data Track பண்றார்கள்?</div><div class="sta">8 parameters — இவற்றை improve பண்ணினால் score உயரும்</div></div></div>
+<div class="g3">
+  <div class="gi"><div class="gico">🏎️</div><div class="gn">Speed</div><div class="gta">Speed limit-க்கு மேல் போனால் score குறையும்</div><div class="gbadge gbh">High Impact</div></div>
+  <div class="gi"><div class="gico">🛑</div><div class="gn">Hard Braking</div><div class="gta">Sudden brake = score down. Smooth brake = up</div><div class="gbadge gbh">High Impact</div></div>
+  <div class="gi"><div class="gico">⚡</div><div class="gn">Acceleration</div><div class="gta">Quick burst = fuel waste + score down</div><div class="gbadge gbh">High Impact</div></div>
+  <div class="gi"><div class="gico">📏</div><div class="gn">Mileage/km</div><div class="gta">Total km — குறைவு = குறைவான risk</div><div class="gbadge gbh">High Impact</div></div>
+  <div class="gi"><div class="gico">🌙</div><div class="gn">Night Driving</div><div class="gta">11PM–5AM trips = risk அதிகம் = score down</div><div class="gbadge gbm">Medium</div></div>
+  <div class="gi"><div class="gico">📱</div><div class="gn">Phone Usage</div><div class="gta">Driving-ல் phone = biggest score penalty</div><div class="gbadge gbh">High Impact</div></div>
+  <div class="gi"><div class="gico">↩️</div><div class="gn">Cornering</div><div class="gta">Sharp turns = tyre wear + score down</div><div class="gbadge gbm">Medium</div></div>
+  <div class="gi"><div class="gico">🛣️</div><div class="gn">Road Type</div><div class="gta">Highway vs city driving pattern</div><div class="gbadge gbm">Medium</div></div>
+</div>
+
+<!-- SCORE DEMO -->
+<div class="sdemo">
+  <div class="sdemo-title">📊 DRIVER SCORE — இப்படி பார்க்கிறார்கள்</div>
+  <div class="sprof">
+    <div class="sp">
+      <div class="spn" style="color:#2dc653;">😊 Safe Driver — Abi</div>
+      <div class="sr"><span class="sl">Speed compliance</span><div class="sbw"><div class="sfg" style="width:92%"></div></div><span style="color:#2dc653;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">92</span></div>
+      <div class="sr"><span class="sl">Smooth braking</span><div class="sbw"><div class="sfg" style="width:88%"></div></div><span style="color:#2dc653;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">88</span></div>
+      <div class="sr"><span class="sl">Acceleration</span><div class="sbw"><div class="sfg" style="width:85%"></div></div><span style="color:#2dc653;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">85</span></div>
+      <div class="sr"><span class="sl">Night driving</span><div class="sbw"><div class="sfg" style="width:90%"></div></div><span style="color:#2dc653;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">90</span></div>
+      <div class="sr"><span class="sl">Phone usage</span><div class="sbw"><div class="sfg" style="width:95%"></div></div><span style="color:#2dc653;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">95</span></div>
+      <div class="sres srg">🏆 Score: 90/100 → 35% Discount!</div>
+    </div>
+    <div class="sp">
+      <div class="spn" style="color:#e63946;">😰 Rash Driver</div>
+      <div class="sr"><span class="sl">Speed compliance</span><div class="sbw"><div class="sfr" style="width:45%"></div></div><span style="color:#e63946;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">45</span></div>
+      <div class="sr"><span class="sl">Smooth braking</span><div class="sbw"><div class="sfr" style="width:38%"></div></div><span style="color:#e63946;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">38</span></div>
+      <div class="sr"><span class="sl">Acceleration</span><div class="sbw"><div class="sfr" style="width:40%"></div></div><span style="color:#e63946;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">40</span></div>
+      <div class="sr"><span class="sl">Night driving</span><div class="sbw"><div class="sfy" style="width:55%"></div></div><span style="color:#f4c100;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">55</span></div>
+      <div class="sr"><span class="sl">Phone usage</span><div class="sbw"><div class="sfr" style="width:30%"></div></div><span style="color:#e63946;font-size:11px;font-family:'Barlow Condensed',sans-serif;font-weight:700;">30</span></div>
+      <div class="sres srr">⚠️ Score: 42/100 → 20% Extra Premium</div>
+    </div>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<div class="cbox">
+  <div class="ctit">💰 UBI Savings Calculator</div>
+  <div class="cta">உன் driving score-க்கு எவ்வளவு save ஆகும்?</div>
+  <div class="crow">
+    <div class="cf"><label>Annual Premium (₹)</label><input class="cin" id="cp" type="number" value="12000" placeholder="12000"></div>
+    <div class="cf"><label>Driver Score (0–100)</label><input class="cin" id="cs" type="number" value="80" min="0" max="100" placeholder="80"></div>
+  </div>
+  <button class="cbtn" onclick="calcUBI()">📊 CALCULATE SAVINGS</button>
+  <div class="cres" id="cr">
+    <div class="crr"><span>தற்போதைய Premium:</span><span class="crv" id="cr1">-</span></div>
+    <div class="crr"><span>UBI Discount %:</span><span class="crv" id="cr2" style="color:var(--green)">-</span></div>
+    <div class="crr"><span>New Premium (UBI):</span><span class="crv" id="cr3">-</span></div>
+    <div class="crfin"><div class="crfv" id="cr4">-</div><div class="crfta">Annual savings | 5 years: <span id="cr5">-</span></div></div>
+  </div>
+</div>
+
+<!-- PROS CONS -->
+<div class="sec"><div class="sbadge sb-g">✅❌ PROS/CONS</div><div><div class="stitle">Advantages & Disadvantages</div><div class="sta">UBI உன்னுக்கு suitable-ஆ?</div></div></div>
+<div class="split">
+  <div style="background:#f0fff4;border:1px solid rgba(26,122,60,.15);border-top:3px solid var(--green);border-radius:14px;padding:16px;">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;color:var(--green);margin-bottom:10px;">✅ ADVANTAGES</div>
+    <div class="rl">
+      <div class="ri"><span>✅</span><div><strong>Safe drivers save money</strong> — 30–40% discount possible</div></div>
+      <div class="ri"><span>✅</span><div>Low mileage drivers-க்கு fair pricing</div></div>
+      <div class="ri"><span>✅</span><div>Driving habits improve — data feedback கிடைக்கும்</div></div>
+      <div class="ri"><span>✅</span><div>Accident-ல் fault proof — data-backed clear evidence</div></div>
+      <div class="ri"><span>✅</span><div>Stolen car GPS track பண்ணலாம்</div></div>
+      <div class="ri"><span>✅</span><div>Young drivers-க்கு fair — age bias தவிர்க்கலாம்</div></div>
+    </div>
+  </div>
+  <div style="background:#fff0ee;border:1px solid rgba(192,57,43,.15);border-top:3px solid var(--red);border-radius:14px;padding:16px;">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;color:var(--red);margin-bottom:10px;">❌ DISADVANTAGES</div>
+    <div class="rl">
+      <div class="ri"><span>❌</span><div><strong>Privacy concern</strong> — Location, driving data insurer-க்கு share ஆகும்</div></div>
+      <div class="ri"><span>❌</span><div>Night shift workers-க்கு unfair — late hours penalize ஆகலாம்</div></div>
+      <div class="ri"><span>❌</span><div>Phone mount சரியாக இல்லாவிட்டால் false reading வரலாம்</div></div>
+      <div class="ri"><span>❌</span><div>India-ல் இன்னும் limited availability</div></div>
+      <div class="ri"><span>❌</span><div>Frequent highway drivers-க்கு km அதிகமாகலாம்</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- DEVICE TYPES -->
+<div class="sec"><div class="sbadge sb-a">📱 DEVICES</div><div><div class="stitle">Data எப்படி Collect பண்றார்கள்?</div><div class="sta">3 types of telematics devices</div></div></div>
+<div class="g2">
+  <div class="gi">
+    <div class="gico">🔌</div>
+    <div class="gn">OBD-II Dongle</div>
+    <div class="gta">Car-ஓட OBD port-ல் (driver seat கீழே) plug பண்ணும் small device. Engine data directly read.</div>
+    <div style="font-size:11px;color:var(--green);font-family:'Barlow Condensed',sans-serif;font-weight:700;margin-top:6px;">✅ Most accurate</div>
+    <div style="font-size:11px;color:var(--red);font-family:'Barlow Condensed',sans-serif;font-weight:700;">❌ Physical install needed</div>
+  </div>
+  <div class="gi">
+    <div class="gico">📱</div>
+    <div class="gn">Smartphone App</div>
+    <div class="gta">Phone-ல் insurer app install மட்டும். GPS + accelerometer data use. India-ல் most popular.</div>
+    <div style="font-size:11px;color:var(--green);font-family:'Barlow Condensed',sans-serif;font-weight:700;margin-top:6px;">✅ Easy, free, phone distraction detect</div>
+    <div style="font-size:11px;color:var(--red);font-family:'Barlow Condensed',sans-serif;font-weight:700;">❌ Phone mount சரியாக வேண்டும்</div>
+  </div>
+  <div class="gi">
+    <div class="gico">📦</div>
+    <div class="gn">Black Box</div>
+    <div class="gta">Professional grade, professionally installed. Fleet, commercial vehicles-ல் use. Most comprehensive.</div>
+    <div style="font-size:11px;color:var(--green);font-family:'Barlow Condensed',sans-serif;font-weight:700;margin-top:6px;">✅ Most complete data</div>
+    <div style="font-size:11px;color:var(--red);font-family:'Barlow Condensed',sans-serif;font-weight:700;">❌ Expensive install</div>
+  </div>
+</div>
+
+<!-- INDIA STATUS -->
+<div class="sec"><div class="sbadge sb-a">🇮🇳 INDIA</div><div><div class="stitle">India-ல் UBI நிலை — 2025</div><div class="sta">IRDAI approval, companies, future</div></div></div>
+<div class="indbox">
+  <div class="indt">🇮🇳 INDIA UBI STATUS — 2025</div>
+  <div class="indg">
+    <div class="indi"><div style="font-size:22px;margin-bottom:4px;">🏛️</div><div class="indiv">IRDAI</div><div class="indil">Regulatory Sandbox approved — UBI pilots running</div></div>
+    <div class="indi"><div style="font-size:22px;margin-bottom:4px;">🏢</div><div class="indiv">Bajaj</div><div class="indil">Feb 2024 — km-credit UBI plan launched for city commuters</div></div>
+    <div class="indi"><div style="font-size:22px;margin-bottom:4px;">📱</div><div class="indiv">Zuno</div><div class="indil">Jun 2025 — crash detection app-based UBI launched</div></div>
+    <div class="indi"><div style="font-size:22px;margin-bottom:4px;">🚗</div><div class="indiv">ICICI+Citroen</div><div class="indil">eC3 EV-ல் PAYD — first OEM+insurer tie-up India</div></div>
+    <div class="indi"><div style="font-size:22px;margin-bottom:4px;">📈</div><div class="indiv">Top-3</div><div class="indil">UBI top-3 motor insurance purchase by end 2025</div></div>
+    <div class="indi"><div style="font-size:22px;margin-bottom:4px;">🔮</div><div class="indiv">2027–30</div><div class="indil">India mainstream UBI — connected cars growing fast</div></div>
+  </div>
+</div>
+
+<!-- TRADITIONAL vs UBI -->
+<div class="ac" id="c1">
+  <div class="ach" onclick="tc('c1')"><div class="aci">📋</div><div style="flex:1"><div class="act">Full comparison</div><div class="ace">Traditional vs UBI Insurance</div><div class="acs">எல்லா factors-உம் compare பண்ணலாம்</div></div><div class="aca">▾</div></div>
+  <div class="acb">
+    <table class="ct">
+      <tr><th>Factor</th><th>Traditional</th><th>UBI</th></tr>
+      <tr><td>Premium based on</td><td>Age, car, location</td><td><span class="bg">Actual driving</span></td></tr>
+      <tr><td>Safe driver benefit</td><td>No-claim bonus only</td><td><span class="bg">30–40% discount</span></td></tr>
+      <tr><td>Young driver</td><td><span class="br">Age-based high premium</span></td><td><span class="bg">Score-based fair</span></td></tr>
+      <tr><td>Low mileage driver</td><td><span class="br">Full premium pay</span></td><td><span class="bg">PAYD km-discount</span></td></tr>
+      <tr><td>Privacy</td><td><span class="bg">No data sharing</span></td><td><span class="by">Location+driving shared</span></td></tr>
+      <tr><td>Accident fault proof</td><td><span class="br">Word-based disputed</span></td><td><span class="bg">Data-backed clear</span></td></tr>
+      <tr><td>Driving improvement</td><td>No feedback</td><td><span class="bg">Real-time coaching</span></td></tr>
+      <tr><td>India availability</td><td><span class="bg">Everywhere</span></td><td><span class="by">Growing — limited now</span></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sec"><div class="sbadge sb-b">❓ FAQ</div><div><div class="stitle">Common Questions</div><div class="sta">Privacy, data, India availability</div></div></div>
+
+<div class="ac" id="f1">
+  <div class="ach" onclick="tc('f1')"><div class="aci">🔒</div><div style="flex:1"><div class="act">Privacy</div><div class="ace">My data safe-ஆ?</div><div class="acs">Location, driving data யாரிடம் போகும்?</div></div><div class="aca">▾</div></div>
+  <div class="acb">
+    <div class="rl">
+      <div class="ri"><span>📋</span><div>Insurance company மட்டும் data access — third parties-க்கு sell பண்ணக்கூடாது (IRDAI rules)</div></div>
+      <div class="ri"><span>🔒</span><div>Data encrypted-ஆக secure servers-ல் store</div></div>
+      <div class="ri"><span>📄</span><div>Policy எடுக்கும்போது consent form — என்ன collect ஆகும் என்று clearly இருக்கும்</div></div>
+      <div class="ri"><span>❌</span><div>Opt-out possible — traditional insurance-க்கு திரும்பலாம்</div></div>
+    </div>
+    <div class="wbox">⚠️ Policy எடுக்கும்முன் data privacy terms கவனமாக படியுங்கள்.</div>
+  </div>
+</div>
+
+<div class="ac" id="f2">
+  <div class="ach" onclick="tc('f2')"><div class="aci">📉</div><div style="flex:1"><div class="act">Score குறைந்தால்?</div><div class="ace">Bad Score = Higher Premium?</div><div class="acs">Score போனால் premium அதிகமாகுமா?</div></div><div class="aca">▾</div></div>
+  <div class="acb">
+    <div class="rl">
+      <div class="ri"><span>📊</span><div>India-ல் பெரும்பாலான UBI — score குறைந்தால் discount மட்டும் குறையும், extra penalty இல்லை</div></div>
+      <div class="ri"><span>💰</span><div>Worst case: Traditional insurance-ஓட same premium — அதிகமாகாது</div></div>
+      <div class="ri"><span>🔄</span><div>Score improve பண்ணினால் next renewal-ல் discount மீண்டும்</div></div>
+    </div>
+    <div class="tbox">✅ UBI = risk-free experiment. Bad score-லும் traditional insurance-ஐ விட worse ஆகாது!</div>
+  </div>
+</div>
+
+<div class="ac" id="f3">
+  <div class="ach" onclick="tc('f3')"><div class="aci">🇮🇳</div><div style="flex:1"><div class="act">India-ல் available-ஆ?</div><div class="ace">Which companies offer UBI?</div><div class="acs">இப்போது யாரிடம் கேட்கணும்?</div></div><div class="aca">▾</div></div>
+  <div class="acb">
+    <div class="rl">
+      <div class="ri"><span>🏢</span><div><strong>Bajaj Allianz</strong> — km-credit plan, city commuters (Feb 2024)</div></div>
+      <div class="ri"><span>🏢</span><div><strong>Zuno (formerly Edelweiss)</strong> — crash detection app-based UBI (Jun 2025)</div></div>
+      <div class="ri"><span>🚗</span><div><strong>ICICI Lombard + Citroen</strong> — eC3 EV owners-க்கு PAYD</div></div>
+      <div class="ri"><span>📱</span><div><strong>Acko, Digit</strong> — telematics features growing</div></div>
+      <div class="ri"><span>🔮</span><div>2026–27-ல் HDFC Ergo, New India Assurance-உம் UBI launch expected</div></div>
+    </div>
+    <div class="iblue">💡 உன் current insurance company-கிட்ட கேளுங்கள் — "telematics or UBI option இருக்கா?" என்று!</div>
+  </div>
+</div>
+
+<!-- TIPS TO IMPROVE SCORE -->
+<div class="sec"><div class="sbadge sb-g">📈 IMPROVE</div><div><div class="stitle">Score Improve பண்றது எப்படி?</div><div class="sta">Maximum discount-க்கு இவற்றை follow பண்ணுங்கள்</div></div></div>
+<div class="tg">
+  <div class="ti"><div class="tiico">🐢</div><div class="tin">Smooth Acceleration</div><div class="tita">Slowly accelerate — sudden burst வேண்டாம். Score +15 points</div></div>
+  <div class="ti"><div class="tiico">👀</div><div class="tin">Anticipate Braking</div><div class="tita">முன்னால் பார்த்து slow down — sudden brake அடிக்காதீர்கள்</div></div>
+  <div class="ti"><div class="tiico">📱</div><div class="tin">Phone Down</div><div class="tita">Driving-ல் phone வேண்டாம் — biggest score killer</div></div>
+  <div class="ti"><div class="tiico">🌙</div><div class="tin">Avoid Night Trips</div><div class="tita">11PM–5AM trips குறையுங்கள் — high-risk window</div></div>
+  <div class="ti"><div class="tiico">🏎️</div><div class="tin">Speed Limits</div><div class="tita">எங்கும் speed limit-க்குள் — single biggest factor</div></div>
+  <div class="ti"><div class="tiico">📉</div><div class="tin">Reduce km</div><div class="tita">WFH days car வேண்டாம். Carpool பண்ணுங்கள்</div></div>
+</div>
+
+<div class="conc">
+  <h3>📱 UBI — Future of Car Insurance</h3>
+  <div class="pills">
+    <div class="pill">✅ Safe drive = Less premium</div>
+    <div class="pill">📏 Less km = Less pay</div>
+    <div class="pill">📊 Data = Fair pricing</div>
+    <div class="pill">🇮🇳 India — growing fast</div>
+    <div class="pill">💰 30–40% savings possible</div>
+  </div>
+  <p>Traditional insurance-ல் safe-ஆ ஓட்டுவர்களும், rash-ஆ ஓட்டுவர்களும் same premium — இது fair இல்லை. UBI இதை மாற்றுகிறது.<br><br><strong style="color:var(--accent2);">India-ல் 2027–2030-ல் mainstream ஆகும்.</strong> நீங்கள் safe driver-ஆ இருந்தால் — UBI உங்களுக்கு ஆண்டுக்கு ₹3,000–₹8,000 மிச்சப்படுத்தும்!</p>
+</div>
+
+<a href="index.html" class="nxt"><div class="nxtI">🏠</div><div><div class="nxtL">← Back to</div><div class="nxtE">KaarKalvi Home</div><div class="nxtT">எல்லா articles-உம் இங்கே</div></div><div class="nxtA">→</div></a>
+
+<div class="sw">
+  <div class="swh">📱 Share பண்ணுங்கள்!</div>
+  <div class="swta">Safe drivers-க்கு insurance discount — friends-க்கு share பண்ணுங்கள்!</div>
+  <div class="swb">
+    <button class="sbt wa" onclick="sWA()">WhatsApp</button>
+    <button class="sbt fb" onclick="sFB()">Facebook</button>
+    <button class="sbt tw" onclick="sTW()">X</button>
+    <button class="sbt tg" onclick="sTG()">Telegram</button>
+    <button class="sbt ig" onclick="sIG()">Instagram</button>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="f1">KAARKALVI</div>
+  <div class="f2">கார் கல்வி · Tamil Car Education</div>
+  <div class="f3"><a href="index.html">Home</a><a href="article12.html">Tesla vs Petrol</a><a href="article13.html">Tyre Change</a><a href="article14.html">UBI Insurance</a></div>
+</footer>
+
+<script>
+function tc(id){document.getElementById(id).classList.toggle('open');}
+window.addEventListener('scroll',()=>{const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('pb').style.width=(w/h*100)+'%';});
+function calcUBI(){
+  const p=parseFloat(document.getElementById('cp').value)||12000;
+  const s=Math.min(100,Math.max(0,parseFloat(document.getElementById('cs').value)||80));
+  let d=0;
+  if(s>=90)d=40;else if(s>=80)d=30;else if(s>=70)d=20;else if(s>=60)d=10;else if(s>=50)d=5;
+  const sv=p*d/100,np=p-sv;
+  document.getElementById('cr1').textContent='₹'+p.toLocaleString('en-IN');
+  document.getElementById('cr2').textContent=d+'% (Score '+s+'/100)';
+  document.getElementById('cr3').textContent='₹'+Math.round(np).toLocaleString('en-IN');
+  document.getElementById('cr4').textContent='₹'+Math.round(sv).toLocaleString('en-IN')+'/year saved!';
+  document.getElementById('cr5').textContent='₹'+Math.round(sv*5).toLocaleString('en-IN');
+  document.getElementById('cr').style.display='block';
+}
+const u=encodeURIComponent(location.href),tx=encodeURIComponent('📱 Safe-ஆ ஓட்டினால் Insurance குறையுமா? UBI Guide தமிழில் — KaarKalvi 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+</body>
+</html>
