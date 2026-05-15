@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | KaarKalvi</title>
+<meta name="description" content="KaarKalvi-ஐ contact பண்ணுங்கள் — feedback, suggestions, partnerships">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;--border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;--muted:#8a6a50;--accent:#c47820;--green:#1a7a3c;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:#2c1a0e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nb{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.ns{font-size:10px;color:#8a6a50;}
+.nh{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#c0a880;text-decoration:none;padding:6px 14px;border:1px solid rgba(180,140,100,0.35);border-radius:6px;}
+.hero{background:linear-gradient(135deg,#1a0e06,#2c1a0e,#4a2e14);padding:44px 20px;text-align:center;}
+.htag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;color:rgba(196,120,32,.6);margin-bottom:10px;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,7vw,48px);font-weight:900;color:#fff;margin-bottom:8px;}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,18px);color:#c0a070;}
+.container{max-width:700px;margin:0 auto;padding:40px 16px;}
+.intro{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;margin-bottom:28px;font-size:14px;line-height:1.8;color:var(--brown2);}
+
+/* CONTACT FORM */
+.form-box{background:var(--cream2);border:1px solid var(--border);border-radius:16px;padding:28px 24px;margin-bottom:24px;}
+.form-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.form-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--muted);margin-bottom:20px;}
+.form-group{margin-bottom:16px;}
+.form-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;}
+.form-input{width:100%;background:var(--cream3);border:1px solid var(--border);border-radius:9px;padding:11px 14px;font-size:14px;color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;outline:none;transition:border .2s;}
+.form-input:focus{border-color:var(--accent);background:var(--cream);}
+textarea.form-input{min-height:120px;resize:vertical;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr;}}
+.form-btn{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px 24px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;cursor:pointer;width:100%;transition:all .2s;letter-spacing:1px;}
+.form-btn:hover{background:#d4880a;transform:translateY(-1px);}
+.form-success{display:none;background:#f0fff4;border:1px solid rgba(26,122,60,.2);border-radius:10px;padding:16px;margin-top:14px;font-family:'Noto Sans Tamil',sans-serif;font-size:14px;color:var(--green);text-align:center;}
+select.form-input{appearance:none;}
+
+/* CONTACT METHODS */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:24px;}
+.contact-item{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;}
+.ci-icon{font-size:28px;margin-bottom:8px;}
+.ci-type{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;}
+.ci-val{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+.ci-link{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none;}
+
+footer{text-align:center;padding:24px 20px;border-top:1px solid var(--border);}
+.fbr{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);letter-spacing:3px;}
+.fsr{font-size:12px;color:var(--muted);margin-top:3px;}
+.flr{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.flr a{font-size:12px;color:var(--muted);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav><div><a href="index.html" class="nb">KAARKALVI</a><div class="ns">கார் கல்வி · Tamil Car Education</div></div><a href="index.html" class="nh">← Home</a></nav>
+
+<div class="hero">
+  <div class="htag">Get in Touch</div>
+  <h1>Contact <em>Us</em></h1>
+  <div class="hero-ta">உங்கள் கருத்துகளை share பண்ணுங்கள்</div>
+</div>
+
+<div class="container">
+  <div class="intro">உங்களுக்கு KaarKalvi useful-ஆ இருந்தால் — சொல்லுங்கள்! Feedback, article suggestions, corrections, partnerships — எதுவும் welcome. நாங்கள் கேட்கிறோம்.</div>
+
+  <!-- CONTACT METHODS -->
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="ci-icon">📧</div>
+      <div class="ci-type">Email</div>
+      <div class="ci-val">Best way to reach us</div>
+      <a href="mailto:ideazoomacademy@gmail.com" class="ci-link">ideazoomacademy@gmail.com</a>
+    </div>
+    <div class="contact-item">
+      <div class="ci-icon">📱</div>
+      <div class="ci-type">Social Media</div>
+      <div class="ci-val">Instagram, YouTube</div>
+      <a href="https://youtube.com/@IdeazoomAcademy" class="ci-link" target="_blank">@IdeazoomAcademy</a>
+    </div>
+    <div class="contact-item">
+      <div class="ci-icon">⏱️</div>
+      <div class="ci-type">Response Time</div>
+      <div class="ci-val">48–72 hours-க்குள் reply பண்றோம்</div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-icon">📍</div>
+      <div class="ci-type">Location</div>
+      <div class="ci-val">Tamil Nadu, India 🇮🇳</div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-box">
+    <div class="form-title">✉️ Message அனுப்புங்கள்</div>
+    <div class="form-ta">உங்கள் feedback, suggestions — எல்லாமே welcome!</div>
+    <div class="form-grid">
+      <div class="form-group"><label class="form-label">உங்கள் பெயர்</label><input class="form-input" id="cn" type="text" placeholder="Name / பெயர்"></div>
+      <div class="form-group"><label class="form-label">Email</label><input class="form-input" id="ce" type="email" placeholder="email@example.com"></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Subject</label>
+      <select class="form-input" id="cs">
+        <option value="">Select / தேர்ந்தெடுங்கள்...</option>
+        <option>Feedback / கருத்து</option>
+        <option>Article Suggestion / புதிய தலைப்பு</option>
+        <option>Correction / திருத்தம்</option>
+        <option>Partnership / Collaboration</option>
+        <option>Technical Issue</option>
+        <option>Other / மற்றவை</option>
+      </select>
+    </div>
+    <div class="form-group"><label class="form-label">Message</label><textarea class="form-input" id="cm" placeholder="உங்கள் message இங்கே..."></textarea></div>
+    <button class="form-btn" onclick="sendMsg()">📨 அனுப்புங்கள்</button>
+    <div class="form-success" id="fs">✅ நன்றி! உங்கள் message கிடைத்தது. 48 hours-க்குள் reply பண்றோம். KaarKalvi-க்கு நன்றி! 🚗</div>
+  </div>
+
+  <div style="background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;margin-bottom:24px;">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:8px;">💡 Article Request பண்றீர்களா?</div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.7;">Car-பற்றி ஒரு topic Tamil-ல் தெரிந்துகொள்ள வேண்டும் — ஆனால் article இல்லை? Request பண்ணுங்கள். நாங்கள் write பண்றோம்!</div>
+  </div>
+</div>
+
+<footer>
+  <div class="fbr">KAARKALVI</div>
+  <div class="fsr">கார் கல்வி · Tamil Car Education</div>
+  <div class="flr"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="newsletter.html">Newsletter</a><a href="privacy.html">Privacy</a></div>
+</footer>
+
+<script>
+function sendMsg(){
+  const n=document.getElementById('cn').value;
+  const e=document.getElementById('ce').value;
+  const m=document.getElementById('cm').value;
+  if(!n||!e||!m){alert('எல்லா fields-உம் fill பண்ணுங்கள்!');return;}
+  if(!e.includes('@')){alert('சரியான email போடுங்கள்!');return;}
+  document.getElementById('fs').style.display='block';
+  document.getElementById('cn').value='';document.getElementById('ce').value='';
+  document.getElementById('cm').value='';document.getElementById('cs').value='';
+  document.querySelector('.form-btn').style.display='none';
+}
+</script>
+</body>
+</html>

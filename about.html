@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | KaarKalvi — Tamil Car Education</title>
+<meta name="description" content="KaarKalvi பற்றி — Abi, a solopreneur & digital creator building Tamil Car Education. Women & driving — உன் சிறகுகள் தயார்!">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;--border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;--muted:#8a6a50;--accent:#c47820;--blue:#1a5fa0;--green:#1a7a3c;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:#2c1a0e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nb{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.ns{font-size:10px;color:#8a6a50;}
+.nh{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#c0a880;text-decoration:none;padding:6px 14px;border:1px solid rgba(180,140,100,0.35);border-radius:6px;}
+.hero{background:linear-gradient(160deg,#030810,#0a1a2a,#1a5fa0);padding:50px 20px;text-align:center;position:relative;overflow:hidden;}
+.hero::after{content:'🦅';position:absolute;font-size:200px;opacity:.05;bottom:-20px;right:-20px;}
+.htag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(100,160,255,.6);margin-bottom:10px;position:relative;z-index:1;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,7vw,52px);font-weight:900;color:#fff;margin-bottom:8px;position:relative;z-index:1;}
+.hero h1 em{color:#80c0ff;font-style:normal;}
+.hero-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:rgba(180,210,255,.85);position:relative;z-index:1;}
+.container{max-width:760px;margin:0 auto;padding:40px 16px;}
+
+/* FOUNDER */
+.founder-card{background:var(--cream2);border:1px solid var(--border);border-radius:20px;padding:32px 28px;margin-bottom:32px;display:flex;gap:24px;align-items:flex-start;}
+@media(max-width:520px){.founder-card{flex-direction:column;align-items:center;text-align:center;}}
+.founder-avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#1a5fa0,#0a3060);display:flex;align-items:center;justify-content:center;font-size:48px;flex-shrink:0;border:3px solid rgba(26,95,160,.3);}
+.founder-name{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--brown);margin-bottom:4px;}
+.founder-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:12px;}
+.founder-bio{font-family:'Noto Sans Tamil',sans-serif;font-size:14px;color:var(--brown2);line-height:1.8;}
+.role-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.role-tag{padding:4px 12px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;}
+.rt-gov{background:#fff8e8;color:var(--accent);border:1px solid rgba(196,120,32,.25);}
+.rt-digi{background:#f0f4ff;color:var(--blue);border:1px solid rgba(26,95,160,.25);}
+
+/* WINGS SECTION */
+.wings-section{background:linear-gradient(135deg,#030810,#0a1a2a);color:#fff;border-radius:20px;padding:36px 28px;margin-bottom:32px;text-align:center;}
+.wings-big{font-size:64px;margin-bottom:16px;display:block;}
+.wings-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:#80c0ff;margin-bottom:16px;letter-spacing:1px;}
+.wings-para{font-family:'Noto Sans Tamil',sans-serif;font-size:15px;color:rgba(200,220,255,.85);line-height:1.9;margin-bottom:16px;}
+.wings-quote{background:rgba(128,192,255,.1);border-left:3px solid #80c0ff;border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0;font-family:'Noto Sans Tamil',sans-serif;font-size:16px;color:#a0d0ff;line-height:1.8;text-align:left;}
+.wings-stats{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:24px;}
+.ws{background:rgba(255,255,255,.05);border:1px solid rgba(128,192,255,.2);border-radius:12px;padding:16px 20px;text-align:center;}
+.wsn{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;color:#80c0ff;}
+.wsl{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:rgba(200,220,255,.6);margin-top:3px;}
+
+/* MISSION */
+.mission-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:32px;}
+.mission-item{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.mi-icon{font-size:28px;margin-bottom:8px;}
+.mi-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.mi-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+
+/* STORY */
+.story-box{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:24px 22px;margin-bottom:32px;}
+.story-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--brown);margin-bottom:14px;}
+.story-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:14px;color:var(--brown2);line-height:1.9;}
+.story-ta p{margin-bottom:12px;}
+
+/* CTA */
+.cta-strip{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:32px;}
+.cta-btn{padding:12px 22px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;text-decoration:none;transition:all .2s;border:none;cursor:pointer;}
+.cta-primary{background:var(--accent);color:#fff;}
+.cta-primary:hover{background:#d4880a;transform:translateY(-1px);}
+.cta-secondary{background:var(--cream2);color:var(--brown);border:1px solid var(--border);}
+.cta-secondary:hover{background:var(--cream3);}
+
+footer{text-align:center;padding:24px 20px;border-top:1px solid var(--border);}
+.fb{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);letter-spacing:3px;}
+.fs{font-size:12px;color:var(--muted);margin-top:3px;}
+.fl{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.fl a{font-size:12px;color:var(--muted);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav><div><a href="index.html" class="nb">KAARKALVI</a><div class="ns">கார் கல்வி · Tamil Car Education</div></div><a href="index.html" class="nh">← Home</a></nav>
+
+<div class="hero">
+  <div class="htag">About KaarKalvi</div>
+  <h1>நம் <em>கதை</em></h1>
+  <div class="hero-ta">ஒரு solopreneur, ஒரு mission — Tamil-ல் Car Education</div>
+</div>
+
+<div class="container">
+
+  <!-- FOUNDER -->
+  <div class="founder-card">
+    <div class="founder-avatar">👩</div>
+    <div>
+      <div class="founder-name">Abi</div>
+      <div class="founder-title">Founder · KaarKalvi | Solopreneur & Digital Creator</div>
+      <div class="founder-bio">
+        நான் Abi — KaarKalvi-ஓட founder. Tamil Nadu-ல் இருந்து DJ Groups என்ற digital brand-ல் websites, YouTube channels, digital products build பண்றேன்.<br><br>
+        Car education Tamil-ல் இல்லை என்பதை பார்த்து KaarKalvi தொடங்கினேன். Solopreneur, content creator, digital entrepreneur — எல்லாமே நான்!
+      </div>
+      <div class="role-tags">
+        <span class="role-tag rt-digi">💡 Solopreneur</span>
+        <span class="role-tag rt-digi">💻 Digital Creator</span>
+        <span class="role-tag rt-digi">🚗 Car Education Founder</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WINGS SECTION -->
+  <div class="wings-section">
+    <span class="wings-big">🦅</span>
+    <div class="wings-title">WOMEN & CAR — உன் சிறகுகள்!</div>
+    <div class="wings-para">
+      Car driving என்பது ஒரு பெண்ணிற்கு வெறும் transportation இல்லை — அது <strong style="color:#80c0ff;">சுதந்திரம்</strong>. அது <strong style="color:#80c0ff;">தன்னம்பிக்கை</strong>. அது <strong style="color:#80c0ff;">சிறகுகள்</strong>.
+    </div>
+    <div class="wings-quote">
+      🐦 ஒரு பறவைக்கு சிறகுகள் இருந்தாலும், அது பறக்கத் தெரியாவிட்டால் என்ன பயன்? கார் இருந்தாலும், அதை தெரிந்துகொள்ளாவிட்டால் — அது வெறும் இரும்பு மட்டுமே.<br><br>
+      <strong style="color:#a0d0ff;">KaarKalvi உன் சிறகுகளுக்கு பலம் கொடுக்க இருக்கு. பறக்க கற்றுக்கொள்!</strong>
+    </div>
+    <div class="wings-para">
+      Dashboard light வந்தால் panic ஆகாதீர்கள் — அது என்ன சொல்கிறது என்று தெரிந்தால் handle பண்ணலாம். Highway-ல் tyre puncture ஆனால் mechanic-ஐ காத்திரு — Jack பயன்படுத்தி நீயே மாற்றலாம். Rain-ல் fog windshield — AC + defogger trick தெரிந்தால் 30 seconds-ல் clear!
+    </div>
+    <div class="wings-para">
+      <strong style="color:#80c0ff;">இந்த knowledge உனக்கு யாரையும் depend ஆகாமல் இருக்க வைக்கும். அதுவே உன் சிறகுகள்.</strong>
+    </div>
+    <div class="wings-stats">
+      <div class="ws"><div class="wsn">📖</div><div class="wsl">Articles</div></div>
+      <div class="ws"><div class="wsn">100%</div><div class="wsl">தமிழில்</div></div>
+      <div class="ws"><div class="wsn">Free</div><div class="wsl">எப்போதும்</div></div>
+      <div class="ws"><div class="wsn">❤️</div><div class="wsl">Women-first</div></div>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--brown);margin-bottom:16px;">🎯 Our Mission</div>
+  <div class="mission-grid">
+    <div class="mission-item"><div class="mi-icon">📚</div><div class="mi-title">Educate</div><div class="mi-ta">Car manual யாரும் படிப்பதில்லை — நாங்கள் அதை தமிழில் எளிமையாக சொல்கிறோம்</div></div>
+    <div class="mission-item"><div class="mi-icon">🛡️</div><div class="mi-title">Protect</div><div class="mi-ta">Car knowledge = accident prevention. உங்கள் family-ஐ safe-ஆ வைக்கணும் — அதுவே எங்கள் goal</div></div>
+    <div class="mission-item"><div class="mi-icon">💪</div><div class="mi-title">Empower Women</div><div class="mi-ta">பெண்கள் car பற்றி தெரிந்துகொண்டால் — யாரையும் depend ஆக வேண்டியதில்லை</div></div>
+    <div class="mission-item"><div class="mi-icon">🌍</div><div class="mi-title">Tamil First</div><div class="mi-ta">Tamil-ல் car education எங்கும் இல்லை — KaarKalvi முதல் தமிழ் car education platform</div></div>
+  </div>
+
+  <!-- STORY -->
+  <div class="story-box">
+    <div class="story-title">📖 KaarKalvi எப்படி தொடங்கியது?</div>
+    <div class="story-ta">
+      <p>ஒரு நாள் என் colleague-ஓட car-ல் dashboard-ல் engine oil light எரிந்தது. அவர் என்ன என்று தெரியாமல் ignore பண்ணினார். சில நாட்களில் engine damage — ₹40,000 repair bill.</p>
+      <p>இந்த ஒரு incident-ஐ தடுக்க ஒரு simple Tamil article போதுமானது. ஆனால் Tamil-ல் car education எங்கும் இல்லை.</p>
+      <p>அப்போது தோன்றியது — <strong>KaarKalvi</strong>. "கார் கல்வி" — car education-ஐ தமிழில் கொண்டு வர வேண்டும். Article 1 எழுதினேன். பிறகு 2, 3... இப்போது growing-ஆக இருக்கு!</p>
+      <p>Digital businesses-லும் busy-ஆ இருக்கும்போதே KaarKalvi build பண்றேன். ஏனென்றால் Tamil-ல் car education இல்லாவிட்டால் — யார் பண்றார்கள்?</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <a href="index.html" class="cta-btn cta-primary">🚗 Articles படிக்க போங்கள்</a>
+    <a href="newsletter.html" class="cta-btn cta-secondary">📬 Newsletter Subscribe</a>
+    <a href="contact.html" class="cta-btn cta-secondary">✉️ Contact Us</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="fb">KAARKALVI</div>
+  <div class="fs">கார் கல்வி · Tamil Car Education</div>
+  <div class="fl"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="newsletter.html">Newsletter</a><a href="privacy.html">Privacy</a></div>
+</footer>
+</body>
+</html>

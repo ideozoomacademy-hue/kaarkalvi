@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter | KaarKalvi — Tamil Car Education</title>
+<meta name="description" content="KaarKalvi Newsletter-ல் subscribe பண்ணுங்கள் — புதிய car tips, articles, road safety news">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;--border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;--muted:#8a6a50;--accent:#c47820;--accent2:#f4a100;--dark:#0a0806;--green:#1a7a3c;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:#2c1a0e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nb{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.ns{font-size:10px;color:#8a6a50;}
+.nh{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#c0a880;text-decoration:none;padding:6px 14px;border:1px solid rgba(180,140,100,0.35);border-radius:6px;}
+.hero{background:linear-gradient(160deg,var(--dark),#1a0e06,#2c1a0e);padding:56px 20px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'📬';position:absolute;font-size:200px;opacity:.06;bottom:-20px;right:-10px;animation:float 4s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+.htag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(244,161,0,.6);margin-bottom:12px;position:relative;z-index:1;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,7vw,52px);font-weight:900;color:#fff;line-height:1.05;margin-bottom:8px;position:relative;z-index:1;}
+.hero h1 em{color:var(--accent2);font-style:normal;}
+.hero-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:rgba(255,220,150,.85);position:relative;z-index:1;margin-bottom:16px;}
+.hero-sub{font-family:'Noto Sans Tamil',sans-serif;font-size:14px;color:rgba(196,120,32,.7);position:relative;z-index:1;}
+
+.container{max-width:680px;margin:0 auto;padding:40px 16px;}
+
+/* BENEFITS */
+.benefits{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:32px;}
+.benefit-item{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;}
+.bi-icon{font-size:28px;margin-bottom:8px;}
+.bi-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;color:var(--brown);margin-bottom:3px;}
+.bi-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.5;}
+
+/* SUBSCRIBE FORM */
+.sub-box{background:var(--dark);border-radius:20px;padding:36px 28px;margin-bottom:28px;text-align:center;}
+.sub-title{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;color:var(--accent2);margin-bottom:8px;letter-spacing:1px;}
+.sub-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:14px;color:rgba(255,220,150,.7);margin-bottom:24px;line-height:1.7;}
+.sub-form{max-width:500px;margin:0 auto;}
+.sub-group{margin-bottom:14px;}
+.sub-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(196,120,32,.7);display:block;margin-bottom:6px;text-align:left;}
+.sub-input{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(196,120,32,.3);border-radius:10px;padding:12px 16px;font-size:14px;color:#fff;font-family:'Noto Sans Tamil',sans-serif;outline:none;transition:all .2s;}
+.sub-input:focus{border-color:var(--accent2);background:rgba(255,255,255,.1);}
+.sub-input::placeholder{color:rgba(138,106,80,.7);}
+.sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:480px){.sub-grid{grid-template-columns:1fr;}}
+select.sub-input option{background:#1a0e06;color:#fff;}
+.sub-btn{background:var(--accent);color:#fff;border:none;border-radius:12px;padding:14px 24px;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;cursor:pointer;width:100%;transition:all .2s;letter-spacing:1px;margin-top:6px;}
+.sub-btn:hover{background:#d4880a;transform:translateY(-2px);}
+.sub-privacy{font-size:11px;color:rgba(138,106,80,.7);margin-top:10px;font-family:'Noto Sans Tamil',sans-serif;}
+
+/* SUCCESS */
+.sub-success{display:none;background:rgba(26,122,60,.15);border:1px solid rgba(26,122,60,.3);border-radius:14px;padding:24px;text-align:center;margin-top:16px;}
+.ss-icon{font-size:48px;margin-bottom:12px;}
+.ss-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:#60e090;margin-bottom:8px;}
+.ss-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:14px;color:rgba(200,255,220,.8);line-height:1.7;}
+
+/* WHAT YOU GET */
+.wg-box{background:var(--cream2);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:24px;}
+.wg-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--brown);margin-bottom:16px;}
+.wg-item{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start;}
+.wg-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.wg-text{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.6;}
+
+/* SAMPLE */
+.sample-box{background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:24px;}
+.sample-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--muted);letter-spacing:1px;margin-bottom:12px;}
+.sample-email{background:var(--cream2);border:1px solid var(--border);border-radius:10px;padding:16px;font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.7;}
+.sample-from{font-family:'Barlow Condensed',sans-serif;font-size:12px;color:var(--muted);margin-bottom:8px;}
+.sample-subject{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--brown);margin-bottom:8px;}
+
+footer{text-align:center;padding:24px 20px;border-top:1px solid var(--border);}
+.fbr{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);letter-spacing:3px;}
+.fsr{font-size:12px;color:var(--muted);margin-top:3px;}
+.flr{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.flr a{font-size:12px;color:var(--muted);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav><div><a href="index.html" class="nb">KAARKALVI</a><div class="ns">கார் கல்வி · Tamil Car Education</div></div><a href="index.html" class="nh">← Home</a></nav>
+
+<div class="hero">
+  <div class="htag">Stay Updated</div>
+  <h1>📬 <em>KAARKALVI</em><br>NEWSLETTER</h1>
+  <div class="hero-ta">புதிய articles, car tips, road safety news — உங்கள் inbox-க்கு!</div>
+  <div class="hero-sub">Week-க்கு ஒரு முறை மட்டும் · Spam இல்லை · எப்போதும் Free</div>
+</div>
+
+<div class="container">
+
+  <!-- BENEFITS -->
+  <div class="benefits">
+    <div class="benefit-item"><div class="bi-icon">🚗</div><div class="bi-title">New Articles</div><div class="bi-ta">புதிய articles வந்தால் உடனே தெரியும் — miss பண்ண மாட்டீர்கள்</div></div>
+    <div class="benefit-item"><div class="bi-icon">💡</div><div class="bi-title">Weekly Car Tips</div><div class="bi-ta">ஒவ்வொரு வாரமும் ஒரு useful car tip உங்கள் inbox-ல்</div></div>
+    <div class="benefit-item"><div class="bi-icon">🛡️</div><div class="bi-title">Road Safety</div><div class="bi-ta">Latest traffic rules, fines, India road safety news</div></div>
+    <div class="benefit-item"><div class="bi-icon">💰</div><div class="bi-title">Money Tips</div><div class="bi-ta">Fuel save, insurance, maintenance cost குறைக்கும் tips</div></div>
+  </div>
+
+  <!-- SUBSCRIBE FORM -->
+  <div class="sub-box">
+    <div class="sub-title">📬 SUBSCRIBE NOW — FREE!</div>
+    <div class="sub-ta">1,000+ Tamil car enthusiasts already subscribe பண்றார்கள். நீங்களும் join பண்ணுங்கள்!</div>
+    <div class="sub-form" id="sub-form">
+      <div class="sub-grid">
+        <div class="sub-group"><label class="sub-label">பெயர் (Name)</label><input class="sub-input" id="sn" type="text" placeholder="உங்கள் பெயர்..."></div>
+        <div class="sub-group"><label class="sub-label">Email Address</label><input class="sub-input" id="se" type="email" placeholder="email@example.com"></div>
+      </div>
+      <div class="sub-group">
+        <label class="sub-label">Car Type (Optional)</label>
+        <select class="sub-input" id="sc">
+          <option value="">Select your car type...</option>
+          <option>Petrol Car</option>
+          <option>Diesel Car</option>
+          <option>CNG Car</option>
+          <option>Electric Car (EV)</option>
+          <option>Planning to buy a car</option>
+          <option>Two-wheeler</option>
+        </select>
+      </div>
+      <div class="sub-group">
+        <label class="sub-label">Most Interested In</label>
+        <select class="sub-input" id="si">
+          <option value="">Select your interest...</option>
+          <option>Car Safety & Emergency</option>
+          <option>Fuel Saving Tips</option>
+          <option>Traffic Rules & Signals</option>
+          <option>EV & New Technology</option>
+          <option>Car Maintenance</option>
+          <option>Everything!</option>
+        </select>
+      </div>
+      <button class="sub-btn" onclick="subscribe()">🚗 Subscribe பண்ணுங்கள் — FREE!</button>
+      <div class="sub-privacy">🔒 உங்கள் data safe-ஆ வைக்கப்படும். யாருக்கும் sell பண்ண மாட்டோம். எப்போதும் unsubscribe பண்ணலாம்.</div>
+    </div>
+    <div class="sub-success" id="sub-success">
+      <div class="ss-icon">🎉</div>
+      <div class="ss-title">Welcome to KaarKalvi Family!</div>
+      <div class="ss-ta">நன்றி! உங்கள் subscription confirm ஆனது. Welcome email உங்கள் inbox-க்கு அனுப்புகிறோம். KaarKalvi Newsletter-க்கு வரவேற்கிறோம் — உங்கள் car journey இப்போது தொடங்குகிறது! 🚗</div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU GET -->
+  <div class="wg-box">
+    <div class="wg-title">📧 Newsletter-ல் என்ன இருக்கும்?</div>
+    <div class="wg-item"><div class="wg-num">1</div><div class="wg-text"><strong>New Article Alert</strong> — புதிய article publish ஆனால் உடனே email வரும்</div></div>
+    <div class="wg-item"><div class="wg-num">2</div><div class="wg-text"><strong>Weekly Car Tip</strong> — ஒவ்வொரு வாரமும் 1 useful tip — fuel save, safety, maintenance</div></div>
+    <div class="wg-item"><div class="wg-num">3</div><div class="wg-text"><strong>Road Safety News</strong> — Tamil Nadu new traffic rules, fines, highway updates</div></div>
+    <div class="wg-item"><div class="wg-num">4</div><div class="wg-text"><strong>Car Market Updates</strong> — New car launches, EV news, CNG expansion India</div></div>
+    <div class="wg-item"><div class="wg-num">5</div><div class="wg-text"><strong>Women & Driving</strong> — Special tips for women drivers — confidence, safety, independence</div></div>
+  </div>
+
+  <!-- SAMPLE EMAIL -->
+  <div class="sample-box">
+    <div class="sample-title">📧 SAMPLE NEWSLETTER PREVIEW</div>
+    <div class="sample-email">
+      <div class="sample-from">From: KaarKalvi &lt;newsletter@kaarkalvi.com&gt;</div>
+      <div class="sample-subject">🚗 இந்த வாரம் — Tyre Pressure-ஐ சரியாக வையுங்கள்!</div>
+      <br>
+      வணக்கம்!<br><br>
+      <strong>இந்த வாரம் Car Tip:</strong> Tyre pressure 33 PSI-க்கு கீழே போனால் — fuel 15% அதிகமாக செலவாகும். வாரம் ஒரு முறை check பண்ணுங்கள்!<br><br>
+      <strong>புதிய Article:</strong> "Usage-Based Insurance — Safe-ஆ ஓட்டினால் Premium குறையுமா?" — இப்போது படிக்கலாம்.<br><br>
+      <strong>Road Safety News:</strong> Tamil Nadu-ல் 2025-ல் highway camera network expand ஆகிறது — speed violations catch ஆகும்!<br><br>
+      வாழ்த்துகள், <strong>Abi | KaarKalvi</strong>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="fbr">KAARKALVI</div>
+  <div class="fsr">கார் கல்வி · Tamil Car Education</div>
+  <div class="flr"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="newsletter.html">Newsletter</a><a href="privacy.html">Privacy</a></div>
+</footer>
+
+<script>
+function subscribe(){
+  const n=document.getElementById('sn').value.trim();
+  const e=document.getElementById('se').value.trim();
+  if(!n){alert('உங்கள் பெயர் போடுங்கள்!');return;}
+  if(!e||!e.includes('@')){alert('சரியான email போடுங்கள்!');return;}
+  document.getElementById('sub-form').style.display='none';
+  document.getElementById('sub-success').style.display='block';
+}
+</script>
+</body>
+</html>
