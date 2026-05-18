@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaarkalvi.vercel.app/sitemap.xml

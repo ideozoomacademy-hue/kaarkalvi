@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Static Pages -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/about.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kaarkalvi.vercel.app/contact.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kaarkalvi.vercel.app/newsletter.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kaarkalvi.vercel.app/privacy.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Interactive Diagrams -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/kaarkalvi-dashboard.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaarkalvi.vercel.app/kaarkalvi-car-interior.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article 1: Dashboard Warning Lights -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article1.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 2: Airbag Guide -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article2.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 3: Gear Shifting -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article3.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 4: Traffic Signs -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article4.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 5: Emergency Guide -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article5.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 6: Traffic Signals Deep Dive -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article6.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 7: Fuel Saving Guide -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article7.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 8: CNG Vehicle Guide -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article8.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 9: Safest Cars in India -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article9.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 10: How Car Engine Works -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article10.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 11: Hidden Car Features -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article11.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 12: Tesla vs Traditional Cars -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article12.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 13: Tyre Change Guide -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article13.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 14: Usage Based Insurance -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article14.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 15: New vs Used vs CPO -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article15.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 16: Emission Standards & Scrap Policy -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article16.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 17: Digital Car Buying -->
+  <url>
+    <loc>https://kaarkalvi.vercel.app/article17.html</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
