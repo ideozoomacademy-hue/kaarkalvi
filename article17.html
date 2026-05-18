@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Car Buying Tamil | Online Car Purchase Guide | KaarKalvi</title>
+<meta name="description" content="ஷோரூம் போகாமல் ஆன்லைனில் கார் வாங்கலாம்! Digital car retailing — Cars24, Spinny, CarDekho guide தமிழில் | KaarKalvi">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;
+  --border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;
+  --muted:#8a6a50;--accent:#c47820;--accent2:#f4a100;
+  --blue:#1a5fa0;--green:#1a7a3c;--red:#c0392b;--purple:#6a1a8a;
+  --dark:#0a0806;--teal:#0e7a6a;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:var(--dark);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.nb{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.ns{font-size:10px;color:#8a6a50;}
+.nh{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#c0a880;text-decoration:none;padding:6px 14px;border:1px solid rgba(180,140,100,0.35);border-radius:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#030610,#061030,#1a3a8a,#2a60c0);padding:44px 20px 36px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'📱';position:absolute;font-size:200px;opacity:.05;top:-20px;right:-20px;animation:float 4s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+.htag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(100,160,255,.6);margin-bottom:10px;position:relative;z-index:1;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,7vw,52px);font-weight:900;color:#fff;line-height:1.05;margin-bottom:8px;position:relative;z-index:1;}
+.hero h1 em{color:var(--accent2);font-style:normal;}
+.hta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:rgba(180,210,255,.85);margin-bottom:14px;position:relative;z-index:1;}
+.hmeta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:12px;color:rgba(150,190,255,.7);position:relative;z-index:1;}
+.hero-stat{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:50px;padding:8px 20px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--accent2);position:relative;z-index:1;}
+
+/* MARKET STATS */
+.stats-strip{background:var(--dark);padding:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;}
+.stat-item{text-align:center;padding:12px;border:1px solid rgba(255,255,255,.06);border-radius:10px;}
+.stat-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent2);}
+.stat-label{font-family:'Noto Sans Tamil',sans-serif;font-size:10px;color:#a09080;margin-top:3px;}
+
+/* MAIN */
+.container{max-width:780px;margin:0 auto;padding:32px 16px;}
+.ibox{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--blue);border-radius:12px;padding:18px 20px;margin-bottom:28px;font-size:14px;line-height:1.8;color:var(--brown2);}
+
+/* SECTION */
+.sec{margin:32px 0 16px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.sbadge{padding:4px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;}
+.sb-b{background:#f0f4ff;color:var(--blue);border:1px solid rgba(26,95,160,.3);}
+.sb-g{background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,.3);}
+.sb-r{background:#fff0ee;color:var(--red);border:1px solid rgba(192,57,43,.3);}
+.sb-a{background:#fffbf0;color:var(--accent);border:1px solid rgba(196,120,32,.3);}
+.sb-p{background:#f8f0ff;color:var(--purple);border:1px solid rgba(106,26,138,.3);}
+.sb-t{background:#e8faf6;color:var(--teal);border:1px solid rgba(14,122,106,.3);}
+.stitle{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;}
+.sta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+
+/* BEFORE VS AFTER */
+.bva-split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
+@media(max-width:500px){.bva-split{grid-template-columns:1fr;}}
+.bva-before{background:#fff0ee;border:1px solid rgba(192,57,43,.15);border-top:4px solid var(--red);border-radius:14px;padding:18px;}
+.bva-after{background:#f0fff4;border:1px solid rgba(26,122,60,.15);border-top:4px solid var(--green);border-radius:14px;padding:18px;}
+.bva-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:8px;}
+.bva-before .bva-label{color:var(--red);}
+.bva-after .bva-label{color:var(--green);}
+.bva-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--brown);margin-bottom:10px;}
+.bva-item{display:flex;gap:8px;margin-bottom:6px;font-size:12px;color:var(--brown2);align-items:flex-start;line-height:1.5;}
+
+/* PROS CONS */
+.pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+@media(max-width:500px){.pc-grid{grid-template-columns:1fr;}}
+.pc-pros{background:#f0fff4;border:1px solid rgba(26,122,60,.15);border-radius:14px;padding:16px;}
+.pc-cons{background:#fff0ee;border:1px solid rgba(192,57,43,.12);border-radius:14px;padding:16px;}
+.pc-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;margin-bottom:12px;}
+.pc-pros .pc-title{color:var(--green);}
+.pc-cons .pc-title{color:var(--red);}
+.pc-item{display:flex;gap:8px;margin-bottom:8px;font-size:13px;color:var(--brown2);align-items:flex-start;line-height:1.5;}
+
+/* PLATFORM CARDS */
+.platform-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:16px;}
+.platform-card{background:var(--cream2);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .2s;}
+.platform-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(120,80,40,.12);}
+.platform-top{height:6px;}
+.platform-body{padding:16px;}
+.platform-icon{font-size:28px;margin-bottom:8px;}
+.platform-name{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--brown);margin-bottom:3px;}
+.platform-type{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;margin-bottom:8px;}
+.platform-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;margin-bottom:8px;}
+.platform-stat{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;}
+.platform-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;}
+.ptag{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;padding:2px 8px;border-radius:50px;background:var(--cream3);border:1px solid var(--border);color:var(--muted);}
+
+/* HOW TO BUY STEPS */
+.buy-steps{display:flex;flex-direction:column;gap:0;margin-bottom:16px;}
+.bs-item{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px dashed var(--border);}
+.bs-item:last-child{border-bottom:none;}
+.bs-num{width:44px;height:44px;border-radius:12px;background:var(--blue);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.bs-icon{font-size:26px;margin-bottom:3px;}
+.bs-title{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:var(--brown);margin-bottom:3px;}
+.bs-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.6;}
+.bs-tip{display:inline-flex;gap:5px;margin-top:6px;padding:3px 10px;background:#f0f4ff;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;color:var(--blue);}
+
+/* SAFETY CHECKLIST */
+.safety-tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+.s-tab{padding:7px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;cursor:pointer;border:none;transition:all .2s;}
+.s-tab.active{background:var(--blue);color:#fff;}
+.s-tab:not(.active){background:var(--cream3);color:var(--muted);border:1px solid var(--border);}
+.safety-panel{display:none;background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:18px;}
+.safety-panel.active{display:block;}
+.sp-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--brown);margin-bottom:12px;}
+.sp-item{display:flex;gap:10px;margin-bottom:8px;font-size:13px;color:var(--brown2);align-items:flex-start;line-height:1.6;}
+.sp-num{width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+
+/* RED FLAGS / FRAUD */
+.fraud-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:16px;}
+.fraud-item{background:#fff0ee;border:1px solid rgba(192,57,43,.15);border-left:3px solid var(--red);border-radius:10px;padding:12px 14px;}
+.fraud-icon{font-size:22px;margin-bottom:5px;}
+.fraud-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--red);margin-bottom:3px;}
+.fraud-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.5;}
+
+/* FUTURE TECH */
+.future-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:16px;}
+.future-item{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;}
+.future-icon{font-size:28px;margin-bottom:6px;}
+.future-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;}
+.future-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--brown2);line-height:1.5;}
+.future-when{display:inline-block;margin-top:5px;padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;background:#f0f4ff;color:var(--blue);}
+
+/* EXPANDABLE */
+.card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.card-hdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;}
+.card-ico{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;background:var(--cream3);}
+.card-en{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;}
+.card-ta{font-size:12px;color:var(--muted);margin-bottom:2px;}
+.card-sum{font-size:12px;color:var(--brown2);}
+.card-arr{margin-left:auto;font-size:16px;color:var(--muted);transition:transform .2s;flex-shrink:0;}
+.card.open .card-arr{transform:rotate(180deg);}
+.card-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border);}
+.card.open .card-body{display:block;}
+.rl{margin-top:12px;display:flex;flex-direction:column;gap:7px;}
+.ri{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--brown2);line-height:1.6;}
+.tip-box{background:#f0fff4;border-left:3px solid var(--green);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--green);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.warn-box{background:#fff8e8;border-left:3px solid var(--accent);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--accent);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.danger-box{background:#fff0ee;border-left:3px solid var(--red);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--red);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.info-box{background:#f0f4ff;border-left:3px solid var(--blue);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--blue);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+
+/* COMPARE TABLE */
+.ct{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;}
+.ct th{background:var(--cream3);color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);}
+.ct td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--brown2);}
+.ct tr:last-child td{border-bottom:none;}
+.ct tr:nth-child(even) td{background:var(--cream3);}
+.bg{background:#f0fff4;color:var(--green);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+.br{background:#fff0ee;color:var(--red);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+.by{background:#fffbf0;color:var(--accent);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;}
+
+/* CONC */
+.conc{background:linear-gradient(135deg,#030610,#061030);color:#fff;border-radius:16px;padding:26px 22px;margin-top:32px;text-align:center;}
+.conc h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;margin-bottom:14px;color:var(--accent2);}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+.pill{padding:7px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;background:rgba(26,95,160,.2);color:#80b0ff;}
+.conc p{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:#8090c0;line-height:1.7;}
+
+/* SHARE */
+.nxt{margin-top:20px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxi{font-size:26px;flex-shrink:0;}
+.nxl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxe{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxt2{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxa{margin-left:auto;font-size:20px;color:var(--accent);}
+.sw{margin-top:16px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.swh{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:3px;}
+.swta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.swb{display:flex;flex-wrap:wrap;gap:7px;}
+.sbt{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sbt:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+footer{text-align:center;padding:26px 20px;border-top:1px solid var(--border);margin-top:14px;}
+.f1{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);letter-spacing:3px;}
+.f2{font-size:12px;color:var(--muted);margin-top:3px;}
+.f3{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.f3 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--blue);z-index:999;transition:width .1s;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+<nav>
+  <div><a href="index.html" class="nb">KAARKALVI</a><div class="ns">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nh">← Home</a>
+</nav>
+
+<div class="hero">
+  <div class="htag">Article 17 · Digital Car Retailing</div>
+  <h1>📱 <em>DIGITAL</em> CAR BUYING</h1>
+  <div class="hta">இனி ஷோரூம் போகாமல் — வீட்டிலிருந்தே கார் வாங்கலாம்!</div>
+  <div class="hmeta"><span>📖 10 min read</span><span>🛒 Online Platforms</span><span>🔍 Safety Checklist</span><span>⚠️ Fraud Watch</span></div>
+  <div class="hero-stat">🇮🇳 India Online Car Market: $11.7 Billion (2024) — 2033-ல் $26 Billion ஆகும்!</div>
+</div>
+
+<!-- MARKET STATS -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <div class="stat-val">75%</div>
+    <div class="stat-label">Spinny purchases digitally made 2024 (70% in 2023)</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-val">54L+</div>
+    <div class="stat-label">Used cars sold in India 2024 — new cars-ஐ விட அதிகம்!</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-val">$11.7B</div>
+    <div class="stat-label">India online car market size 2024</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-val">76%</div>
+    <div class="stat-label">Spinny customers — first-time car buyers 2024</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-val">2L+</div>
+    <div class="stat-label">Cars Spinny delivered in 2024</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-val">30%+</div>
+    <div class="stat-label">Organized online channel share 2024-25</div>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="ibox">
+  ஒரு கார் வாங்குவது லட்சக்கணக்கில் முதலீடு. முன்பு இதற்கு பல ஷோரூம்கள் அலைந்து, வாரக்கணக்கில் நேரம் செலவழித்து, sales person pressure-ல் decision எடுக்க வேண்டியிருந்தது. இன்று? <strong>உங்கள் சோபாவில் அமர்ந்துகொண்டே, ரவிவாரம் இரவு 11 மணிக்கும் கார் வாங்கலாம்!</strong> இந்த புரட்சி எப்படி நடக்கிறது, எப்படி பாதுகாப்பாக வாங்குவது — தமிழில் விரிவாக பார்க்கலாம்.
+</div>
+
+<!-- BEFORE VS AFTER -->
+<div class="sec"><div class="sbadge sb-b">⏰ REVOLUTION</div><div><div class="stitle">முன்பு vs இப்போது — Car Buying</div><div class="sta">என்ன மாறியது?</div></div></div>
+
+<div class="bva-split">
+  <div class="bva-before">
+    <div class="bva-label">❌ BEFORE — Traditional</div>
+    <div class="bva-title">ஷோரூம் யுகம்</div>
+    <div class="bva-item"><span>😓</span><div>5–10 ஷோரூம்களுக்கு அலைந்து நேரம் வீணாக்குவது</div></div>
+    <div class="bva-item"><span>💸</span><div>Hidden charges — insurance, accessories, handling — delivery-ல் surprise!</div></div>
+    <div class="bva-item"><span>👔</span><div>Sales person pressure — "today only offer" என்று பயமுறுத்துவது</div></div>
+    <div class="bva-item"><span>📋</span><div>Manual documents, bank visits, days-long loan process</div></div>
+    <div class="bva-item"><span>🔍</span><div>Used cars — history தெரியாது, odometer tamper risk</div></div>
+    <div class="bva-item"><span>⏳</span><div>Weekend-ல் மட்டும் ஷோரூம் time கிடைக்கும்</div></div>
+  </div>
+  <div class="bva-after">
+    <div class="bva-label">✅ NOW — Digital</div>
+    <div class="bva-title">டிஜிட்டல் யுகம்</div>
+    <div class="bva-item"><span>🏠</span><div>வீட்டிலிருந்தே 1000+ cars compare — 15 நிமிடத்தில்</div></div>
+    <div class="bva-item"><span>💰</span><div>Transparent on-road pricing — tax, insurance எல்லாமே upfront</div></div>
+    <div class="bva-item"><span>🤝</span><div>No pressure, own pace-ல் decide — midnight-லயும் browse!</div></div>
+    <div class="bva-item"><span>📱</span><div>Digital KYC, instant loan approval — 30 minutes process</div></div>
+    <div class="bva-item"><span>📊</span><div>200+ point inspection report, accident history, service records</div></div>
+    <div class="bva-item"><span>🚗</span><div>Doorstep test drive + home delivery — ஷோரூம் போகவே வேண்டாம்!</div></div>
+  </div>
+</div>
+
+<!-- PROS & CONS -->
+<div class="sec"><div class="sbadge sb-g">✅❌ PROS CONS</div><div><div class="stitle">Digital Car Buying — நன்மை தீமைகள்</div><div class="sta">Balance-ஆக புரிந்துகொள்வோம்</div></div></div>
+
+<div class="pc-grid">
+  <div class="pc-pros">
+    <div class="pc-title">✅ ADVANTAGES</div>
+    <div class="pc-item"><span>✅</span><div><strong>நேரம் மிச்சம்</strong> — பல ஷோரூம்களுக்கு போகாமல் 1000+ cars ஒரே திரையில் compare</div></div>
+    <div class="pc-item"><span>✅</span><div><strong>Transparent pricing</strong> — Hidden charges இல்லை. Ex-showroom, taxes, insurance — எல்லாமே upfront</div></div>
+    <div class="pc-item"><span>✅</span><div><strong>24/7 availability</strong> — Midnight, holiday — எப்போதும் browse, book possible</div></div>
+    <div class="pc-item"><span>✅</span><div><strong>Doorstep test drive</strong> — உன் வீட்டிற்கே car வரும், familiar roads-ல் test</div></div>
+    <div class="pc-item"><span>✅</span><div><strong>Digital financing</strong> — 30 minutes-ல் loan approval, online KYC, instant disbursement</div></div>
+    <div class="pc-item"><span>✅</span><div><strong>Verified used cars</strong> — 200+ point inspection, accident history, service records transparent</div></div>
+    <div class="pc-item"><span>✅</span><div><strong>No pressure</strong> — Sales person pressure இல்லாமல் own pace-ல் research, decide</div></div>
+    <div class="pc-item"><span>✅</span><div><strong>Money-back guarantee</strong> — 5–7 day return policy most platforms offer</div></div>
+    <div class="pc-item"><span>✅</span><div><strong>Pan-India access</strong> — Chennai-லிருந்து Delhi-ல் listed car வாங்கி home delivery பெறலாம்</div></div>
+  </div>
+  <div class="pc-cons">
+    <div class="pc-title">❌ DISADVANTAGES</div>
+    <div class="pc-item"><span>❌</span><div><strong>No physical feel</strong> — Seat comfort, plastic quality, actual boot space — screen-ல் தெரியாது</div></div>
+    <div class="pc-item"><span>❌</span><div><strong>Negotiation குறைவு</strong> — Online platforms mostly fixed price. Traditional showroom-ல் bargain possible</div></div>
+    <div class="pc-item"><span>❌</span><div><strong>Used car risk</strong> — Photos vs reality gap possible. Inspection report mislead ஆகலாம்</div></div>
+    <div class="pc-item"><span>❌</span><div><strong>Online fraud</strong> — Fake platforms, WhatsApp fraud, advance money scams</div></div>
+    <div class="pc-item"><span>❌</span><div><strong>Tech issues</strong> — Website crash, payment gateway problems, document upload issues</div></div>
+    <div class="pc-item"><span>❌</span><div><strong>After-sales distance</strong> — Online platform-க்கும் service center-க்கும் accountability gap</div></div>
+    <div class="pc-item"><span>❌</span><div><strong>Photography filter</strong> — Professional photos real condition-ஐ hide பண்ணலாம்</div></div>
+  </div>
+</div>
+
+<!-- PLATFORMS - NEW CARS -->
+<div class="sec"><div class="sbadge sb-b">🆕 NEW CAR PLATFORMS</div><div><div class="stitle">புதிய கார் — Online Platforms</div><div class="sta">Comparison + Booking platforms</div></div></div>
+
+<div class="platform-grid">
+  <div class="platform-card">
+    <div class="platform-top" style="background:#e63946;"></div>
+    <div class="platform-body">
+      <div class="platform-icon">🚗</div>
+      <div class="platform-name">CarWale</div>
+      <div class="platform-type" style="color:#e63946;">NEW + USED · COMPARISON</div>
+      <div class="platform-ta">India-ஓட largest auto comparison portal. New cars, prices, reviews, dealer locator. OEM website-க்கு redirect பண்ணும்.</div>
+      <div class="platform-stat" style="color:#e63946;">Best for: Research & Compare</div>
+      <div class="platform-tags"><span class="ptag">Price Compare</span><span class="ptag">Reviews</span><span class="ptag">EMI Calc</span></div>
+    </div>
+  </div>
+
+  <div class="platform-card">
+    <div class="platform-top" style="background:var(--blue);"></div>
+    <div class="platform-body">
+      <div class="platform-icon">🔍</div>
+      <div class="platform-name">CarDekho</div>
+      <div class="platform-type" style="color:var(--blue);">NEW + USED · FULL STACK</div>
+      <div class="platform-ta">Comparison + financing + insurance. CarDekho 7 acquisitions மூலம் India-ஓட comprehensive auto platform ஆனது.</div>
+      <div class="platform-stat" style="color:var(--blue);">Best for: New car full journey</div>
+      <div class="platform-tags"><span class="ptag">Compare</span><span class="ptag">Loan</span><span class="ptag">Insurance</span></div>
+    </div>
+  </div>
+
+  <div class="platform-card">
+    <div class="platform-top" style="background:var(--accent);"></div>
+    <div class="platform-body">
+      <div class="platform-icon">📊</div>
+      <div class="platform-name">CarTrade</div>
+      <div class="platform-type" style="color:var(--accent);">NEW + USED · LISTED COMPANY</div>
+      <div class="platform-ta">India-ஓட only profitable listed used car platform. OLX Auto-ஐ acquire பண்ணியது. B2B + B2C marketplace.</div>
+      <div class="platform-stat" style="color:var(--accent);">Only profitable car platform</div>
+      <div class="platform-tags"><span class="ptag">B2C</span><span class="ptag">B2B</span><span class="ptag">NSE Listed</span></div>
+    </div>
+  </div>
+
+  <div class="platform-card">
+    <div class="platform-top" style="background:var(--green);"></div>
+    <div class="platform-body">
+      <div class="platform-icon">🏭</div>
+      <div class="platform-name">OEM Websites</div>
+      <div class="platform-type" style="color:var(--green);">DIRECT FROM MANUFACTURER</div>
+      <div class="platform-ta">Maruti, Tata, Hyundai, Mahindra — சொந்த websites-ல் 100% online booking, configuration, color/variant selection.</div>
+      <div class="platform-stat" style="color:var(--green);">Best for: Brand-specific buyers</div>
+      <div class="platform-tags"><span class="ptag">Official</span><span class="ptag">Configure</span><span class="ptag">No middleman</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PLATFORMS - USED CARS -->
+<div class="sec"><div class="sbadge sb-a">🔄 USED CAR PLATFORMS</div><div><div class="stitle">பழைய கார் — Online Platforms</div><div class="sta">India-ஓட top used car digital marketplaces</div></div></div>
+
+<div class="platform-grid">
+  <div class="platform-card">
+    <div class="platform-top" style="background:#c0392b;"></div>
+    <div class="platform-body">
+      <div class="platform-icon">🏆</div>
+      <div class="platform-name">Cars24</div>
+      <div class="platform-type" style="color:#c0392b;">USED CARS · #1 BY REVENUE</div>
+      <div class="platform-ta">India-ஓட largest used car platform. ₹5,500 crore+ revenue. Valuation $3.3 billion. 2025-ல் Team-BHP acquire பண்ணியது! AI pricing, home delivery.</div>
+      <div class="platform-stat" style="color:#c0392b;">₹6,917 Cr revenue FY24</div>
+      <div class="platform-tags"><span class="ptag">AI Pricing</span><span class="ptag">Home Delivery</span><span class="ptag">Financing</span><span class="ptag">New Cars too</span></div>
+    </div>
+  </div>
+
+  <div class="platform-card">
+    <div class="platform-top" style="background:#27ae60;"></div>
+    <div class="platform-body">
+      <div class="platform-icon">🌀</div>
+      <div class="platform-name">Spinny</div>
+      <div class="platform-type" style="color:#27ae60;">USED CARS · FASTEST GROWING</div>
+      <div class="platform-ta">2 lakh+ cars delivered 2024. 75% digital purchases. Hub-based model. $131M raised March 2025. IPO planned. Women buyers — 26%!</div>
+      <div class="platform-stat" style="color:#27ae60;">₹4,657 Cr revenue FY25 (+25%)</div>
+      <div class="platform-tags"><span class="ptag">360° View</span><span class="ptag">7-day Return</span><span class="ptag">NBFC Loans</span><span class="ptag">SpinnyMax</span></div>
+    </div>
+  </div>
+
+  <div class="platform-card">
+    <div class="platform-top" style="background:var(--purple);"></div>
+    <div class="platform-body">
+      <div class="platform-icon">🔨</div>
+      <div class="platform-name">Droom</div>
+      <div class="platform-type" style="color:var(--purple);">NEW + USED · AUCTION TOO</div>
+      <div class="platform-ta">Tech-first platform. Auction (ஏலம்) model-ல் car வாங்கலாம். AI-based pricing, history report, doorstep delivery.</div>
+      <div class="platform-stat" style="color:var(--purple);">Best for: Auction deals</div>
+      <div class="platform-tags"><span class="ptag">Auction</span><span class="ptag">AI Price</span><span class="ptag">History</span></div>
+    </div>
+  </div>
+
+  <div class="platform-card">
+    <div class="platform-top" style="background:var(--teal);"></div>
+    <div class="platform-body">
+      <div class="platform-icon">✅</div>
+      <div class="platform-name">Maruti True Value</div>
+      <div class="platform-type" style="color:var(--teal);">CPO · 629 OUTLETS</div>
+      <div class="platform-ta">India-ஓட largest CPO program. 629 outlets, 321 cities. 376-point inspection. Maruti cars மட்டும். Warranty included.</div>
+      <div class="platform-stat" style="color:var(--teal);">India's #1 CPO Network</div>
+      <div class="platform-tags"><span class="ptag">CPO</span><span class="ptag">376-pt check</span><span class="ptag">Warranty</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW TO BUY ONLINE - STEP BY STEP -->
+<div class="sec"><div class="sbadge sb-b">🛒 HOW TO BUY</div><div><div class="stitle">Online Car வாங்குவது எப்படி?</div><div class="sta">Step by step guide — beginners-க்கும் புரியும்</div></div></div>
+
+<div class="buy-steps">
+  <div class="bs-item">
+    <div class="bs-num">1</div>
+    <div>
+      <div class="bs-icon">🔍</div>
+      <div class="bs-title">Research & Shortlist</div>
+      <div class="bs-ta">CarDekho, CarWale-ல் budget, fuel type, body type filter பண்ணி 3–4 cars shortlist பண்ணுங்கள். YouTube reviews, owner forums படியுங்கள். கடந்த article 15-ல் New vs Used vs CPO guide பாருங்கள்.</div>
+      <div class="bs-tip">💡 CarDekho comparison tool use பண்ணுங்கள்</div>
+    </div>
+  </div>
+  <div class="bs-item">
+    <div class="bs-num">2</div>
+    <div>
+      <div class="bs-icon">📱</div>
+      <div class="bs-title">Platform Select & Register</div>
+      <div class="bs-ta">New car? — OEM website direct. Used car? — Spinny அல்லது Cars24. Account create பண்ணி verified phone number add பண்ணுங்கள். Official app download பண்ணுங்கள் — browser version avoid.</div>
+      <div class="bs-tip">⚠️ App store-லிருந்து மட்டும் download</div>
+    </div>
+  </div>
+  <div class="bs-item">
+    <div class="bs-num">3</div>
+    <div>
+      <div class="bs-icon">📊</div>
+      <div class="bs-title">Inspection Report Read பண்ணுங்கள்</div>
+      <div class="bs-ta">Used car-க்கு — 200+ point inspection report கவனமாக படியுங்கள். Engine, transmission, body, electricals — individual scores பாருங்கள். Accident history section — red flags பாருங்கள்.</div>
+      <div class="bs-tip">📋 Every point read — skip பண்ணாதீர்கள்</div>
+    </div>
+  </div>
+  <div class="bs-item">
+    <div class="bs-num">4</div>
+    <div>
+      <div class="bs-icon">🚗</div>
+      <div class="bs-title">Doorstep Test Drive Book பண்ணுங்கள்</div>
+      <div class="bs-ta">உங்கள் home address-க்கு test drive schedule பண்ணுங்கள். Familiar roads-ல் drive பண்ணுங்கள். AC, music system, power windows, brakes எல்லாமே test பண்ணுங்கள். கம்பெனி driver உடன் இருப்பார்.</div>
+      <div class="bs-tip">🔑 30+ minutes test drive — rush பண்ணாதீர்கள்</div>
+    </div>
+  </div>
+  <div class="bs-item">
+    <div class="bs-num">5</div>
+    <div>
+      <div class="bs-icon">🏦</div>
+      <div class="bs-title">Digital Loan Apply பண்ணுங்கள்</div>
+      <div class="bs-ta">Platform-ல் EMI calculator பார்த்து budget confirm பண்ணுங்கள். Digital KYC (Aadhaar, PAN, bank statement) upload. Multiple lenders compare பண்ணுங்கள் — platform default loan accept பண்ணாதீர்கள்.</div>
+      <div class="bs-tip">💰 Bank pre-approval letter ready வையுங்கள்</div>
+    </div>
+  </div>
+  <div class="bs-item">
+    <div class="bs-num">6</div>
+    <div>
+      <div class="bs-icon">✅</div>
+      <div class="bs-title">Payment & Documentation</div>
+      <div class="bs-ta">Token amount — only official payment gateway. RC, insurance, service history documents verify பண்ணுங்கள். New car-க்கு PDI (Pre-Delivery Inspection) book பண்ணுங்கள் — showroom yard-ல் physically check பண்ணுங்கள்.</div>
+      <div class="bs-tip">⚠️ Cash / UPI to individual — never!</div>
+    </div>
+  </div>
+  <div class="bs-item">
+    <div class="bs-num">7</div>
+    <div>
+      <div class="bs-icon">🚚</div>
+      <div class="bs-title">Delivery Day — Final Check</div>
+      <div class="bs-ta">Car arrive ஆனதும் — fuel level, spare tyre, documents, service book எல்லாமே check பண்ணுங்கள். Photos எடுங்கள். 7-day return window இருந்தால் — first week ஒரு mechanic-கிட்டே காட்டுங்கள்.</div>
+      <div class="bs-tip">📸 Delivery photos / video எடுங்கள்</div>
+    </div>
+  </div>
+</div>
+
+<!-- SAFETY CHECKLIST TABS -->
+<div class="sec"><div class="sbadge sb-g">🔍 SAFETY CHECKLIST</div><div><div class="stitle">Online Car வாங்கும்முன் — Verify பண்ணுங்கள்</div><div class="sta">New car-க்கும் Used car-க்கும் different checks</div></div></div>
+
+<div class="safety-tabs">
+  <button class="s-tab active" onclick="showPanel('new')">🆕 New Car</button>
+  <button class="s-tab" onclick="showPanel('used')">🔄 Used Car</button>
+  <button class="s-tab" onclick="showPanel('docs')">📋 Documents</button>
+</div>
+
+<div class="safety-panel active" id="panel-new">
+  <div class="sp-title">🆕 புதிய கார் — Online Checklist</div>
+  <div class="sp-item"><div class="sp-num">1</div><div><strong>Authorized Dealer verify:</strong> Platform நீங்கள் book பண்ணும் dealer-ஓட authorized dealer-ஆ என்று manufacturer website-ல் confirm பண்ணுங்கள்</div></div>
+  <div class="sp-item"><div class="sp-num">2</div><div><strong>On-road price breakdown:</strong> Ex-showroom + GST (28%) + Cess + Registration + Insurance + Accessories — itemized breakdown கேளுங்கள். Surprises இல்லாமல்.</div></div>
+  <div class="sp-item"><div class="sp-num">3</div><div><strong>PDI கட்டாயம்:</strong> Delivery-க்கு முன்பு RTO registration-க்கு முன்பே PDI (Pre-Delivery Inspection) பண்ணுங்கள். Scratches, dents, engine compartment check.</div></div>
+  <div class="sp-item"><div class="sp-num">4</div><div><strong>Warranty card & service book:</strong> Original warranty card, service book, tools kit — எல்லாமே delivery-ல் கிடைக்கிறதா check பண்ணுங்கள்</div></div>
+  <div class="sp-item"><div class="sp-num">5</div><div><strong>Booking receipt:</strong> Official payment receipt — car company letterhead-ல் இருக்கணும். UPI screenshot மட்டும் accept பண்ணாதீர்கள்.</div></div>
+  <div class="sp-item"><div class="sp-num">6</div><div><strong>Insurance policy verify:</strong> Comprehensive insurance — IDV correct-ஆ இருக்கிறதா verify பண்ணுங்கள். Zero depreciation add-on worth it.</div></div>
+</div>
+
+<div class="safety-panel" id="panel-used">
+  <div class="sp-title">🔄 பழைய கார் — Online Checklist</div>
+  <div class="sp-item"><div class="sp-num">1</div><div><strong>Vahan Portal RC verify:</strong> parivahan.gov.in-ல் car registration number enter பண்ணி — owner name, chassis number, engine number match ஆகிறதா check பண்ணுங்கள்</div></div>
+  <div class="sp-item"><div class="sp-num">2</div><div><strong>Odometer verify:</strong> Service book-ல் km record + platform-ல் km match ஆகிறதா? Odometer tampering — India-ல் common fraud. Physical vs claimed km gap suspicious-ஆ இருந்தால் — pass!</div></div>
+  <div class="sp-item"><div class="sp-num">3</div><div><strong>Accident history:</strong> Inspection report-ல் accident section carefully படியுங்கள். Uneven panel gaps, mismatched paint, fresh welding — physical signs பாருங்கள்.</div></div>
+  <div class="sp-item"><div class="sp-num">4</div><div><strong>Flood check:</strong> Carpet smell, seat rail rust, door hinge rust, electrical issues — flood damage sign. TN-ல் flood season cars — extra careful!</div></div>
+  <div class="sp-item"><div class="sp-num">5</div><div><strong>Service history:</strong> Authorized service center records + service book match. Oil change intervals verify. Skip-ஆன services = hidden engine issues possibility.</div></div>
+  <div class="sp-item"><div class="sp-num">6</div><div><strong>Challan/FIR check:</strong> echallan.parivahan.gov.in-ல் pending challans check. Court cases, stolen vehicle report — police portal verify.</div></div>
+  <div class="sp-item"><div class="sp-num">7</div><div><strong>Loan clearance:</strong> Bank loan-ல் இருக்கும் car-ஐ வாங்கினால் — NOC (No Objection Certificate) from bank கட்டாயம். RC-ல் hypothecation entry இருந்தால் — loan clear ஆகாத car!</div></div>
+  <div class="sp-item"><div class="sp-num">8</div><div><strong>Independent mechanic check:</strong> Platform's inspection report enough இல்லை — உன் trusted mechanic-ஐ வைத்து separately inspect பண்ணுங்கள். ₹500–₹1,500 cost — worthwhile investment!</div></div>
+</div>
+
+<div class="safety-panel" id="panel-docs">
+  <div class="sp-title">📋 Documents Checklist</div>
+  <div class="sp-item"><div class="sp-num">1</div><div><strong>RC (Registration Certificate):</strong> Smart card RC — owner name, engine/chassis number, registration date, validity check</div></div>
+  <div class="sp-item"><div class="sp-num">2</div><div><strong>Insurance:</strong> Valid comprehensive insurance. Previous claim history — NC (No-Claim) bonus transferable?</div></div>
+  <div class="sp-item"><div class="sp-num">3</div><div><strong>PUC (Pollution Certificate):</strong> Valid PUC — not expired. BS6 car-க்கு check standard different.</div></div>
+  <div class="sp-item"><div class="sp-num">4</div><div><strong>Service Book:</strong> Original stamped service records — photo copies sufficient இல்லை</div></div>
+  <div class="sp-item"><div class="sp-num">5</div><div><strong>Duplicate key:</strong> Master key + spare key — both இருக்கணும். Spare key இல்லாமல் வேண்டாம்.</div></div>
+  <div class="sp-item"><div class="sp-num">6</div><div><strong>GST Invoice/Form 29/30:</strong> RC transfer-க்கு Form 29 (notice of transfer) + Form 30 (report of transfer) + sale deed</div></div>
+</div>
+
+<!-- PLATFORM COMPARISON TABLE -->
+<div class="card" id="c1">
+  <div class="card-hdr" onclick="tc('c1')">
+    <div class="card-ico">📊</div>
+    <div style="flex:1"><div class="card-ta">Side by side comparison</div><div class="card-en">Cars24 vs Spinny vs OLX vs Droom</div><div class="card-sum">எந்த platform எதற்கு suitable?</div></div>
+    <div class="card-arr">▾</div>
+  </div>
+  <div class="card-body">
+    <div style="overflow-x:auto;">
+    <table class="ct">
+      <tr><th>Factor</th><th>Cars24</th><th>Spinny</th><th>OLX Autos</th><th>Droom</th></tr>
+      <tr><td><strong>Type</strong></td><td>Full-stack marketplace</td><td>Full-stack marketplace</td><td>Classifieds platform</td><td>Tech marketplace</td></tr>
+      <tr><td><strong>Inspection</strong></td><td><span class="bg">AI + Physical</span></td><td><span class="bg">Hub-based thorough</span></td><td><span class="br">Seller's word</span></td><td><span class="by">Third-party</span></td></tr>
+      <tr><td><strong>Warranty</strong></td><td><span class="bg">Yes</span></td><td><span class="bg">Yes</span></td><td><span class="br">No</span></td><td><span class="by">Varies</span></td></tr>
+      <tr><td><strong>Return Policy</strong></td><td><span class="bg">7 days</span></td><td><span class="bg">5 days</span></td><td><span class="br">None</span></td><td><span class="by">Varies</span></td></tr>
+      <tr><td><strong>Financing</strong></td><td><span class="bg">Yes — in-house</span></td><td><span class="bg">Yes — NBFC partner</span></td><td><span class="br">No</span></td><td><span class="by">Third-party</span></td></tr>
+      <tr><td><strong>Fraud Risk</strong></td><td><span class="bg">Low</span></td><td><span class="bg">Low</span></td><td><span class="br">High</span></td><td><span class="by">Moderate</span></td></tr>
+      <tr><td><strong>Price</strong></td><td>Market rate</td><td>Market rate</td><td><span class="bg">Negotiable lower</span></td><td>Varies</td></tr>
+      <tr><td><strong>Best for</strong></td><td>Volume buyers, fast process</td><td>Quality-conscious, transparency</td><td>Budget hunters, risk-tolerant</td><td>Auction deals</td></tr>
+    </table>
+    </div>
+    <div class="tip-box">✅ <strong>Recommendation:</strong> First-time online car buyer-ஆ? → Spinny அல்லது Maruti True Value. Budget tight, risk ok? → OLX-ல் search பண்ணி favorite car find பண்ணி, same car Spinny/Cars24-ல் check பண்ணுங்கள்.</div>
+  </div>
+</div>
+
+<!-- DIGITAL FINANCING -->
+<div class="card" id="c2">
+  <div class="card-hdr" onclick="tc('c2')">
+    <div class="card-ico" style="background:#f0f4ff;">🏦</div>
+    <div style="flex:1"><div class="card-ta">Online loan process</div><div class="card-en">Digital Car Financing — எப்படி வேலை செய்யும்?</div><div class="card-sum">30 minutes-ல் loan approval possible — ஆனால் smart-ஆ apply பண்ணுங்கள்</div></div>
+    <div class="card-arr">▾</div>
+  </div>
+  <div class="card-body">
+    <div class="rl">
+      <div class="ri"><span>📱</span><div><strong>Digital KYC:</strong> Aadhaar OTP, PAN, selfie — 5 minutes. Bank statement PDF upload. Physical documents போக வேண்டியதில்லை.</div></div>
+      <div class="ri"><span>🏦</span><div><strong>Multiple lenders compare:</strong> Platform ஒரே நேரத்தில் 10+ banks/NBFCs-க்கு send பண்ணும். Best rate offer select பண்ணலாம்.</div></div>
+      <div class="ri"><span>💰</span><div><strong>New car:</strong> 85–90% finance, 8–11% interest. Used car: 70–80% finance, 12–18%. CPO: 75–85%, 10–14%.</div></div>
+      <div class="ri"><span>⏱️</span><div><strong>Disbursement speed:</strong> New car — 24 hours. Used car — 2–4 hours (digital process).</div></div>
+      <div class="ri"><span>📊</span><div><strong>CIBIL score matters:</strong> 750+ = best rates. 650–750 = higher rates. 650 below = rejection possible or very high rates.</div></div>
+    </div>
+    <div class="warn-box">⚠️ Multiple loan applications = CIBIL score drop. Platform-ல் "soft inquiry" check பண்ணி, final decision-ல் மட்டும் hard inquiry.</div>
+    <div class="info-box">💡 <strong>56% of Spinny buyers used financing in 2024.</strong> 60% of them were aged 25–30. Young buyers-க்கு digital financing much more accessible!</div>
+  </div>
+</div>
+
+<!-- AI FEATURES -->
+<div class="card" id="c3">
+  <div class="card-hdr" onclick="tc('c3')">
+    <div class="card-ico" style="background:#f8f0ff;">🤖</div>
+    <div style="flex:1"><div class="card-ta">Technology features</div><div class="card-en">AI Features — Digital Platforms-ல் என்ன இருக்கு?</div><div class="card-sum">360° photos, AR, AI pricing, virtual test drive — புதிய features!</div></div>
+    <div class="card-arr">▾</div>
+  </div>
+  <div class="card-body">
+    <div class="rl">
+      <div class="ri"><span>📷</span><div><strong>360° Car View:</strong> Spinny-ஓட 360° interior/exterior photos. Car-ஓட every corner screen-ல் பார்க்கலாம் — showroom போவதற்கு முன்பே.</div></div>
+      <div class="ri"><span>🤖</span><div><strong>AI Pricing:</strong> Cars24, Spinny AI algorithms use பண்ணி market data-based fair price calculate பண்றார்கள். Under-priced/over-priced cars flag ஆகும்.</div></div>
+      <div class="ri"><span>🎥</span><div><strong>Video Walkthroughs:</strong> Cars24 2025-ல் AI-powered video walkthroughs launch பண்ணியது. Actual car video — photos than more realistic.</div></div>
+      <div class="ri"><span>📊</span><div><strong>Price History:</strong> CarDekho, CarWale-ல் car-ஓட price trend — last 3–6 months graph காட்டும். Waiting பண்ணினால் price குறையுமா? தெரியும்!</div></div>
+      <div class="ri"><span>🔔</span><div><strong>Price Alerts:</strong> Budget range set பண்ணினால் — matching car வந்தால் notification வரும். Perfect car miss ஆகாது!</div></div>
+    </div>
+    <div class="tip-box">✅ Cars24 March 2025-ல் 'New Cars' platform launch பண்ணியது — real on-road pricing, AI video walkthroughs, home test drives with new cars too!</div>
+  </div>
+</div>
+
+<!-- FRAUD PREVENTION -->
+<div class="sec"><div class="sbadge sb-r">⚠️ FRAUD WATCH</div><div><div class="stitle">ஆன்லைன் Car Fraud — எப்படி தவிர்ப்பது?</div><div class="sta">இந்த red flags பாருங்கள் — பலி ஆகாதீர்கள்!</div></div></div>
+
+<div class="fraud-grid">
+  <div class="fraud-item">
+    <div class="fraud-icon">💸</div>
+    <div class="fraud-title">Advance Money Scam</div>
+    <div class="fraud-ta">"Token advance" UPI-ல் அனுப்புங்கள் என்று கேட்பார்கள். பணம் சென்றதும் — seller disappear! Never pay to individual.</div>
+  </div>
+  <div class="fraud-item">
+    <div class="fraud-icon">🌐</div>
+    <div class="fraud-title">Fake Websites</div>
+    <div class="fraud-ta">cars24.co.in, spinny.net போன்ற fake URLs. Always official app/site மட்டும். Address bar carefully check பண்ணுங்கள்.</div>
+  </div>
+  <div class="fraud-item">
+    <div class="fraud-icon">📱</div>
+    <div class="fraud-title">WhatsApp Fraud</div>
+    <div class="fraud-ta">"Army officer, transferring car cheap" — classic scam. Low price + urgency + WhatsApp only = definitely fraud!</div>
+  </div>
+  <div class="fraud-item">
+    <div class="fraud-icon">🔢</div>
+    <div class="fraud-title">Odometer Tampering</div>
+    <div class="fraud-ta">7 year old car-ல் 30,000 km மட்டும் show ஆகும். Service book records cross-check கட்டாயம். Digital odometer also can be tampered!</div>
+  </div>
+  <div class="fraud-item">
+    <div class="fraud-icon">📸</div>
+    <div class="fraud-title">Stock Photos Scam</div>
+    <div class="fraud-ta">Google images-லிருந்து download பண்ணிய photos பயன்படுத்துவது. Actual car video call-ல் live show பண்ண request பண்ணுங்கள்.</div>
+  </div>
+  <div class="fraud-item">
+    <div class="fraud-icon">📋</div>
+    <div class="fraud-title">Fake Documents</div>
+    <div class="fraud-ta">Duplicate RC, forged service history. Always Vahan portal-ல் RC verify. Notary stamp alone sufficient இல்லை.</div>
+  </div>
+</div>
+
+<div style="background:#fff0ee;border:1px solid rgba(192,57,43,.15);border-radius:12px;padding:18px;margin-bottom:16px;">
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:var(--red);margin-bottom:10px;">🚨 Golden Rule — NEVER DO THIS</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;">
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);display:flex;gap:8px;"><span>🚫</span><div>Individual-க்கு UPI advance payment</div></div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);display:flex;gap:8px;"><span>🚫</span><div>OTP share பண்ணுவது</div></div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);display:flex;gap:8px;"><span>🚫</span><div>Cash transaction — no receipt</div></div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);display:flex;gap:8px;"><span>🚫</span><div>Fake website-ல் card details</div></div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);display:flex;gap:8px;"><span>🚫</span><div>RC verify பண்ணாமல் pay</div></div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);display:flex;gap:8px;"><span>🚫</span><div>"Too good to be true" deals</div></div>
+  </div>
+</div>
+
+<!-- FUTURE OF DIGITAL CAR BUYING -->
+<div class="sec"><div class="sbadge sb-p">🔮 FUTURE</div><div><div class="stitle">Digital Car Buying — Future Trends</div><div class="sta">2025–2030-ல் என்ன வரும்?</div></div></div>
+
+<div class="future-grid">
+  <div class="future-item">
+    <div class="future-icon">🥽</div>
+    <div class="future-name">AR/VR Test Drive</div>
+    <div class="future-ta">Augmented Reality headset போட்டு virtual test drive. Home-ல் இருந்தே cabin feel!</div>
+    <div class="future-when">2025–2027</div>
+  </div>
+  <div class="future-item">
+    <div class="future-icon">🤖</div>
+    <div class="future-name">AI Negotiation Bot</div>
+    <div class="future-ta">AI agent உன் behalf-ல் dealer-உடன் negotiate பண்ணும். Best deal automatically!</div>
+    <div class="future-when">2026–2028</div>
+  </div>
+  <div class="future-item">
+    <div class="future-icon">⛓️</div>
+    <div class="future-name">Blockchain RC</div>
+    <div class="future-ta">Car history, ownership blockchain-ல் tamper-proof. Fraud impossible. Government pilot running.</div>
+    <div class="future-when">2026–2030</div>
+  </div>
+  <div class="future-item">
+    <div class="future-icon">📱</div>
+    <div class="future-name">IPO Wave</div>
+    <div class="future-ta">Cars24, Spinny, CarDekho — மூன்றும் 12–18 months-ல் IPO plan. Organized market boom!</div>
+    <div class="future-when">2025–2026</div>
+  </div>
+  <div class="future-item">
+    <div class="future-icon">🏙️</div>
+    <div class="future-name">Tier 2/3 Expansion</div>
+    <div class="future-ta">Tiruppur, Salem, Madurai போன்ற cities-ல் hub-based delivery expanding. TN tier-2 focus.</div>
+    <div class="future-when">2025 onwards</div>
+  </div>
+  <div class="future-item">
+    <div class="future-icon">🔋</div>
+    <div class="future-name">EV Digital First</div>
+    <div class="future-ta">Tesla, Tata EV — fully online purchase model. Dealership-less future for EVs accelerating.</div>
+    <div class="future-when">Already happening</div>
+  </div>
+</div>
+
+<!-- WHO SHOULD USE DIGITAL -->
+<div class="card" id="c4">
+  <div class="card-hdr" onclick="tc('c4')">
+    <div class="card-ico">🤔</div>
+    <div style="flex:1"><div class="card-ta">உனக்கு suitable-ஆ?</div><div class="card-en">யாருக்கு Digital, யாருக்கு Traditional?</div><div class="card-sum">உன் situation பாரு — decide பண்ணு</div></div>
+    <div class="card-arr">▾</div>
+  </div>
+  <div class="card-body">
+    <div class="rl">
+      <div class="ri"><span>✅</span><div><strong>Digital best for:</strong> Busy professionals (time இல்லாதவர்கள்), repeat car buyers (experience இருக்கவர்கள்), remote area-ல் இருப்பவர்கள் (showroom door இல்லாதவர்கள்), research-oriented buyers</div></div>
+      <div class="ri"><span>✅</span><div><strong>Women buyers special benefit:</strong> No sales pressure, own pace-ல் decide, safety (no strange showroom visits at odd hours). Spinny-ல் 26% women buyers 2024!</div></div>
+      <div class="ri"><span>⚠️</span><div><strong>Traditional better for:</strong> First-time car buyer (physical feel important), heavily negotiated deals seekers, rural areas with no delivery coverage</div></div>
+      <div class="ri"><span>💡</span><div><strong>Hybrid approach best:</strong> Online-ல் research + price finalize, physical-ல் PDI + delivery. Both-ஓட benefit!</div></div>
+    </div>
+    <div class="tip-box">✅ <strong>Smart strategy:</strong> Online-ல் 80% journey complete பண்ணுங்கள். Final 20% — physical inspection + delivery check. இதுவே புத்திசாலித்தனமான digital car buying!</div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="conc">
+  <h3>📱 Digital Car Buying — Key Takeaways</h3>
+  <div class="pills">
+    <div class="pill">🔍 Research online</div>
+    <div class="pill">🚗 Test drive doorstep</div>
+    <div class="pill">📋 Inspection report read</div>
+    <div class="pill">🔒 Vahan verify always</div>
+    <div class="pill">💰 Never UPI to individual</div>
+    <div class="pill">📸 Delivery video எடு</div>
+  </div>
+  <p>
+    Digital car buying என்பது ஒரு tool — smartly பயன்படுத்தினால் time, money, effort எல்லாமே மிச்சம். ஆனால் லட்சக்கணக்கில் investment செய்யும்போது shortcut பண்ணாதீர்கள்.<br><br>
+    <strong style="color:var(--accent2);">Golden formula:</strong> Online research + Doorstep test drive + Physical inspection + Vahan verify + Official payment = Safe digital car purchase!<br><br>
+    2024-ல் Spinny-ல் 75% purchases digitally made ஆனது — India-ல் used cars 54 lakh+ sold, new cars-ஐ விட அதிகம். Digital revolution இப்போது நடக்கிறது. சரியான knowledge-உடன் நீயும் இதில் participate பண்ணலாம்!
+  </p>
+</div>
+
+<a href="index.html" class="nxt">
+  <div class="nxi">🏠</div>
+  <div><div class="nxl">← Back to</div><div class="nxe">KaarKalvi Home</div><div class="nxt2">எல்லா articles-உம் இங்கே</div></div>
+  <div class="nxa">→</div>
+</a>
+
+<div class="sw">
+  <div class="swh">📱 Share பண்ணுங்கள்!</div>
+  <div class="swta">Car வாங்க யோசிக்கும் நண்பர்களுக்கு இந்த guide share பண்ணுங்கள்!</div>
+  <div class="swb">
+    <button class="sbt wa" onclick="sWA()">WhatsApp</button>
+    <button class="sbt fb" onclick="sFB()">Facebook</button>
+    <button class="sbt tw" onclick="sTW()">X</button>
+    <button class="sbt tg" onclick="sTG()">Telegram</button>
+    <button class="sbt ig" onclick="sIG()">Instagram</button>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <div class="f1">KAARKALVI</div>
+  <div class="f2">கார் கல்வி · Tamil Car Education</div>
+  <div class="f3">
+    <a href="index.html">Home</a>
+    <a href="article15.html">Car Buying</a>
+    <a href="article16.html">Emission Norms</a>
+    <a href="article17.html">Digital Buying</a>
+  </div>
+</footer>
+
+<script>
+function tc(id){document.getElementById(id).classList.toggle('open');}
+window.addEventListener('scroll',()=>{
+  const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(w/h*100)+'%';
+});
+function showPanel(tab){
+  document.querySelectorAll('.safety-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.s-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+tab).classList.add('active');
+  event.target.classList.add('active');
+}
+const u=encodeURIComponent(location.href),tx=encodeURIComponent('📱 ஷோரூம் போகாமல் Online-ல் Car வாங்கலாம்! Safety tips + Platform guide தமிழில் — KaarKalvi 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+  <!-- KaarKalvi Widget -->
+  <script src="widget.js" defer></script>
+</body>
+</html>

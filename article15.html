@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New vs Used vs CPO Car Buying Guide Tamil | KaarKalvi</title>
+<meta name="description" content="புதிய கார் வாங்கலாமா? பழைய கார் வாங்கலாமா? CPO என்றால் என்ன? — தமிழில் முழு guide | KaarKalvi">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;
+  --border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;
+  --muted:#8a6a50;--accent:#c47820;--accent2:#f4a100;
+  --new:#1a5fa0;--used:#c0392b;--cpo:#1a7a3c;--dark:#0a0806;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+nav{background:var(--dark);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.nb{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.ns{font-size:10px;color:#8a6a50;}
+.nh{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#c0a880;text-decoration:none;padding:6px 14px;border:1px solid rgba(180,140,100,0.35);border-radius:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#0a0806,#1a1206,#2c1a06,#c47820);padding:44px 20px 36px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'🚗';position:absolute;font-size:200px;opacity:.05;top:-20px;right:-20px;}
+.htag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(244,161,0,.6);margin-bottom:10px;position:relative;z-index:1;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,7vw,52px);font-weight:900;color:#fff;line-height:1.05;margin-bottom:8px;position:relative;z-index:1;}
+.hero h1 em{color:var(--accent2);font-style:normal;}
+.hta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,20px);color:rgba(255,220,150,.85);margin-bottom:14px;position:relative;z-index:1;}
+.hmeta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:12px;color:rgba(255,200,100,.7);position:relative;z-index:1;}
+/* 3 TYPE BADGES */
+.type-strip{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px;position:relative;z-index:1;}
+.type-badge{padding:8px 16px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:800;letter-spacing:.5px;}
+.tb-new{background:rgba(26,95,160,.3);color:#80b8ff;border:1px solid rgba(26,95,160,.4);}
+.tb-used{background:rgba(192,57,43,.3);color:#ff9080;border:1px solid rgba(192,57,43,.4);}
+.tb-cpo{background:rgba(26,122,60,.3);color:#80e0a0;border:1px solid rgba(26,122,60,.4);}
+
+/* MAIN */
+.container{max-width:780px;margin:0 auto;padding:32px 16px;}
+.ibox{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;margin-bottom:28px;font-size:14px;line-height:1.8;color:var(--brown2);}
+
+/* SECTION */
+.sec{margin:32px 0 16px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.sbadge{padding:4px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;}
+.sb-new{background:#f0f4ff;color:var(--new);border:1px solid rgba(26,95,160,.3);}
+.sb-used{background:#fff0ee;color:var(--used);border:1px solid rgba(192,57,43,.3);}
+.sb-cpo{background:#f0fff4;color:var(--cpo);border:1px solid rgba(26,122,60,.3);}
+.sb-amber{background:#fffbf0;color:var(--accent);border:1px solid rgba(196,120,32,.3);}
+.sb-dark{background:var(--cream3);color:var(--brown);border:1px solid var(--border);}
+.stitle{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;}
+.sta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);}
+
+/* BIG 3-COLUMN INTRO CARDS */
+.three-intro{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
+@media(max-width:580px){.three-intro{grid-template-columns:1fr;}}
+.ti-card{border-radius:14px;padding:18px;text-align:center;}
+.ti-new{background:#f0f4ff;border:1px solid rgba(26,95,160,.2);border-top:4px solid var(--new);}
+.ti-used{background:#fff0ee;border:1px solid rgba(192,57,43,.15);border-top:4px solid var(--used);}
+.ti-cpo{background:#f0fff4;border:1px solid rgba(26,122,60,.15);border-top:4px solid var(--cpo);}
+.ti-icon{font-size:36px;margin-bottom:8px;}
+.ti-name{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;margin-bottom:4px;}
+.ti-new .ti-name{color:var(--new);}
+.ti-used .ti-name{color:var(--used);}
+.ti-cpo .ti-name{color:var(--cpo);}
+.ti-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+.ti-price{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;margin-top:8px;}
+.ti-new .ti-price{color:var(--new);}
+.ti-used .ti-price{color:var(--used);}
+.ti-cpo .ti-price{color:var(--cpo);}
+
+/* DETAILED TYPE SECTIONS */
+.type-section{border-radius:16px;padding:24px;margin-bottom:20px;}
+.ts-new{background:#f0f4ff;border:1px solid rgba(26,95,160,.15);}
+.ts-used{background:#fff8f6;border:1px solid rgba(192,57,43,.12);}
+.ts-cpo{background:#f0fff4;border:1px solid rgba(26,122,60,.12);}
+.ts-header{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.ts-icon{font-size:36px;}
+.ts-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;font-weight:700;margin-bottom:2px;}
+.ts-new .ts-label{color:var(--new);}
+.ts-used .ts-label{color:var(--used);}
+.ts-cpo .ts-label{color:var(--cpo);}
+.ts-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;}
+.ts-new .ts-title{color:var(--new);}
+.ts-used .ts-title{color:var(--used);}
+.ts-cpo .ts-title{color:var(--cpo);}
+.ts-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);margin-bottom:14px;line-height:1.7;}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+@media(max-width:480px){.pros-cons{grid-template-columns:1fr;}}
+.pc-box{border-radius:10px;padding:12px 14px;}
+.pros-box{background:rgba(26,122,60,.08);border:1px solid rgba(26,122,60,.15);}
+.cons-box{background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.12);}
+.pc-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:8px;}
+.pros-t{color:var(--cpo);}
+.cons-t{color:var(--used);}
+.pc-item{display:flex;gap:8px;margin-bottom:6px;font-size:12px;color:var(--brown2);align-items:flex-start;line-height:1.5;}
+.key-facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:12px;}
+.kf{background:rgba(255,255,255,.6);border:1px solid rgba(0,0,0,.06);border-radius:8px;padding:9px 11px;}
+.kf-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+.kf-val{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;color:var(--brown);}
+
+/* BIG COMPARISON TABLE */
+.comp-wrap{background:var(--cream2);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:20px;}
+.comp-table{width:100%;border-collapse:collapse;font-size:12px;}
+.comp-table th{padding:10px 12px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.5px;text-align:left;border-bottom:2px solid var(--border);}
+.th-factor{background:var(--cream3);color:var(--muted);}
+.th-new{background:#f0f4ff;color:var(--new);}
+.th-used{background:#fff0ee;color:var(--used);}
+.th-cpo{background:#f0fff4;color:var(--cpo);}
+.comp-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--brown2);vertical-align:top;}
+.comp-table tr:last-child td{border-bottom:none;}
+.td-new{background:#f8fbff;}
+.td-used{background:#fff8f6;}
+.td-cpo{background:#f5fff7;}
+.win{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;padding:2px 7px;border-radius:50px;}
+.w-new{background:#f0f4ff;color:var(--new);border:1px solid rgba(26,95,160,.2);}
+.w-used{background:#fff0ee;color:var(--used);border:1px solid rgba(192,57,43,.2);}
+.w-cpo{background:#f0fff4;color:var(--cpo);border:1px solid rgba(26,122,60,.2);}
+.w-tie{background:var(--cream3);color:var(--muted);border:1px solid var(--border);}
+
+/* DEPRECIATION VISUAL */
+.dep-visual{background:var(--dark);border-radius:14px;padding:22px;margin-bottom:16px;color:#fff;}
+.dv-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);margin-bottom:16px;letter-spacing:1px;}
+.dep-bars{display:flex;flex-direction:column;gap:14px;}
+.dep-row{display:flex;align-items:center;gap:12px;}
+.dep-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;width:60px;flex-shrink:0;}
+.dep-bar-wrap{flex:1;height:32px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden;position:relative;}
+.dep-bar{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:10px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;color:#fff;transition:width .8s ease;}
+.dep-bar.new-bar{background:linear-gradient(90deg,#1a5fa0,#4090d0);}
+.dep-bar.cpo-bar{background:linear-gradient(90deg,#1a7a3c,#40b060);}
+.dep-bar.used-bar{background:linear-gradient(90deg,#c0392b,#e05040);}
+.dep-note{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#a09080;margin-top:12px;}
+
+/* CPO PROGRAMS TABLE */
+.cpo-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:16px;}
+.cpo-table th{background:var(--cream3);color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);}
+.cpo-table td{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--brown2);}
+.cpo-table tr:last-child td{border-bottom:none;}
+.cpo-table tr:nth-child(even) td{background:var(--cream3);}
+.bg{background:#f0fff4;color:var(--cpo);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;}
+.br{background:#fff0ee;color:var(--used);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;}
+.by{background:#fffbf0;color:var(--accent);padding:2px 8px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;}
+
+/* DECISION TREE */
+.decision-box{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px;}
+.dt-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:14px;}
+.dt-item{background:var(--cream3);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start;}
+.dt-q{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:4px;}
+.dt-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.6;}
+.dt-ans{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;margin-top:4px;}
+.ans-new{color:var(--new);}
+.ans-used{color:var(--used);}
+.ans-cpo{color:var(--cpo);}
+.dt-icon{font-size:24px;flex-shrink:0;}
+
+/* CHECKLIST */
+.checklist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:16px;}
+.cl-item{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:12px 14px;}
+.cl-icon{font-size:20px;margin-bottom:4px;}
+.cl-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:3px;}
+.cl-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.5;}
+
+/* EXPANDABLE */
+.card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.card-hdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;}
+.card-ico{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;background:var(--cream3);}
+.card-en{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;}
+.card-ta{font-size:12px;color:var(--muted);margin-bottom:2px;}
+.card-sum{font-size:12px;color:var(--brown2);}
+.card-arr{margin-left:auto;font-size:16px;color:var(--muted);transition:transform .2s;flex-shrink:0;}
+.card.open .card-arr{transform:rotate(180deg);}
+.card-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border);}
+.card.open .card-body{display:block;}
+.rl{margin-top:12px;display:flex;flex-direction:column;gap:7px;}
+.ri{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--brown2);line-height:1.5;}
+.tip-box{background:#f0fff4;border-left:3px solid var(--cpo);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--cpo);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.warn-box{background:#fff8e8;border-left:3px solid var(--accent);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--accent);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+.info-box{background:#f0f4ff;border-left:3px solid var(--new);border-radius:6px;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--new);font-family:'Noto Sans Tamil',sans-serif;line-height:1.6;}
+
+/* CONC */
+.conc{background:linear-gradient(135deg,#0a0806,#1a1206,#2c1a06);color:#fff;border-radius:16px;padding:26px 22px;margin-top:32px;text-align:center;}
+.conc h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;margin-bottom:14px;color:var(--accent2);}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+.pill{padding:7px 13px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;}
+.pill-new{background:rgba(26,95,160,.2);color:#80b8ff;}
+.pill-used{background:rgba(192,57,43,.2);color:#ff9080;}
+.pill-cpo{background:rgba(26,122,60,.2);color:#80e0a0;}
+.conc p{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:#c0a060;line-height:1.7;}
+
+/* SHARE */
+.nxt{margin-top:20px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxi{font-size:26px;flex-shrink:0;}
+.nxl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxe{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxt-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxa{margin-left:auto;font-size:20px;color:var(--accent);}
+.sw{margin-top:16px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.swh{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:3px;}
+.swta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.swb{display:flex;flex-wrap:wrap;gap:7px;}
+.sbt{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sbt:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+footer{text-align:center;padding:26px 20px;border-top:1px solid var(--border);margin-top:14px;}
+.f1{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);letter-spacing:3px;}
+.f2{font-size:12px;color:var(--muted);margin-top:3px;}
+.f3{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.f3 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--accent2);z-index:999;transition:width .1s;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+<nav>
+  <div><a href="index.html" class="nb">KAARKALVI</a><div class="ns">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nh">← Home</a>
+</nav>
+
+<div class="hero">
+  <div class="htag">Article 15 · Car Buying Strategy</div>
+  <h1>🚗 New vs Used vs <em>CPO</em></h1>
+  <div class="hta">எந்த கார் வாங்கணும்? — தமிழில் முழு strategy guide</div>
+  <div class="hmeta"><span>📖 10 min read</span><span>💰 Smart buying</span><span>🔍 CPO explained</span><span>🇮🇳 India focus</span></div>
+  <div class="type-strip">
+    <span class="type-badge tb-new">🆕 NEW CAR</span>
+    <span class="type-badge tb-used">🔄 USED CAR</span>
+    <span class="type-badge tb-cpo">✅ CPO CAR</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="ibox">
+  கார் வாங்கும்போது எல்லாரும் கேட்கும் question: <strong>புதிய கார் வாங்கலாமா? பழைய கார் வாங்கலாமா?</strong> ஆனால் இப்போது ஒரு third option இருக்கு — <strong>CPO (Certified Pre-Owned)</strong>. இந்த மூன்றும் என்ன, எது உனக்கு suitable என்று இந்த article-ல் விரிவாக பார்க்கலாம்.
+</div>
+
+<!-- 3 TYPE INTRO -->
+<div class="sec"><div class="sbadge sb-amber">🚗 OVERVIEW</div><div><div class="stitle">மூன்று வகைகள் — Quick Overview</div><div class="sta">எந்த price-ல் என்ன கிடைக்கும்?</div></div></div>
+
+<div class="three-intro">
+  <div class="ti-card ti-new">
+    <div class="ti-icon">🆕</div>
+    <div class="ti-name">NEW CAR</div>
+    <div class="ti-ta">Factory-லிருந்து நேரடியாக. யாரும் use பண்ணாத car. Full warranty.</div>
+    <div class="ti-price">₹6L – ₹50L+</div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--new);margin-top:4px;">Highest price · Best features</div>
+  </div>
+  <div class="ti-card ti-used">
+    <div class="ti-icon">🔄</div>
+    <div class="ti-name">USED CAR</div>
+    <div class="ti-ta">பழைய owner-கிட்டயிருந்து. As-is condition. No warranty (generally).</div>
+    <div class="ti-price">₹1.5L – ₹25L</div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--used);margin-top:4px;">Lowest price · Higher risk</div>
+  </div>
+  <div class="ti-card ti-cpo">
+    <div class="ti-icon">✅</div>
+    <div class="ti-name">CPO CAR</div>
+    <div class="ti-ta">Certified, inspected used car. Manufacturer warranty. Middle ground.</div>
+    <div class="ti-price">₹3L – ₹30L</div>
+    <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--cpo);margin-top:4px;">Middle price · Best value</div>
+  </div>
+</div>
+
+<!-- NEW CAR SECTION -->
+<div class="sec"><div class="sbadge sb-new">🆕 NEW CAR</div><div><div class="stitle">புதிய கார் — New Car</div><div class="sta">எல்லாமே fresh — ஆனால் விலை அதிகம்</div></div></div>
+
+<div class="type-section ts-new">
+  <div class="ts-header">
+    <div class="ts-icon">🆕</div>
+    <div><div class="ts-label">NEW CAR</div><div class="ts-title">Brand New Vehicle</div></div>
+  </div>
+  <div class="ts-ta">Showroom-லிருந்து நேரடியாக வாங்கும் car. யாரும் use பண்ணாதது — zero km, full warranty, latest features. <strong>India-ல் new car market ₹3.5 lakh crore — ஒவ்வொரு வருடமும் 40 lakh+ new cars sell ஆகுது!</strong></div>
+
+  <div class="pros-cons">
+    <div class="pc-box pros-box">
+      <div class="pc-title pros-t">✅ ADVANTAGES</div>
+      <div class="pc-item"><span>✅</span><div><strong>Full warranty</strong> — 3–5 years manufacturer warranty. Repairs free.</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Latest features</strong> — Newest safety tech, ADAS, OTA updates</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>No hidden problems</strong> — Brand new engine, tyres, everything</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Low maintenance</strong> — First 3 years மிகவும் குறைவான repairs</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Loan easy</strong> — Banks 85–90% finance. Interest rates குறைவு</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Satisfaction</strong> — Brand new car-லிருந்து கிடைக்கும் feel priceless!</div></div>
+    </div>
+    <div class="pc-box cons-box">
+      <div class="pc-title cons-t">❌ DISADVANTAGES</div>
+      <div class="pc-item"><span>❌</span><div><strong>Depreciation hit</strong> — Showroom-லிருந்து வெளியே வந்தவுடன் 10–15% value drop</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Highest price</strong> — Same model used-ஐ விட 30–50% அதிகம்</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Higher insurance</strong> — IDV அதிகம் என்பதால் premium அதிகம்</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Waiting period</strong> — Popular models-க்கு 2–8 months waiting</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>On-road extras</strong> — Registration, insurance, accessories add ஆகும்</div></div>
+    </div>
+  </div>
+
+  <div class="key-facts">
+    <div class="kf"><div class="kf-label">First year depreciation</div><div class="kf-val" style="color:var(--used);">15–20%</div></div>
+    <div class="kf"><div class="kf-label">Warranty</div><div class="kf-val" style="color:var(--cpo);">3–5 years</div></div>
+    <div class="kf"><div class="kf-label">Loan rate</div><div class="kf-val" style="color:var(--new);">8–11%</div></div>
+    <div class="kf"><div class="kf-label">Insurance</div><div class="kf-val" style="color:var(--used);">High IDV</div></div>
+  </div>
+</div>
+
+<!-- USED CAR SECTION -->
+<div class="sec"><div class="sbadge sb-used">🔄 USED CAR</div><div><div class="stitle">பழைய கார் — Used Car</div><div class="sta">Budget-ல் best — ஆனால் risks தெரிந்துகொள்ளுங்கள்</div></div></div>
+
+<div class="type-section ts-used">
+  <div class="ts-header">
+    <div class="ts-icon">🔄</div>
+    <div><div class="ts-label">USED CAR</div><div class="ts-title">Pre-Owned Vehicle</div></div>
+  </div>
+  <div class="ts-ta">ஒரு அல்லது பல owners use பண்ணிய car. Private seller, local dealer, OLX, Cars24 என்று பல channels-ல் கிடைக்கும். <strong>India-ல் used car market ஒவ்வொரு வருடமும் 51 lakh+ units — new car market-ஐ விட அதிகம்!</strong></div>
+
+  <div class="pros-cons">
+    <div class="pc-box pros-box">
+      <div class="pc-title pros-t">✅ ADVANTAGES</div>
+      <div class="pc-item"><span>✅</span><div><strong>Lowest price</strong> — Same model new-ஐ விட 30–60% குறைவு</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Depreciation avoided</strong> — Previous owner already absorbed the big drop</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Lower insurance</strong> — IDV குறைவு = premium குறைவு</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Wide variety</strong> — Discontinued models கூட கிடைக்கும்</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>More car for budget</strong> — ₹8L-ல் used premium car வாங்கலாம்</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Negotiation possible</strong> — Price bargain பண்ணலாம்</div></div>
+    </div>
+    <div class="pc-box cons-box">
+      <div class="pc-title cons-t">❌ DISADVANTAGES</div>
+      <div class="pc-item"><span>❌</span><div><strong>Unknown history</strong> — Accident, flood damage, tampered odometer — தெரியாது</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>No warranty</strong> — Repair cost உன் pocket-லிருந்து</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Higher maintenance</strong> — Older parts, more wear</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Loan harder</strong> — Banks 70–80% மட்டும். Rate அதிகம்.</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Fraud risk</strong> — Fake documents, stolen cars risk</div></div>
+    </div>
+  </div>
+
+  <div class="key-facts">
+    <div class="kf"><div class="kf-label">Price savings</div><div class="kf-val" style="color:var(--cpo);">30–60%</div></div>
+    <div class="kf"><div class="kf-label">Warranty</div><div class="kf-val" style="color:var(--used);">None</div></div>
+    <div class="kf"><div class="kf-label">Loan rate</div><div class="kf-val" style="color:var(--used);">12–18%</div></div>
+    <div class="kf"><div class="kf-label">Risk level</div><div class="kf-val" style="color:var(--used);">High</div></div>
+  </div>
+</div>
+
+<!-- CPO SECTION -->
+<div class="sec"><div class="sbadge sb-cpo">✅ CPO</div><div><div class="stitle">CPO என்றால் என்ன?</div><div class="sta">Certified Pre-Owned — Middle ground, best value</div></div></div>
+
+<div class="type-section ts-cpo">
+  <div class="ts-header">
+    <div class="ts-icon">✅</div>
+    <div><div class="ts-label">CERTIFIED PRE-OWNED · CPO</div><div class="ts-title">சான்றிதழ் பெற்ற பழைய கார்</div></div>
+  </div>
+  <div class="ts-ta">CPO car என்பது manufacturer அல்லது authorized dealer 100+ point inspection செய்து, certified பண்ணிய used car. Extended warranty, road assistance உடன் வருகிறது. <strong>Used car-ஓட price advantage + New car-ஓட peace of mind — இரண்டும் ஒன்றே!</strong></div>
+
+  <div class="pros-cons">
+    <div class="pc-box pros-box">
+      <div class="pc-title pros-t">✅ ADVANTAGES</div>
+      <div class="pc-item"><span>✅</span><div><strong>Manufacturer warranty</strong> — Engine, gearbox, major parts covered</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>100+ point inspection</strong> — Engine to interior எல்லாமே check ஆனது</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Clean history</strong> — No accident, flood, tampered cars allowed</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Roadside assistance</strong> — 24/7 help கிடைக்கும்</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>14% fewer problems</strong> — vs regular used cars (Consumer Reports 2024)</div></div>
+      <div class="pc-item"><span>✅</span><div><strong>Better resale value</strong> — CPO history = better price when you sell</div></div>
+    </div>
+    <div class="pc-box cons-box">
+      <div class="pc-title cons-t">❌ DISADVANTAGES</div>
+      <div class="pc-item"><span>❌</span><div><strong>Higher than regular used</strong> — Same age car-ஐ விட 10–20% அதிகம்</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Limited selection</strong> — Only authorized dealer brands கிடைக்கும்</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Age/km limit</strong> — பெரும்பாலான CPO programs — 3–5 years, under 60,000 km மட்டும்</div></div>
+      <div class="pc-item"><span>❌</span><div><strong>Warranty read carefully</strong> — எல்லாமே cover ஆவதில்லை — exclusions இருக்கும்</div></div>
+    </div>
+  </div>
+
+  <div class="key-facts">
+    <div class="kf"><div class="kf-label">vs new savings</div><div class="kf-val" style="color:var(--cpo);">20–40%</div></div>
+    <div class="kf"><div class="kf-label">Warranty</div><div class="kf-val" style="color:var(--cpo);">1–3 yrs extra</div></div>
+    <div class="kf"><div class="kf-label">Inspection pts</div><div class="kf-val" style="color:var(--cpo);">100–300+</div></div>
+    <div class="kf"><div class="kf-label">Risk level</div><div class="kf-val" style="color:var(--cpo);">Low</div></div>
+  </div>
+</div>
+
+<!-- DEPRECIATION VISUAL -->
+<div class="sec"><div class="sbadge sb-amber">📉 DEPRECIATION</div><div><div class="stitle">Depreciation — இது புரிந்தால் எல்லாம் புரியும்</div><div class="sta">கார் வாங்கியவுடன் value எப்படி குறையும்?</div></div></div>
+
+<div class="dep-visual">
+  <div class="dv-title">📉 5 YEARS-ல் ₹10L CAR-ஓட VALUE</div>
+  <div class="dep-bars">
+    <div class="dep-row">
+      <div class="dep-label" style="color:#80b8ff;">NEW</div>
+      <div class="dep-bar-wrap">
+        <div class="dep-bar new-bar" style="width:100%;">₹10L (Day 1)</div>
+      </div>
+    </div>
+    <div class="dep-row">
+      <div class="dep-label" style="color:#80b8ff;">1 yr</div>
+      <div class="dep-bar-wrap">
+        <div class="dep-bar new-bar" style="width:82%;">₹8.2L</div>
+      </div>
+    </div>
+    <div class="dep-row">
+      <div class="dep-label" style="color:#80e0a0;">CPO buy</div>
+      <div class="dep-bar-wrap">
+        <div class="dep-bar cpo-bar" style="width:72%;">₹7.2L (you pay this)</div>
+      </div>
+    </div>
+    <div class="dep-row">
+      <div class="dep-label" style="color:#80b8ff;">3 yrs</div>
+      <div class="dep-bar-wrap">
+        <div class="dep-bar new-bar" style="width:62%;">₹6.2L</div>
+      </div>
+    </div>
+    <div class="dep-row">
+      <div class="dep-label" style="color:#ff9080;">Used buy</div>
+      <div class="dep-bar-wrap">
+        <div class="dep-bar used-bar" style="width:52%;">₹5.2L (you pay this)</div>
+      </div>
+    </div>
+    <div class="dep-row">
+      <div class="dep-label" style="color:#80b8ff;">5 yrs</div>
+      <div class="dep-bar-wrap">
+        <div class="dep-bar new-bar" style="width:45%;">₹4.5L</div>
+      </div>
+    </div>
+  </div>
+  <div class="dep-note">💡 New car-ல் day 1-லிருந்தே 15–20% drop. CPO வாங்கினால் — already depreciated car-ஐ வாங்குகிறீர்கள். Smarter move!</div>
+</div>
+
+<!-- BIG COMPARISON TABLE -->
+<div class="sec"><div class="sbadge sb-amber">📊 COMPARE</div><div><div class="stitle">முழு Comparison Table</div><div class="sta">எல்லா factors-உம் ஒரே இடத்தில்</div></div></div>
+
+<div class="comp-wrap">
+  <table class="comp-table">
+    <tr>
+      <th class="th-factor">Factor</th>
+      <th class="th-new">🆕 New Car</th>
+      <th class="th-used">🔄 Used Car</th>
+      <th class="th-cpo">✅ CPO Car</th>
+    </tr>
+    <tr>
+      <td><strong>Purchase Price</strong></td>
+      <td class="td-new"><span class="win w-used">Highest</span> ₹6–50L+</td>
+      <td class="td-used"><span class="win w-cpo">Lowest</span> ₹1.5–25L</td>
+      <td class="td-cpo"><span class="win w-new">Middle</span> ₹3–30L</td>
+    </tr>
+    <tr>
+      <td><strong>Depreciation</strong></td>
+      <td class="td-new"><span class="win w-used">15–20% yr 1</span> Steepest</td>
+      <td class="td-used"><span class="win w-cpo">Already occurred</span> Slow now</td>
+      <td class="td-cpo"><span class="win w-cpo">✅ Best</span> Slower than new</td>
+    </tr>
+    <tr>
+      <td><strong>Warranty</strong></td>
+      <td class="td-new"><span class="win w-cpo">✅ Best</span> 3–5 years full</td>
+      <td class="td-used"><span class="win w-used">❌ None</span></td>
+      <td class="td-cpo"><span class="win w-new">Good</span> 1–3 yrs extended</td>
+    </tr>
+    <tr>
+      <td><strong>Inspection</strong></td>
+      <td class="td-new"><span class="win w-cpo">✅ Factory fresh</span></td>
+      <td class="td-used"><span class="win w-used">❌ As-is</span> Buyer beware</td>
+      <td class="td-cpo"><span class="win w-cpo">✅ 100+ points</span></td>
+    </tr>
+    <tr>
+      <td><strong>Loan Availability</strong></td>
+      <td class="td-new"><span class="win w-cpo">✅ Easy</span> 85–90% finance</td>
+      <td class="td-used"><span class="win w-used">Harder</span> 70–80% only</td>
+      <td class="td-cpo"><span class="win w-new">Good</span> 75–85% finance</td>
+    </tr>
+    <tr>
+      <td><strong>Interest Rate</strong></td>
+      <td class="td-new"><span class="win w-cpo">✅ Lowest</span> 8–11%</td>
+      <td class="td-used"><span class="win w-used">Highest</span> 12–18%</td>
+      <td class="td-cpo"><span class="win w-new">Middle</span> 10–14%</td>
+    </tr>
+    <tr>
+      <td><strong>Insurance Cost</strong></td>
+      <td class="td-new"><span class="win w-used">Highest</span> High IDV</td>
+      <td class="td-used"><span class="win w-cpo">✅ Lowest</span> Low IDV</td>
+      <td class="td-cpo"><span class="win w-new">Middle</span> Moderate IDV</td>
+    </tr>
+    <tr>
+      <td><strong>Maintenance</strong></td>
+      <td class="td-new"><span class="win w-cpo">✅ Lowest</span> First 3 yrs</td>
+      <td class="td-used"><span class="win w-used">Highest</span> Unpredictable</td>
+      <td class="td-cpo"><span class="win w-new">Low-Moderate</span></td>
+    </tr>
+    <tr>
+      <td><strong>Fraud/Risk</strong></td>
+      <td class="td-new"><span class="win w-cpo">✅ Zero risk</span></td>
+      <td class="td-used"><span class="win w-used">High risk</span></td>
+      <td class="td-cpo"><span class="win w-cpo">✅ Very low</span></td>
+    </tr>
+    <tr>
+      <td><strong>Latest Tech</strong></td>
+      <td class="td-new"><span class="win w-cpo">✅ Latest ADAS</span></td>
+      <td class="td-used"><span class="win w-used">Older tech</span></td>
+      <td class="td-cpo"><span class="win w-new">Recent tech</span></td>
+    </tr>
+    <tr>
+      <td><strong>Resale Value</strong></td>
+      <td class="td-new"><span class="win w-used">Drops fast</span></td>
+      <td class="td-used"><span class="win w-tie">Moderate</span></td>
+      <td class="td-cpo"><span class="win w-cpo">✅ Better</span></td>
+    </tr>
+    <tr>
+      <td><strong>Best for</strong></td>
+      <td class="td-new">Long-term keeper, first car, family</td>
+      <td class="td-used">Tight budget, short-term use</td>
+      <td class="td-cpo"><span class="win w-cpo">✅ Best all-round</span></td>
+    </tr>
+  </table>
+</div>
+
+<!-- INDIA CPO PROGRAMS -->
+<div class="sec"><div class="sbadge sb-cpo">🇮🇳 INDIA CPO</div><div><div class="stitle">India-ல் CPO Programs</div><div class="sta">எந்த brand-ல் CPO கிடைக்கும்?</div></div></div>
+
+<table class="cpo-table">
+  <tr><th>Brand</th><th>CPO Program</th><th>Warranty</th><th>Inspection</th><th>2024 Sales</th></tr>
+  <tr><td><strong>Maruti Suzuki</strong></td><td>True Value<br><span style="font-size:10px;color:var(--muted);">629 outlets, 321 cities</span></td><td><span class="bg">1 year</span></td><td><span class="bg">376 points</span></td><td>India's largest CPO</td></tr>
+  <tr><td><strong>Hyundai</strong></td><td>Hyundai Promise<br><span style="font-size:10px;color:var(--muted);">600+ dealers</span></td><td><span class="bg">1 year</span></td><td><span class="bg">150+ points</span></td><td>1.57 lakh units (2024)</td></tr>
+  <tr><td><strong>Tata Motors</strong></td><td>Tata Assured<br><span style="font-size:10px;color:var(--muted);">Pan India</span></td><td><span class="bg">1 year</span></td><td><span class="bg">140+ points</span></td><td>Growing fast</td></tr>
+  <tr><td><strong>Mahindra</strong></td><td>Mahindra First Choice<br><span style="font-size:10px;color:var(--muted);">Multi-brand</span></td><td><span class="by">6 months</span></td><td><span class="bg">140+ points</span></td><td>Multi-brand option</td></tr>
+  <tr><td><strong>Toyota</strong></td><td>Toyota U-Trust</td><td><span class="bg">1 year</span></td><td><span class="bg">100+ points</span></td><td>Premium focus</td></tr>
+  <tr><td><strong>Cars24 / Spinny</strong></td><td>Digital CPO<br><span style="font-size:10px;color:var(--muted);">Online + offline</span></td><td><span class="by">6–12 months</span></td><td><span class="by">100–200 pts</span></td><td>Fastest growing</td></tr>
+</table>
+
+<!-- WHO SHOULD BUY WHAT -->
+<div class="sec"><div class="sbadge sb-amber">🤔 DECISION</div><div><div class="stitle">யாருக்கு எது suitable?</div><div class="sta">உன் situation பாரு — decide பண்ணு</div></div></div>
+
+<div class="decision-box">
+  <div class="dt-title">🎯 Quick Decision Guide</div>
+
+  <div class="dt-item">
+    <div class="dt-icon">💰</div>
+    <div>
+      <div class="dt-q">BUDGET என்ன?</div>
+      <div class="dt-ta">₹15L+ budget இருந்தால் — <span class="dt-ans ans-new">New Car</span> பாருங்கள். ₹5–12L — <span class="dt-ans ans-cpo">CPO</span> best. ₹3L-க்கு கீழே — <span class="dt-ans ans-used">Used Car</span> மட்டுமே.</div>
+    </div>
+  </div>
+
+  <div class="dt-item">
+    <div class="dt-icon">📅</div>
+    <div>
+      <div class="dt-q">எத்தனை years வைத்திருப்பீர்கள்?</div>
+      <div class="dt-ta">7+ years — <span class="dt-ans ans-new">New Car</span> (depreciation recover ஆகும்). 3–6 years — <span class="dt-ans ans-cpo">CPO</span> smart. 1–2 years மட்டும் — <span class="dt-ans ans-used">Used Car</span>.</div>
+    </div>
+  </div>
+
+  <div class="dt-item">
+    <div class="dt-icon">🔧</div>
+    <div>
+      <div class="dt-q">Repair பண்ண தெரியுமா / budget இருக்கா?</div>
+      <div class="dt-ta">Mechanic knowledge இல்லை, unexpected repair fear — <span class="dt-ans ans-new">New</span> அல்லது <span class="dt-ans ans-cpo">CPO</span>. Mechanic-கிட்டே நெருங்கிய relationship, risk ok — <span class="dt-ans ans-used">Used Car</span>.</div>
+    </div>
+  </div>
+
+  <div class="dt-item">
+    <div class="dt-icon">🚗</div>
+    <div>
+      <div class="dt-q">Daily km எவ்வளவு?</div>
+      <div class="dt-ta">Daily 80+ km, heavy use — <span class="dt-ans ans-new">New Car</span> (warranty covers). Moderate 30–60 km — <span class="dt-ans ans-cpo">CPO</span>. Weekend/occasional use — <span class="dt-ans ans-used">Used Car</span>.</div>
+    </div>
+  </div>
+
+  <div class="dt-item">
+    <div class="dt-icon">👨‍👩‍👧</div>
+    <div>
+      <div class="dt-q">Family car-ஆ?</div>
+      <div class="dt-ta">Family safety priority — <span class="dt-ans ans-new">New Car</span> (latest airbags, ADAS). Family + budget conscious — <span class="dt-ans ans-cpo">CPO</span> (inspected, warranty). Solo use — <span class="dt-ans ans-used">Used Car</span> ok.</div>
+    </div>
+  </div>
+
+  <div class="dt-item">
+    <div class="dt-icon">🎓</div>
+    <div>
+      <div class="dt-q">First car வாங்குகிறீர்களா?</div>
+      <div class="dt-ta">First-time buyer, learning — <span class="dt-ans ans-cpo">CPO</span> best (safe, warranty, affordable). Experienced driver, budget tight — <span class="dt-ans ans-used">Used Car</span>. Premium budget — <span class="dt-ans ans-new">New Car</span>.</div>
+    </div>
+  </div>
+</div>
+
+<!-- USED CAR BUYING TIPS -->
+<div class="sec"><div class="sbadge sb-used">🔍 USED CAR TIPS</div><div><div class="stitle">Used Car வாங்கும்முன் — Checklist</div><div class="sta">இவற்றை check பண்ணாமல் வாங்காதீர்கள்!</div></div></div>
+
+<div class="checklist-grid">
+  <div class="cl-item"><div class="cl-icon">📄</div><div class="cl-title">RC + Documents</div><div class="cl-ta">RC, insurance, PUC — owner name match ஆகிறதா? RTO transfer pending-ஆ? Loan clearance certificate இருக்கா?</div></div>
+  <div class="cl-item"><div class="cl-icon">🔢</div><div class="cl-title">Odometer Check</div><div class="cl-ta">Odometer tamper பண்ணியிருக்கலாம். Service book-ல் km record-உடன் match பண்ணுங்கள்.</div></div>
+  <div class="cl-item"><div class="cl-icon">💥</div><div class="cl-title">Accident History</div><div class="cl-ta">Body panels carefully பாருங்கள். Uneven paint, misaligned doors — accident sign. Professional inspection கட்டாயம்.</div></div>
+  <div class="cl-item"><div class="cl-icon">🔧</div><div class="cl-title">Mechanic Inspection</div><div class="cl-ta">உங்கள் trusted mechanic-ஐ வைத்து inspect பண்ணுங்கள். Engine oil, coolant, brakes, suspension check.</div></div>
+  <div class="cl-item"><div class="cl-icon">🌊</div><div class="cl-title">Flood Check</div><div class="cl-ta">Seat rails-ல் rust, carpet-ல் mold smell — flood damage sign. Dashboard electric issues கவனிக்கவும்.</div></div>
+  <div class="cl-item"><div class="cl-icon">🚗</div><div class="cl-title">Test Drive</div><div class="cl-ta">30+ minutes city + highway test drive. Strange sounds, pull to one side, gear issue — எல்லாமே feel பண்ணுங்கள்.</div></div>
+  <div class="cl-item"><div class="cl-icon">💰</div><div class="cl-title">Market Rate Check</div><div class="cl-ta">OLX, Cars24, CarDekho-ல் similar car price compare பண்ணுங்கள். Negotiate confidently.</div></div>
+  <div class="cl-item"><div class="cl-icon">📱</div><div class="cl-title">VIN Verification</div><div class="cl-ta">Vehicle Identification Number-ஐ Vahan portal-ல் verify பண்ணுங்கள். Stolen car check பண்ணலாம்.</div></div>
+</div>
+
+<!-- CPO BUYING TIPS -->
+<div class="sec"><div class="sbadge sb-cpo">✅ CPO TIPS</div><div><div class="stitle">CPO Car வாங்கும்முன்</div><div class="sta">Warranty terms கவனமாக படியுங்கள்</div></div></div>
+
+<div class="card" id="c1">
+  <div class="card-hdr" onclick="tc('c1')">
+    <div class="card-ico" style="background:#f0fff4;">📋</div>
+    <div style="flex:1"><div class="card-ta">CPO Warranty — என்ன cover ஆகும்?</div><div class="card-en">What CPO Warranty Covers</div><div class="card-sum">எல்லாமே cover ஆவதில்லை — terms படியுங்கள்</div></div>
+    <div class="card-arr">▾</div>
+  </div>
+  <div class="card-body">
+    <div class="rl">
+      <div class="ri"><span>✅</span><div><strong>Engine & Transmission</strong> — பெரும்பாலான CPO programs cover பண்றது</div></div>
+      <div class="ri"><span>✅</span><div><strong>Electrical systems</strong> — AC, infotainment, sensors</div></div>
+      <div class="ri"><span>✅</span><div><strong>Roadside assistance</strong> — 24/7 help, towing</div></div>
+      <div class="ri"><span>❌</span><div><strong>Tyres, brakes</strong> — பெரும்பாலும் cover ஆவதில்லை — wear items</div></div>
+      <div class="ri"><span>❌</span><div><strong>Accident damage</strong> — CPO warranty covers mechanical only, not collision</div></div>
+      <div class="ri"><span>❌</span><div><strong>Cosmetic issues</strong> — Dents, scratches generally excluded</div></div>
+    </div>
+    <div class="warn-box">⚠️ "Comprehensive warranty" என்று சொன்னாலும் — exclusion list carefully படியுங்கள். "What's NOT covered" list கேளுங்கள்.</div>
+  </div>
+</div>
+
+<div class="card" id="c2">
+  <div class="card-hdr" onclick="tc('c2')">
+    <div class="card-ico" style="background:#f0fff4;">🔢</div>
+    <div style="flex:1"><div class="card-ta">CPO Eligibility — எந்த car CPO ஆகும்?</div><div class="card-en">CPO Eligibility Criteria</div><div class="card-sum">Age, km limits — manufacturer-க்கு manufacturer மாறும்</div></div>
+    <div class="card-arr">▾</div>
+  </div>
+  <div class="card-body">
+    <div class="rl">
+      <div class="ri"><span>📅</span><div><strong>Age limit:</strong> பெரும்பாலான programs — 3–5 years பழைய car மட்டும்</div></div>
+      <div class="ri"><span>📏</span><div><strong>Km limit:</strong> 40,000–75,000 km-க்கு கீழே மட்டும்</div></div>
+      <div class="ri"><span>🔧</span><div><strong>Condition:</strong> No major accident history, clean title</div></div>
+      <div class="ri"><span>🏢</span><div><strong>Brand:</strong> Same brand authorized dealer மூலம் மட்டும் (Maruti True Value-ல் Maruti cars only)</div></div>
+    </div>
+    <div class="tip-box">✅ Mahindra First Choice போன்ற multi-brand CPO centers-ல் different brands கிடைக்கும் — more options!</div>
+  </div>
+</div>
+
+<!-- NEGOTIATION TIPS -->
+<div class="card" id="c3">
+  <div class="card-hdr" onclick="tc('c3')">
+    <div class="card-ico">💰</div>
+    <div style="flex:1"><div class="card-ta">Price negotiate பண்றது எப்படி?</div><div class="card-en">Car Price Negotiation Tips</div><div class="card-sum">New, Used, CPO — எல்லாத்திலும் negotiate பண்ணலாம்</div></div>
+    <div class="card-arr">▾</div>
+  </div>
+  <div class="card-body">
+    <div class="rl">
+      <div class="ri"><span>📊</span><div><strong>Research first:</strong> CarDekho, OLX, Cars24-ல் same model price compare பண்ணுங்கள். Market rate தெரியாமல் போகாதீர்கள்.</div></div>
+      <div class="ri"><span>📅</span><div><strong>Month-end visit:</strong> Month-end-ல் dealers target achieve பண்ண pressure-ல் இருப்பார்கள் — discount கிடைக்கும்.</div></div>
+      <div class="ri"><span>🔧</span><div><strong>Defects use:</strong> Test drive-ல் problems கண்டால் — "இதை fix பண்றோமா, இல்லை price குறைக்கிறோமா?" என்று கேளுங்கள்.</div></div>
+      <div class="ri"><span>💵</span><div><strong>Cash vs loan:</strong> Cash payment-ல் extra discount possible. Loan-ல் interest rate negotiate பண்ணுங்கள்.</div></div>
+      <div class="ri"><span>🎁</span><div><strong>Free extras கேளுங்கள்:</strong> Accessories, extended warranty, free service — price குறைக்காவிட்டால் இவற்றை கேளுங்கள்.</div></div>
+    </div>
+    <div class="info-box">💡 New car-ல் ex-showroom price fixed — ஆனால் accessories, insurance, on-road charges-ல் negotiate பண்ணலாம். Up to ₹50,000 save பண்ணலாம்!</div>
+  </div>
+</div>
+
+<!-- FINANCING TIPS -->
+<div class="card" id="c4">
+  <div class="card-hdr" onclick="tc('c4')">
+    <div class="card-ico">🏦</div>
+    <div style="flex:1"><div class="card-ta">Car Loan — Smartly எடுப்பது எப்படி?</div><div class="card-en">Car Loan Strategy</div><div class="card-sum">Down payment, tenure, rate — எப்படி plan பண்றது?</div></div>
+    <div class="card-arr">▾</div>
+  </div>
+  <div class="card-body">
+    <div class="rl">
+      <div class="ri"><span>💰</span><div><strong>Down payment:</strong> Minimum 20–30% down payment பண்ணுங்கள். Less loan = less interest.</div></div>
+      <div class="ri"><span>📅</span><div><strong>Tenure:</strong> 3–4 years max. 7 year loan = car old ஆனாலும் EMI கட்டிக்கொண்டிருப்பீர்கள்.</div></div>
+      <div class="ri"><span>🏦</span><div><strong>Bank vs dealer:</strong> Pre-approved bank loan rate compare பண்ணுங்கள் — dealer finance always best இல்லை.</div></div>
+      <div class="ri"><span>📊</span><div><strong>Total cost:</strong> EMI மட்டும் பார்க்காதீர்கள் — total interest over loan period calculate பண்ணுங்கள்.</div></div>
+    </div>
+    <div class="warn-box">⚠️ EMI ₹10,000 இருந்தாலும் — insurance ₹15,000/yr, fuel ₹8,000/month, maintenance ₹5,000/yr add ஆகும். Total cost calculate பண்ணுங்கள்!</div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="conc">
+  <h3>🚗 Final Verdict — எது வாங்கணும்?</h3>
+  <div class="pills">
+    <div class="pill pill-new">🆕 New = Peace of mind + Features</div>
+    <div class="pill pill-used">🔄 Used = Budget + Depreciation avoided</div>
+    <div class="pill pill-cpo">✅ CPO = Best value overall</div>
+  </div>
+  <p>
+    <strong style="color:#80e0a0;">CPO</strong> — பெரும்பாலான buyers-க்கு best choice. Used car-ஓட price advantage + warranty peace of mind. <br><br>
+    <strong style="color:#80b8ff;">New Car</strong> — long-term (7+ years) வைத்திருக்கப்போவர்களுக்கு, safety priority உள்ளவர்களுக்கு, latest tech வேண்டுவர்களுக்கு.<br><br>
+    <strong style="color:#ff9080;">Used Car</strong> — tight budget, mechanic knowledge உள்ளவர்களுக்கு, short-term use-க்கு.<br><br>
+    எந்த option-உம் — research, test drive, mechanic inspection இல்லாமல் வாங்காதீர்கள். கார் வாங்குவது life-ல் important decision!
+  </p>
+</div>
+
+<a href="index.html" class="nxt">
+  <div class="nxi">🏠</div>
+  <div><div class="nxl">← Back to</div><div class="nxe">KaarKalvi Home</div><div class="nxt-ta">எல்லா articles-உம் இங்கே</div></div>
+  <div class="nxa">→</div>
+</a>
+
+<div class="sw">
+  <div class="swh">🚗 Share பண்ணுங்கள்!</div>
+  <div class="swta">Car வாங்க யோசிக்கும் நண்பர்களுக்கு share பண்ணுங்கள் — useful-ஆ இருக்கும்!</div>
+  <div class="swb">
+    <button class="sbt wa" onclick="sWA()">WhatsApp</button>
+    <button class="sbt fb" onclick="sFB()">Facebook</button>
+    <button class="sbt tw" onclick="sTW()">X</button>
+    <button class="sbt tg" onclick="sTG()">Telegram</button>
+    <button class="sbt ig" onclick="sIG()">Instagram</button>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<footer>
+  <div class="f1">KAARKALVI</div>
+  <div class="f2">கார் கல்வி · Tamil Car Education</div>
+  <div class="f3">
+    <a href="index.html">Home</a>
+    <a href="article9.html">Safest Cars</a>
+    <a href="article12.html">Tesla vs Petrol</a>
+    <a href="article14.html">UBI Insurance</a>
+    <a href="article15.html">Car Buying</a>
+  </div>
+</footer>
+
+<script>
+function tc(id){document.getElementById(id).classList.toggle('open');}
+window.addEventListener('scroll',()=>{
+  const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(w/h*100)+'%';
+});
+const u=encodeURIComponent(location.href),tx=encodeURIComponent('🚗 New vs Used vs CPO Car — எது வாங்கணும்? தமிழில் முழு guide — KaarKalvi! 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+  <!-- KaarKalvi Widget -->
+  <script src="widget.js" defer></script>
+</body>
+</html>
