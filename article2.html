@@ -291,5 +291,6 @@ function shareToTwitter(){window.open('https://twitter.com/intent/tweet?text='+s
 function shareToTelegram(){window.open('https://t.me/share/url?url='+shareURL+'&text='+shareText,'_blank');}
 function shareToInstagram(){navigator.clipboard.writeText(decodeURIComponent(shareURL)).then(()=>{alert('✅ Link copied! Instagram Story-ல் paste பண்ணுங்கள்!');}).catch(()=>{prompt('Copy பண்ணுங்கள்:',window.location.href);});}
 </script>
+  <script src="widget.js" defer></script>
 </body>
 </html>
