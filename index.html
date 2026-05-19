@@ -9,6 +9,19 @@
 <meta name="keywords" content="car education tamil, kaar kalvi, tamil car guide, dashboard warning lights tamil, traffic signs tamil, கார் கல்வி">
 <meta property="og:title" content="KaarKalvi — Tamil Car Education">
 <meta property="og:description" content="உங்கள் காரை புரிந்துகொள்ளுங்கள் — தமிழில்">
+<meta property="og:image" content="https://kaarkalvi.vercel.app/icon-512.png">
+<meta property="og:url" content="https://kaarkalvi.vercel.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kaarkalvi.vercel.app/icon-192.png">
+<meta name="theme-color" content="#2c1a0e">
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;--border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;--muted:#8a6a50;--accent:#c47820;--red:#c0392b;--green:#1a7a3c;--blue:#1a5fa0;}
@@ -104,6 +117,21 @@ footer{background:var(--brown);padding:36px 20px;text-align:center;}
 .fpages a{font-family:'Barlow Condensed',sans-serif;font-size:13px;color:#8a6a50;text-decoration:none;}
 .fpages a:hover{color:var(--accent);}
 .fcopy{font-size:11px;color:#5a4030;font-family:'Noto Sans Tamil',sans-serif;}
+/* ── NEW ARTICLE COLORS ── */
+.a18{border-top:3px solid #c47820;}.a19{border-top:3px solid #1a5fa0;}.a20{border-top:3px solid #d35400;}
+/* ── SEARCH BAR ── */
+.srch-wrap{max-width:960px;margin:0 auto;padding:22px 16px 6px;}
+.srch-box{display:flex;align-items:center;gap:10px;background:var(--cream2);border:2px solid var(--border);border-radius:50px;padding:11px 20px;transition:border-color .2s;}
+.srch-box:focus-within{border-color:var(--accent);}
+.srch-ico{font-size:18px;flex-shrink:0;}
+.srch-inp{flex:1;border:none;background:transparent;font-size:14px;color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;outline:none;}
+.srch-inp::placeholder{color:var(--muted);}
+.srch-clr{background:none;border:none;cursor:pointer;font-size:15px;color:var(--muted);display:none;padding:0 2px;}
+.srch-meta{display:flex;justify-content:space-between;padding:5px 22px 0;max-width:960px;margin:0 auto;}
+.srch-cnt{font-family:'Barlow Condensed',sans-serif;font-size:12px;color:var(--muted);}
+.srch-hint{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:var(--muted);}
+.srch-none{display:none;text-align:center;padding:28px;font-family:'Noto Sans Tamil',sans-serif;font-size:14px;color:var(--muted);}
+.ac.s-hide{display:none!important;}
 </style>
 </head>
 <body>
@@ -132,46 +160,66 @@ footer{background:var(--brown);padding:36px 20px;text-align:center;}
   </div>
 </div>
 
+<div class="srch-wrap">
+  <div class="srch-box">
+    <span class="srch-ico">🔍</span>
+    <input class="srch-inp" id="srchInp" type="text" placeholder="Article தேடுங்கள்... (e.g. airbag, fuel, reverse, windshield, பஞ்சர்)">
+    <button class="srch-clr" id="srchClr" onclick="srchClear()">✕</button>
+  </div>
+  <div class="srch-meta">
+    <span class="srch-cnt" id="srchCnt"></span>
+    <span class="srch-hint">Tamil அல்லது English — இரண்டிலும் தேடலாம்</span>
+  </div>
+</div>
+<div class="srch-none" id="srchNone">🔍 "<span id="srchQ"></span>" — பொருந்தும் article இல்லை. வேறொரு keyword try பண்ணுங்கள்!</div>
+
 <div class="sw">
 
   <div class="sec-title"><div class="stl"></div><div class="stt">📚 Safety · Driving · Rules</div><div class="stl"></div></div>
   <div class="cg">
-    <a href="article1.html" class="ac a1 fu"><div class="ct"><div class="cn">01</div><div class="ce">⚠️</div><div class="ci"><div class="ctag">Article 1 · Safety</div><div class="cen">Dashboard Warning Lights</div><div class="cta2">Dashboard Light-களின் அர்த்தம்</div></div></div><div class="cb"><div class="cdesc">சிவப்பு light வந்தால் என்ன செய்யணும்? 18 warning lights-ஓட அர்த்தம் தமிழில்.</div></div><div class="ctags"><span class="tp">🔴 Red</span><span class="tp">🟡 Yellow</span><span class="tp">🟢 Green</span></div><div class="cf"><span class="crd">📖 5 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article1.html" class="ac a1 fu" data-s="dashboard warning lights சிவப்பு மஞ்சள் பச்சை விளக்கு safety red yellow green"><div class="ct"><div class="cn">01</div><div class="ce">⚠️</div><div class="ci"><div class="ctag">Article 1 · Safety</div><div class="cen">Dashboard Warning Lights</div><div class="cta2">Dashboard Light-களின் அர்த்தம்</div></div></div><div class="cb"><div class="cdesc">சிவப்பு light வந்தால் என்ன செய்யணும்? 18 warning lights-ஓட அர்த்தம் தமிழில்.</div></div><div class="ctags"><span class="tp">🔴 Red</span><span class="tp">🟡 Yellow</span><span class="tp">🟢 Green</span></div><div class="cf"><span class="crd">📖 5 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article2.html" class="ac a2 fu"><div class="ct"><div class="cn">02</div><div class="ce">🎈</div><div class="ci"><div class="ctag">Article 2 · Safety</div><div class="cen">Airbag Complete Guide</div><div class="cta2">Airbag எப்படி வேலை செய்யும்?</div></div></div><div class="cb"><div class="cdesc">சரியான seat position, குழந்தை front seat-ல் வைக்கலாமா? SRS warning என்ன?</div></div><div class="ctags"><span class="tp">💺 Seat position</span><span class="tp">👶 Child safety</span></div><div class="cf"><span class="crd">📖 4 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article2.html" class="ac a2 fu" data-s="airbag air bag safety seat position குழந்தை child srs பாதுகாப்பு"><div class="ct"><div class="cn">02</div><div class="ce">🎈</div><div class="ci"><div class="ctag">Article 2 · Safety</div><div class="cen">Airbag Complete Guide</div><div class="cta2">Airbag எப்படி வேலை செய்யும்?</div></div></div><div class="cb"><div class="cdesc">சரியான seat position, குழந்தை front seat-ல் வைக்கலாமா? SRS warning என்ன?</div></div><div class="ctags"><span class="tp">💺 Seat position</span><span class="tp">👶 Child safety</span></div><div class="cf"><span class="crd">📖 4 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article3.html" class="ac a3 fu"><div class="ct"><div class="cn">03</div><div class="ce">⚙️</div><div class="ci"><div class="ctag">Article 3 · Driving</div><div class="cen">Gear Shifting Guide</div><div class="cta2">சரியான நேரத்தில் Gear மாற்றுவது எப்படி?</div></div></div><div class="cb"><div class="cdesc">Uphill, downhill, slope-ல் நிறுத்துவது — engine brake என்றால் என்ன?</div></div><div class="ctags"><span class="tp">⛰️ Uphill</span><span class="tp">📉 Downhill</span><span class="tp">🔄 Engine Brake</span></div><div class="cf"><span class="crd">📖 5 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article3.html" class="ac a3 fu" data-s="gear shift கியர் மாற்றி uphill downhill slope clutch engine brake manual"><div class="ct"><div class="cn">03</div><div class="ce">⚙️</div><div class="ci"><div class="ctag">Article 3 · Driving</div><div class="cen">Gear Shifting Guide</div><div class="cta2">சரியான நேரத்தில் Gear மாற்றுவது எப்படி?</div></div></div><div class="cb"><div class="cdesc">Uphill, downhill, slope-ல் நிறுத்துவது — engine brake என்றால் என்ன?</div></div><div class="ctags"><span class="tp">⛰️ Uphill</span><span class="tp">📉 Downhill</span><span class="tp">🔄 Engine Brake</span></div><div class="cf"><span class="crd">📖 5 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article4.html" class="ac a4 fu"><div class="ct"><div class="cn">04</div><div class="ce">🚦</div><div class="ci"><div class="ctag">Article 4 · Rules</div><div class="cen">Traffic Signs & Road Rules</div><div class="cta2">சாலை அடையாளங்கள் — அனைத்தும் தமிழில்</div></div></div><div class="cb"><div class="cdesc">Mandatory, cautionary, informatory signs. Speed limits, lane rules, fines 2024.</div></div><div class="ctags"><span class="tp">🔴 Mandatory</span><span class="tp">🟡 Cautionary</span><span class="tp">💸 Fines</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article4.html" class="ac a4 fu" data-s="traffic signs road rules சாலை அடையாளங்கள் speed limit fine penalty mandatory"><div class="ct"><div class="cn">04</div><div class="ce">🚦</div><div class="ci"><div class="ctag">Article 4 · Rules</div><div class="cen">Traffic Signs & Road Rules</div><div class="cta2">சாலை அடையாளங்கள் — அனைத்தும் தமிழில்</div></div></div><div class="cb"><div class="cdesc">Mandatory, cautionary, informatory signs. Speed limits, lane rules, fines 2024.</div></div><div class="ctags"><span class="tp">🔴 Mandatory</span><span class="tp">🟡 Cautionary</span><span class="tp">💸 Fines</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article5.html" class="ac a5 fu"><div class="ct"><div class="cn">05</div><div class="ce">🆘</div><div class="ci"><div class="ctag">Article 5 · Emergency</div><div class="cen">Emergency Guide</div><div class="cta2">திடீர் ஆபத்தில் என்ன செய்யணும்?</div></div></div><div class="cb"><div class="cdesc">Tyre burst, brake fail, flood driving, night breakdown — life-saving steps.</div></div><div class="ctags"><span class="tp">💥 Tyre Burst</span><span class="tp">🚨 Brake Fail</span><span class="tp">🌊 Flood</span></div><div class="cf"><span class="crd">📖 5 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article5.html" class="ac a5 fu" data-s="emergency tyre burst brake fail flood night breakdown ஆபத்து puncture"><div class="ct"><div class="cn">05</div><div class="ce">🆘</div><div class="ci"><div class="ctag">Article 5 · Emergency</div><div class="cen">Emergency Guide</div><div class="cta2">திடீர் ஆபத்தில் என்ன செய்யணும்?</div></div></div><div class="cb"><div class="cdesc">Tyre burst, brake fail, flood driving, night breakdown — life-saving steps.</div></div><div class="ctags"><span class="tp">💥 Tyre Burst</span><span class="tp">🚨 Brake Fail</span><span class="tp">🌊 Flood</span></div><div class="cf"><span class="crd">📖 5 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article6.html" class="ac a6 fu"><div class="ct"><div class="cn">06</div><div class="ce">🚥</div><div class="ci"><div class="ctag">Article 6 · Signals</div><div class="cen">Traffic Signals Deep Dive</div><div class="cta2">Symbols உடன் முழு விளக்கம்</div></div></div><div class="cb"><div class="cdesc">Animated signals, road markings, roundabout diagram, emergency vehicle rules.</div></div><div class="ctags"><span class="tp">🚦 Signals</span><span class="tp">🔄 Roundabout</span><span class="tp">🌙 Night</span></div><div class="cf"><span class="crd">📖 7 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article6.html" class="ac a6 fu" data-s="traffic signals signal roundabout road markings night driving விளக்கு"><div class="ct"><div class="cn">06</div><div class="ce">🚥</div><div class="ci"><div class="ctag">Article 6 · Signals</div><div class="cen">Traffic Signals Deep Dive</div><div class="cta2">Symbols உடன் முழு விளக்கம்</div></div></div><div class="cb"><div class="cdesc">Animated signals, road markings, roundabout diagram, emergency vehicle rules.</div></div><div class="ctags"><span class="tp">🚦 Signals</span><span class="tp">🔄 Roundabout</span><span class="tp">🌙 Night</span></div><div class="cf"><span class="crd">📖 7 min</span><span class="carr">படிக்க →</span></div></a>
   </div>
 
   <div class="sec-title"><div class="stl"></div><div class="stt">⛽ Fuel · Tech · Innovation</div><div class="stl"></div></div>
   <div class="cg">
-    <a href="article7.html" class="ac a7 fu"><div class="ct"><div class="cn">07</div><div class="ce">⛽</div><div class="ci"><div class="ctag">Article 7 · Fuel Saving</div><div class="cen">Petrol & Diesel Saving Guide</div><div class="cta2">மாதம் ₹3,000 வரை save பண்ணலாம்!</div></div></div><div class="cb"><div class="cdesc">Driving habits, tyre pressure, AC tricks — interactive savings calculator உடன்.</div></div><div class="ctags"><span class="tp">💰 Save money</span><span class="tp">🔧 Maintenance</span><span class="tp">❄️ AC tips</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article7.html" class="ac a7 fu" data-s="fuel saving petrol diesel மைலேஜ் save money AC tyre pressure mileage எரிபொருள்"><div class="ct"><div class="cn">07</div><div class="ce">⛽</div><div class="ci"><div class="ctag">Article 7 · Fuel Saving</div><div class="cen">Petrol & Diesel Saving Guide</div><div class="cta2">மாதம் ₹3,000 வரை save பண்ணலாம்!</div></div></div><div class="cb"><div class="cdesc">Driving habits, tyre pressure, AC tricks — interactive savings calculator உடன்.</div></div><div class="ctags"><span class="tp">💰 Save money</span><span class="tp">🔧 Maintenance</span><span class="tp">❄️ AC tips</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article8.html" class="ac a8 fu"><div class="ct"><div class="cn">08</div><div class="ce">🟢</div><div class="ci"><div class="ctag">Article 8 · CNG Guide</div><div class="cen">CNG Vehicle Guide</div><div class="cta2">Advantages & Disadvantages முழு விளக்கம்</div></div></div><div class="cb"><div class="cdesc">Factory CNG vs kit, safety rules, best CNG cars 2024, running cost.</div></div><div class="ctags"><span class="tp">🟢 CNG pros</span><span class="tp">❌ Cons</span><span class="tp">💰 Cost</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article8.html" class="ac a8 fu" data-s="cng compressed natural gas vehicle factory kit safety cost சேமிப்பு"><div class="ct"><div class="cn">08</div><div class="ce">🟢</div><div class="ci"><div class="ctag">Article 8 · CNG Guide</div><div class="cen">CNG Vehicle Guide</div><div class="cta2">Advantages & Disadvantages முழு விளக்கம்</div></div></div><div class="cb"><div class="cdesc">Factory CNG vs kit, safety rules, best CNG cars 2024, running cost.</div></div><div class="ctags"><span class="tp">🟢 CNG pros</span><span class="tp">❌ Cons</span><span class="tp">💰 Cost</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article9.html" class="ac a9 fu"><div class="ct"><div class="cn">09</div><div class="ce">🛡️</div><div class="ci"><div class="ctag">Article 9 · Safety</div><div class="cen">Safest Cars in India</div><div class="cta2">5 Star NCAP — Tamil Nadu Buyers Guide</div></div></div><div class="cb"><div class="cdesc">Crash test explained, top safe cars, budget guide, unsafe cars warning.</div></div><div class="ctags"><span class="tp">⭐ 5 Star</span><span class="tp">💥 Crash test</span><span class="tp">🗺️ TN picks</span></div><div class="cf"><span class="crd">📖 7 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article9.html" class="ac a9 fu" data-s="safest cars india ncap crash test 5 star safe budget TN பாதுகாப்பான"><div class="ct"><div class="cn">09</div><div class="ce">🛡️</div><div class="ci"><div class="ctag">Article 9 · Safety</div><div class="cen">Safest Cars in India</div><div class="cta2">5 Star NCAP — Tamil Nadu Buyers Guide</div></div></div><div class="cb"><div class="cdesc">Crash test explained, top safe cars, budget guide, unsafe cars warning.</div></div><div class="ctags"><span class="tp">⭐ 5 Star</span><span class="tp">💥 Crash test</span><span class="tp">🗺️ TN picks</span></div><div class="cf"><span class="crd">📖 7 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article10.html" class="ac a10 fu"><div class="ct"><div class="cn">10</div><div class="ce">⚙️</div><div class="ci"><div class="ctag">Article 10 · Engine</div><div class="cen">How Car Engine Works</div><div class="cta2">கார் என்ஜின் எப்படி வேலை செய்யும்?</div></div></div><div class="cb"><div class="cdesc">4-stroke animated cycle, 9 interactive engine parts, petrol vs diesel, sounds.</div></div><div class="ctags"><span class="tp">🔥 4-Stroke</span><span class="tp">🔧 Parts</span><span class="tp">🔊 Sounds</span></div><div class="cf"><span class="crd">📖 7 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article10.html" class="ac a10 fu" data-s="engine how works 4 stroke cycle என்ஜின் வேலை petrol diesel parts sounds"><div class="ct"><div class="cn">10</div><div class="ce">⚙️</div><div class="ci"><div class="ctag">Article 10 · Engine</div><div class="cen">How Car Engine Works</div><div class="cta2">கார் என்ஜின் எப்படி வேலை செய்யும்?</div></div></div><div class="cb"><div class="cdesc">4-stroke animated cycle, 9 interactive engine parts, petrol vs diesel, sounds.</div></div><div class="ctags"><span class="tp">🔥 4-Stroke</span><span class="tp">🔧 Parts</span><span class="tp">🔊 Sounds</span></div><div class="cf"><span class="crd">📖 7 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article11.html" class="ac a11 fu"><div class="ct"><div class="cn">11</div><div class="ce">🔍</div><div class="ci"><div class="ctag">Article 11 · Hidden Features</div><div class="cen">Secret Car Features</div><div class="cta2">பலருக்கு தெரியாத Hidden Features!</div></div></div><div class="cb"><div class="cdesc">12 hidden features, Indian car easter eggs, ADAS — உன் car-ல் இவை இருக்கா?</div></div><div class="ctags"><span class="tp">🤫 Secrets</span><span class="tp">🥚 Easter eggs</span><span class="tp">🤖 ADAS</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article11.html" class="ac a11 fu" data-s="hidden secret features tricks remote window headrest easter egg ADAS fuel arrow"><div class="ct"><div class="cn">11</div><div class="ce">🔍</div><div class="ci"><div class="ctag">Article 11 · Hidden Features</div><div class="cen">Secret Car Features</div><div class="cta2">பலருக்கு தெரியாத Hidden Features!</div></div></div><div class="cb"><div class="cdesc">12 hidden features, Indian car easter eggs, ADAS — உன் car-ல் இவை இருக்கா?</div></div><div class="ctags"><span class="tp">🤫 Secrets</span><span class="tp">🥚 Easter eggs</span><span class="tp">🤖 ADAS</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article12.html" class="ac a12 fu"><div class="ct"><div class="cn">12</div><div class="ce">⚡</div><div class="ci"><div class="ctag">Article 12 · EV Tech</div><div class="cen">Tesla vs Traditional Cars</div><div class="cta2">Electric vs Petrol vs Diesel</div></div></div><div class="cb"><div class="cdesc">Tesla India ₹59.89L. Running cost, OTA updates, Indian EV alternatives.</div></div><div class="ctags"><span class="tp">⚡ EV future</span><span class="tp">💰 Cost</span><span class="tp">🇮🇳 India</span></div><div class="cf"><span class="crd">📖 8 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article12.html" class="ac a12 fu" data-s="tesla vs petrol diesel electric EV comparison india price range charging"><div class="ct"><div class="cn">12</div><div class="ce">⚡</div><div class="ci"><div class="ctag">Article 12 · EV Tech</div><div class="cen">Tesla vs Traditional Cars</div><div class="cta2">Electric vs Petrol vs Diesel</div></div></div><div class="cb"><div class="cdesc">Tesla India ₹59.89L. Running cost, OTA updates, Indian EV alternatives.</div></div><div class="ctags"><span class="tp">⚡ EV future</span><span class="tp">💰 Cost</span><span class="tp">🇮🇳 India</span></div><div class="cf"><span class="crd">📖 8 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article13.html" class="ac a13 fu"><div class="ct"><div class="cn">13</div><div class="ce">🔧</div><div class="ci"><div class="ctag">Article 13 · DIY</div><div class="cen">Tyre Change Using Jack</div><div class="cta2">Jack வைத்து டயர் மாற்றுவது எப்படி?</div></div></div><div class="cb"><div class="cdesc">10 steps, LIFT formula, cross-pattern tightening diagram — infographic உடன்.</div></div><div class="ctags"><span class="tp">🛞 Spare tyre</span><span class="tp">💡 LIFT formula</span><span class="tp">🔩 Steps</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article13.html" class="ac a13 fu" data-s="tyre change jack spare stepney பஞ்சர் puncture LIFT formula 10 steps"><div class="ct"><div class="cn">13</div><div class="ce">🔧</div><div class="ci"><div class="ctag">Article 13 · DIY</div><div class="cen">Tyre Change Using Jack</div><div class="cta2">Jack வைத்து டயர் மாற்றுவது எப்படி?</div></div></div><div class="cb"><div class="cdesc">10 steps, LIFT formula, cross-pattern tightening diagram — infographic உடன்.</div></div><div class="ctags"><span class="tp">🛞 Spare tyre</span><span class="tp">💡 LIFT formula</span><span class="tp">🔩 Steps</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article14.html" class="ac a14 fu"><div class="ct"><div class="cn">14</div><div class="ce">📱</div><div class="ci"><div class="ctag">Article 14 · Insurance Tech</div><div class="cen">Usage-Based Insurance (UBI)</div><div class="cta2">Safe ஓட்டினால் Insurance குறையுமா?</div></div></div><div class="cb"><div class="cdesc">Pay-How-You-Drive explained. Driver score, savings calculator, India status 2025.</div></div><div class="ctags"><span class="tp">📊 Driver score</span><span class="tp">💰 Savings</span><span class="tp">🇮🇳 India 2025</span></div><div class="cf"><span class="crd">📖 7 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article14.html" class="ac a14 fu" data-s="UBI usage based insurance pay how drive safe discount premium calculator"><div class="ct"><div class="cn">14</div><div class="ce">📱</div><div class="ci"><div class="ctag">Article 14 · Insurance Tech</div><div class="cen">Usage-Based Insurance (UBI)</div><div class="cta2">Safe ஓட்டினால் Insurance குறையுமா?</div></div></div><div class="cb"><div class="cdesc">Pay-How-You-Drive explained. Driver score, savings calculator, India status 2025.</div></div><div class="ctags"><span class="tp">📊 Driver score</span><span class="tp">💰 Savings</span><span class="tp">🇮🇳 India 2025</span></div><div class="cf"><span class="crd">📖 7 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article15.html" class="ac a15 fu"><div class="ct"><div class="cn">15</div><div class="ce">🚗</div><div class="ci"><div class="ctag">Article 15 · Car Buying</div><div class="cen">New vs Used vs CPO</div><div class="cta2">எந்த கார் வாங்கணும்? Smart Strategy</div></div></div><div class="cb"><div class="cdesc">புதிய, பழைய, Certified Pre-Owned — depreciation visual, comparison table, India CPO programs.</div></div><div class="ctags"><span class="tp">🆕 New Car</span><span class="tp">🔄 Used Car</span><span class="tp">✅ CPO</span></div><div class="cf"><span class="crd">📖 10 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article15.html" class="ac a15 fu" data-s="new used CPO car buying certified pre-owned depreciation comparison புதிய பழைய"><div class="ct"><div class="cn">15</div><div class="ce">🚗</div><div class="ci"><div class="ctag">Article 15 · Car Buying</div><div class="cen">New vs Used vs CPO</div><div class="cta2">எந்த கார் வாங்கணும்? Smart Strategy</div></div></div><div class="cb"><div class="cdesc">புதிய, பழைய, Certified Pre-Owned — depreciation visual, comparison table, India CPO programs.</div></div><div class="ctags"><span class="tp">🆕 New Car</span><span class="tp">🔄 Used Car</span><span class="tp">✅ CPO</span></div><div class="cf"><span class="crd">📖 10 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article16.html" class="ac a16 fu"><div class="ct"><div class="cn">16</div><div class="ce">🌿</div><div class="ci"><div class="ctag">Article 16 · Emission Standards</div><div class="cen">BS6 & Scrap Policy</div><div class="cta2">உமிழ்வு விதிமுறைகள் தமிழில்</div></div></div><div class="cb"><div class="cdesc">BS4→BS6 Phase 2, RDE testing, CAFE norms, Scrap Policy — TN-ல் 15.9 lakh பழைய vehicles.</div></div><div class="ctags"><span class="tp">🌿 BS6 Phase 2</span><span class="tp">🔨 Scrap Policy</span><span class="tp">💰 Benefits</span></div><div class="cf"><span class="crd">📖 10 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article16.html" class="ac a16 fu" data-s="emission standards BS6 scrap policy CAFE pollution உமிழ்வு விதிமுறைகள் பழைய"><div class="ct"><div class="cn">16</div><div class="ce">🌿</div><div class="ci"><div class="ctag">Article 16 · Emission Standards</div><div class="cen">BS6 & Scrap Policy</div><div class="cta2">உமிழ்வு விதிமுறைகள் தமிழில்</div></div></div><div class="cb"><div class="cdesc">BS4→BS6 Phase 2, RDE testing, CAFE norms, Scrap Policy — TN-ல் 15.9 lakh பழைய vehicles.</div></div><div class="ctags"><span class="tp">🌿 BS6 Phase 2</span><span class="tp">🔨 Scrap Policy</span><span class="tp">💰 Benefits</span></div><div class="cf"><span class="crd">📖 10 min</span><span class="carr">படிக்க →</span></div></a>
 
-    <a href="article17.html" class="ac a17 fu"><div class="ct"><div class="cn">17</div><div class="ce">📲</div><div class="ci"><div class="ctag">Article 17 · Digital Buying</div><div class="cen">Digital Car Retailing</div><div class="cta2">ஷோரூம் போகாமல் கார் வாங்கலாம்!</div></div></div><div class="cb"><div class="cdesc">Cars24, Spinny guide, fraud prevention, safety checklist — $11.7B India online car market.</div></div><div class="ctags"><span class="tp">🛒 Online</span><span class="tp">⚠️ Fraud Watch</span><span class="tp">📊 Data</span></div><div class="cf"><span class="crd">📖 10 min</span><span class="carr">படிக்க →</span></div></a>
+    <a href="article17.html" class="ac a17 fu" data-s="digital car buying online Cars24 Spinny retailing fraud ஆன்லைன் கார்"><div class="ct"><div class="cn">17</div><div class="ce">📲</div><div class="ci"><div class="ctag">Article 17 · Digital Buying</div><div class="cen">Digital Car Retailing</div><div class="cta2">ஷோரூம் போகாமல் கார் வாங்கலாம்!</div></div></div><div class="cb"><div class="cdesc">Cars24, Spinny guide, fraud prevention, safety checklist — $11.7B India online car market.</div></div><div class="ctags"><span class="tp">🛒 Online</span><span class="tp">⚠️ Fraud Watch</span><span class="tp">📊 Data</span></div><div class="cf"><span class="crd">📖 10 min</span><span class="carr">படிக்க →</span></div></a>
+  </div>
+
+    <a href="article18.html" class="ac a18 fu" data-s="reverse parking mirror steering sensor camera ரிவர்ஸ் பார்க்கிங் beginners guide பிகினர்"><div class="ct"><div class="cn">18</div><div class="ce">🔄</div><div class="ci"><div class="ctag">Article 18 · Driving Skills</div><div class="cen">Reverse Parking Guide</div><div class="cta2">காரை சரியாக Reverse எடுப்பது எப்படி?</div></div></div><div class="cb"><div class="cdesc">Mirror setup, steering logic, sensors & camera — beginners-க்கான 7-day practice plan.</div></div><div class="ctags"><span class="tp">🪞 Mirrors</span><span class="tp">🔄 Steering</span><span class="tp">📡 Sensors</span></div><div class="cf"><span class="crd">📖 8 min</span><span class="carr">படிக்க →</span></div></a>
+
+    <a href="article19.html" class="ac a19 fu" data-s="chassis engine number VIN சேசிஸ் இன்ஜின் நம்பர் location verify vahan RC decode find tamper"><div class="ct"><div class="cn">19</div><div class="ce">🔍</div><div class="ci"><div class="ctag">Article 19 · Car ID</div><div class="cen">Chassis & Engine Number</div><div class="cta2">சேசிஸ் நம்பர் எங்கு இருக்கும்?</div></div></div><div class="cb"><div class="cdesc">7 locations, VIN decode, Vahan verify, brand-wise guide, fraud red flags.</div></div><div class="ctags"><span class="tp">📍 7 Locations</span><span class="tp">🔢 VIN</span><span class="tp">🌐 Vahan</span></div><div class="cf"><span class="crd">📖 8 min</span><span class="carr">படிக்க →</span></div></a>
+
+    <a href="article20.html" class="ac a20 fu" data-s="car parts names tamil english windshield bonnet bumper fender dashboard கார் பாகங்கள் பெயர் dictionary glossary"><div class="ct"><div class="cn">20</div><div class="ce">🔧</div><div class="ci"><div class="ctag">Article 20 · Dictionary</div><div class="cen">Car Parts — Tamil & English</div><div class="cta2">60+ பாகங்கள் பெயர்கள் தமிழில்!</div></div></div><div class="cb"><div class="cdesc">Windshield = முன் கண்ணாடி, Bonnet = என்ஜின் மூடி — 60+ parts searchable dictionary.</div></div><div class="ctags"><span class="tp">🔍 Search</span><span class="tp">📍 Location</span><span class="tp">🖼️ Diagram</span></div><div class="cf"><span class="crd">📖 6 min</span><span class="carr">படிக்க →</span></div></a>
   </div>
 
   <!-- DIAGRAMS -->
@@ -185,10 +233,13 @@ footer{background:var(--brown);padding:36px 20px;text-align:center;}
   <div class="nl">
     <div class="nlt">📧 New Articles — உடனே தெரிந்துகொள்ளுங்கள்!</div>
     <div class="nlta">புதிய car tips, safety guides வரும்போது உங்கள் email-ல் கிடைக்கும். Free. Spam இல்லை.</div>
-    <form class="nlf" onsubmit="nlSub(event)">
-      <input class="nli" type="email" id="nl-em" placeholder="உங்கள் Email..." required>
-      <button class="nlb" type="submit">Subscribe →</button>
-    </form>
+    <div class="nlf" id="nl-form">
+      <input class="nli" type="text"  id="nl-name"  placeholder="பெயர்..." style="margin-bottom:6px;">
+      <input class="nli" type="tel"   id="nl-phone" placeholder="Phone: 98765 43210" maxlength="10" style="margin-bottom:6px;">
+      <input class="nli" type="email" id="nl-em"    placeholder="உங்கள் Email..." required>
+      <button class="nlb" onclick="nlSub()">Subscribe →</button>
+    </div>
+    <div id="nl-ok" style="display:none;color:#f4a100;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;padding:12px 0;text-align:center;">✅ நன்றி! உங்களுக்கு welcome email அனுப்புகிறோம்! 🚗</div>
     <div class="nln">✅ Free forever · No spam · Unsubscribe எப்போதும் · <a href="newsletter.html" style="color:var(--accent)">Full form →</a></div>
   </div>
 
@@ -228,7 +279,8 @@ footer{background:var(--brown);padding:36px 20px;text-align:center;}
     <a href="article7.html">Fuel Saving</a><a href="article8.html">CNG</a><a href="article9.html">Safe Cars</a>
     <a href="article10.html">Engine</a><a href="article11.html">Secrets</a><a href="article12.html">Tesla</a>
     <a href="article13.html">Tyre Change</a><a href="article14.html">UBI Insurance</a>
-    <a href="article15.html">Car Buying</a><a href="article16.html">BS6 Emissions</a><a href="article17.html">Digital Buying</a>
+    <a href="article15.html">Car Buying</a><a href="article16.html">BS6</a><a href="article17.html">Digital</a>
+    <a href="article18.html">Reverse</a><a href="article19.html">Chassis No.</a><a href="article20.html">Parts Names</a>
   </div>
   <div class="fpages">
     <a href="about.html">About Us</a>
@@ -240,7 +292,52 @@ footer{background:var(--brown);padding:36px 20px;text-align:center;}
 </footer>
 
 <script>
-function nlSub(e){e.preventDefault();document.querySelector('.nlf').innerHTML='<div style="color:#f4a100;font-family:Barlow Condensed,sans-serif;font-size:18px;font-weight:700;padding:12px 0;">✅ Subscribed! புதிய articles email-ல் கிடைக்கும்!</div>';}
+// ── Article Search ──
+(function(){
+  var inp = document.getElementById('srchInp');
+  var clr = document.getElementById('srchClr');
+  var cnt = document.getElementById('srchCnt');
+  var none= document.getElementById('srchNone');
+  var qEl = document.getElementById('srchQ');
+  var cards = document.querySelectorAll('.ac[data-s]');
+
+  function run(){
+    var q = inp.value.toLowerCase().trim();
+    clr.style.display = q ? 'block' : 'none';
+    var vis = 0;
+    cards.forEach(function(c){
+      var match = !q || (c.dataset.s||'').toLowerCase().includes(q) || c.textContent.toLowerCase().includes(q);
+      c.classList.toggle('s-hide', !match);
+      if(match) vis++;
+    });
+    // hide section titles if all cards in that section are hidden
+    document.querySelectorAll('.sec-title').forEach(function(sec){
+      var next = sec.nextElementSibling;
+      if(next && next.classList.contains('cg')){
+        var any = Array.from(next.querySelectorAll('.ac')).some(function(c){return !c.classList.contains('s-hide');});
+        sec.style.display = (any || !q) ? '' : 'none';
+      }
+    });
+    if(cnt) cnt.textContent = q ? vis + ' article' + (vis!==1?'s':'') + ' found' : '';
+    if(qEl) qEl.textContent = inp.value;
+    if(none) none.style.display = (q && vis===0) ? 'block' : 'none';
+  }
+
+  if(inp){ inp.addEventListener('input', run); }
+  window.srchClear = function(){ inp.value=''; run(); inp.focus(); };
+})();
+
+const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+function nlSub(){
+  const name=document.getElementById('nl-name').value.trim();
+  const phone=document.getElementById('nl-phone').value.trim();
+  const email=document.getElementById('nl-em').value.trim();
+  if(!email||!email.includes('@')){alert('சரியான email போடுங்கள்!');return;}
+  const params=new URLSearchParams({name,email,phone,source:'Home Page',date:new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'})});
+  fetch(APPS_SCRIPT_URL+'?'+params.toString(),{method:'GET',mode:'no-cors'}).catch(()=>{});
+  document.getElementById('nl-form').style.display='none';
+  document.getElementById('nl-ok').style.display='block';
+}
 const u=encodeURIComponent(location.href),tx=encodeURIComponent('🚗 KaarKalvi — தமிழில் Car Education! Dashboard முதல் Insurance வரை. இலவசம்! 👇');
 function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
 function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
