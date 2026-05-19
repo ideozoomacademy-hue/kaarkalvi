@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>காரை சரியாக Reverse எடுப்பது எப்படி? | Beginners Guide | KaarKalvi</title>
+<meta name="description" content="காரை சரியாக reverse எடுப்பது எப்படி? Mirror setup, steering logic, parking sensors — beginners-க்கான எளிய guide தமிழில் | KaarKalvi">
+<meta name="keywords" content="car reverse tamil, reverse parking tamil, how to reverse car tamil, கார் ரிவர்ஸ், mirror adjustment tamil, parking tips tamil">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ee;--cream2:#fff8f0;--cream3:#fef3e2;
+  --border:rgba(180,140,100,0.2);--brown:#2c1a0e;--brown2:#5a3e2b;
+  --muted:#8a6a50;--accent:#c47820;--accent2:#f4a100;
+  --green:#1a7a3c;--red:#c0392b;--blue:#1a5fa0;--teal:#0e7a6a;
+  --dark:#0a0806;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--brown);font-family:'Noto Sans Tamil',sans-serif;line-height:1.8;}
+nav{background:var(--dark);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.nb{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);letter-spacing:2px;text-decoration:none;}
+.ns{font-size:10px;color:#8a6a50;}
+.nh{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#c0a880;text-decoration:none;padding:6px 14px;border:1px solid rgba(180,140,100,0.35);border-radius:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#0a0806,#1a0e06,#2c1a0a,#6a3010);padding:48px 20px 40px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'🚗';position:absolute;font-size:220px;opacity:.05;bottom:-30px;left:-20px;transform:scaleX(-1);}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 30%,rgba(196,120,32,.1),transparent);}
+.htag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(244,161,0,.6);margin-bottom:12px;position:relative;z-index:1;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,6vw,48px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:10px;position:relative;z-index:1;}
+.hero h1 em{color:var(--accent2);font-style:normal;}
+.hta{font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(14px,3vw,18px);color:rgba(255,220,150,.85);margin-bottom:16px;position:relative;z-index:1;line-height:1.6;}
+.hmeta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:12px;color:rgba(255,200,100,.7);position:relative;z-index:1;}
+
+/* CONTAINER */
+.container{max-width:760px;margin:0 auto;padding:36px 16px;}
+
+/* INTRO */
+.intro-box{background:var(--cream3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:20px 22px;margin-bottom:32px;font-size:14px;line-height:1.9;color:var(--brown2);}
+.intro-box strong{color:var(--brown);}
+
+/* SECTION HEADER */
+.sec{margin:36px 0 18px;}
+.sec-inner{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:2px solid var(--border);}
+.sec-badge{padding:5px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;flex-shrink:0;}
+.sb-a{background:var(--cream3);color:var(--accent);border:1px solid rgba(196,120,32,.35);}
+.sb-b{background:#f0f4ff;color:var(--blue);border:1px solid rgba(26,95,160,.3);}
+.sb-g{background:#f0fff4;color:var(--green);border:1px solid rgba(26,122,60,.3);}
+.sb-r{background:#fff0ee;color:var(--red);border:1px solid rgba(192,57,43,.3);}
+.sb-t{background:#e8faf6;color:var(--teal);border:1px solid rgba(14,122,106,.3);}
+.stitle{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--brown);line-height:1.1;}
+.sta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-top:2px;}
+
+/* STEP CARDS */
+.steps-list{display:flex;flex-direction:column;gap:14px;margin-bottom:10px;}
+.step-card{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;transition:all .2s;}
+.step-card:hover{box-shadow:0 4px 20px rgba(120,80,40,.1);transform:translateY(-1px);}
+.step-num{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:#fff;flex-shrink:0;}
+.step-body{flex:1;}
+.step-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.step-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:var(--brown2);line-height:1.7;}
+
+/* BULLET SECTIONS */
+.bullet-card{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-bottom:14px;}
+.bullet-card-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--brown);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.bullet-list{display:flex;flex-direction:column;gap:9px;}
+.bullet-item{display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--brown2);line-height:1.7;}
+.bullet-dot{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:11px;}
+.bd-accent{background:rgba(196,120,32,.15);color:var(--accent);}
+.bd-green{background:rgba(26,122,60,.12);color:var(--green);}
+.bd-blue{background:rgba(26,95,160,.12);color:var(--blue);}
+.bd-red{background:rgba(192,57,43,.12);color:var(--red);}
+
+/* MIRROR DIAGRAM */
+.mirror-diagram{background:var(--dark);border-radius:16px;padding:24px 20px;margin-bottom:14px;color:#fff;}
+.md-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--accent2);margin-bottom:16px;letter-spacing:1px;}
+.mirror-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:480px){.mirror-grid{grid-template-columns:1fr;}}
+.mirror-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:14px;text-align:center;}
+.mirror-icon{font-size:28px;margin-bottom:8px;}
+.mirror-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--accent2);margin-bottom:4px;}
+.mirror-angle{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;margin-bottom:4px;}
+.mirror-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#a09080;line-height:1.5;}
+
+/* STEERING LOGIC VISUAL */
+.steer-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
+@media(max-width:480px){.steer-grid{grid-template-columns:1fr;}}
+.steer-card{border-radius:12px;padding:16px;}
+.steer-left{background:#f0f4ff;border:1px solid rgba(26,95,160,.15);border-left:4px solid var(--blue);}
+.steer-right{background:#fff8f0;border:1px solid rgba(196,120,32,.15);border-left:4px solid var(--accent);}
+.steer-icon{font-size:32px;margin-bottom:8px;text-align:center;}
+.steer-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;margin-bottom:8px;}
+.steer-left .steer-title{color:var(--blue);}
+.steer-right .steer-title{color:var(--accent);}
+.steer-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.7;}
+
+/* SENSOR CARDS */
+.sensor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:14px;}
+.sensor-card{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:16px;}
+.sensor-icon{font-size:28px;margin-bottom:8px;}
+.sensor-name{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--brown);margin-bottom:4px;}
+.sensor-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+.sensor-beep{margin-top:8px;}
+.beep-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+.beep-bar{display:flex;gap:3px;align-items:center;}
+.beep-dot{width:12px;height:12px;border-radius:50%;}
+
+/* CALLOUT BOX */
+.kk-callout{background:linear-gradient(135deg,#1a0e06,#2c1a0a);border-radius:16px;padding:24px 22px;margin:32px 0;position:relative;overflow:hidden;}
+.kk-callout::before{content:'🛠️';position:absolute;font-size:100px;opacity:.08;right:-10px;top:-10px;}
+.kk-callout-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent2);margin-bottom:8px;}
+.kk-callout-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:10px;}
+.kk-callout-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:rgba(255,220,150,.85);line-height:1.8;margin-bottom:16px;}
+.kk-callout-links{display:flex;flex-wrap:wrap;gap:8px;}
+.kk-callout-link{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;background:rgba(244,161,0,.15);border:1px solid rgba(244,161,0,.3);border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--accent2);text-decoration:none;transition:all .2s;}
+.kk-callout-link:hover{background:rgba(244,161,0,.25);transform:translateY(-1px);}
+
+/* COMMON MISTAKES */
+.mistake-list{display:flex;flex-direction:column;gap:10px;margin-bottom:14px;}
+.mistake-item{background:#fff0ee;border:1px solid rgba(192,57,43,.12);border-left:3px solid var(--red);border-radius:10px;padding:12px 16px;display:flex;gap:12px;align-items:flex-start;}
+.mistake-icon{font-size:22px;flex-shrink:0;}
+.mistake-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--red);margin-bottom:3px;}
+.mistake-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.6;}
+.mistake-fix{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--green);margin-top:4px;}
+
+/* TIP BOX */
+.tip-box{background:#f0fff4;border-left:4px solid var(--green);border-radius:10px;padding:14px 16px;margin:12px 0;font-size:13px;color:var(--green);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+.warn-box{background:#fff8e8;border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;margin:12px 0;font-size:13px;color:var(--accent);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+.danger-box{background:#fff0ee;border-left:4px solid var(--red);border-radius:10px;padding:14px 16px;margin:12px 0;font-size:13px;color:var(--red);font-family:'Noto Sans Tamil',sans-serif;line-height:1.7;}
+
+/* PRACTICE PLAN */
+.practice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:14px;}
+.practice-item{background:var(--cream2);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;}
+.practice-day{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--accent);}
+.practice-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:4px;}
+.practice-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);line-height:1.5;}
+
+/* CONC */
+.conc{background:linear-gradient(135deg,#0a0806,#1a0e06,#2c1a0a);color:#fff;border-radius:16px;padding:28px 24px;margin-top:36px;text-align:center;}
+.conc h3{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:900;color:var(--accent2);margin-bottom:14px;}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:14px 0;}
+.pill{padding:7px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;background:rgba(244,161,0,.14);color:var(--accent2);}
+.conc p{font-family:'Noto Sans Tamil',sans-serif;font-size:13px;color:#c0a060;line-height:1.8;}
+
+/* SHARE */
+.nxt{margin-top:20px;background:var(--brown);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;transition:all .2s;}
+.nxt:hover{background:#4a2e14;}
+.nxi{font-size:26px;flex-shrink:0;}
+.nxl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a6a50;margin-bottom:2px;}
+.nxe{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+.nxt-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:11px;color:#8a6a50;margin-top:1px;}
+.nxa{margin-left:auto;font-size:20px;color:var(--accent);}
+.sw{margin-top:16px;background:var(--cream3);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.swh{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:3px;}
+.swta{font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--muted);margin-bottom:12px;}
+.swb{display:flex;flex-wrap:wrap;gap:7px;}
+.sbt{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;border:none;transition:all .2s;}
+.sbt:hover{transform:translateY(-1px);filter:brightness(1.1);}
+.wa{background:#25d366;}.fb{background:#1877f2;}.tw{background:#1a1a2e;}.tg{background:#0088cc;}.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+footer{text-align:center;padding:28px 20px;border-top:1px solid var(--border);margin-top:14px;}
+.f1{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);letter-spacing:3px;}
+.f2{font-size:12px;color:var(--muted);margin-top:3px;}
+.f3{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.f3 a{font-size:12px;color:var(--muted);text-decoration:none;}
+#pb{position:fixed;top:0;left:0;height:3px;background:var(--accent2);z-index:999;transition:width .1s;}
+</style>
+</head>
+<body>
+<div id="pb" style="width:0%"></div>
+<nav>
+  <div><a href="index.html" class="nb">KAARKALVI</a><div class="ns">கார் கல்வி · Tamil Car Education</div></div>
+  <a href="index.html" class="nh">← Home</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="htag">Article 18 · Driving Skills</div>
+  <h1>🚗 காரை சரியாக <em>REVERSE</em> எடுப்பது எப்படி?</h1>
+  <div class="hta">பிகினர்களுக்கான எளிய step-by-step guide — தமிழில்!</div>
+  <div class="hmeta">
+    <span>📖 8 min read</span>
+    <span>🪞 Mirror setup</span>
+    <span>🔄 Steering logic</span>
+    <span>📡 Sensors & Camera</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="intro-box">
+    Driving test-ல் எல்லாரும் fail ஆகும் இடம் எது தெரியுமா? <strong>Reverse parking!</strong> ஆனால் உண்மை என்னவென்றால் — reverse எடுப்பது கஷ்டமில்லை, <strong>சரியான technique மட்டும் தெரிந்திருந்தால் போதும்.</strong> Chennai-ல் petrol bunk, Coimbatore-ல் narrow street, Madurai temple parking — எங்கும் confident-ஆக reverse எடுக்கலாம். இந்த guide படித்தால் நீங்களே ஆச்சரியப்படுவீர்கள்!
+  </div>
+
+  <!-- ══════════════ SECTION 1: BEFORE REVERSE ══════════════ -->
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-badge sb-a">⚙️ PREP</div>
+      <div>
+        <div class="stitle">Reverse போடுவதற்கு முன்னால்</div>
+        <div class="sta">Basic preparation — இவை இல்லாமல் reverse வேண்டாம்</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="steps-list">
+    <div class="step-card">
+      <div class="step-num" style="background:#c47820;">1</div>
+      <div class="step-body">
+        <div class="step-title">Seat Position சரி பண்ணுங்கள்</div>
+        <div class="step-ta">
+          Reverse-ல் நீங்கள் சற்று பின்னால் திரும்பிப் பார்க்க வேண்டியிருக்கும். Seat-ஐ கொஞ்சம் <strong>நேராக (upright)</strong> வையுங்கள் — சாய்ந்திருந்தால் பின்னே பார்க்க கஷ்டமாகும். Seat belt பாக்கி, car gear Neutral-ல் இருக்கட்டும்.
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="background:#1a5fa0;">2</div>
+      <div class="step-body">
+        <div class="step-title">சுற்றிலும் பாருங்கள் — 360° Check</div>
+        <div class="step-ta">
+          Reverse போடுவதற்கு முன்னால் கட்டாயம் <strong>car-ஐ சுற்றி ஒரு முறை நடந்து பாருங்கள்</strong> — குழந்தைகள், pets, two-wheelers, தள்ளுவண்டிகள் blind spot-ல் இருக்கலாம். Chennai-ல் மட்டும் வருடம் 200+ accidents இப்படித்தான் நடக்கின்றன.
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="background:#1a7a3c;">3</div>
+      <div class="step-body">
+        <div class="step-title">Hazard Lights போடுங்கள்</div>
+        <div class="step-ta">
+          Reverse light (white light — rear-ல் automatically켜 ஆகும்) இருந்தாலும், <strong>hazard lights போடுவது safe practice.</strong> Traffic-ல் பின்னால் உள்ளவர்களுக்கு warning. Good habit!
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="background:#6a1a8a;">4</div>
+      <div class="step-body">
+        <div class="step-title">Clutch + Gear — Reverse-ல் போடுங்கள்</div>
+        <div class="step-ta">
+          <strong>Manual car:</strong> Clutch fully press பண்ணி, Reverse gear (R) போடுங்கள். Clutch slowly release பண்ணுங்கள் — sudden release பண்ணாதீர்கள், car jerk ஆகும்.<br>
+          <strong>Automatic car:</strong> Brake press பண்ணி, gear lever-ஐ 'R'-க்கு move பண்ணுங்கள். அவ்வளவுதான்!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box">💡 <strong>TN Driving Test Tip:</strong> RTO test-ல் examiner car-ஐ சுற்றி walk பண்றீர்களா என்று கவனிப்பார். இந்த habit exam-ல் extra marks தரும்!</div>
+
+  <!-- ══════════════ SECTION 2: MIRROR SETUP ══════════════ -->
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-badge sb-b">🪞 MIRRORS</div>
+      <div>
+        <div class="stitle">Mirror சரியான Angle-ல் Adjust பண்ணுங்கள்</div>
+        <div class="sta">Reverse-க்கு முன்னால் ஒரு முறை check பண்ணுங்கள்</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mirror-diagram">
+    <div class="md-title">🪞 3 MIRRORS — CORRECT ADJUSTMENT</div>
+    <div class="mirror-grid">
+      <div class="mirror-item">
+        <div class="mirror-icon">◀️🪞</div>
+        <div class="mirror-name">Left Side Mirror</div>
+        <div class="mirror-angle">45° Down</div>
+        <div class="mirror-ta">Reverse-ல் left mirror-ஐ கொஞ்சம் <strong>கீழே angle பண்ணுங்கள்</strong> — இடது பக்க tyre + kerb (road edge) தெரியும். Narrow street-ல் scratch ஆகாமல் இருக்கும்</div>
+      </div>
+      <div class="mirror-item">
+        <div class="mirror-icon">🪟🪞</div>
+        <div class="mirror-name">Rear View Mirror</div>
+        <div class="mirror-angle">Normal</div>
+        <div class="mirror-ta">Rearview mirror-ல் rear windshield fully தெரியட்டும். <strong>Night-ல் anti-glare mode</strong> (lever கீழே flip) use பண்ணுங்கள். Head rest interference இல்லாமல் பாருங்கள்</div>
+      </div>
+      <div class="mirror-item">
+        <div class="mirror-icon">▶️🪞</div>
+        <div class="mirror-name">Right Side Mirror</div>
+        <div class="mirror-angle">Slight Down</div>
+        <div class="mirror-ta">வலது பக்க traffic + tyre தெரியட்டும். <strong>Tight parking-ல்</strong> right mirror-ஐயும் கீழே adjust பண்ணினால் — right side tyre + floor gap தெரியும்</div>
+      </div>
+    </div>
+    <div style="margin-top:14px;font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:#a09080;text-align:center;">
+      💡 Pro tip: அனைத்து mirrors-லும் உன் car-ஓட corner சிறிதளவு தெரிய வேண்டும் — reference point!
+    </div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="bullet-card-title"><span>👁️</span> Blind Spots — இந்த இடங்களை Mirrors காட்டாது!</div>
+    <div class="bullet-list">
+      <div class="bullet-item">
+        <div class="bullet-dot bd-red">⚠️</div>
+        <div><strong>Rear corners (A/C pillars):</strong> Car-ஓட பின் மூலைகள் — mirror angle எப்படி இருந்தாலும் dead zone. Physical turn-திரும்பி பார்க்க வேண்டும்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-red">⚠️</div>
+        <div><strong>Ground level objects:</strong> பக்கத்தில் நிற்கும் குழந்தைகள், pets — rear camera இல்லாத cars-ல் முற்றிலும் invisible</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-accent">✅</div>
+        <div><strong>Solution:</strong> Mirror-ல் பார்ப்பதோடு, physically தலையை திருப்பி <strong>right shoulder-க்கு மேலால் பாருங்கள்</strong> (peeking over shoulder) — இதுவே safe reverse technique</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-green">💡</div>
+        <div><strong>Convex mirror trick:</strong> Dashboard-ல் portable blind spot mirror ₹150-க்கு கிடைக்கும் — left mirror-ல் stick பண்ணினால் extra coverage கிடைக்கும்</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ SECTION 3: STEERING LOGIC ══════════════ -->
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-badge sb-a">🔄 STEERING</div>
+      <div>
+        <div class="stitle">Steering Logic — இந்த ஒரு Rule தெரிந்தால் போதும்!</div>
+        <div class="sta">Beginners-க்கு confusing-ஆக இருக்கும் — simple-ஆ புரிந்துகொள்ளுங்கள்</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="steer-grid">
+    <div class="steer-card steer-left">
+      <div class="steer-icon">⬅️🚗</div>
+      <div class="steer-title">LEFT-க்கு Reverse போக வேண்டும்?</div>
+      <div class="steer-ta">
+        <strong>Steering-ஐ LEFT-க்கு திருப்புங்கள்</strong><br><br>
+        Car-ஓட பின்பகுதி (tail) left-க்கு போகும். இது forward driving போலவே! Rear கண்ணாடியில் பாருங்கள் — car-ஓட பின் பகுதி எந்த direction-ல் போகிறதோ, அந்த direction-க்கு steering திருப்புங்கள்.
+      </div>
+    </div>
+    <div class="steer-card steer-right">
+      <div class="steer-icon">➡️🚗</div>
+      <div class="steer-title">RIGHT-க்கு Reverse போக வேண்டும்?</div>
+      <div class="steer-ta">
+        <strong>Steering-ஐ RIGHT-க்கு திருப்புங்கள்</strong><br><br>
+        Car-ஓட tail right-க்கு போகும். <strong>Golden Rule: "Back goes where you steer"</strong> — steering எந்த direction-க்கு திருப்புகிறோமோ, car-ஓட பின்பகுதி அந்த direction-க்குப் போகும்.
+      </div>
+    </div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="bullet-card-title"><span>🎯</span> Straight Reverse — Perfectly நேராக போவது எப்படி?</div>
+    <div class="bullet-list">
+      <div class="bullet-item">
+        <div class="bullet-dot bd-accent">1</div>
+        <div><strong>Rearview mirror-ஐ மட்டும் பாருங்கள்</strong> — side mirrors-ல் divert ஆகாதீர்கள்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-accent">2</div>
+        <div><strong>Car-ஓட rear-ல் ஒரு reference point</strong> (electric pole, wall corner) பாருங்கள் — அதை center-ல் வைத்துக்கொண்டு போங்கள்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-accent">3</div>
+        <div>Car left-க்கு drift ஆனால் — <strong>steering-ஐ கொஞ்சம் right-க்கு திருப்புங்கள்.</strong> Right-க்கு போனால் — left-க்கு திருப்புங்கள். Small corrections, slow speed!</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-green">💡</div>
+        <div><strong>Speed = எதிரியா:</strong> Slow-ஆ போனால் corrections easy. Fast-ஆ reverse போனால் control இழப்பீர்கள். Max 5 km/h-ல் reverse!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="bullet-card-title"><span>🅿️</span> Reverse Parallel Parking — Step by Step</div>
+    <div class="bullet-list">
+      <div class="bullet-item">
+        <div class="bullet-dot bd-blue">1</div>
+        <div>Target parking space-க்கு முன்னால் நிற்கும் car-ஓடு <strong>side-by-side</strong> (சமாந்திரமாக) நிறுத்துங்கள் — உங்கள் car-ஓட rear bumper அந்த car-ஓட rear bumper align ஆக</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-blue">2</div>
+        <div><strong>Reverse start பண்ணி, steering-ஐ 45° right-க்கு</strong> (kerb-side) திருப்புங்கள் — car-ஓட tail space-க்குள் போகும்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-blue">3</div>
+        <div>Car-ஓட பின்பகுதி kerb-க்கு 45° angle-ல் வரும்போது — <strong>steering-ஐ full left-க்கு திருப்புங்கள்</strong> (counter-steer)</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-blue">4</div>
+        <div>Car space-க்குள் நுழைந்தவுடன் — <strong>steering நேராக</strong> வையுங்கள். Fine tune பண்ணி kerb-க்கு 20–30 cm close-ல் நிறுத்துங்கள்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-green">✅</div>
+        <div><strong>Practice tip:</strong> வீட்டிற்கு அருகில் ஒரு empty street-ல் தினமும் 15 minutes practice — 1 week-ல் expert ஆவீர்கள்!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KAARKALVI CALLOUT BOX -->
+  <div class="kk-callout">
+    <div class="kk-callout-label">🛠️ KaarKalvi Interactive Tools</div>
+    <div class="kk-callout-title">உன் Car-ஐ Better-ஆ Understand பண்ணுவோம்!</div>
+    <div class="kk-callout-ta">
+      Reverse எடுக்கத் தெரிந்தவுடன் — <strong>car-ஓட dashboard warning lights, RTO procedures, fuel saving tips</strong> எல்லாமே தெரிந்துகொள்ளுங்கள். KaarKalvi-ல் Tamil-ல் எளிமையான interactive tools உள்ளன. <strong>Widget-ல் EMI calculator, RTO finder, resale estimator</strong> — எல்லாமே free!
+    </div>
+    <div class="kk-callout-links">
+      <a href="kaarkalvi-dashboard.html" class="kk-callout-link">⚠️ Dashboard Lights</a>
+      <a href="kaarkalvi-car-interior.html" class="kk-callout-link">🚗 Car Interior Diagram</a>
+      <a href="article1.html" class="kk-callout-link">🔴 Warning Lights Guide</a>
+      <a href="article5.html" class="kk-callout-link">🆘 Emergency Guide</a>
+      <a href="index.html" class="kk-callout-link">📚 All Articles →</a>
+    </div>
+  </div>
+
+  <!-- ══════════════ SECTION 4: SENSORS & CAMERA ══════════════ -->
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-badge sb-g">📡 TECH</div>
+      <div>
+        <div class="stitle">Reverse Parking Sensors & Camera</div>
+        <div class="sta">Modern car-ல் உள்ள tech — எப்படி சரியாக use பண்றது?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sensor-grid">
+    <div class="sensor-card">
+      <div class="sensor-icon">📡</div>
+      <div class="sensor-name">Parking Sensors</div>
+      <div class="sensor-ta">Ultrasonic waves use பண்ணி obstacle distance measure பண்ணும். Rear bumper-ல் 4 sensors இருக்கும். Reverse gear போட்டவுடன் automatically activate ஆகும்.</div>
+      <div class="sensor-beep">
+        <div class="beep-label">Distance-க்கு தகுந்த Beep Pattern:</div>
+        <div style="font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);margin-top:6px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><div style="width:10px;height:10px;border-radius:50%;background:#1a7a3c;"></div> <span>1.5m+ — Slow beep... beep...</span></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><div style="width:10px;height:10px;border-radius:50%;background:#f59e0b;"></div> <span>1m — Medium beep. beep.</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><div style="width:10px;height:10px;border-radius:50%;background:#c0392b;"></div> <span>30cm — Continuous beeeep!</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sensor-card">
+      <div class="sensor-icon">📷</div>
+      <div class="sensor-name">Rear Camera</div>
+      <div class="sensor-ta">Reverse gear போட்டவுடன் — dashboard touchscreen-ல் camera view தெரியும். Wide-angle view — sensors-ஐ விட அதிக area cover பண்ணும். Ground-level objects தெரியும்.</div>
+      <div style="margin-top:8px;font-family:'Noto Sans Tamil',sans-serif;font-size:12px;color:var(--brown2);">
+        📐 Camera-ல் color lines:<br>
+        <span style="color:#1a7a3c;">🟢 Green = Safe zone</span><br>
+        <span style="color:#f59e0b;">🟡 Yellow = Caution zone</span><br>
+        <span style="color:#c0392b;">🔴 Red = Danger! Brake!!</span>
+      </div>
+    </div>
+    <div class="sensor-card">
+      <div class="sensor-icon">🔭</div>
+      <div class="sensor-name">360° Surround View</div>
+      <div class="sensor-ta">Premium cars-ல் (Creta, XUV700, Seltos) 4 cameras combine ஆகி bird's eye view காட்டும். Entire car-ஓட surroundings — ஒரே screen-ல் பார்க்கலாம். Parking king!</div>
+      <div style="margin-top:8px;font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--green);font-weight:700;">Available in: Creta, Seltos, XUV700, Thar Roxx</div>
+    </div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="bullet-card-title"><span>📷</span> Rear Camera — சரியாக பயன்படுத்துவது எப்படி?</div>
+    <div class="bullet-list">
+      <div class="bullet-item">
+        <div class="bullet-dot bd-green">✅</div>
+        <div>Camera line பார்க்கும்போது <strong>dynamic guidelines</strong> (steering திருப்பும்போது lines-உம் move ஆகும்) enable பண்ணியிருக்கிறதா confirm பண்ணுங்கள் — settings-ல் turn on பண்ணலாம்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-green">✅</div>
+        <div><strong>Camera + Mirror combination</strong> use பண்ணுங்கள் — camera மட்டும் பார்த்தால் side blind spots miss ஆகும். Camera-க்கு 80%, mirrors-க்கு 20% attention</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-accent">⚠️</div>
+        <div><strong>Camera clean-ஆ வையுங்கள்:</strong> Dirty/foggy camera = useless. Rain + mud = camera wipe பண்ணி பாருங்கள். Reverse-ல் camera தெரியவில்லை என்றால் பாதியில் நிறுத்துங்கள்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-red">⚠️</div>
+        <div><strong>Camera dependency danger:</strong> Camera-ல் மட்டும் rely பண்ணாதீர்கள். Children, pets — camera angle-க்கு வெளியே இருக்கலாம். Physical check கட்டாயம்!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="bullet-card-title"><span>📡</span> Parking Sensors — Common Problems & Solutions</div>
+    <div class="bullet-list">
+      <div class="bullet-item">
+        <div class="bullet-dot bd-red">❌</div>
+        <div><strong>Sensor beeping without obstacle:</strong> Sensor dirty-ஆ இருக்கும். Bumper-ல் உள்ள 4 sensors-ஐ wet cloth-ல் clean பண்ணுங்கள். Mud, bird droppings — false alarms தரும்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-red">❌</div>
+        <div><strong>No beep sound:</strong> Fuse blow ஆகியிருக்கும் அல்லது sensor damage ஆகியிருக்கும். Mechanic-கிட்டே காட்டுங்கள் — ₹500–₹1500-ல் fix ஆகும்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-red">❌</div>
+        <div><strong>Low/thin obstacles invisible:</strong> Sensors 30cm-க்கு கீழே உள்ள objects detect பண்ணாது — speed bump, low poles! Slow speed + camera combination use பண்ணுங்கள்</div>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot bd-green">✅</div>
+        <div><strong>Best practice:</strong> Sensors = early warning. Camera = visual guide. Physical turn = final confirmation. இந்த 3-layer approach safe!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ SECTION 5: COMMON MISTAKES ══════════════ -->
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-badge sb-r">⚠️ MISTAKES</div>
+      <div>
+        <div class="stitle">பொதுவான தவறுகள் — தவிர்க்க வேண்டியவை</div>
+        <div class="sta">Beginners மட்டுமில்லை, experienced drivers-உம் செய்யும் mistakes</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mistake-list">
+    <div class="mistake-item">
+      <div class="mistake-icon">🚀</div>
+      <div>
+        <div class="mistake-title">அதிக வேகத்தில் Reverse</div>
+        <div class="mistake-ta">Reverse-ல் 15–20 km/h போவது மிகவும் ஆபத்து. Control இல்லாமல் போகும். Petrol bunk-ல், narrow streets-ல் இது அதிகம் நடக்கும்.</div>
+        <div class="mistake-fix">✅ Fix: Max 5 km/h. Slow-ஆ போனால் corrections பண்ண நேரம் கிடைக்கும்.</div>
+      </div>
+    </div>
+    <div class="mistake-item">
+      <div class="mistake-icon">📱</div>
+      <div>
+        <div class="mistake-title">Phone பார்த்துக்கொண்டு Reverse</div>
+        <div class="mistake-ta">Reverse-ல் attention 100% தேவை. Phone ஒரு second distraction — ஒரு life-க்கு போதும். Tamil Nadu-ல் reverse accidents-ல் 35% phone distraction காரணம்.</div>
+        <div class="mistake-fix">✅ Fix: Phone silent mode, seat-ல் face-down வையுங்கள். Reverse முடிந்தவுடன் எடுங்கள்.</div>
+      </div>
+    </div>
+    <div class="mistake-item">
+      <div class="mistake-icon">🪞</div>
+      <div>
+        <div class="mistake-title">Mirror Check இல்லாமல் Reverse</div>
+        <div class="mistake-ta">"Camera இருக்கே!" என்று mirrors-ஐ ignore பண்றது — side obstacles camera-ல் தெரியாது. Left-right traffic miss ஆகும்.</div>
+        <div class="mistake-fix">✅ Fix: Camera + Left mirror + Right mirror — 3-ஐயும் alternate-ஆக check பண்ணுங்கள்.</div>
+      </div>
+    </div>
+    <div class="mistake-item">
+      <div class="mistake-icon">🅿️</div>
+      <div>
+        <div class="mistake-title">Space Check இல்லாமல் Attempt</div>
+        <div class="mistake-ta">Space போதுமா என்று confirm பண்ணாமல் reverse start பண்றது — கடைசியில் stuck ஆவீர்கள். 3-point turn தேவையாகும்.</div>
+        <div class="mistake-fix">✅ Fix: "Car length + 1 meter" space இருந்தால் மட்டுமே attempt பண்ணுங்கள்.</div>
+      </div>
+    </div>
+    <div class="mistake-item">
+      <div class="mistake-icon">🔄</div>
+      <div>
+        <div class="mistake-title">Over-steering பண்றது</div>
+        <div class="mistake-ta">Panic-ல் steering-ஐ full lock-க்கு திருப்பிவிடுவது — car control-ஐ விட்டுவிடும். Small corrections போதும்.</div>
+        <div class="mistake-fix">✅ Fix: Steering-ஐ 1/4 turn சின்னதாக திருப்புங்கள் — result பாருங்கள் — adjust பண்ணுங்கள்.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ SECTION 6: PRACTICE PLAN ══════════════ -->
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-badge sb-t">📅 PRACTICE</div>
+      <div>
+        <div class="stitle">7-Day Practice Plan</div>
+        <div class="sta">இந்த plan follow பண்ணினால் — 1 week-ல் reverse expert!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="practice-grid">
+    <div class="practice-item">
+      <div class="practice-day">Day 1</div>
+      <div class="practice-title">Mirror Adjustment</div>
+      <div class="practice-ta">3 mirrors சரியாக adjust பண்ணி, parking lot-ல் straight reverse practice பண்ணுங்கள்</div>
+    </div>
+    <div class="practice-item">
+      <div class="practice-day">Day 2</div>
+      <div class="practice-title">Straight Reverse</div>
+      <div class="practice-ta">Empty road-ல் 50 meters straight reverse — reference point technique practice</div>
+    </div>
+    <div class="practice-item">
+      <div class="practice-day">Day 3</div>
+      <div class="practice-title">Left Reverse</div>
+      <div class="practice-ta">Cones அல்லது bottles வைத்து — left side-க்கு reverse turn practice</div>
+    </div>
+    <div class="practice-item">
+      <div class="practice-day">Day 4</div>
+      <div class="practice-title">Right Reverse</div>
+      <div class="practice-ta">Right side reverse turn — steering logic confirm பண்ணுங்கள்</div>
+    </div>
+    <div class="practice-item">
+      <div class="practice-day">Day 5</div>
+      <div class="practice-title">Parallel Park</div>
+      <div class="practice-ta">2 cars space-ல் parallel parking attempt — empty parking lot</div>
+    </div>
+    <div class="practice-item">
+      <div class="practice-day">Day 6–7</div>
+      <div class="practice-title">Real World</div>
+      <div class="practice-ta">Actual parking lot-ல் practice — peak hours தவிர்த்து, morning 6–7AM best!</div>
+    </div>
+  </div>
+
+  <div class="warn-box">⚠️ <strong>Practice Location Tips:</strong> Empty school ground, large parking lots (Sunday morning mall), quiet streets after 9PM — இந்த இடங்களில் practice பண்ணுங்கள். Heavy traffic-ல் beginners practice வேண்டாம்!</div>
+
+  <!-- CONCLUSION -->
+  <div class="conc">
+    <h3>🚗 Reverse Mastery — Key Takeaways</h3>
+    <div class="pills">
+      <div class="pill">🪞 Mirrors adjust பண்ணு</div>
+      <div class="pill">🔄 Back goes where you steer</div>
+      <div class="pill">🐢 Slow speed = control</div>
+      <div class="pill">📡 Camera + Sensors use பண்ணு</div>
+      <div class="pill">👀 Physical check கட்டாயம்</div>
+      <div class="pill">📅 7 days practice</div>
+    </div>
+    <p>
+      Reverse எடுப்பது ஒரு skill — born talent இல்லை. <strong>சரியான technique + practice = confidence.</strong><br><br>
+      Chennai-ல் tight street, Coimbatore-ல் narrow lane, Madurai-ல் crowded temple parking — எல்லா இடத்திலும் confident-ஆக reverse எடுக்க இந்த guide உதவும்.<br><br>
+      <strong style="color:var(--accent2);">Remember: Mirror → Signal → Manoeuvre (MSM) — இந்த sequence கடைபிடியுங்கள். எப்போதும் safe driving! 🚗</strong>
+    </p>
+  </div>
+
+  <a href="index.html" class="nxt">
+    <div class="nxi">🏠</div>
+    <div><div class="nxl">← Back to</div><div class="nxe">KaarKalvi Home</div><div class="nxt-ta">எல்லா articles-உம் இங்கே</div></div>
+    <div class="nxa">→</div>
+  </a>
+
+  <div class="sw">
+    <div class="swh">🚗 Share பண்ணுங்கள்!</div>
+    <div class="swta">Reverse பண்ண பயப்படும் நண்பர்களுக்கு இந்த guide share பண்ணுங்கள்!</div>
+    <div class="swb">
+      <button class="sbt wa" onclick="sWA()">WhatsApp</button>
+      <button class="sbt fb" onclick="sFB()">Facebook</button>
+      <button class="sbt tw" onclick="sTW()">X</button>
+      <button class="sbt tg" onclick="sTG()">Telegram</button>
+      <button class="sbt ig" onclick="sIG()">Instagram</button>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="f1">KAARKALVI</div>
+  <div class="f2">கார் கல்வி · Tamil Car Education</div>
+  <div class="f3">
+    <a href="index.html">Home</a>
+    <a href="article3.html">Gear Shifting</a>
+    <a href="article5.html">Emergency Guide</a>
+    <a href="article13.html">Tyre Change</a>
+    <a href="article18.html">Reverse Guide</a>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const w=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(w/h*100)+'%';
+});
+const u=encodeURIComponent(location.href),tx=encodeURIComponent('🚗 காரை சரியாக Reverse எடுப்பது எப்படி? Beginners-க்கான எளிய guide தமிழில் — KaarKalvi! 👇');
+function sWA(){window.open('https://wa.me/?text='+tx+'%0A'+u,'_blank');}
+function sFB(){window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank');}
+function sTW(){window.open('https://twitter.com/intent/tweet?text='+tx+'&url='+u,'_blank');}
+function sTG(){window.open('https://t.me/share/url?url='+u+'&text='+tx,'_blank');}
+function sIG(){navigator.clipboard.writeText(decodeURIComponent(u)).then(()=>alert('✅ Link copied!')).catch(()=>prompt('Copy:',location.href));}
+</script>
+
+  <!-- KaarKalvi Widget -->
+  <script src="widget.js" defer></script>
+</body>
+</html>
